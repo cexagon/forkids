@@ -1,0 +1,17 @@
+{
+  "name": "Kebun Hitung",
+  "short_name": "Kebun Hitung",
+  "description": "Game belajar bilangan untuk anak kelas 1 SD. Bantu Kancil melayani pembeli di Warung Tebu.",
+  "lang": "id",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#FFF3D1",
+  "theme_color": "#FFF3D1",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
