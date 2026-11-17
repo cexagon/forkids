@@ -85,6 +85,15 @@ h1 { font-family: var(--display); font-weight: 800; font-size: 40px; line-height
   <button class="btn" id="startBtn" disabled>Masuk pasar</button>
   <div id="loading">Menata pasar...</div>
 </div></div>
+<script>
+(function () {
+  var show = function (m) { var l = document.getElementById('loading'); if (l) l.textContent = 'Ada gangguan: ' + m; };
+  addEventListener('error', function (e) { show(e.message || 'berkas gagal dimuat'); }, true);
+  addEventListener('unhandledrejection', function (e) { show((e.reason && e.reason.message) || e.reason); });
+  try { var c = document.createElement('canvas'); if (!c.getContext('webgl2')) show('browser ini belum mendukung WebGL2. Coba Chrome atau Safari terbaru.'); } catch (e) { show('grafis 3D tidak tersedia.'); }
+  setTimeout(function () { var l = document.getElementById('loading'); if (l && l.textContent.indexOf('Menata') === 0) l.textContent = 'Masih memuat... kalau lama, tutup lalu buka lagi halaman ini.'; }, 20000);
+})();
+</script>
 <script src="./app.bundle.js"></script>
 </body>
 </html>
