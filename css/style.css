@@ -245,3 +245,4 @@ h2 { font-size: 32px; } h3 { font-size: 22px; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+a.btn { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; }
