@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#A6DCEA">
+<title>Peta Cerita Kota Kancil</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; background: #A6DCEA; color: #3b2614; font: 700 17px/1.35 Nunito, system-ui, sans-serif; -webkit-tap-highlight-color: transparent; }
+main { max-width: 560px; margin: 0 auto; padding: calc(18px + env(safe-area-inset-top)) 16px calc(28px + env(safe-area-inset-bottom)); }
+h1 { font: 800 38px/1 "Baloo 2", system-ui, sans-serif; margin: 6px 0 4px; }
+p.lead { margin: 0 0 16px; }
+ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+a.bab { display: grid; grid-template-columns: 64px 1fr auto; gap: 12px; align-items: center; min-height: 84px; padding: 10px 14px; border-radius: 24px; border: 4px solid #3b2614; background: #fffaf0; color: inherit; text-decoration: none; box-shadow: 0 6px 0 rgba(59,38,20,.22); }
+a.bab:active { transform: translateY(4px); box-shadow: none; }
+a.bab b { display: grid; place-items: center; width: 60px; height: 60px; border-radius: 50%; background: #ffd166; border: 4px solid #3b2614; font: 800 30px/1 "Baloo 2", system-ui, sans-serif; }
+a.bab strong { display: block; font: 800 22px/1.1 "Baloo 2", system-ui, sans-serif; }
+a.bab span { font-size: 15px; color: #7a5a3a; }
+a.bab i { font-style: normal; font: 800 15px/1 Nunito, sans-serif; padding: 8px 10px; border-radius: 12px; background: #e8742a; color: #fff; }
+a.bab.done b { background: #4e9a3c; color: #fff; }
+a.bab.done i { background: #4e9a3c; }
+a.bab.lock { opacity: .5; pointer-events: none; box-shadow: none; }
+a.bab.lock i { background: #9a8b7a; }
+.foot { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 10px; }
+.foot a, .foot button { min-height: 52px; padding: 0 16px; border-radius: 16px; border: 3px solid #3b2614; background: #fffaf0; color: #3b2614; font: 800 17px/46px Nunito, sans-serif; text-decoration: none; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Peta Cerita</h1>
+  <p class="lead">Sepuluh kasus Kancil. Tiap kasus terbuka setelah kasus sebelumnya selesai.</p>
+  <ol id="list"></ol>
+  <div class="foot">
+    <a href="../">Kebun Hitung</a>
+    <a href="../pasar3d/">Pasar (bebas main)</a>
+    <button id="open">Orang tua: buka semua</button>
+  </div>
+</main>
+<script src="../kit/ui.js"></script>
+<script>
+const BAB = [
+  ['Kancil dan Buaya', 'Hitung lanjut, pasangan sepuluh'],
+  ['Warung Bu Murni', 'Tambah dan kurang lewat sepuluh'],
+  ['Kebun Ketimun Kakek Ramlan', 'Mencari yang belum diketahui'],
+  ['Labu Bawang Putih', 'Lebih banyak berapa?'],
+  ['Naik Angkot ke Sekolah', 'Loncat sepuluhan sampai 100'],
+  ['Seratus Candi', 'Lewat puluhan, tinggal berapa lagi'],
+  ['Celengan Semut', 'Dua angka tambah dua angka'],
+  ['Lomba Kancil dan Siput', 'Selisih jarak sampai 100'],
+  ['Kantung Ajaib Timun Mas', 'Kelompok sama banyak, hitung loncat'],
+  ['Dapur Nenek Gabe', 'Perkalian dan bagi rata'],
+];
+const draw = () => {
+  const all = KK.all(); let openAll = false; try { openAll = localStorage.getItem('kota-kancil-buka-semua') === '1'; } catch (e) {}
+  document.getElementById('list').innerHTML = BAB.map((b, i) => {
+    const n = i + 1, done = !!(all[n] && all[n].done), prev = n === 1 || !!(all[n - 1] && all[n - 1].done), lock = !prev && !done && !openAll;
+    return `<li><a class="bab ${done ? 'done' : ''} ${lock ? 'lock' : ''}" href="../bab${String(n).padStart(2, '0')}/"><b>${n}</b><div><strong>${b[0]}</strong><span>${b[1]}</span></div><i>${done ? 'Selesai' : lock ? 'Terkunci' : 'Main'}</i></a></li>`;
+  }).join('');
+};
+document.getElementById('open').addEventListener('click', () => { try { localStorage.setItem('kota-kancil-buka-semua', localStorage.getItem('kota-kancil-buka-semua') === '1' ? '0' : '1'); } catch (e) {} draw(); });
+addEventListener('pageshow', draw); draw();
+</script>
+</body>
+</html>
