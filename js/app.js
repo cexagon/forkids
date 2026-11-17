@@ -182,6 +182,7 @@
         <section class="chapters">${chapters}</section>
         <section class="row map-foot">
           <button class="btn ghost" id="installBtn" hidden>Pasang di HP</button>
+          <a class="btn secondary" href="./pasar3d/">Lanjut ke Pasar 3D</a>
           <button class="btn ghost" id="parentBtn">Untuk orang tua</button>
         </section>
       </main>`, 'map');
