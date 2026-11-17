@@ -1,5 +1,5 @@
 /* Kebun Hitung: cache supaya bisa dimainkan tanpa internet setelah dibuka sekali. */
-const CACHE = 'kebun-hitung-v2.1.0';
+const CACHE = 'kebun-hitung-v2.1.2';
 const ASSETS = ['./', './index.html', './css/style.css', './js/art.js', './js/content.js', './js/app.js', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-512.png', './icons/apple-touch-icon.png'];
 
 self.addEventListener('install', (e) => {
@@ -18,6 +18,11 @@ self.addEventListener('fetch', (e) => {
       const net = fetch(e.request).then(r => { if (r.ok) c.put(e.request, r.clone()); return r; }).catch(() => hit);
       return hit || net;
     }));
+    return;
+  }
+  /* Pasar 3D: selalu ambil dari jaringan dulu, salinan hanya untuk saat offline */
+  if (url.pathname.includes('/pasar3d/')) {
+    e.respondWith(fetch(e.request).then(r => { if (r.ok && r.status === 200) { const copy = r.clone(); caches.open(CACHE).then(c => c.put(e.request, copy)).catch(() => {}); } return r; }).catch(() => caches.match(e.request).then(hit => hit || Response.error())));
     return;
   }
   e.respondWith(caches.match(e.request).then(hit => hit || fetch(e.request).then(r => {
