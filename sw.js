@@ -1,5 +1,5 @@
 /* Kebun Hitung: cache supaya bisa dimainkan tanpa internet setelah dibuka sekali. */
-const CACHE = 'kebun-hitung-v2.1.0';
+const CACHE = 'kebun-hitung-v2.1.1';
 const ASSETS = ['./', './index.html', './css/style.css', './js/art.js', './js/content.js', './js/app.js', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-512.png', './icons/apple-touch-icon.png'];
 
 self.addEventListener('install', (e) => {

@@ -182,7 +182,7 @@ const makeThumbs = async () => {
   for (const k of Object.keys(crates)) {
     const cv = document.createElement('canvas'); cv.width = cv.height = 160; const x = cv.getContext('2d');
     x.fillStyle = '#fffaf0'; x.beginPath(); x.arc(80, 80, 74, 0, 7); x.fill(); x.lineWidth = 9; x.strokeStyle = '#3b2614'; x.stroke();
-    const im = new Image(); im.src = thumbs[k]; await im.decode(); x.drawImage(im, 16, 16, 128, 128);
+    const im = new Image(); await new Promise((ok, no) => { im.onload = ok; im.onerror = no; im.src = thumbs[k]; }); x.drawImage(im, 16, 16, 128, 128);
     const tx = new THREE.CanvasTexture(cv); tx.colorSpace = THREE.SRGBColorSpace;
     const m = new THREE.Mesh(new THREE.CircleGeometry(0.6, 28), new THREE.MeshBasicMaterial({ map: tx, transparent: true }));
     m.rotation.x = -0.42; m.position.set(0, -0.55, 1.3); crates[k].add(m);
@@ -290,8 +290,9 @@ const confetti = () => { const box = document.createElement('div'); box.classNam
 
 /* ---------- Sentuhan ---------- */
 const ray = new THREE.Raycaster(), ptr = new THREE.Vector2(); let down = null;
-canvas.addEventListener('pointerdown', (e) => { down = { x: e.clientX, y: e.clientY, az: cam.azGoal, moved: false }; canvas.setPointerCapture(e.pointerId); });
-canvas.addEventListener('pointermove', (e) => { if (!down) return; const dx = e.clientX - down.x; if (Math.abs(dx) > 8) down.moved = true; if (down.moved) cam.azGoal = Math.max(-0.45, Math.min(0.75, down.az - dx * 0.004)); });
+canvas.addEventListener('pointerdown', (e) => { down = { x: e.clientX, y: e.clientY, az: cam.azGoal, moved: false }; try { canvas.setPointerCapture(e.pointerId); } catch (er) { /* abaikan */ } });
+canvas.addEventListener('pointermove', (e) => { if (!down) return; const dx = e.clientX - down.x; if (Math.abs(dx) > 18) down.moved = true; if (down.moved) cam.azGoal = Math.max(-0.45, Math.min(0.75, down.az - dx * 0.004)); });
+canvas.addEventListener('pointercancel', () => { down = null; });
 canvas.addEventListener('pointerup', (e) => {
   const d = down; down = null; if (!d || d.moved) return;
   ptr.set((e.clientX / innerWidth) * 2 - 1, -(e.clientY / innerHeight) * 2 + 1); ray.setFromCamera(ptr, camera);
@@ -332,12 +333,18 @@ const frame = () => {
   requestAnimationFrame(frame);
 };
 
+addEventListener('error', (e) => { const l = $('#loading'); if (l) l.textContent = 'Ada gangguan: ' + e.message; });
+addEventListener('unhandledrejection', (e) => { const l = $('#loading'); if (l) l.textContent = 'Ada gangguan: ' + (e.reason && e.reason.message || e.reason); });
 (async () => {
   fit(); placeCam();
-  try { await document.fonts.load('800 40px "Baloo 2"'); } catch (e) { /* abaikan */ }
-  await buildWorld(); fit(); await makeThumbs();
+  const lim = (p, ms) => Promise.race([p, wait(ms)]);
+  try { await lim(document.fonts.load('800 40px "Baloo 2"'), 1500); } catch (e) { /* abaikan */ }
+  try { await buildWorld(); } catch (e) { $('#loading').textContent = 'Pasar gagal dimuat: ' + (e && e.message || e); throw e; }
+  fit();
+  try { await lim(makeThumbs(), 6000); } catch (e) { console.warn(e); }
+  for (const k of Object.keys(ITEMS)) if (!thumbs[k]) thumbs[k] = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="#E8742A"/></svg>');
   $('#helped').textContent = `${D.helped} bantuan`;
-  renderer.compile(scene, camera);
+  try { renderer.compile(scene, camera); } catch (e) { /* abaikan */ }
   $('#loading').remove(); $('#startBtn').disabled = false;
   if (QS.has('play')) { $('#intro').classList.add('gone'); greeted = true; $('#alert').hidden = false; }
   window.__game = { balloonBreak, CUST, world, onSari, onCrate, get order() { return order; }, cam, actors, D };
