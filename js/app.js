@@ -99,7 +99,7 @@
 
   const bar = (opts = {}) => `
     <header class="bar">
-      <button class="icon-btn" id="homeBtn" aria-label="Ke peta">${A.HOME}</button>
+      <button class="icon-btn" id="homeBtn" aria-label="Kembali">${A.HOME}</button>
       ${opts.title ? `<div class="bar-title">${opts.title}</div>` : ''}
       <div class="progress" id="progress" aria-label="Kemajuan sesi">${opts.progress ? progressHtml() : ''}</div>
       <button class="icon-btn" id="soundBtn" aria-pressed="${D.sound}" aria-label="Suara">${A.SPEAKER}</button>
@@ -114,7 +114,7 @@
     return h;
   };
   const wireBar = () => {
-    $('#homeBtn')?.addEventListener('click', () => { if (S.round !== undefined && app.dataset.screen === 'play') confirmLeave(); else mapScreen(); });
+    $('#homeBtn')?.addEventListener('click', () => { if (S.round !== undefined && app.dataset.screen === 'play') confirmLeave(); else if (app.dataset.screen === 'map') startScreen(); else mapScreen(); });
     $('#soundBtn')?.addEventListener('click', (e) => {
       D.sound = !D.sound; save();
       e.currentTarget.setAttribute('aria-pressed', String(D.sound));
@@ -130,28 +130,42 @@
     $('#leave', ov).addEventListener('click', () => mapScreen());
   };
 
-  /* ---------- Layar awal ---------- */
+  /* ---------- Menu utama ---------- */
+  const MAP_ICON = `<svg viewBox="0 0 80 80" aria-hidden="true"><path d="M10 18 30 10l20 8 20-8v52l-20 8-20-8-20 8z" fill="#FFF3D1" stroke="#3B2614" stroke-width="4" stroke-linejoin="round"/><path d="M30 10v52M50 18v52" stroke="#E3C98E" stroke-width="3"/><path d="M18 56c6-10 14-4 20-14s16-8 22-20" fill="none" stroke="#E8742A" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 7"/><circle cx="60" cy="22" r="6" fill="#4E9A3C" stroke="#3B2614" stroke-width="3"/><circle cx="18" cy="56" r="5" fill="#E8742A" stroke="#3B2614" stroke-width="3"/></svg>`;
+  const storyDone = () => { try { const a = JSON.parse(localStorage.getItem('kota-kancil-cerita-v1') || '{}'); return Object.values(a).filter(x => x && x.done).length; } catch (e) { return 0; } };
   const startScreen = () => {
+    const stars = Object.values(D.stars || {}).reduce((a, b) => a + (b || 0), 0), total = C.CHAPTERS.length, sd = storyDone();
     render(`
       <div class="center hero">
         ${A.SCENE_BG}
-        <div class="hero-body">
+        <div class="hero-body menu">
           ${A.KANCIL('hero-k', 'happy')}
-          <h1>Kebun <span>Hitung</span></h1>
-          <p class="lead">Bantu Kancil melayani pembeli di Warung Tebu. Hitung, ikat, dan kirim!</p>
+          <h1>${D.name ? `Halo, <span>${D.name}</span>!` : 'Kebun <span>Hitung</span>'}</h1>
+          <p class="lead">Mau main apa hari ini?</p>
           ${D.name ? '' : `<label class="field"><span>Siapa namamu? (boleh dibantu Ayah/Bunda)</span><input id="nameIn" maxlength="14" autocomplete="off" placeholder="nama panggilan"></label>`}
-          <button class="btn primary big-btn" id="startBtn">${D.name ? `Halo, ${D.name}! Ayo main` : 'Ayo mulai'}</button>
-          <p class="note">Nyalakan suara, ya. Satu sesi sekitar 10 menit.</p>
+          <div class="menu-cards">
+            <div class="menu-item"><button class="menu-card" id="goKebun">
+              <span class="mc-art">${A.BUNDLE}</span>
+              <span class="mc-body"><b>Kebun Tebu</b><span>Hitung, ikat, dan kirim tebu bersama Kancil.</span><i>${Math.min(D.unlocked, total)} dari ${total} bab terbuka · ${stars} bintang</i></span>
+            </button><button class="mc-say" data-say="Kebun Tebu. Hitung, ikat, dan kirim tebu bersama Kancil." aria-label="Dengar: Kebun Tebu">${A.SPEAKER}</button></div>
+            <div class="menu-item"><a class="menu-card mc-story" id="goCerita" href="./cerita/">
+              <span class="mc-art">${MAP_ICON}</span>
+              <span class="mc-body"><b>Peta Cerita</b><span>Lanjutan Kebun Tebu. Sekarang kamu yang mengajari Kancil!</span><i>${sd} dari 10 cerita selesai</i></span>
+            </a><button class="mc-say" data-say="Peta Cerita. Lanjutan Kebun Tebu. Sekarang kamu yang mengajari Kancil di sepuluh cerita." aria-label="Dengar: Peta Cerita">${A.SPEAKER}</button></div>
+          </div>
+          <p class="note menu-note">${A.SPEAKER}<span>Ketuk speaker untuk mendengar. Satu sesi sekitar 10 menit.</span></p>
         </div>
       </div>`, 'start');
     app.dataset.screen = 'start';
-    $('#startBtn').addEventListener('click', () => {
-      const inp = $('#nameIn');
-      if (inp && inp.value.trim()) { D.name = inp.value.trim().slice(0, 14); save(); }
+    const keepName = () => { const inp = $('#nameIn'); if (inp && inp.value.trim()) { D.name = inp.value.trim().slice(0, 14); save(); } };
+    $('#goKebun').addEventListener('click', () => {
+      keepName();
       try { actx = actx || new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { /* abaikan */ }
       say(`Halo, ${name()}! Aku Kancil. Senang sekali kamu datang.`);
       mapScreen();
     });
+    $('#goCerita').addEventListener('click', keepName);
+    document.querySelectorAll('.mc-say').forEach(b => b.addEventListener('click', () => { try { actx = actx || new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { /* abaikan */ } say(b.dataset.say); }));
   };
 
   /* ---------- Peta bab ---------- */
@@ -182,7 +196,6 @@
         <section class="chapters">${chapters}</section>
         <section class="row map-foot">
           <button class="btn ghost" id="installBtn" hidden>Pasang di HP</button>
-          <a class="btn secondary" href="./cerita/">Lanjut: Peta Cerita</a>
           <button class="btn ghost" id="parentBtn">Untuk orang tua</button>
         </section>
       </main>`, 'map');
