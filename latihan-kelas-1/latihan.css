@@ -40,7 +40,7 @@ svg.i { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-widt
 .subjects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 14px; }
 .subject { position: relative; text-align: left; display: flex; flex-direction: column; gap: 6px; min-height: 128px; padding: 14px 16px; background: #fff;
   border: 3px solid var(--hill); border-radius: 22px; box-shadow: 0 5px 0 var(--hill); transition: transform .1s; min-width: 0; }
-.subject:active { transform: translateY(3px); box-shadow: none; }
+.subject:active { transform: none; }
 .subject .s-name { font-family: var(--display); font-size: 24px; font-weight: 800; line-height: 1.1; }
 .subject .s-materi { font-size: 15px; line-height: 1.35; color: var(--ink-soft); }
 .subject .s-foot { margin-top: auto; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; font-size: 15px; padding-top: 4px; }
@@ -257,3 +257,14 @@ svg.i { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-widt
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .listen.on { box-shadow: 0 0 0 6px #FFD9BC; }
 }
+
+/* paket per mapel */
+.subject { cursor: default; }
+.pakets { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 10px; }
+.paket { min-height: 72px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: #FFF8EA; border: 3px solid var(--hill, #EAD7B0); border-radius: 18px; box-shadow: 0 4px 0 var(--hill, #EAD7B0); font: inherit; color: inherit; cursor: pointer; }
+.paket:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--hill, #EAD7B0); }
+.paket:focus-visible { outline: 4px solid var(--accent); outline-offset: 2px; }
+.paket .p-name { font-family: var(--display); font-weight: 800; font-size: 19px; }
+.paket .p-score { display: inline-flex; align-items: center; gap: 4px; font-size: 15px; color: var(--leaf-deep); font-weight: 800; }
+.paket .p-score .i { width: 18px; height: 18px; }
+.paket .p-score.none { color: var(--ink-soft); font-weight: 700; }

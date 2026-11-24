@@ -21,7 +21,7 @@ self.addEventListener('fetch', (e) => {
     return;
   }
   /* Pasar 3D: selalu ambil dari jaringan dulu, salinan hanya untuk saat offline */
-  if (/\/(pasar3d|bab\d\d|kit|cerita|latihan)\//.test(url.pathname)) {
+  if (/\/(pasar3d|bab\d\d|kit|cerita|latihan-kelas-1)\//.test(url.pathname)) {
     e.respondWith(fetch(e.request).then(r => { if (r.ok && r.status === 200) { const copy = r.clone(); caches.open(CACHE).then(c => c.put(e.request, copy)).catch(() => {}); } return r; }).catch(() => caches.match(e.request).then(hit => hit || Response.error())));
     return;
   }

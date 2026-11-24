@@ -157,22 +157,29 @@
       '<p class="parent">' + ic('info') + '<span>Untuk orang tua: anak memilih atau menulis jawaban, lalu menekan Kumpul. Setelah itu tekan Nilai untuk melihat hasilnya.</span></p></header>' +
       '<h2 class="hide">Pilih pelajaran</h2><div class="subjects">';
     DATA.forEach(function (s) {
-      var sc = sk[s.id];
-      h += '<button class="subject" data-id="' + esc(s.id) + '" aria-label="' + esc(s.nama) + (s.tambahan ? ', pelajaran tambahan' : '') + (typeof sc === 'number' ? ', nilai terakhir ' + sc : '') + '">' +
-        '<span class="s-name">' + esc(s.nama) + '</span><span class="s-materi">' + esc(s.materi) + '</span><span class="s-foot">' +
-        '<span class="tag">' + s.soal.length + ' soal</span>' +
-        (s.tambahan ? '<span class="tag extra">Tambahan</span>' : '') +
-        (typeof sc === 'number' ? '<span class="score">' + ic('star') + 'Nilai terakhir ' + sc + '</span>' : '<span class="score none">Belum dicoba</span>') +
-        '</span></button>';
+      var pk = s.paket || [{ nama: 'Paket 1', soal: s.soal }];
+      h += '<section class="subject"><span class="s-name">' + esc(s.nama) + '</span><span class="s-materi">' + esc(s.materi) + '</span>' +
+        (s.tambahan ? '<span class="s-foot"><span class="tag extra">Tambahan</span></span>' : '') +
+        '<div class="pakets" role="group" aria-label="Pilih paket ' + esc(s.nama) + '">';
+      pk.forEach(function (p, k) {
+        var sc = sk[s.id + '-' + (k + 1)];
+        h += '<button class="paket" data-id="' + esc(s.id) + '" data-k="' + k + '" aria-label="' + esc(s.nama + ', ' + p.nama) + (typeof sc === 'number' ? ', nilai terakhir ' + sc : ', belum dicoba') + '">' +
+          '<span class="p-name">' + esc(p.nama) + '</span>' +
+          (typeof sc === 'number' ? '<span class="p-score">' + ic('star') + sc + '</span>' : '<span class="p-score none">Belum</span>') + '</button>';
+      });
+      h += '</div></section>';
     });
     app.innerHTML = h + '</div></div>';
     window.scrollTo(0, 0);
-    app.querySelectorAll('.subject').forEach(function (b) { b.onclick = function () { start(b.dataset.id); }; });
+    app.querySelectorAll('.paket').forEach(function (b) { b.onclick = function () { start(b.dataset.id, +b.dataset.k); }; });
   }
 
-  function start(id) {
+  function start(id, k) {
     hush();
-    var sub = DATA.filter(function (s) { return s.id === id; })[0];
+    var base = DATA.filter(function (s) { return s.id === id; })[0];
+    var pk = base.paket || [{ nama: 'Paket 1', soal: base.soal }];
+    k = k || 0;
+    var sub = { id: base.id + '-' + (k + 1), mapel: base.id, paketIdx: k, nama: base.nama + ' \u00b7 ' + pk[k].nama, soal: pk[k].soal, materi: base.materi };
     S = { sub: sub, ans: [], pads: [], audio: {}, graded: null, over: {} };
     exam();
   }
@@ -411,7 +418,7 @@
         renderScore();
       };
     });
-    $('again').onclick = function () { start(s.id); };
+    $('again').onclick = function () { start(s.mapel, s.paketIdx); };
     $('other').onclick = home;
     renderScore();
     window.scrollTo(0, 0);

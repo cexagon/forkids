@@ -1,0 +1,65 @@
+from _alat import *
+
+paket1 = [
+    pg('Pagi hari bertemu Bu Guru, kita mengucapkan ....', 'Good morning', ['Good afternoon', 'Good night'],
+       gambar=[img('sunrise', label='pagi')], kisi='EN1a'),
+    pg('Sebelum tidur malam kita mengucapkan ....', 'Good night', ['Good afternoon', 'Good morning'],
+       gambar=[img('crescent-moon', label='malam')], kisi='EN1a'),
+    pg('“How are you?”\nJawaban yang tepat adalah ....', 'I am fine, thank you', ['Good night', 'My name is Dina'],
+       bahas='How are you? = Apa kabar? Dijawab I am fine, thank you.', kisi='EN1b'),
+    pg('“What is your name?”\nJawaban yang tepat adalah ....', 'My name is Dina', ['I am fine', 'I have a bag'],
+       bahas='What is your name? = Siapa namamu?', kisi='EN3b'),
+    pg('Kata “your” pada “What is your name?” artinya ....', 'kamu (-mu)', ['dia', 'aku'], kisi='EN3c'),
+    isian('“Eight” dalam bahasa Indonesia adalah ....', ['delapan', '8'], kisi='EN4a'),
+    pg('How many apples?\nAda berapa apel?', 'five', ['seven', 'three'],
+       gambar=[img('red-apple', n=5)], kisi='EN4b'),
+    pg('I have two ....', 'bags', ['books', 'balls'],
+       gambar=[img('backpack', n=2)], bahas='bags = tas.', kisi='EN5'),
+    pg('Warna ini dalam bahasa Inggris adalah ....', 'purple', ['yellow', 'green'],
+       gambar=[UNGU], bahas='Ungu = purple.', kisi='EN6'),
+    isian('“Red” artinya warna ....', ['merah'], gambar=[img('red-apple')], kisi='EN6'),
+]
+
+paket2 = [
+    pg('Siang hari, Ani bertemu Bu Guru. Ani mengucapkan ....', 'Good afternoon', ['Good night', 'Good morning'],
+       gambar=[img('sun', label='siang')], bahas='Good afternoon = selamat siang.', kisi='EN1a'),
+    pg('“Hi” artinya ....', 'halo', ['selamat tinggal', 'terima kasih'],
+       gambar=[img('waving-hand')], kisi='EN2'),
+    pg('“My name is Dodi.” artinya ....', 'Namaku Dodi.', ['Temanku Dodi.', 'Adikku Dodi.'], kisi='EN3a'),
+    pg('Bu Guru bertanya: “What is your name?”\nAli menjawab ....', 'My name is Ali.', ['I am fine.', 'I have a book.'],
+       kisi='EN3b'),
+    pg('“Six” artinya ....', 'enam', ['tujuh', 'sembilan'], kisi='EN4a'),
+    pg('How many stars?\nAda berapa bintang?', 'seven', ['six', 'nine'],
+       gambar=[img('star', n=7)], kisi='EN4b'),
+    pg('How many fish?\nAda berapa ikan?', 'four', ['two', 'five'],
+       gambar=[img('fish', n=4)], kisi='EN4b'),
+    pg('“I have three books.” artinya ....', 'Aku punya tiga buku.', ['Aku punya tiga tas.', 'Aku punya dua buku.'],
+       gambar=[img('green-book', n=3)], kisi='EN5'),
+    pg('Pisang ini berwarna kuning. Kuning dalam bahasa Inggris adalah ....', 'yellow', ['blue', 'purple'],
+       gambar=[img('banana', label='pisang')], kisi='EN6'),
+    isian('“Purple” artinya warna ....', ['ungu'], gambar=[UNGU], kisi='EN6'),
+]
+
+paket3 = [
+    pg('Malam hari, Budi pamit tidur kepada ayah. Budi mengucapkan ....', 'Good night', ['Good morning', 'Good afternoon'],
+       gambar=[img('night-with-stars', label='malam')], bahas='Good night = selamat malam (sebelum tidur).', kisi='EN1a'),
+    pg('Dina bertanya: “How are you?”\nBudi menjawab ....', 'Fine, thank you.', ['Good night.', 'My name is Budi.'],
+       kisi='EN1b'),
+    pg('“Hi, I am Rina.” artinya ....', 'Halo, aku Rina.', ['Selamat tinggal, Rina.', 'Terima kasih, Rina.'],
+       gambar=[img('girl'), img('waving-hand')], kisi='EN2'),
+    pg('Kalimat untuk menyebutkan namamu adalah ....', 'My name is Sari.', ['I am fine.', 'Good morning.'],
+       bahas='My name is ... = Namaku ....', kisi='EN3a'),
+    pg('“What is your name?” artinya ....', 'Siapa namamu?', ['Apa kabarmu?', 'Di mana rumahmu?'],
+       bahas='your = kamu (-mu); name = nama.', kisi='EN3c'),
+    isian('Tulis arti “ten” dalam bahasa Indonesia.', ['sepuluh', '10'], kisi='EN4a'),
+    pg('How many balloons?\nAda berapa balon?', 'six', ['eight', 'four'],
+       gambar=[img('balloon', n=6)], kisi='EN4b'),
+    pg('Rina berkata: “I have books.”\nRina punya ....', img('books', label='buku'),
+       [img('backpack', label='tas'), img('pencil', label='pensil')], bahas='books = buku.', kisi='EN5'),
+    pg('Anggur ini berwarna ungu. Ungu dalam bahasa Inggris adalah ....', 'purple', ['orange', 'green'],
+       gambar=[img('grapes', label='anggur')], kisi='EN6'),
+    isian('Tulis arti “green” dalam bahasa Indonesia.', ['hijau'],
+          gambar=[img('leaf-fluttering-in-wind', label='daun')], kisi='EN6'),
+]
+
+PAKET = [paket1, paket2, paket3]
