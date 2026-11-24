@@ -58,7 +58,7 @@ def _padi_kapas():
         f'<circle cx="{x}" cy="{y}" r="11" fill="#fff" stroke="#9aa5ab" stroke-width="3"/>' for x, y in [(100, 64), (120, 64), (110, 48)])
     return _perisai(padi + kapas, '#fff')
 
-LAMBANG = {1: _bintang(), 2: _rantai(), 3: _beringin(), 4: _banteng(), 5: _padi_kapas()}
+LAMBANG = {k: {'img': f'aset/lambang-sila-{k}.png'} for k in range(1, 6)}  # gambar acuan dari cex (perisai Garuda Pancasila)
 
 # ---------------------------------------------------------------- PAKET 1
 paket1 = [

@@ -1580,7 +1580,7 @@ window.SOAL = [
       "kisi": "PK6",
       "gambar": [
        {
-        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 160\" role=\"img\"><rect x=\"6\" y=\"6\" width=\"148\" height=\"148\" rx=\"16\" fill=\"#C8102E\" stroke=\"#3d2b1f\" stroke-width=\"5\"/><rect x=\"66\" y=\"14\" width=\"28\" height=\"48\" rx=\"14\" fill=\"none\" stroke=\"#f2f2f2\" stroke-width=\"9\" transform=\"rotate(0 80 38)\"/><rect x=\"66\" y=\"56\" width=\"28\" height=\"48\" rx=\"14\" fill=\"none\" stroke=\"#f2f2f2\" stroke-width=\"9\" transform=\"rotate(90 80 80)\"/><rect x=\"66\" y=\"98\" width=\"28\" height=\"48\" rx=\"14\" fill=\"none\" stroke=\"#f2f2f2\" stroke-width=\"9\" transform=\"rotate(0 80 122)\"/></svg>"
+        "img": "aset/lambang-sila-2.png"
        }
       ],
       "bahas": "Rantai adalah lambang sila kedua. Mata rantai saling terkait, seperti manusia yang saling menyayangi."
@@ -1599,7 +1599,7 @@ window.SOAL = [
       "kisi": "PK6",
       "gambar": [
        {
-        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 160\" role=\"img\"><rect x=\"6\" y=\"6\" width=\"148\" height=\"148\" rx=\"16\" fill=\"#fff\" stroke=\"#3d2b1f\" stroke-width=\"5\"/><line x1=\"34\" y1=\"140\" x2=\"22\" y2=\"38\" stroke=\"#c9972b\" stroke-width=\"3\" stroke-linecap=\"round\"/><ellipse cx=\"17.1\" cy=\"44.2\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><ellipse cx=\"30.2\" cy=\"54.4\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><ellipse cx=\"19.3\" cy=\"64.6\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><ellipse cx=\"32.4\" cy=\"74.8\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><ellipse cx=\"21.5\" cy=\"85.0\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><line x1=\"54\" y1=\"140\" x2=\"54\" y2=\"38\" stroke=\"#c9972b\" stroke-width=\"3\" stroke-linecap=\"round\"/><ellipse cx=\"48.0\" cy=\"44.2\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><ellipse cx=\"60.0\" cy=\"54.4\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><ellipse cx=\"48.0\" cy=\"64.6\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><ellipse cx=\"60.0\" cy=\"74.8\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><ellipse cx=\"48.0\" cy=\"85.0\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><line x1=\"74\" y1=\"140\" x2=\"86\" y2=\"38\" stroke=\"#c9972b\" stroke-width=\"3\" stroke-linecap=\"round\"/><ellipse cx=\"78.9\" cy=\"44.2\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><ellipse cx=\"89.8\" cy=\"54.4\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><ellipse cx=\"76.7\" cy=\"64.6\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><ellipse cx=\"87.6\" cy=\"74.8\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><ellipse cx=\"74.5\" cy=\"85.0\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><path d=\"M110 138 L110 80\" stroke=\"#2e8b3a\" stroke-width=\"4\"/><circle cx=\"100\" cy=\"64\" r=\"11\" fill=\"#fff\" stroke=\"#9aa5ab\" stroke-width=\"3\"/><circle cx=\"120\" cy=\"64\" r=\"11\" fill=\"#fff\" stroke=\"#9aa5ab\" stroke-width=\"3\"/><circle cx=\"110\" cy=\"48\" r=\"11\" fill=\"#fff\" stroke=\"#9aa5ab\" stroke-width=\"3\"/></svg>"
+        "img": "aset/lambang-sila-5.png"
        }
       ],
       "bahas": "Padi dan kapas adalah lambang sila kelima: pangan dan sandang cukup untuk semua. Kita bersikap adil dan mau berbagi."
@@ -1726,7 +1726,7 @@ window.SOAL = [
       "kisi": "PK4",
       "gambar": [
        {
-        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 160\" role=\"img\"><rect x=\"6\" y=\"6\" width=\"148\" height=\"148\" rx=\"16\" fill=\"#C8102E\" stroke=\"#3d2b1f\" stroke-width=\"5\"/><path d=\"M50 62 Q16 66 22 26\" fill=\"none\" stroke=\"#111\" stroke-width=\"11\" stroke-linecap=\"round\"/><path d=\"M110 62 Q144 66 138 26\" fill=\"none\" stroke=\"#111\" stroke-width=\"11\" stroke-linecap=\"round\"/><ellipse cx=\"30\" cy=\"78\" rx=\"16\" ry=\"9\" fill=\"#111\" transform=\"rotate(-20 30 78)\"/><ellipse cx=\"130\" cy=\"78\" rx=\"16\" ry=\"9\" fill=\"#111\" transform=\"rotate(20 130 78)\"/><path d=\"M46 56 Q80 42 114 56 Q122 92 100 128 Q80 142 60 128 Q38 92 46 56Z\" fill=\"#111\"/><ellipse cx=\"66\" cy=\"78\" rx=\"6\" ry=\"4\" fill=\"#fff\"/><ellipse cx=\"94\" cy=\"78\" rx=\"6\" ry=\"4\" fill=\"#fff\"/><ellipse cx=\"80\" cy=\"116\" rx=\"20\" ry=\"13\" fill=\"#3a3a3a\"/><circle cx=\"72\" cy=\"116\" r=\"3.5\" fill=\"#fff\"/><circle cx=\"88\" cy=\"116\" r=\"3.5\" fill=\"#fff\"/></svg>"
+        "img": "aset/lambang-sila-4.png"
        }
       ],
       "bahas": "Kepala banteng adalah lambang sila keempat."
@@ -1746,7 +1746,7 @@ window.SOAL = [
       "kisi": "PK4",
       "gambar": [
        {
-        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 160\" role=\"img\"><rect x=\"6\" y=\"6\" width=\"148\" height=\"148\" rx=\"16\" fill=\"#fff\" stroke=\"#3d2b1f\" stroke-width=\"5\"/><line x1=\"34\" y1=\"140\" x2=\"22\" y2=\"38\" stroke=\"#c9972b\" stroke-width=\"3\" stroke-linecap=\"round\"/><ellipse cx=\"17.1\" cy=\"44.2\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><ellipse cx=\"30.2\" cy=\"54.4\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><ellipse cx=\"19.3\" cy=\"64.6\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><ellipse cx=\"32.4\" cy=\"74.8\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><ellipse cx=\"21.5\" cy=\"85.0\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><line x1=\"54\" y1=\"140\" x2=\"54\" y2=\"38\" stroke=\"#c9972b\" stroke-width=\"3\" stroke-linecap=\"round\"/><ellipse cx=\"48.0\" cy=\"44.2\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><ellipse cx=\"60.0\" cy=\"54.4\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><ellipse cx=\"48.0\" cy=\"64.6\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><ellipse cx=\"60.0\" cy=\"74.8\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><ellipse cx=\"48.0\" cy=\"85.0\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><line x1=\"74\" y1=\"140\" x2=\"86\" y2=\"38\" stroke=\"#c9972b\" stroke-width=\"3\" stroke-linecap=\"round\"/><ellipse cx=\"78.9\" cy=\"44.2\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><ellipse cx=\"89.8\" cy=\"54.4\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><ellipse cx=\"76.7\" cy=\"64.6\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><ellipse cx=\"87.6\" cy=\"74.8\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><ellipse cx=\"74.5\" cy=\"85.0\" rx=\"4.5\" ry=\"8\" fill=\"#F2C94C\" stroke=\"#c9972b\" stroke-width=\"1.5\"/><path d=\"M110 138 L110 80\" stroke=\"#2e8b3a\" stroke-width=\"4\"/><circle cx=\"100\" cy=\"64\" r=\"11\" fill=\"#fff\" stroke=\"#9aa5ab\" stroke-width=\"3\"/><circle cx=\"120\" cy=\"64\" r=\"11\" fill=\"#fff\" stroke=\"#9aa5ab\" stroke-width=\"3\"/><circle cx=\"110\" cy=\"48\" r=\"11\" fill=\"#fff\" stroke=\"#9aa5ab\" stroke-width=\"3\"/></svg>"
+        "img": "aset/lambang-sila-5.png"
        }
       ],
       "bahas": "Padi dan kapas adalah lambang sila kelima."
@@ -2050,7 +2050,7 @@ window.SOAL = [
       "kisi": "PK4",
       "gambar": [
        {
-        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 160\" role=\"img\"><rect x=\"6\" y=\"6\" width=\"148\" height=\"148\" rx=\"16\" fill=\"#C8102E\" stroke=\"#3d2b1f\" stroke-width=\"5\"/><rect x=\"66\" y=\"14\" width=\"28\" height=\"48\" rx=\"14\" fill=\"none\" stroke=\"#f2f2f2\" stroke-width=\"9\" transform=\"rotate(0 80 38)\"/><rect x=\"66\" y=\"56\" width=\"28\" height=\"48\" rx=\"14\" fill=\"none\" stroke=\"#f2f2f2\" stroke-width=\"9\" transform=\"rotate(90 80 80)\"/><rect x=\"66\" y=\"98\" width=\"28\" height=\"48\" rx=\"14\" fill=\"none\" stroke=\"#f2f2f2\" stroke-width=\"9\" transform=\"rotate(0 80 122)\"/></svg>"
+        "img": "aset/lambang-sila-2.png"
        }
       ],
       "bahas": "Rantai adalah lambang sila kedua, Kemanusiaan yang Adil dan Beradab."
@@ -2097,7 +2097,7 @@ window.SOAL = [
       "kisi": "PK6",
       "gambar": [
        {
-        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 160\" role=\"img\"><rect x=\"6\" y=\"6\" width=\"148\" height=\"148\" rx=\"16\" fill=\"#fff\" stroke=\"#3d2b1f\" stroke-width=\"5\"/><path d=\"M34 70 Q30 100 34 118\" fill=\"none\" stroke=\"#6b4423\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M50 70 Q55 100 50 118\" fill=\"none\" stroke=\"#6b4423\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M110 70 Q105 100 110 118\" fill=\"none\" stroke=\"#6b4423\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M126 70 Q130 100 126 118\" fill=\"none\" stroke=\"#6b4423\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M68 128 L72 70 L88 70 L92 128 Z\" fill=\"#7a4a24\" stroke=\"#4d2e14\" stroke-width=\"3\" stroke-linejoin=\"round\"/><ellipse cx=\"80\" cy=\"56\" rx=\"62\" ry=\"36\" fill=\"#2e8b3a\" stroke=\"#1f6128\" stroke-width=\"3\"/><circle cx=\"44\" cy=\"60\" r=\"22\" fill=\"#3a9a46\"/><circle cx=\"116\" cy=\"60\" r=\"22\" fill=\"#3a9a46\"/><circle cx=\"80\" cy=\"40\" r=\"24\" fill=\"#43a64f\"/></svg>"
+        "img": "aset/lambang-sila-3.png"
        }
       ],
       "bahas": "Pohon beringin besar dan rindang, melindungi banyak makhluk. Ini lambang persatuan, yaitu rukun dengan semua orang."
@@ -2116,7 +2116,7 @@ window.SOAL = [
       "kisi": "PK6",
       "gambar": [
        {
-        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 160\" role=\"img\"><rect x=\"6\" y=\"6\" width=\"148\" height=\"148\" rx=\"16\" fill=\"#111\" stroke=\"#3d2b1f\" stroke-width=\"5\"/><polygon points=\"80.0,30.0 92.3,65.0 129.5,65.9 100.0,88.5 110.6,124.1 80.0,103.0 49.4,124.1 60.0,88.5 30.5,65.9 67.7,65.0\" fill=\"#F5C518\" stroke=\"#b8860b\" stroke-width=\"3\" stroke-linejoin=\"round\"/></svg>"
+        "img": "aset/lambang-sila-1.png"
        }
       ],
       "bahas": "Bintang adalah lambang sila pertama. Kita meneladaninya dengan beribadah dan bersyukur kepada Allah swt."
@@ -2252,7 +2252,7 @@ window.SOAL = [
       "kisi": "PK4",
       "gambar": [
        {
-        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 160\" role=\"img\"><rect x=\"6\" y=\"6\" width=\"148\" height=\"148\" rx=\"16\" fill=\"#C8102E\" stroke=\"#3d2b1f\" stroke-width=\"5\"/><path d=\"M50 62 Q16 66 22 26\" fill=\"none\" stroke=\"#111\" stroke-width=\"11\" stroke-linecap=\"round\"/><path d=\"M110 62 Q144 66 138 26\" fill=\"none\" stroke=\"#111\" stroke-width=\"11\" stroke-linecap=\"round\"/><ellipse cx=\"30\" cy=\"78\" rx=\"16\" ry=\"9\" fill=\"#111\" transform=\"rotate(-20 30 78)\"/><ellipse cx=\"130\" cy=\"78\" rx=\"16\" ry=\"9\" fill=\"#111\" transform=\"rotate(20 130 78)\"/><path d=\"M46 56 Q80 42 114 56 Q122 92 100 128 Q80 142 60 128 Q38 92 46 56Z\" fill=\"#111\"/><ellipse cx=\"66\" cy=\"78\" rx=\"6\" ry=\"4\" fill=\"#fff\"/><ellipse cx=\"94\" cy=\"78\" rx=\"6\" ry=\"4\" fill=\"#fff\"/><ellipse cx=\"80\" cy=\"116\" rx=\"20\" ry=\"13\" fill=\"#3a3a3a\"/><circle cx=\"72\" cy=\"116\" r=\"3.5\" fill=\"#fff\"/><circle cx=\"88\" cy=\"116\" r=\"3.5\" fill=\"#fff\"/></svg>"
+        "img": "aset/lambang-sila-4.png"
        }
       ],
       "bahas": "Kepala banteng adalah lambang sila keempat."
@@ -2556,16 +2556,16 @@ window.SOAL = [
       "tanya": "Manakah gambar lambang sila ketiga, Persatuan Indonesia?",
       "pilihan": [
        {
-        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 160\" role=\"img\"><rect x=\"6\" y=\"6\" width=\"148\" height=\"148\" rx=\"16\" fill=\"#C8102E\" stroke=\"#3d2b1f\" stroke-width=\"5\"/><path d=\"M50 62 Q16 66 22 26\" fill=\"none\" stroke=\"#111\" stroke-width=\"11\" stroke-linecap=\"round\"/><path d=\"M110 62 Q144 66 138 26\" fill=\"none\" stroke=\"#111\" stroke-width=\"11\" stroke-linecap=\"round\"/><ellipse cx=\"30\" cy=\"78\" rx=\"16\" ry=\"9\" fill=\"#111\" transform=\"rotate(-20 30 78)\"/><ellipse cx=\"130\" cy=\"78\" rx=\"16\" ry=\"9\" fill=\"#111\" transform=\"rotate(20 130 78)\"/><path d=\"M46 56 Q80 42 114 56 Q122 92 100 128 Q80 142 60 128 Q38 92 46 56Z\" fill=\"#111\"/><ellipse cx=\"66\" cy=\"78\" rx=\"6\" ry=\"4\" fill=\"#fff\"/><ellipse cx=\"94\" cy=\"78\" rx=\"6\" ry=\"4\" fill=\"#fff\"/><ellipse cx=\"80\" cy=\"116\" rx=\"20\" ry=\"13\" fill=\"#3a3a3a\"/><circle cx=\"72\" cy=\"116\" r=\"3.5\" fill=\"#fff\"/><circle cx=\"88\" cy=\"116\" r=\"3.5\" fill=\"#fff\"/></svg>"
+        "img": "aset/lambang-sila-4.png"
        },
        {
-        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 160\" role=\"img\"><rect x=\"6\" y=\"6\" width=\"148\" height=\"148\" rx=\"16\" fill=\"#C8102E\" stroke=\"#3d2b1f\" stroke-width=\"5\"/><rect x=\"66\" y=\"14\" width=\"28\" height=\"48\" rx=\"14\" fill=\"none\" stroke=\"#f2f2f2\" stroke-width=\"9\" transform=\"rotate(0 80 38)\"/><rect x=\"66\" y=\"56\" width=\"28\" height=\"48\" rx=\"14\" fill=\"none\" stroke=\"#f2f2f2\" stroke-width=\"9\" transform=\"rotate(90 80 80)\"/><rect x=\"66\" y=\"98\" width=\"28\" height=\"48\" rx=\"14\" fill=\"none\" stroke=\"#f2f2f2\" stroke-width=\"9\" transform=\"rotate(0 80 122)\"/></svg>"
+        "img": "aset/lambang-sila-2.png"
        },
        {
-        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 160\" role=\"img\"><rect x=\"6\" y=\"6\" width=\"148\" height=\"148\" rx=\"16\" fill=\"#fff\" stroke=\"#3d2b1f\" stroke-width=\"5\"/><path d=\"M34 70 Q30 100 34 118\" fill=\"none\" stroke=\"#6b4423\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M50 70 Q55 100 50 118\" fill=\"none\" stroke=\"#6b4423\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M110 70 Q105 100 110 118\" fill=\"none\" stroke=\"#6b4423\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M126 70 Q130 100 126 118\" fill=\"none\" stroke=\"#6b4423\" stroke-width=\"3\" stroke-linecap=\"round\"/><path d=\"M68 128 L72 70 L88 70 L92 128 Z\" fill=\"#7a4a24\" stroke=\"#4d2e14\" stroke-width=\"3\" stroke-linejoin=\"round\"/><ellipse cx=\"80\" cy=\"56\" rx=\"62\" ry=\"36\" fill=\"#2e8b3a\" stroke=\"#1f6128\" stroke-width=\"3\"/><circle cx=\"44\" cy=\"60\" r=\"22\" fill=\"#3a9a46\"/><circle cx=\"116\" cy=\"60\" r=\"22\" fill=\"#3a9a46\"/><circle cx=\"80\" cy=\"40\" r=\"24\" fill=\"#43a64f\"/></svg>"
+        "img": "aset/lambang-sila-3.png"
        },
        {
-        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 160\" role=\"img\"><rect x=\"6\" y=\"6\" width=\"148\" height=\"148\" rx=\"16\" fill=\"#111\" stroke=\"#3d2b1f\" stroke-width=\"5\"/><polygon points=\"80.0,30.0 92.3,65.0 129.5,65.9 100.0,88.5 110.6,124.1 80.0,103.0 49.4,124.1 60.0,88.5 30.5,65.9 67.7,65.0\" fill=\"#F5C518\" stroke=\"#b8860b\" stroke-width=\"3\" stroke-linejoin=\"round\"/></svg>"
+        "img": "aset/lambang-sila-1.png"
        }
       ],
       "jawab": 2,
@@ -2587,7 +2587,7 @@ window.SOAL = [
       "kisi": "PK5",
       "gambar": [
        {
-        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 160\" role=\"img\"><rect x=\"6\" y=\"6\" width=\"148\" height=\"148\" rx=\"16\" fill=\"#C8102E\" stroke=\"#3d2b1f\" stroke-width=\"5\"/><path d=\"M50 62 Q16 66 22 26\" fill=\"none\" stroke=\"#111\" stroke-width=\"11\" stroke-linecap=\"round\"/><path d=\"M110 62 Q144 66 138 26\" fill=\"none\" stroke=\"#111\" stroke-width=\"11\" stroke-linecap=\"round\"/><ellipse cx=\"30\" cy=\"78\" rx=\"16\" ry=\"9\" fill=\"#111\" transform=\"rotate(-20 30 78)\"/><ellipse cx=\"130\" cy=\"78\" rx=\"16\" ry=\"9\" fill=\"#111\" transform=\"rotate(20 130 78)\"/><path d=\"M46 56 Q80 42 114 56 Q122 92 100 128 Q80 142 60 128 Q38 92 46 56Z\" fill=\"#111\"/><ellipse cx=\"66\" cy=\"78\" rx=\"6\" ry=\"4\" fill=\"#fff\"/><ellipse cx=\"94\" cy=\"78\" rx=\"6\" ry=\"4\" fill=\"#fff\"/><ellipse cx=\"80\" cy=\"116\" rx=\"20\" ry=\"13\" fill=\"#3a3a3a\"/><circle cx=\"72\" cy=\"116\" r=\"3.5\" fill=\"#fff\"/><circle cx=\"88\" cy=\"116\" r=\"3.5\" fill=\"#fff\"/></svg>"
+        "img": "aset/lambang-sila-4.png"
        }
       ],
       "bahas": "Sila keempat: Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan dalam Permusyawaratan/Perwakilan."
@@ -2760,7 +2760,7 @@ window.SOAL = [
       "kisi": "PK4",
       "gambar": [
        {
-        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 160\" role=\"img\"><rect x=\"6\" y=\"6\" width=\"148\" height=\"148\" rx=\"16\" fill=\"#111\" stroke=\"#3d2b1f\" stroke-width=\"5\"/><polygon points=\"80.0,30.0 92.3,65.0 129.5,65.9 100.0,88.5 110.6,124.1 80.0,103.0 49.4,124.1 60.0,88.5 30.5,65.9 67.7,65.0\" fill=\"#F5C518\" stroke=\"#b8860b\" stroke-width=\"3\" stroke-linejoin=\"round\"/></svg>"
+        "img": "aset/lambang-sila-1.png"
        }
       ],
       "bahas": "Bintang adalah lambang sila pertama."
