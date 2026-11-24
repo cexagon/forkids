@@ -135,7 +135,7 @@ svg.i { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-widt
 .read { flex: 1 1 240px; min-width: 0; font-size: 20px; line-height: 1.3; }
 .read .rl { color: var(--ink-soft); }
 .read b { font-family: var(--display); font-size: 28px; color: var(--ink); overflow-wrap: anywhere; }
-.read .unread { color: var(--ink-soft); font-size: 17px; }
+.read .unread { color: var(--ink-soft); font-size: 19px; }
 .read .reading { color: var(--ink-soft); }
 .read .warn { color: var(--accent-deep); }
 .padfail { padding: 18px; color: var(--accent-deep); font-size: 18px; }
@@ -272,7 +272,8 @@ svg.i { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-widt
 /* ===== Kelas 2 ===== */
 /* alat bantu di kepala soal: bacakan + penjelasan orang tua */
 .qtools { display: flex; flex-direction: column; align-items: center; gap: 8px; flex: none; }
-.pk { width: 52px; height: 52px; min-width: 44px; min-height: 44px; border-radius: 14px; border: 2px dashed var(--line); background: transparent; display: grid; place-items: center; padding: 0; }
+.kfoot { display: flex; justify-content: flex-end; margin-top: -4px; }
+.pk { width: 52px; height: 52px; min-width: 44px; min-height: 44px; border-radius: 14px; border: 2px dashed #B08A5E; background: transparent; display: grid; place-items: center; padding: 0; }
 .pk span { font-size: 26px; line-height: 1; font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; }
 .pk:hover { background: #FFF8E1; }
 .pk.on, .pk[aria-expanded="true"] { background: #FFF8E1; border-style: solid; border-color: var(--soil); }
@@ -294,7 +295,7 @@ svg.i { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-widt
 .seg-b { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; min-width: 110px; padding: 4px 16px; border: 0; border-radius: 12px; background: transparent;
   font-family: var(--display); font-weight: 800; font-size: 20px; color: var(--ink); }
 .seg-b svg { width: 24px; height: 24px; }
-.seg-b[aria-checked="true"] { background: var(--leaf-deep); color: #fff; }
+.seg-b[aria-checked="true"] { background: #fff; color: var(--leaf-deep); box-shadow: inset 0 0 0 3px var(--leaf-deep); }
 .write.locked .seg, .write.locked .w-lbl { display: none; }
 .write.locked .w-top { display: none; }
 .typed { width: 100%; display: block; font-family: var(--display); font-weight: 700; font-size: 32px; line-height: 1.3; color: var(--ink); background: #fff; border: 3px solid var(--hill);
@@ -335,3 +336,33 @@ textarea.typed { resize: vertical; min-height: 168px; font-size: 28px; line-heig
   .r-q { font-size: 19px; }
 }
 .write.locked.long .w-foot .btn { flex: none; min-width: 160px; }
+
+/* r-tools: chip status dan 😵‍💫 berdampingan, tidak ditumpuk */
+.r-tools { display: flex; flex-direction: row; align-items: center; gap: 8px; flex: none; }
+/* deret huruf Arab (ب + ت + ك) tetap satu baris di layar sempit */
+.picbox:has(> .op.huruf) { flex-wrap: nowrap; }
+@media (max-width: 520px) { .picbox:has(> .op.huruf) .op.huruf { font-size: 56px; padding: 2px 6px; } .picbox:has(> .op.huruf) > .op:not(.huruf) { font-size: 28px; padding: 0 2px; } }
+
+/* ayat (lebih dari satu kata Arab): lebih kecil, rata tengah, baris lanjutan tidak tertinggal di kiri */
+.op.huruf.ayat { font-size: 60px; line-height: 1.7; text-align: center; direction: rtl; max-width: 100%; padding: 4px 10px; }
+@media (max-width: 520px) { .op.huruf.ayat { font-size: 40px; } }
+/* jawaban terkunci: teks jawaban dulu, tombol Ubah/Tulis ulang ringan di bawahnya */
+.write.locked .w-foot { flex-wrap: wrap; }
+.write.locked .w-foot .read { order: -1; flex: 1 1 100%; }
+.write.locked .w-foot .btn.secondary { box-shadow: none; background: transparent; min-height: 48px; font-size: 18px; }
+/* layar Nilai di HP: chip status dan 😵‍💫 turun ke baris sendiri, teks soal memakai lebar penuh */
+.r-q { overflow-wrap: break-word; }
+@media (max-width: 520px) {
+  .r-top { flex-wrap: wrap; }
+  .r-q { flex: 1 1 0; }
+  .r-tools { order: 3; flex: 1 1 100%; justify-content: flex-end; }
+}
+
+/* HP: nomor dan tombol bacakan satu baris di atas, teks soal selebar kartu */
+@media (max-width: 480px) {
+  .qhead { flex-wrap: wrap; justify-content: space-between; }
+  .qhead .qtext { order: 3; flex: 1 1 100%; }
+}
+.qtext, .r-q, .result .cheer { text-wrap: pretty; }
+/* angka nilai: oranye gelap agar terbaca (kontras >= 4.5:1 di atas krem) */
+.result .nilai b { color: #A84E12; }

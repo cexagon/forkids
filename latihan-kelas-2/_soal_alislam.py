@@ -25,9 +25,9 @@ paket1 = [
     # --- PG (6)
     pg('Bacaan ini adalah ayat pertama dari surah ....', 'An-Nas', ['Al-Ikhlas', 'Al-Kausar', 'Al-Asr'],
        gambar=[{'teks': AYAT1}],
-       bahas="Ayat ini berbunyi Qul a'udzu birabbin-nas. Kata 'an-nas' (manusia) ada di ujung ayat.",
+       bahas="Ayat ini berbunyi Qul a'udzu birabbin‑nas. Kata 'an‑nas' (manusia) ada di ujung ayat.",
        kisi='AI1',
-       konteks="Surah An-Nas adalah surah penutup Al-Qur'an (ke-114) dan terdiri atas 6 ayat. Ayat pertamanya diawali Qul a'udzu, lalu diakhiri kata an-nas yang artinya manusia. "
+       konteks="Surah An-Nas adalah surah penutup Al-Qur'an (ke-114) dan terdiri atas 6 ayat. Ayat pertamanya diawali Qul a'udzu, lalu diakhiri kata an‑nas yang artinya manusia. "
                "Ajak anak menunjuk kata di ujung ayat dan membacanya bersama; kata itulah yang menjadi nama surahnya."),
     pg('Allah Al-Hafiz artinya Allah Maha ....', 'Menjaga', ['Mengetahui', 'Penyayang', 'Pemaaf'],
        bahas='Al-Hafiz artinya Maha Menjaga (Maha Memelihara). Allah menjaga kita dan seluruh makhluk-Nya.',
@@ -122,11 +122,11 @@ paket1 = [
 # ====================================================== PAKET 2
 paket2 = [
     # --- PG (6)
-    pg('Ayat di atas dibaca ....', 'Malikin-nas', ['Ilahin-nas', 'Minal jinnati wan-nas', "Qul a'udzu birabbin-nas"],
+    pg('Ayat pada kotak ini dibaca ....', 'Malikin‑nas', ['Ilahin‑nas', 'Minal jinnati wan‑nas', "Qul a'udzu birabbin‑nas"],
        gambar=[{'teks': AYAT2}],
-       bahas='Ayat kedua Surah An-Nas: Malikin-nas, artinya Raja manusia.',
+       bahas='Ayat kedua Surah An-Nas: Malikin‑nas, artinya Raja manusia.',
        kisi='AI1',
-       konteks="Ayat kedua Surah An-Nas berbunyi Malikin-nas, artinya 'Raja manusia'. Ayat 1 sampai 3 menyebut tiga sifat Allah: Tuhan (Rabb), Raja (Malik), dan yang disembah (Ilah) bagi manusia. "
+       konteks="Ayat kedua Surah An-Nas berbunyi Malikin‑nas, artinya 'Raja manusia'. Ayat 1 sampai 3 menyebut tiga sifat Allah: Tuhan (Rabb), Raja (Malik), dan yang disembah (Ilah) bagi manusia. "
                "Ajak anak membaca ayat 1, 2, 3 berurutan; huruf pertama setiap ayat membantunya membedakan."),
     pg("Huruf-huruf ini dibaca dari kanan. Jika disambung menjadi ....", ar('كَتَبَ'), [ar('كَبَتَ'), ar('تَبَكَ'), ar('بَكَتَ')],
        gambar=[{'teks': 'ب'}, {'teks': '+'}, {'teks': 'ت'}, {'teks': '+'}, {'teks': 'ك'}],
@@ -165,7 +165,7 @@ paket2 = [
     isian('Surah An-Nas terdiri atas ... ayat.', ['6', 'enam', '6 ayat', 'enam ayat'],
           bahas='Surah An-Nas terdiri atas 6 ayat dan termasuk surah Makkiyah.',
           kisi='AI1',
-          konteks="Surah An-Nas memiliki 6 ayat. Ajak anak membaca surah itu sambil menghitung ayatnya dengan jari, karena akhir tiap ayat selalu ditutup kata an-nas atau serupa. "
+          konteks="Surah An-Nas memiliki 6 ayat. Ajak anak membaca surah itu sambil menghitung ayatnya dengan jari, karena akhir tiap ayat selalu ditutup kata an‑nas atau serupa. "
                   "Hitung ayatnya satu per satu, jangan sekadar menebak angkanya."),
     isian('Nama Allah yang artinya Maha Melindungi adalah Al-....', ['wali', 'waly', 'al wali', 'al-wali', 'alwali'],
           bahas='Al-Wali artinya Maha Melindungi dan Maha Menolong orang beriman.',
@@ -297,7 +297,7 @@ paket3 = [
     # --- Uraian (3)
     uraian('Adi ingin berbohong karena ada bisikan buruk di hatinya. Apa yang sebaiknya Adi baca dan lakukan? Jelaskan.',
            contoh="Adi membaca Surah An-Nas dan berlindung kepada Allah dari bisikan setan, lalu memilih berkata jujur.",
-           kata_kunci=[['berlindung', 'a\'udzu', 'audzu', 'an-nas', 'an nas', 'istigfar', 'minta tolong', 'meminta perlindungan', 'memohon'], ['allah', 'tuhan'],
+           kata_kunci=[['berlindung', 'a\'udzu', 'audzu', 'an‑nas', 'an nas', 'istigfar', 'minta tolong', 'meminta perlindungan', 'memohon'], ['allah', 'tuhan'],
                        ['tidak berbohong', 'jujur', 'menolak', 'jauhi', 'menjauh', 'tidak jadi', 'berkata benar']],
            minimal=2,
            bahas='Kita berlindung kepada Allah dari bisikan setan dan memilih berbuat baik.',

@@ -83,7 +83,8 @@
   }
 
   /* ---------- helpers soal ---------- */
-  function br(s) { return esc(s).replace(/\n/g, '<br>'); }
+  /* tanda hubung tak-putus: "An-Nas", "lari-lari" tidak patah di ujung baris */
+  function br(s) { return esc(s).replace(/([A-Za-z\u00C0-\u024F])-(?=[A-Za-z\u00C0-\u024F])/g, '$1\u2011').replace(/ (\.{3,}|…)/g, '\u00a0$1').replace(/\n/g, '<br>'); }
   function jenis(q) { return q.jenis || 'pg'; }
   function isWrite(q) { var j = jenis(q); return j === 'isian' || j === 'uraian'; }
   function optLabel(p) { return typeof p === 'string' ? p : (p.label || ''); }
@@ -94,7 +95,10 @@
     return h;
   }
   function part(p) {
-    if (p.teks != null) return '<span class="op' + (/[؀-ۿ]/.test(p.teks) ? ' huruf" lang="ar' : '') + '" aria-hidden="true">' + esc(p.teks) + '</span>';
+    if (p.teks != null) {
+      var ar = /[؀-ۿ]/.test(p.teks), ayat = ar && /\s/.test(p.teks.trim());
+      return '<span class="op' + (ar ? ' huruf' + (ayat ? ' ayat' : '') + '" lang="ar" dir="rtl' : '') + '" aria-hidden="true">' + esc(p.teks) + '</span>';
+    }
     if (p.svg) return '<figure class="part"><div class="sv">' + p.svg + '</div></figure>';
     var n = p.n > 1 ? p.n : 0, cols = n ? Math.min(n, 5) : 1;
     return '<figure class="part"><div class="copies' + (n ? ' multi' : '') + '" style="--c:' + cols + '"' + (n ? ' role="img" aria-label="' + n + ' ' + esc(p.label || 'gambar') + '"' : '') + '>' + pic(p.img, p.label, n) + '</div>' +
@@ -241,8 +245,7 @@
     h += '<article class="qc" id="q-' + i + '" aria-labelledby="qt-' + i + '">';
     h += '<div class="qhead"><span class="qno" aria-hidden="true">' + (i + 1) + '</span>' +
       '<div class="qtext" id="qt-' + i + '" dir="ltr"><span class="sr">Soal ' + (i + 1) + '. </span>' + br(q.tanya) + '</div>' +
-      '<div class="qtools"><button class="speak" data-i="' + i + '" aria-label="Bacakan soal ' + (i + 1) + '">' + ic('read') + '</button>' + parentBtn('kx-' + i) + '</div></div>' +
-      parentPanel(q, 'kx-' + i, i);
+      '<div class="qtools"><button class="speak" data-i="' + i + '" aria-label="Bacakan soal ' + (i + 1) + '">' + ic('read') + '</button></div></div>';
     var hasPic = q.gambar && q.gambar.length;
     if (hasPic || q.suara) {
       h += '<div class="picbox' + (q.suara ? ' has-audio' : '') + '" role="group" aria-label="Gambar soal">';
@@ -265,7 +268,8 @@
     } else {
       h += writeHtml(q, i);
     }
-    h += '</div></article>';
+    /* bantuan orang tua di "lantai bawah" kartu: tidak memisahkan soal dari gambar dan pilihannya */
+    h += '</div><div class="kfoot">' + parentBtn('kx-' + i) + '</div>' + parentPanel(q, 'kx-' + i, i) + '</article>';
     return h;
   }
 
@@ -348,7 +352,7 @@
     if (a.busy) return '<span class="reading">Sedang membaca tulisan…</span>';
     if (a.mode === 'ketik') return '<span class="rl">Jawabanmu:</span> <b dir="ltr" class="iso pre">' + esc(a.text) + '</b>';
     if (a.text) return '<span class="rl">Terbaca:</span> <b dir="ltr" class="iso pre">' + esc(a.text) + '</b>';
-    return '<span class="rl">Terbaca:</span> <span class="unread">belum terbaca. Orang tua memeriksa saat penilaian.</span>';
+    return '<span class="rl">Terbaca:</span> <span class="unread">tulisan belum terbaca mesin. Orang tua memeriksa saat penilaian.</span>';
   }
   function lockUi(i, a) {
     $('w-' + i).classList.add('locked');
@@ -503,7 +507,8 @@
   }
   function pendingU(i) {
     var g = S.graded[i], o = S.over[i];
-    return jenis(S.sub.soal[i]) === 'uraian' && g.st === 'periksa' && o !== true && o !== false;
+    /* isian atau uraian berstatus Periksa yang belum diputuskan orang tua: belum dihitung, tidak dianggap salah */
+    return g.st === 'periksa' && o !== true && o !== false;
   }
   function finalOk(i) {
     var o = S.over[i];
@@ -542,7 +547,7 @@
     var main = app.querySelector('main');
     main.innerHTML = '<section class="result" id="result"></section>' +
       '<section class="review"><h2>Periksa jawaban</h2>' +
-      (hasIsian ? '<p class="parent small">' + ic('info') + '<span>Untuk orang tua: jawaban tulisan dibaca mesin dan bisa salah terbaca. Jawaban uraian yang belum cocok ditandai Periksa dan belum dihitung salah. Tekan Benar atau Salah di soal itu, nilai langsung berubah.</span></p>' : '') +
+      (hasIsian ? '<p class="parent small">' + ic('info') + '<span>Untuk orang tua: jawaban tulisan dibaca mesin dan bisa salah terbaca. Jawaban yang ditandai Periksa belum dihitung. Tekan Benar atau Salah di soal itu, nilai langsung berubah.</span></p>' : '') +
       '<ol class="rlist">' + rows + '</ol></section>' +
       '<div class="res-actions"><button class="btn primary" id="again">' + ic('redo') + 'Ulangi ujian</button><button class="btn secondary" id="other">' + ic('grid') + 'Pilih pelajaran lain</button></div>';
     main.querySelectorAll('.ov').forEach(function (b) {
@@ -613,13 +618,12 @@
     var msg = sc.nilai === 100 ? 'Luar biasa! Semua jawabanmu benar.' : sc.nilai >= 80 ? 'Hebat sekali! Kamu sudah paham banyak.' : sc.nilai >= 50 ? 'Bagus! Sedikit lagi. Yuk bahas yang salah bersama.' : 'Terima kasih sudah berusaha. Yuk belajar bersama, lalu coba lagi.';
     var periksa = S.graded.filter(function (g, i) { return g.st === 'periksa' && S.over[i] !== true && S.over[i] !== false; }).length;
     var pend = sc.pend;
-    if (pend) msg = 'Sementara ini bagus! Nilai akhir menunggu orang tua memeriksa jawaban yang ditandai Periksa.';
     var sr = '';
     for (var k = 1; k <= 3; k++) sr += '<svg class="' + (k <= stars ? 'on' : '') + '" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.9 6.8 19.7l1-5.9L3.5 9.7l5.9-.8z"/></svg>';
-    $('result').innerHTML = '<p class="sub">' + sc.benar + ' dari ' + sc.den + ' benar' + (pend ? ' (' + pend + ' uraian belum dihitung)' : '') + '</p>' +
+    $('result').innerHTML = '<p class="sub">' + sc.benar + ' dari ' + sc.den + ' benar' + (pend ? ', ' + pend + ' belum dihitung' : '') + '</p>' +
       '<h1 class="nilai">' + (pend ? 'Nilai sementara' : 'Nilaimu') + ' <b id="skor">' + sc.nilai + '</b></h1><div class="starrow" role="img" aria-label="' + stars + ' bintang dari 3">' + sr + '</div>' +
       '<p class="cheer">' + msg + '</p>' +
-      (periksa ? '<p class="pending">' + ic('info') + periksa + ' jawaban perlu diperiksa orang tua.</p>' : '');
+      (pend ? '<p class="pending">' + ic('info') + pend + ' jawaban menunggu diperiksa orang tua.</p>' : '');
   }
 
   app.addEventListener('click', function (e) {

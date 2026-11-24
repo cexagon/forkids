@@ -19,14 +19,14 @@ window.SOAL = [
        "Al-Asr"
       ],
       "jawab": 0,
-      "konteks": "Surah An-Nas adalah surah penutup Al-Qur'an (ke-114) dan terdiri atas 6 ayat. Ayat pertamanya diawali Qul a'udzu, lalu diakhiri kata an-nas yang artinya manusia. Ajak anak menunjuk kata di ujung ayat dan membacanya bersama; kata itulah yang menjadi nama surahnya.",
+      "konteks": "Surah An-Nas adalah surah penutup Al-Qur'an (ke-114) dan terdiri atas 6 ayat. Ayat pertamanya diawali Qul a'udzu, lalu diakhiri kata an‑nas yang artinya manusia. Ajak anak menunjuk kata di ujung ayat dan membacanya bersama; kata itulah yang menjadi nama surahnya.",
       "kisi": "AI1",
       "gambar": [
        {
         "teks": "قُلْ اَعُوْذُ بِرَبِّ النَّاسِ"
        }
       ],
-      "bahas": "Ayat ini berbunyi Qul a'udzu birabbin-nas. Kata 'an-nas' (manusia) ada di ujung ayat."
+      "bahas": "Ayat ini berbunyi Qul a'udzu birabbin‑nas. Kata 'an‑nas' (manusia) ada di ujung ayat."
      },
      {
       "jenis": "pg",
@@ -307,22 +307,22 @@ window.SOAL = [
     "soal": [
      {
       "jenis": "pg",
-      "tanya": "Ayat di atas dibaca ....",
+      "tanya": "Ayat pada kotak ini dibaca ....",
       "pilihan": [
-       "Ilahin-nas",
-       "Qul a'udzu birabbin-nas",
-       "Minal jinnati wan-nas",
-       "Malikin-nas"
+       "Ilahin‑nas",
+       "Malikin‑nas",
+       "Qul a'udzu birabbin‑nas",
+       "Minal jinnati wan‑nas"
       ],
-      "jawab": 3,
-      "konteks": "Ayat kedua Surah An-Nas berbunyi Malikin-nas, artinya 'Raja manusia'. Ayat 1 sampai 3 menyebut tiga sifat Allah: Tuhan (Rabb), Raja (Malik), dan yang disembah (Ilah) bagi manusia. Ajak anak membaca ayat 1, 2, 3 berurutan; huruf pertama setiap ayat membantunya membedakan.",
+      "jawab": 1,
+      "konteks": "Ayat kedua Surah An-Nas berbunyi Malikin‑nas, artinya 'Raja manusia'. Ayat 1 sampai 3 menyebut tiga sifat Allah: Tuhan (Rabb), Raja (Malik), dan yang disembah (Ilah) bagi manusia. Ajak anak membaca ayat 1, 2, 3 berurutan; huruf pertama setiap ayat membantunya membedakan.",
       "kisi": "AI1",
       "gambar": [
        {
         "teks": "مَلِكِ النَّاسِ"
        }
       ],
-      "bahas": "Ayat kedua Surah An-Nas: Malikin-nas, artinya Raja manusia."
+      "bahas": "Ayat kedua Surah An-Nas: Malikin‑nas, artinya Raja manusia."
      },
      {
       "jenis": "pg",
@@ -438,7 +438,7 @@ window.SOAL = [
        "6 ayat",
        "enam ayat"
       ],
-      "konteks": "Surah An-Nas memiliki 6 ayat. Ajak anak membaca surah itu sambil menghitung ayatnya dengan jari, karena akhir tiap ayat selalu ditutup kata an-nas atau serupa. Hitung ayatnya satu per satu, jangan sekadar menebak angkanya.",
+      "konteks": "Surah An-Nas memiliki 6 ayat. Ajak anak membaca surah itu sambil menghitung ayatnya dengan jari, karena akhir tiap ayat selalu ditutup kata an‑nas atau serupa. Hitung ayatnya satu per satu, jangan sekadar menebak angkanya.",
       "kisi": "AI1",
       "bahas": "Surah An-Nas terdiri atas 6 ayat dan termasuk surah Makkiyah."
      },
@@ -787,7 +787,7 @@ window.SOAL = [
         "berlindung",
         "a'udzu",
         "audzu",
-        "an-nas",
+        "an‑nas",
         "an nas",
         "istigfar",
         "minta tolong",
