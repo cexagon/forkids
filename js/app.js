@@ -183,6 +183,7 @@
         <section class="row map-foot">
           <button class="btn ghost" id="installBtn" hidden>Pasang di HP</button>
           <a class="btn secondary" href="./cerita/">Lanjut: Peta Cerita</a>
+          <a class="btn ghost" href="./latihan/">Latihan ujian</a>
           <button class="btn ghost" id="parentBtn">Untuk orang tua</button>
         </section>
       </main>`, 'map');
