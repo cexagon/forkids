@@ -52,8 +52,8 @@ def topeng(ekspresi='senang', panah=None):
         s += line('M110 118 Q140 104 170 118', INK, 6)
         s += line('M90 38 L124 50', INK, 6) + line('M156 50 L190 38', INK, 6)
     if panah:
-        tx, ty = {'mata': (186, 68), 'hidung': (146, 92), 'mulut': (172, 114)}[panah]
-        sx, sy = 272, 150
+        tx, ty = {'mata': (186, 68), 'hidung': (141, 86), 'mulut': (172, 114)}[panah]
+        sx, sy = (272, 92) if panah == 'hidung' else (272, 150)
         L = math.hypot(tx - sx, ty - sy); ux, uy = (tx - sx) / L, (ty - sy) / L
         bx, by = tx - 20 * ux, ty - 20 * uy
         s += line(f'M{sx} {sy} L{bx:.1f} {by:.1f}', '#D7263D', 6)

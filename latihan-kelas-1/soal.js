@@ -50,13 +50,13 @@ window.SOAL = [
      },
      {
       "jenis": "pg",
-      "tanya": "Al-Qur'an adalah kitab Allah. Gambar ini mengingatkan kita untuk beriman kepada ....",
+      "tanya": "Ini adalah Al-Qur'an. Gambar ini mengingatkan kita untuk beriman kepada ....",
       "pilihan": [
        "hari akhir",
-       "kitab Allah",
-       "malaikat"
+       "malaikat",
+       "kitab Allah"
       ],
-      "jawab": 1,
+      "jawab": 2,
       "kisi": "AI2b",
       "gambar": [
        {
@@ -89,8 +89,11 @@ window.SOAL = [
        "terima kasih",
        "terimakasih",
        "makasih",
+       "terima kasih ya",
+       "makasih ya",
        "jazakallah",
        "jazakallahu khairan",
+       "jazakallah khairan",
        "jazakillah"
       ],
       "kisi": "AI3b",
@@ -351,7 +354,9 @@ window.SOAL = [
        "para rasul",
        "rasul allah",
        "rasulullah",
-       "rasul-rasul"
+       "rasul-rasul",
+       "rasul-rasul allah",
+       "nabi dan rasul"
       ],
       "kisi": "AI2a",
       "bahas": "Urutan Rukun Iman: Allah, malaikat, kitab, rasul, hari akhir, qada dan qadar."
@@ -426,7 +431,7 @@ window.SOAL = [
       "jenis": "pg",
       "tanya": "Bacaan syahadat rasul adalah ....",
       "pilihan": [
-       "wa asyhadu anna Muhammadar rasulullah",
+       "Wa asyhadu anna Muhammadar Rasulullah",
        "Alhamdulillahirabbil 'alamin",
        "Asyhadu an laa ilaaha illallah"
       ],
@@ -538,13 +543,13 @@ window.SOAL = [
      },
      {
       "jenis": "pg",
-      "tanya": "Anak pada gambar ini adalah anak ....",
+      "tanya": "Gambar ini menunjukkan seorang ....",
       "pilihan": [
-       "laki-laki",
        "kakek",
-       "perempuan"
+       "anak laki-laki",
+       "anak perempuan"
       ],
-      "jawab": 0,
+      "jawab": 1,
       "kisi": "PK2",
       "gambar": [
        {
@@ -691,13 +696,13 @@ window.SOAL = [
      },
      {
       "jenis": "pg",
-      "tanya": "Namaku Siti. Allah menciptakan aku sebagai anak ....",
+      "tanya": "Namaku Siti. Allah menciptakan aku sebagai ....",
       "pilihan": [
+       "anak perempuan",
        "nenek",
-       "laki-laki",
-       "perempuan"
+       "anak laki-laki"
       ],
-      "jawab": 2,
+      "jawab": 0,
       "kisi": "PK2",
       "gambar": [
        {
@@ -949,16 +954,22 @@ window.SOAL = [
       "bahas": "Kalimat berita (memberi tahu) diakhiri titik (.)."
      },
      {
-      "jenis": "pg",
-      "tanya": "Kamu mau ke mana ...\nTanda baca yang tepat adalah ....",
-      "pilihan": [
-       "! (tanda seru)",
-       ". (titik)",
-       "? (tanda tanya)"
+      "jenis": "isian",
+      "tanya": "Rina memegang tali mobil mainan, lalu berjalan mundur. Mobil itu bergerak mendekat karena ... oleh Rina.",
+      "terima": [
+       "ditarik",
+       "tarik",
+       "menarik",
+       "di tarik"
       ],
-      "jawab": 2,
-      "kisi": "BI2a",
-      "bahas": "Kalimat bertanya diakhiri tanda tanya (?)."
+      "kisi": "BI4d",
+      "gambar": [
+       {
+        "img": "aset/person-walking.svg",
+        "label": "Rina"
+       }
+      ],
+      "bahas": "Benda yang bergerak mendekat ke arah kita berarti ditarik. Kalau menjauh, berarti didorong."
      },
      {
       "jenis": "pg",
@@ -1037,7 +1048,9 @@ window.SOAL = [
       "terima": [
        "berlari",
        "lari",
-       "belari"
+       "belari",
+       "berlari-lari",
+       "lari-lari"
       ],
       "kisi": "BI4a",
       "gambar": [
@@ -1064,37 +1077,40 @@ window.SOAL = [
     "nama": "Paket 2",
     "soal": [
      {
-      "jenis": "isian",
-      "tanya": "Dengarkan suaranya. Tulis nama hewan itu.",
-      "terima": [
-       "ayam",
-       "ayam jago",
-       "jago",
-       "ayam jantan"
-      ],
-      "kisi": "BI1b",
-      "suara": "aset/suara/ayam-jago.mp3",
-      "bahas": "Itu suara ayam jago: kukuruyuk."
-     },
-     {
       "jenis": "pg",
-      "tanya": "Bunyi tik tok tik tok berasal dari ....",
+      "tanya": "Gambar yang namanya diawali suku kata “ku” adalah ....",
       "pilihan": [
        {
-        "img": "aset/pencil.svg",
-        "label": "pensil"
+        "img": "aset/cow-face.svg",
+        "label": "sapi"
        },
        {
-        "img": "aset/umbrella.svg",
-        "label": "payung"
+        "img": "aset/goat.svg",
+        "label": "kambing"
        },
        {
-        "img": "aset/mantelpiece-clock.svg",
-        "label": "jam"
+        "img": "aset/horse-face.svg",
+        "label": "kuda"
        }
       ],
       "jawab": 2,
-      "kisi": "BI1a"
+      "kisi": "BI3d",
+      "bahas": "ku-da diawali ku."
+     },
+     {
+      "jenis": "isian",
+      "tanya": "Lihat gambar. Gerakan anak itu adalah ....",
+      "terima": [
+       "berenang",
+       "renang",
+       "bernang"
+      ],
+      "kisi": "BI4a",
+      "gambar": [
+       {
+        "img": "aset/person-swimming.svg"
+       }
+      ]
      },
      {
       "jenis": "pg",
@@ -1201,15 +1217,21 @@ window.SOAL = [
      },
      {
       "jenis": "isian",
-      "tanya": "Dalam lomba tarik tambang, tali tambang ditarik atau didorong? Tulis jawabanmu.",
+      "tanya": "Ibu berdiri di belakang troli belanja. Agar troli maju, troli itu ... oleh ibu.",
       "terima": [
-       "ditarik",
-       "tarik",
-       "menarik",
-       "di tarik"
+       "didorong",
+       "dorong",
+       "mendorong",
+       "di dorong"
       ],
       "kisi": "BI4d",
-      "bahas": "Tarik tambang: tali ditarik ke arah kita."
+      "gambar": [
+       {
+        "img": "aset/shopping-cart.svg",
+        "label": "troli"
+       }
+      ],
+      "bahas": "Benda di depan kita yang kita gerakkan menjauh berarti didorong. Kalau ditarik, benda mendekat ke arah kita."
      },
      {
       "jenis": "pg",
@@ -1228,6 +1250,26 @@ window.SOAL = [
    {
     "nama": "Paket 3",
     "soal": [
+     {
+      "jenis": "pg",
+      "tanya": "Bunyi tik tok tik tok berasal dari ....",
+      "pilihan": [
+       {
+        "img": "aset/pencil.svg",
+        "label": "pensil"
+       },
+       {
+        "img": "aset/umbrella.svg",
+        "label": "payung"
+       },
+       {
+        "img": "aset/mantelpiece-clock.svg",
+        "label": "jam"
+       }
+      ],
+      "jawab": 2,
+      "kisi": "BI1a"
+     },
      {
       "jenis": "pg",
       "tanya": "Dengarkan bunyi ini. Hewan apa yang bersuara seperti itu?",
@@ -1249,29 +1291,6 @@ window.SOAL = [
       "kisi": "BI1b",
       "bahas": "Itu suara anjing: guk guk.",
       "suara": "aset/suara/anjing.mp3"
-     },
-     {
-      "jenis": "isian",
-      "tanya": "Hewan yang berbunyi kwek kwek adalah ....",
-      "terima": [
-       "bebek",
-       "itik",
-       "bebe"
-      ],
-      "kisi": "BI1b",
-      "bahas": "Bebek (itik) berbunyi kwek kwek."
-     },
-     {
-      "jenis": "pg",
-      "tanya": "Ibu pergi ke pasar ...\nTanda baca yang tepat adalah ....",
-      "pilihan": [
-       "? (tanda tanya)",
-       "! (tanda seru)",
-       ". (titik)"
-      ],
-      "jawab": 2,
-      "kisi": "BI2a",
-      "bahas": "Kalimat yang memberi tahu diakhiri titik (.)."
      },
      {
       "jenis": "pg",
@@ -1347,42 +1366,6 @@ window.SOAL = [
       "bahas": "Makanan terlalu manis tidak sehat dan merusak gigi."
      },
      {
-      "jenis": "pg",
-      "tanya": "Gambar yang namanya diawali suku kata “ku” adalah ....",
-      "pilihan": [
-       {
-        "img": "aset/cow-face.svg",
-        "label": "sapi"
-       },
-       {
-        "img": "aset/goat.svg",
-        "label": "kambing"
-       },
-       {
-        "img": "aset/horse-face.svg",
-        "label": "kuda"
-       }
-      ],
-      "jawab": 2,
-      "kisi": "BI3d",
-      "bahas": "ku-da diawali ku."
-     },
-     {
-      "jenis": "isian",
-      "tanya": "Lihat gambar. Gerakan anak itu adalah ....",
-      "terima": [
-       "berenang",
-       "renang",
-       "bernang"
-      ],
-      "kisi": "BI4a",
-      "gambar": [
-       {
-        "img": "aset/person-swimming.svg"
-       }
-      ]
-     },
-     {
       "jenis": "isian",
       "tanya": "Ular bergerak dengan cara ....",
       "terima": [
@@ -1398,6 +1381,48 @@ window.SOAL = [
         "label": "ular"
        }
       ]
+     },
+     {
+      "jenis": "pg",
+      "tanya": "Kata “buku” dipisah menjadi suku kata ....",
+      "pilihan": [
+       "bu - ku",
+       "b - uku",
+       "buk - u"
+      ],
+      "jawab": 0,
+      "kisi": "BI2b",
+      "gambar": [
+       {
+        "img": "aset/green-book.svg",
+        "label": "buku"
+       }
+      ],
+      "bahas": "buku = bu - ku (2 suku kata)."
+     },
+     {
+      "jenis": "pg",
+      "tanya": "Permainan ular naga dimainkan bersama ....",
+      "pilihan": [
+       "banyak teman",
+       "seekor ular",
+       "satu teman saja"
+      ],
+      "jawab": 0,
+      "kisi": "BI4b",
+      "bahas": "Ular naga dimainkan oleh banyak anak yang berbaris dan bernyanyi bersama."
+     },
+     {
+      "jenis": "pg",
+      "tanya": "Kita ingin meminjam mainan teman. Kita berkata dengan sopan, ....",
+      "pilihan": [
+       "Boleh aku pinjam?",
+       "Berikan padaku!",
+       "Sini, punyaku!"
+      ],
+      "jawab": 0,
+      "kisi": "BI4e",
+      "bahas": "Meminjam dengan sopan: minta izin dulu."
      }
     ]
    }
@@ -1413,21 +1438,27 @@ window.SOAL = [
     "soal": [
      {
       "jenis": "pg",
-      "tanya": "Ada berapa apel?",
+      "tanya": "Lihat gambar. Mana yang lebih banyak?",
       "pilihan": [
-       "8",
-       "7",
-       "9"
+       "sama banyak",
+       "pisang",
+       "apel"
       ],
-      "jawab": 0,
+      "jawab": 2,
       "kisi": "MT1",
       "gambar": [
        {
         "img": "aset/red-apple.svg",
-        "n": 8
+        "n": 7,
+        "label": "apel"
+       },
+       {
+        "img": "aset/banana.svg",
+        "n": 4,
+        "label": "pisang"
        }
       ],
-      "bahas": "Hitung apel satu per satu sampai 8."
+      "bahas": "Ada 7 apel dan 4 pisang. Apel lebih banyak."
      },
      {
       "jenis": "pg",
@@ -1576,15 +1607,27 @@ window.SOAL = [
     "soal": [
      {
       "jenis": "pg",
-      "tanya": "2, 4, 6, 8, ....\nBilangan berikutnya adalah ....",
+      "tanya": "Lihat gambar. Banyak bebek dan banyak ikan ....",
       "pilihan": [
-       "7",
-       "10",
-       "9"
+       "ikan lebih banyak",
+       "sama banyak",
+       "bebek lebih banyak"
       ],
       "jawab": 1,
       "kisi": "MT1",
-      "bahas": "Bilangannya loncat 2: 2, 4, 6, 8, 10."
+      "gambar": [
+       {
+        "img": "aset/duck.svg",
+        "n": 5,
+        "label": "bebek"
+       },
+       {
+        "img": "aset/fish.svg",
+        "n": 5,
+        "label": "ikan"
+       }
+      ],
+      "bahas": "Ada 5 bebek dan 5 ikan. Banyaknya sama."
      },
      {
       "jenis": "pg",
@@ -1730,21 +1773,27 @@ window.SOAL = [
     "soal": [
      {
       "jenis": "pg",
-      "tanya": "Ada berapa ikan?",
+      "tanya": "Lihat gambar. Mana yang lebih sedikit?",
       "pilihan": [
-       "5",
-       "6",
-       "7"
+       "sama banyak",
+       "balon",
+       "bintang"
       ],
       "jawab": 1,
       "kisi": "MT1",
       "gambar": [
        {
-        "img": "aset/fish.svg",
-        "n": 6
+        "img": "aset/balloon.svg",
+        "n": 3,
+        "label": "balon"
+       },
+       {
+        "img": "aset/star.svg",
+        "n": 6,
+        "label": "bintang"
        }
       ],
-      "bahas": "Hitung ikan satu per satu sampai 6."
+      "bahas": "Ada 3 balon dan 6 bintang. Balon lebih sedikit."
      },
      {
       "jenis": "pg",
@@ -1904,7 +1953,7 @@ window.SOAL = [
       "kisi": "PJ1",
       "gambar": [
        {
-        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"32\" cy=\"70\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"25\" cy=\"67\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M45 82 H115 M50 82 L48 140 M115 82 L112 140 M112 140 H152\"/><path d=\"M10 145 H155\" stroke-width=\"4\"/></g></svg>"
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"130\" cy=\"92\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"135\" cy=\"89\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M144 90 L150 95 L144 97\" stroke-width=\"3\" fill=\"#F7C873\"/><path d=\"M46 98 L108 94 M108 94 L112 146 M112 146 H124 M46 98 L60 142 M60 142 L20 146\"/><path d=\"M92 96 L90 146 M90 146 H102 M46 98 L78 138 M78 138 L40 148\" stroke-width=\"5\" opacity=\".55\"/><path d=\"M8 152 H152\" stroke-width=\"4\"/></g></svg>"
        }
       ],
       "bahas": "Saat merangkak, tangan dan lutut menahan badan. Itu gerak bertumpu."
@@ -1948,13 +1997,13 @@ window.SOAL = [
       "kisi": "PJ2",
       "gambar": [
        {
-        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"62\" cy=\"30\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"57\" cy=\"27\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><circle cx=\"67\" cy=\"27\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M57 35 Q62 39 67 35\" stroke-width=\"2.5\"/><path d=\"M62 45 V108 M62 108 L52 162 M62 108 L102 160 M62 60 L44 100 M62 60 L80 100\"/><path d=\"M10 166 H150\" stroke-width=\"4\"/><path d=\"M96 120 L150 120 M137.7 126.7 L150 120 L137.7 113.3\" stroke=\"#E8742A\" stroke-width=\"6\"/></g></svg>"
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"62\" cy=\"30\" r=\"15\" fill=\"#F7C873\"/><path d=\"M62 45 V108 M62 108 L52 162 M62 108 L102 160 M62 60 L44 100 M62 60 L80 100\"/><path d=\"M10 166 H150\" stroke-width=\"4\"/><path d=\"M96 120 L150 120 M137.7 126.7 L150 120 L137.7 113.3\" stroke=\"#E8742A\" stroke-width=\"6\"/></g></svg>"
        },
        {
         "img": "aset/musical-note.svg"
        }
       ],
-      "bahas": "Panah menunjuk ke kanan. Anak melangkah ke samping kanan."
+      "bahas": "Anak dilihat dari belakang. Panah menunjuk ke kanan, jadi anak melangkah ke samping kanan."
      },
      {
       "jenis": "pg",
@@ -2057,7 +2106,7 @@ window.SOAL = [
       "tanya": "Gambar mana yang menunjukkan gerak bergantung?",
       "pilihan": [
        {
-        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"32\" cy=\"70\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"25\" cy=\"67\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M45 82 H115 M50 82 L48 140 M115 82 L112 140 M112 140 H152\"/><path d=\"M10 145 H155\" stroke-width=\"4\"/></g></svg>"
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"130\" cy=\"92\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"135\" cy=\"89\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M144 90 L150 95 L144 97\" stroke-width=\"3\" fill=\"#F7C873\"/><path d=\"M46 98 L108 94 M108 94 L112 146 M112 146 H124 M46 98 L60 142 M60 142 L20 146\"/><path d=\"M92 96 L90 146 M90 146 H102 M46 98 L78 138 M78 138 L40 148\" stroke-width=\"5\" opacity=\".55\"/><path d=\"M8 152 H152\" stroke-width=\"4\"/></g></svg>"
        },
        {
         "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"80\" cy=\"30\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"75\" cy=\"27\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><circle cx=\"85\" cy=\"27\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M75 35 Q80 39 85 35\" stroke-width=\"2.5\"/><path d=\"M80 45 V110 M80 110 L78 165 M80 110 L104 130 L86 142 M80 60 L36 64 M80 60 L124 64\"/><path d=\"M15 170 H145\" stroke-width=\"4\"/></g></svg>"
@@ -2106,7 +2155,7 @@ window.SOAL = [
       "kisi": "PJ2",
       "gambar": [
        {
-        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g transform=\"translate(160 0) scale(-1 1)\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"62\" cy=\"30\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"57\" cy=\"27\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><circle cx=\"67\" cy=\"27\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M57 35 Q62 39 67 35\" stroke-width=\"2.5\"/><path d=\"M62 45 V108 M62 108 L52 162 M62 108 L102 160 M62 60 L44 100 M62 60 L80 100\"/><path d=\"M10 166 H150\" stroke-width=\"4\"/><path d=\"M96 120 L150 120 M137.7 126.7 L150 120 L137.7 113.3\" stroke=\"#E8742A\" stroke-width=\"6\"/></g></g></svg>"
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g transform=\"translate(160 0) scale(-1 1)\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"62\" cy=\"30\" r=\"15\" fill=\"#F7C873\"/><path d=\"M62 45 V108 M62 108 L52 162 M62 108 L102 160 M62 60 L44 100 M62 60 L80 100\"/><path d=\"M10 166 H150\" stroke-width=\"4\"/><path d=\"M96 120 L150 120 M137.7 126.7 L150 120 L137.7 113.3\" stroke=\"#E8742A\" stroke-width=\"6\"/></g></g></svg>"
        },
        {
         "img": "aset/musical-note.svg"
@@ -2222,7 +2271,7 @@ window.SOAL = [
       "kisi": "PJ1",
       "gambar": [
        {
-        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"28\" cy=\"78\" r=\"15\" fill=\"#F7C873\"/><path d=\"M43 82 L104 88 M104 88 L106 165 M104 88 L152 80 M62 84 L58 50 M62 84 L66 118\"/><path d=\"M70 168 H140\" stroke-width=\"4\"/></g></svg>"
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"134\" cy=\"72\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"139\" cy=\"69\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M121 78 L48 82 M48 82 L52 152 M52 152 H70 M48 82 L6 76\"/><path d=\"M106 79 L82 34 M106 79 L82 124\"/><path d=\"M28 160 H110\" stroke-width=\"4\"/></g></svg>"
        }
       ],
       "bahas": "Satu kaki menumpu, badan condong ke depan, tangan terentang. Itu sikap pesawat."
@@ -2251,7 +2300,7 @@ window.SOAL = [
       "kisi": "PJ2",
       "gambar": [
        {
-        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"62\" cy=\"30\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"57\" cy=\"27\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><circle cx=\"67\" cy=\"27\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M57 35 Q62 39 67 35\" stroke-width=\"2.5\"/><path d=\"M62 45 V108 M62 108 L52 162 M62 108 L102 160 M62 60 L44 100 M62 60 L80 100\"/><path d=\"M10 166 H150\" stroke-width=\"4\"/><path d=\"M96 120 L150 120 M137.7 126.7 L150 120 L137.7 113.3\" stroke=\"#E8742A\" stroke-width=\"6\"/></g></svg>"
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"62\" cy=\"30\" r=\"15\" fill=\"#F7C873\"/><path d=\"M62 45 V108 M62 108 L52 162 M62 108 L102 160 M62 60 L44 100 M62 60 L80 100\"/><path d=\"M10 166 H150\" stroke-width=\"4\"/><path d=\"M96 120 L150 120 M137.7 126.7 L150 120 L137.7 113.3\" stroke=\"#E8742A\" stroke-width=\"6\"/></g></svg>"
        },
        {
         "img": "aset/musical-note.svg"
@@ -2651,7 +2700,7 @@ window.SOAL = [
       "kisi": "SR4",
       "gambar": [
        {
-        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 290 160\" role=\"img\"><path d=\"M60 30 Q140 0 220 30 Q235 95 200 125 Q140 155 80 125 Q45 95 60 30Z\" fill=\"#F7C873\" stroke=\"#3d2b1f\" stroke-width=\"5\"/><line x1=\"60\" y1=\"55\" x2=\"20\" y2=\"45\" stroke=\"#3d2b1f\" stroke-width=\"3\"/><line x1=\"220\" y1=\"55\" x2=\"260\" y2=\"45\" stroke=\"#3d2b1f\" stroke-width=\"3\"/><ellipse cx=\"108\" cy=\"62\" rx=\"17\" ry=\"11\" fill=\"#3d2b1f\"/><ellipse cx=\"172\" cy=\"62\" rx=\"17\" ry=\"11\" fill=\"#3d2b1f\"/><path d=\"M138 72 l-8 20 h18\" fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M105 104 Q140 132 175 104\" fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M272 150 L164.2 100.4\" fill=\"none\" stroke=\"#D7263D\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M146 92 L168.3 91.3 L160.0 109.4 Z\" fill=\"#D7263D\"/></svg>"
+        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 290 160\" role=\"img\"><path d=\"M60 30 Q140 0 220 30 Q235 95 200 125 Q140 155 80 125 Q45 95 60 30Z\" fill=\"#F7C873\" stroke=\"#3d2b1f\" stroke-width=\"5\"/><line x1=\"60\" y1=\"55\" x2=\"20\" y2=\"45\" stroke=\"#3d2b1f\" stroke-width=\"3\"/><line x1=\"220\" y1=\"55\" x2=\"260\" y2=\"45\" stroke=\"#3d2b1f\" stroke-width=\"3\"/><ellipse cx=\"108\" cy=\"62\" rx=\"17\" ry=\"11\" fill=\"#3d2b1f\"/><ellipse cx=\"172\" cy=\"62\" rx=\"17\" ry=\"11\" fill=\"#3d2b1f\"/><path d=\"M138 72 l-8 20 h18\" fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M105 104 Q140 132 175 104\" fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M272 92 L161.0 86.9\" fill=\"none\" stroke=\"#D7263D\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M141 86 L161.4 76.9 L160.5 96.9 Z\" fill=\"#D7263D\"/></svg>"
        }
       ],
       "bahas": "Panah menunjuk hidung di tengah topeng."
@@ -2904,20 +2953,20 @@ window.SOAL = [
      },
      {
       "jenis": "pg",
-      "tanya": "Sebelum tidur malam kita mengucapkan ....",
+      "tanya": "Ani bertemu teman baru dan berkata “Hi!”\nMaksud Ani adalah ....",
       "pilihan": [
-       "Good morning",
-       "Good night",
-       "Good afternoon"
+       "menyapa teman",
+       "pamit pulang",
+       "minta tolong"
       ],
-      "jawab": 1,
-      "kisi": "EN1a",
+      "jawab": 0,
+      "kisi": "EN2",
       "gambar": [
        {
-        "img": "aset/crescent-moon.svg",
-        "label": "malam"
+        "img": "aset/waving-hand.svg"
        }
-      ]
+      ],
+      "bahas": "Hi = halo, kata untuk menyapa."
      },
      {
       "jenis": "pg",
@@ -3016,17 +3065,16 @@ window.SOAL = [
       "bahas": "Ungu = purple."
      },
      {
-      "jenis": "isian",
-      "tanya": "“Red” artinya warna ....",
-      "terima": [
-       "merah"
+      "jenis": "pg",
+      "tanya": "Pasangan kalimat dan artinya yang benar adalah ....",
+      "pilihan": [
+       "My name is Tono. = Namanya Tono.",
+       "My name is Tono. = Namaku Tono.",
+       "My name is Tono. = Namamu Tono."
       ],
-      "kisi": "EN6",
-      "gambar": [
-       {
-        "img": "aset/red-apple.svg"
-       }
-      ]
+      "jawab": 1,
+      "kisi": "EN3a",
+      "bahas": "My name is ... = Namaku ...."
      }
     ]
    },
@@ -3091,14 +3139,15 @@ window.SOAL = [
      },
      {
       "jenis": "pg",
-      "tanya": "“Six” artinya ....",
+      "tanya": "Pasangan angka dan artinya yang benar adalah ....",
       "pilihan": [
-       "sembilan",
-       "enam",
-       "tujuh"
+       "six = enam",
+       "nine = lima",
+       "seven = delapan"
       ],
-      "jawab": 1,
-      "kisi": "EN4a"
+      "jawab": 0,
+      "kisi": "EN4a",
+      "bahas": "six = 6 (enam)."
      },
      {
       "jenis": "pg",
@@ -3119,20 +3168,15 @@ window.SOAL = [
      },
      {
       "jenis": "pg",
-      "tanya": "How many fish?\nAda berapa ikan?",
+      "tanya": "Bu Guru bertanya: “How are you, Ani?”\nAni menjawab ....",
       "pilihan": [
-       "four",
-       "five",
-       "two"
+       "My name is Ani.",
+       "I am fine, thank you.",
+       "Good afternoon."
       ],
-      "jawab": 0,
-      "kisi": "EN4b",
-      "gambar": [
-       {
-        "img": "aset/fish.svg",
-        "n": 4
-       }
-      ]
+      "jawab": 1,
+      "kisi": "EN1b",
+      "bahas": "How are you? = Apa kabar? Dijawab I am fine, thank you."
      },
      {
       "jenis": "pg",
@@ -3153,26 +3197,22 @@ window.SOAL = [
      },
      {
       "jenis": "pg",
-      "tanya": "Pisang ini berwarna kuning. Kuning dalam bahasa Inggris adalah ....",
+      "tanya": "Pasangan kata dan artinya yang benar adalah ....",
       "pilihan": [
-       "yellow",
-       "purple",
-       "blue"
+       "your book = bukumu",
+       "your book = bukuku",
+       "your book = bukunya"
       ],
       "jawab": 0,
-      "kisi": "EN6",
-      "gambar": [
-       {
-        "img": "aset/banana.svg",
-        "label": "pisang"
-       }
-      ]
+      "kisi": "EN3c",
+      "bahas": "your = kamu (-mu). your book = bukumu."
      },
      {
       "jenis": "isian",
       "tanya": "“Purple” artinya warna ....",
       "terima": [
-       "ungu"
+       "ungu",
+       "warna ungu"
       ],
       "kisi": "EN6",
       "gambar": [
@@ -3248,15 +3288,15 @@ window.SOAL = [
      },
      {
       "jenis": "pg",
-      "tanya": "“What is your name?” artinya ....",
+      "tanya": "“What is your name?”\nKata “your name” artinya ....",
       "pilihan": [
-       "Apa kabarmu?",
-       "Siapa namamu?",
-       "Di mana rumahmu?"
+       "namanya",
+       "namamu",
+       "namaku"
       ],
       "jawab": 1,
       "kisi": "EN3c",
-      "bahas": "your = kamu (-mu); name = nama."
+      "bahas": "your = kamu (-mu); name = nama. Jadi your name = namamu."
      },
      {
       "jenis": "isian",
@@ -3307,26 +3347,22 @@ window.SOAL = [
      },
      {
       "jenis": "pg",
-      "tanya": "Anggur ini berwarna ungu. Ungu dalam bahasa Inggris adalah ....",
+      "tanya": "Pasangan pertanyaan dan jawaban yang benar adalah ....",
       "pilihan": [
-       "orange",
-       "green",
-       "purple"
+       "What is your name? = My name is Budi.",
+       "What is your name? = I am fine.",
+       "What is your name? = Good night."
       ],
-      "jawab": 2,
-      "kisi": "EN6",
-      "gambar": [
-       {
-        "img": "aset/grapes.svg",
-        "label": "anggur"
-       }
-      ]
+      "jawab": 0,
+      "kisi": "EN3b",
+      "bahas": "What is your name? (Siapa namamu?) dijawab My name is ...."
      },
      {
       "jenis": "isian",
       "tanya": "Tulis arti “green” dalam bahasa Indonesia.",
       "terima": [
-       "hijau"
+       "hijau",
+       "warna hijau"
       ],
       "kisi": "EN6",
       "gambar": [

@@ -30,19 +30,19 @@ Angka di kolom paket = nomor soal yang menguji indikator itu. Dibuat otomatis ol
 
 | Kode | Indikator kisi-kisi | Butir di kisi | Paket 1 | Paket 2 | Paket 3 |
 | --- | --- | --- | --- | --- | --- |
-| BI1a | Sumber bunyi berdasarkan gambar atau cerita | 1 (PG 1) | 1 | 2 | - |
-| BI1b | Benda atau hewan sumber bunyi di sekitar | 2 (PG 1, isian 1) | 2 | 1 | 1, 2 |
-| BI2a | Tanda baca titik, tanya, dan seru | 3 (PG 3) | 3, 4 | 3 | 3, 4 |
-| BI2b | Suku kata | 1 (PG 1) | - | 4 | - |
-| BI3a | Kuman dan bahayanya | 2 (PG 2) | 5 | 5 | 5 |
-| BI3b | Menjaga kesehatan dan kebersihan diri | 2 (PG 2) | 6 | 6 | 6 |
-| BI3c | Makanan sehat dan tidak sehat | 2 (PG 1, isian 1) | 7 | 7 | 7 |
-| BI3d | Awalan suku kata | 2 (PG 2) | 8 | - | 8 |
-| BI4a | Macam-macam gerakan | 1 (isian 1) | 9 | - | 9 |
-| BI4b | Permainan ular naga | 1 (PG 1) | 10 | - | - |
-| BI4c | Gerakan hewan (melompat, terbang, merayap, berlari, berjalan) | 1 (isian 1) | - | 8 | 10 |
-| BI4d | Gerakan mendorong dan menarik | 1 (isian 1) | - | 9 | - |
-| BI4e | Aturan bermain dengan sopan | 1 (PG 1) | - | 10 | - |
+| BI1a | Sumber bunyi berdasarkan gambar atau cerita | 1 (PG 1) | 1 | - | 1 |
+| BI1b | Benda atau hewan sumber bunyi di sekitar | 2 (PG 1, isian 1) | 2 | - | 2 |
+| BI2a | Tanda baca titik, tanya, dan seru | 3 (PG 3) | 3 | 3 | 3 |
+| BI2b | Suku kata | 1 (PG 1) | - | 4 | 8 |
+| BI3a | Kuman dan bahayanya | 2 (PG 2) | 5 | 5 | 4 |
+| BI3b | Menjaga kesehatan dan kebersihan diri | 2 (PG 2) | 6 | 6 | 5 |
+| BI3c | Makanan sehat dan tidak sehat | 2 (PG 1, isian 1) | 7 | 7 | 6 |
+| BI3d | Awalan suku kata | 2 (PG 2) | 8 | 1 | - |
+| BI4a | Macam-macam gerakan | 1 (isian 1) | 9 | 2 | - |
+| BI4b | Permainan ular naga | 1 (PG 1) | 10 | - | 9 |
+| BI4c | Gerakan hewan (melompat, terbang, merayap, berlari, berjalan) | 1 (isian 1) | - | 8 | 7 |
+| BI4d | Gerakan mendorong dan menarik | 1 (isian 1) | 4 | 9 | - |
+| BI4e | Aturan bermain dengan sopan | 1 (PG 1) | - | 10 | 10 |
 
 ## Matematika
 
@@ -77,13 +77,13 @@ Angka di kolom paket = nomor soal yang menguji indikator itu. Dibuat otomatis ol
 
 | Kode | Indikator kisi-kisi | Butir di kisi | Paket 1 | Paket 2 | Paket 3 |
 | --- | --- | --- | --- | --- | --- |
-| EN1a | Greetings: good morning, good afternoon, good night | 3 (PG 3) | 1, 2 | 1 | 1 |
-| EN1b | Jawaban "How are you?" | 1 (PG 1) | 3 | - | 2 |
-| EN2 | Arti "Hi" sebagai sapaan / "Hi, I am ..." | 1 (PG 1) | - | 2 | 3 |
-| EN3a | Arti "My name is ..." | 1 (PG 1) | - | 3 | 4 |
-| EN3b | Jawaban "What is your name?" | 1 (PG 1) | 4 | 4 | - |
-| EN3c | Arti kata "your" | 1 (PG 1) | 5 | - | 5 |
+| EN1a | Greetings: good morning, good afternoon, good night | 3 (PG 3) | 1 | 1 | 1 |
+| EN1b | Jawaban "How are you?" | 1 (PG 1) | 3 | 7 | 2 |
+| EN2 | Arti "Hi" sebagai sapaan / "Hi, I am ..." | 1 (PG 1) | 2 | 2 | 3 |
+| EN3a | Arti "My name is ..." | 1 (PG 1) | 10 | 3 | 4 |
+| EN3b | Jawaban "What is your name?" | 1 (PG 1) | 4 | 4 | 9 |
+| EN3c | Arti kata "your" | 1 (PG 1) | 5 | 9 | 5 |
 | EN4a | Arti angka one sampai ten | 3 (PG 1, uraian 2) | 6 | 5 | 6 |
-| EN4b | Menghitung one sampai ten melalui gambar | 3 (PG 3) | 7 | 6, 7 | 7 |
+| EN4b | Menghitung one sampai ten melalui gambar | 3 (PG 3) | 7 | 6 | 7 |
 | EN5 | Arti kata bags, books dengan "I have ..." | 2 (PG 2) | 8 | 8 | 8 |
-| EN6 | Warna (purple, dll.) dalam bahasa Indonesia | 4 (PG 1, uraian 3) | 9, 10 | 9, 10 | 9, 10 |
+| EN6 | Warna (purple, dll.) dalam bahasa Indonesia | 4 (PG 1, uraian 3) | 9 | 10 | 10 |

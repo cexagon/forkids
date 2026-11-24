@@ -10,7 +10,7 @@ KAPAL = svg(
     f'<rect x="92" y="46" width="16" height="14" fill="#fff" stroke="{INK}" stroke-width="3"/><rect x="132" y="46" width="16" height="14" fill="#fff" stroke="{INK}" stroke-width="3"/>',
     240, 140)
 
-TERIMA_KASIH = ['terima kasih', 'terimakasih', 'makasih', 'jazakallah', 'jazakallahu khairan', 'jazakillah']
+TERIMA_KASIH = ['terima kasih', 'terimakasih', 'makasih', 'terima kasih ya', 'makasih ya', 'jazakallah', 'jazakallahu khairan', 'jazakallah khairan', 'jazakillah']
 
 paket1 = [
     isian('Huruf hijaiah ini dibaca ....', ['alif', 'alip'], gambar=[{'teks': 'ا'}],
@@ -19,7 +19,7 @@ paket1 = [
        bahas="Al-Fatihah artinya pembukaan, surah pertama dalam Al-Qur'an.", kisi='AI1b'),
     pg('Iman artinya ....', 'percaya', ['bermain', 'marah'],
        bahas='Iman artinya percaya dengan sepenuh hati.', kisi='AI2a'),
-    pg("Al-Qur'an adalah kitab Allah. Gambar ini mengingatkan kita untuk beriman kepada ....",
+    pg("Ini adalah Al-Qur'an. Gambar ini mengingatkan kita untuk beriman kepada ....",
        'kitab Allah', ['malaikat', 'hari akhir'], gambar=[img('open-book', label="Al-Qur'an")], kisi='AI2b'),
     pg('Sebelum makan, kita membaca ....', 'Bismillahirrahmanirrahim',
        ["Alhamdulillahirabbil 'alamin", 'Astagfirullah'], gambar=[img('cooked-rice')],
@@ -68,7 +68,7 @@ paket3 = [
        bahas='Jim punya satu titik di dalam bagian bawahnya; kha titiknya di atas.', kisi='AI1a'),
     pg("Bacaan \"Alhamdulillahirabbil 'alamin\" ada di dalam surah ....", 'Al-Fatihah', ['An-Nas', 'Al-Ikhlas'],
        bahas="Alhamdulillahirabbil 'alamin adalah ayat dalam surah Al-Fatihah.", kisi='AI1b'),
-    isian('Rukun Iman yang keempat adalah iman kepada ....', ['rasul', 'para rasul', 'rasul allah', 'rasulullah', 'rasul-rasul'],
+    isian('Rukun Iman yang keempat adalah iman kepada ....', ['rasul', 'para rasul', 'rasul allah', 'rasulullah', 'rasul-rasul', 'rasul-rasul allah', 'nabi dan rasul'],
           bahas='Urutan Rukun Iman: Allah, malaikat, kitab, rasul, hari akhir, qada dan qadar.', kisi='AI2a'),
     pg('Matahari, bulan, dan bintang diciptakan oleh Allah. Gambar ini mengingatkan kita untuk beriman kepada ....',
        'Allah', ['malaikat', 'hari akhir'], gambar=[img('sun'), img('crescent-moon'), img('star')],
@@ -80,7 +80,7 @@ paket3 = [
           bahas='Anak santun segera meminta maaf.', kisi='AI3b'),
     pg("Rukun Islam yang dikerjakan di Ka'bah, kota Mekah, adalah ....", 'haji', ['zakat', 'puasa'],
        gambar=[img('kaaba', label="Ka'bah")], bahas='Haji adalah Rukun Islam yang kelima, dikerjakan di Mekah.', kisi='AI4a'),
-    pg('Bacaan syahadat rasul adalah ....', 'wa asyhadu anna Muhammadar rasulullah',
+    pg('Bacaan syahadat rasul adalah ....', 'Wa asyhadu anna Muhammadar Rasulullah',
        ['Asyhadu an laa ilaaha illallah', "Alhamdulillahirabbil 'alamin"],
        bahas='Syahadat rasul berisi pengakuan bahwa Nabi Muhammad utusan Allah.', kisi='AI4b'),
     pg('Yang termasuk 25 nabi adalah ....', 'Nabi Yunus', ['Nabi Umar', 'Nabi Hasan'],

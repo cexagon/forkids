@@ -31,14 +31,15 @@ DUDUK = orang(KEPALA(52, 62) + MATA(59, 59) + '<path d="M52 77 L55 140 M55 140 L
 # jongkok (tampak samping, menghadap kanan)
 JONGKOK = orang(KEPALA(94, 64) + MATA(101, 61) + '<path d="M92 79 L84 150 M84 150 L120 126 L112 164 H128 M90 94 L134 102"/>' + LANTAI(168))
 # merangkak: bertumpu pada tangan dan lutut (tampak samping)
-MERANGKAK = orang(KEPALA(32, 70) + MATA(25, 67) + '<path d="M45 82 H115 M50 82 L48 140 M115 82 L112 140 M112 140 H152"/>' + LANTAI(145, 10, 155))
+MERANGKAK = orang(KEPALA(130, 92) + MATA(135, 89) + HIDUNG(130, 92) + '<path d="M46 98 L108 94 M108 94 L112 146 M112 146 H124 M46 98 L60 142 M60 142 L20 146"/>'
+                   + '<path d="M92 96 L90 146 M90 146 H102 M46 98 L78 138 M78 138 L40 148" stroke-width="5" opacity=".55"/>' + LANTAI(152, 8, 152))
 # berdiri satu kaki, tangan terentang ke samping (tampak depan)
 SATU_KAKI = orang(KEPALA(80, 30) + WAJAH(80, 30) + '<path d="M80 45 V110 M80 110 L78 165 M80 110 L104 130 L86 142 M80 60 L36 64 M80 60 L124 64"/>' + LANTAI())
 # melangkah ke depan (tampak samping, menghadap kanan) + panah ke depan
 LANGKAH_DEPAN = orang(KEPALA(66, 28) + MATA(73, 25) + HIDUNG(66, 28) + '<path d="M66 43 V105 M66 105 L96 160 M66 105 L44 160 M66 58 L84 94 M66 58 L50 92"/>'
                       + LANTAI(166, 10, 150) + panah(100, 70, 148, 70))
-# melangkah ke samping kanan (tampak depan) + panah ke kanan
-LANGKAH_KANAN = orang(KEPALA(62, 30) + WAJAH(62, 30) + '<path d="M62 45 V108 M62 108 L52 162 M62 108 L102 160 M62 60 L44 100 M62 60 L80 100"/>'
+# melangkah ke samping kanan (tampak BELAKANG, tanpa wajah, supaya kanan anak = kanan kita) + panah ke kanan
+LANGKAH_KANAN = orang(KEPALA(62, 30) + '<path d="M62 45 V108 M62 108 L52 162 M62 108 L102 160 M62 60 L44 100 M62 60 L80 100"/>'
                       + LANTAI(166, 10, 150) + panah(96, 120, 150, 120))
 LANGKAH_KIRI = cermin(LANGKAH_KANAN)
 # meliukkan badan ke samping, tangan di atas kepala + panah lengkung kanan-kiri
@@ -74,7 +75,7 @@ paket1 = [
     pg('Lagu berbunyi, lalu kaki melangkah maju. Itu gerak melangkah ke ....', 'depan', ['belakang', 'atas'],
        gambar=[LANGKAH_DEPAN, img('musical-note')], bahas='Panah menunjuk ke depan. Kaki melangkah ke depan sesuai irama.', kisi='PJ2'),
     bs('Anak pada gambar melangkah ke samping kanan.', True, gambar=[LANGKAH_KANAN, img('musical-note')],
-       bahas='Panah menunjuk ke kanan. Anak melangkah ke samping kanan.', kisi='PJ2'),
+       bahas='Anak dilihat dari belakang. Panah menunjuk ke kanan, jadi anak melangkah ke samping kanan.', kisi='PJ2'),
     pg('Manakah yang termasuk sikap tubuh diam?', opsi(JONGKOK, 'jongkok'), [opsi(MELOMPAT, 'melompat'), opsi(BERLARI, 'berlari')],
        bahas='Jongkok, duduk, dan berdiri tegak adalah sikap tubuh diam.', kisi='PJ3'),
     bs('Berdiri tegak dengan kedua kaki rapat termasuk sikap tubuh diam.', True, gambar=[BERDIRI_RAPAT],

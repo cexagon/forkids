@@ -53,7 +53,12 @@ def orang(body):
     return {'svg': f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 180" role="img"><g fill="none" stroke="{INK}" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">{body}</g></svg>'}
 KEPALA = lambda x, y: f'<circle cx="{x}" cy="{y}" r="15" fill="#F7C873"/>'
 BERDIRI = orang(KEPALA(80, 30) + '<path d="M80 45 V110 M80 110 L70 165 M80 110 L90 165 M80 60 L62 100 M80 60 L98 100"/>')
-PESAWAT = orang(KEPALA(28, 78) + '<path d="M43 82 L104 88 M104 88 L106 165 M104 88 L152 80 M62 84 L58 50 M62 84 L66 118"/>' + '<path d="M70 168 H140" stroke-width="4"/>')
+# sikap pesawat (tampak samping, menghadap kanan): satu kaki menumpu, badan condong ke depan mendatar,
+# kaki lain lurus ke belakang, kedua lengan direntangkan ke samping (digambar menyapu ke belakang seperti sayap)
+PESAWAT = orang(KEPALA(134, 72) + f'<circle cx="139" cy="69" r="2.5" fill="{INK}" stroke="none"/>'
+                + '<path d="M121 78 L48 82 M48 82 L52 152 M52 152 H70 M48 82 L6 76"/>'
+                + '<path d="M106 79 L82 34 M106 79 L82 124"/>'
+                + '<path d="M28 160 H110" stroke-width="4"/>')
 BERGANTUNG = orang('<path d="M15 18 H145" stroke-width="9"/>' + KEPALA(80, 62) + '<path d="M70 18 L76 48 M90 18 L84 48 M80 77 V130 M80 130 L72 172 M80 130 L88 172"/>')
 BERLARI = orang(KEPALA(88, 30) + '<path d="M86 45 L76 105 M76 105 L106 130 L100 165 M76 105 L52 140 L30 135 M82 62 L110 82 L128 66 M82 62 L56 74 L46 96"/>')
 MELOMPAT = orang(KEPALA(80, 26) + '<path d="M80 41 V98 M80 98 L60 128 L76 150 M80 98 L100 128 L84 150 M80 55 L54 22 M80 55 L106 22"/>' + '<path d="M30 172 H130" stroke-width="4" stroke-dasharray="6 8"/>')

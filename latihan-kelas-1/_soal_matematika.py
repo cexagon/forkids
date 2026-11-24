@@ -50,8 +50,9 @@ HITUNG_PERSEGI = bentuk([('s', 30, 40, 20), ('c', 85, 40, 20), ('s', 140, 40, 20
 
 # ---------- PAKET 1 ----------
 paket1 = [
-    pg('Ada berapa apel?', '8', ['7', '9'], gambar=[img('red-apple', n=8)],
-       bahas='Hitung apel satu per satu sampai 8.', kisi='MT1'),
+    pg('Lihat gambar. Mana yang lebih banyak?', 'apel', ['pisang', 'sama banyak'],
+       gambar=[img('red-apple', n=7, label='apel'), img('banana', n=4, label='pisang')],
+       bahas='Ada 7 apel dan 4 pisang. Apel lebih banyak.', kisi='MT1'),
     pg('Isi dengan tanda yang tepat:  8 ... 5', '>', ['<', '='],
        bahas='8 lebih besar dari 5, jadi tandanya >.', kisi='MT1'),
     pg('Ada berapa bintang semuanya?', '7', ['6', '8'], gambar=[img('star', n=3), {'teks': '+'}, img('star', n=4)],
@@ -72,8 +73,9 @@ paket1 = [
 
 # ---------- PAKET 2 ----------
 paket2 = [
-    pg('2, 4, 6, 8, ....\nBilangan berikutnya adalah ....', '10', ['9', '7'],
-       bahas='Bilangannya loncat 2: 2, 4, 6, 8, 10.', kisi='MT1'),
+    pg('Lihat gambar. Banyak bebek dan banyak ikan ....', 'sama banyak', ['bebek lebih banyak', 'ikan lebih banyak'],
+       gambar=[img('duck', n=5, label='bebek'), img('fish', n=5, label='ikan')],
+       bahas='Ada 5 bebek dan 5 ikan. Banyaknya sama.', kisi='MT1'),
     pg('Tanda yang tepat untuk  7 ... 7  adalah ....', '=', ['<', '>'],
        bahas='7 sama dengan 7, jadi tandanya =.', kisi='MT1'),
     pg('Dina punya 4 balon. Ibu memberi 3 balon lagi. Balon Dina sekarang ada ....', '7', ['6', '8'],
@@ -96,8 +98,9 @@ paket2 = [
 
 # ---------- PAKET 3 ----------
 paket3 = [
-    pg('Ada berapa ikan?', '6', ['5', '7'], gambar=[img('fish', n=6)],
-       bahas='Hitung ikan satu per satu sampai 6.', kisi='MT1'),
+    pg('Lihat gambar. Mana yang lebih sedikit?', 'balon', ['bintang', 'sama banyak'],
+       gambar=[img('balloon', n=3, label='balon'), img('star', n=6, label='bintang')],
+       bahas='Ada 3 balon dan 6 bintang. Balon lebih sedikit.', kisi='MT1'),
     pg('Urutan bilangan dari yang terkecil adalah ....', '2, 5, 9', ['9, 5, 2', '5, 2, 9'],
        bahas='Dari terkecil: 2, lalu 5, lalu 9.', kisi='MT1'),
     pg('Lihat garis bilangan. 1 + 6 = ....', '7', ['6', '8'], gambar=[garis_bilangan(1, 6)],
