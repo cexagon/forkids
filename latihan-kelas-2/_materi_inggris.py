@@ -1,5 +1,18 @@
 from _alat import *
-from _soal_inggris import adegan, KOTAK_PENSIL
+from _soal_inggris import adegan, KOTAK_PENSIL, BG, im, kotak
+
+
+def adegan_besar(prep, item, s=66):
+    """Kotak + satu benda/hewan besar (s=66 dari tinggi 150, sekitar 44%) untuk kartu depan/belakang/sebelah."""
+    o = BG
+    if prep == 'next':
+        o += kotak(40, 52, 80, 70) + im(item, 138, 122 - s, s)
+    elif prep == 'front':
+        o += kotak(90, 44, 80, 70) + im(item, 99, 144 - s, s)
+    else:  # behind: benda lebih dulu, kotak menutupi bagian bawahnya
+        o += im(item, 99, 8, s) + kotak(90, 52, 80, 70)
+    return svg(o, 260, 150)
+
 
 MATERI = [
   {'kisi': 'EN1a', 'judul': 'Nama buah dalam bahasa Inggris: apple, banana, mango, orange',
@@ -107,9 +120,9 @@ MATERI = [
            'Behind artinya di belakang.',
            'Next to artinya di sebelah, berdampingan.',
            'Coba lihat tiga gambar kotak di bawah ini.'],
-   'contoh': [{'teks': 'In front of = di depan kotak.', 'gambar': [adegan('front', 'rabbit-face')]},
-              {'teks': 'Behind = di belakang kotak, hanya sebagian yang terlihat.', 'gambar': [adegan('behind', 'dog-face')]},
-              {'teks': 'Next to = di sebelah kotak, berdampingan.', 'gambar': [adegan('next', 'duck')]}],
+   'contoh': [{'teks': 'In front of = di depan kotak.', 'gambar': [adegan_besar('front', 'rabbit-face')]},
+              {'teks': 'Behind = di belakang kotak, hanya sebagian yang terlihat.', 'gambar': [adegan_besar('behind', 'dog-face')]},
+              {'teks': 'Next to = di sebelah kotak, berdampingan.', 'gambar': [adegan_besar('next', 'duck')]}],
    'ingat': 'In front of = di depan, behind = di belakang, next to = di sebelah.',
    'ortu': 'Peragakan dengan boneka dan kotak: taruh boneka di depan, di belakang, lalu di samping kotak. Minta anak menyebut kata Inggrisnya, lalu balik: Anda menyebut kata, anak yang menaruh boneka.'},
 

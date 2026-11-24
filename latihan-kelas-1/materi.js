@@ -11,16 +11,16 @@ window.MATERI = {
    ],
    "gambar": [
     {
-     "teks": "ا"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 140 160\" role=\"img\"><text x=\"70\" y=\"80\" text-anchor=\"middle\" font-size=\"92\" fill=\"#3d2b1f\" font-family=\"'Amiri', 'Noto Naskh Arabic', serif\">ا</text><text x=\"70\" y=\"148\" text-anchor=\"middle\" font-size=\"30\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">alif</text></svg>"
     },
     {
-     "teks": "ب"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 140 160\" role=\"img\"><text x=\"70\" y=\"80\" text-anchor=\"middle\" font-size=\"92\" fill=\"#3d2b1f\" font-family=\"'Amiri', 'Noto Naskh Arabic', serif\">ب</text><text x=\"70\" y=\"148\" text-anchor=\"middle\" font-size=\"30\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">ba</text></svg>"
     },
     {
-     "teks": "ت"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 140 160\" role=\"img\"><text x=\"70\" y=\"80\" text-anchor=\"middle\" font-size=\"92\" fill=\"#3d2b1f\" font-family=\"'Amiri', 'Noto Naskh Arabic', serif\">ت</text><text x=\"70\" y=\"148\" text-anchor=\"middle\" font-size=\"30\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">ta</text></svg>"
     },
     {
-     "teks": "ث"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 140 160\" role=\"img\"><text x=\"70\" y=\"80\" text-anchor=\"middle\" font-size=\"92\" fill=\"#3d2b1f\" font-family=\"'Amiri', 'Noto Naskh Arabic', serif\">ث</text><text x=\"70\" y=\"148\" text-anchor=\"middle\" font-size=\"30\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">tsa</text></svg>"
     }
    ],
    "contoh": [
@@ -41,13 +41,13 @@ window.MATERI = {
    ],
    "gambar": [
     {
-     "teks": "ج"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 140 160\" role=\"img\"><text x=\"70\" y=\"80\" text-anchor=\"middle\" font-size=\"92\" fill=\"#3d2b1f\" font-family=\"'Amiri', 'Noto Naskh Arabic', serif\">ج</text><text x=\"70\" y=\"148\" text-anchor=\"middle\" font-size=\"30\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">jim</text></svg>"
     },
     {
-     "teks": "ح"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 140 160\" role=\"img\"><text x=\"70\" y=\"80\" text-anchor=\"middle\" font-size=\"92\" fill=\"#3d2b1f\" font-family=\"'Amiri', 'Noto Naskh Arabic', serif\">ح</text><text x=\"70\" y=\"148\" text-anchor=\"middle\" font-size=\"30\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">ha</text></svg>"
     },
     {
-     "teks": "خ"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 140 160\" role=\"img\"><text x=\"70\" y=\"80\" text-anchor=\"middle\" font-size=\"92\" fill=\"#3d2b1f\" font-family=\"'Amiri', 'Noto Naskh Arabic', serif\">خ</text><text x=\"70\" y=\"148\" text-anchor=\"middle\" font-size=\"30\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">kha</text></svg>"
     }
    ],
    "contoh": [
@@ -68,13 +68,13 @@ window.MATERI = {
    ],
    "gambar": [
     {
-     "teks": "د"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 140 160\" role=\"img\"><text x=\"70\" y=\"80\" text-anchor=\"middle\" font-size=\"92\" fill=\"#3d2b1f\" font-family=\"'Amiri', 'Noto Naskh Arabic', serif\">د</text><text x=\"70\" y=\"148\" text-anchor=\"middle\" font-size=\"30\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">dal</text></svg>"
     },
     {
-     "teks": "ذ"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 140 160\" role=\"img\"><text x=\"70\" y=\"80\" text-anchor=\"middle\" font-size=\"92\" fill=\"#3d2b1f\" font-family=\"'Amiri', 'Noto Naskh Arabic', serif\">ذ</text><text x=\"70\" y=\"148\" text-anchor=\"middle\" font-size=\"30\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">dzal</text></svg>"
     },
     {
-     "teks": "ر"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 140 160\" role=\"img\"><text x=\"70\" y=\"80\" text-anchor=\"middle\" font-size=\"92\" fill=\"#3d2b1f\" font-family=\"'Amiri', 'Noto Naskh Arabic', serif\">ر</text><text x=\"70\" y=\"148\" text-anchor=\"middle\" font-size=\"30\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">ra</text></svg>"
     }
    ],
    "contoh": [
@@ -96,16 +96,16 @@ window.MATERI = {
    ],
    "gambar": [
     {
-     "teks": "ل"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 140 160\" role=\"img\"><text x=\"70\" y=\"80\" text-anchor=\"middle\" font-size=\"92\" fill=\"#3d2b1f\" font-family=\"'Amiri', 'Noto Naskh Arabic', serif\">ل</text><text x=\"70\" y=\"148\" text-anchor=\"middle\" font-size=\"30\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">lam</text></svg>"
     },
     {
-     "teks": "م"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 140 160\" role=\"img\"><text x=\"70\" y=\"80\" text-anchor=\"middle\" font-size=\"92\" fill=\"#3d2b1f\" font-family=\"'Amiri', 'Noto Naskh Arabic', serif\">م</text><text x=\"70\" y=\"148\" text-anchor=\"middle\" font-size=\"30\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">mim</text></svg>"
     },
     {
-     "teks": "ن"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 140 160\" role=\"img\"><text x=\"70\" y=\"80\" text-anchor=\"middle\" font-size=\"92\" fill=\"#3d2b1f\" font-family=\"'Amiri', 'Noto Naskh Arabic', serif\">ن</text><text x=\"70\" y=\"148\" text-anchor=\"middle\" font-size=\"30\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">nun</text></svg>"
     },
     {
-     "teks": "ب"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 140 160\" role=\"img\"><text x=\"70\" y=\"80\" text-anchor=\"middle\" font-size=\"92\" fill=\"#3d2b1f\" font-family=\"'Amiri', 'Noto Naskh Arabic', serif\">ب</text><text x=\"70\" y=\"148\" text-anchor=\"middle\" font-size=\"30\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">ba</text></svg>"
     }
    ],
    "contoh": [

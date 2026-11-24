@@ -94,6 +94,36 @@ def banding(a, tanda, b):
                + teks(150, 98, {'<': 'lebih kecil dari', '>': 'lebih besar dari', '=': 'sama dengan'}[tanda], 17, 700, ABU), 300, 112)
 
 
+# ---------- gambar: menyusun bangun (sebelum -> sesudah, rapat tanpa celah) ----------
+def _panah(y):
+    return (f'<line x1="176" y1="{y}" x2="206" y2="{y}" stroke="{INK}" stroke-width="5" stroke-linecap="round"/>'
+            f'<polyline points="198,{y-9} 208,{y} 198,{y+9}" fill="none" stroke="{INK}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>')
+
+
+def _susunan(sebelum, sesudah, nama, cx=275, y=30):
+    return svg(sebelum + _panah(y + 38) + sesudah
+               + teks(80, 126, 'dipisah', 15, 700, ABU) + teks(cx, 126, nama, 15, 700, ABU), 360, 136)
+
+
+def _kotak_s(x, y, s):
+    return f'<rect x="{x}" y="{y}" width="{s}" height="{s}" fill="{BC["s"]}" stroke="{INK}" stroke-width="4" stroke-linejoin="round"/>'
+
+
+_y = 30
+SUSUN_SEGITIGA = _susunan(
+    poly([(10, _y + 76), (80, _y + 76), (10, _y + 6)], BC['t']) + poly([(95, _y + 6), (165, _y + 6), (165, _y + 76)], BC['c']),
+    poly([(240, _y + 76), (310, _y + 76), (240, _y + 6)], BC['t']) + poly([(240, _y + 6), (310, _y + 6), (310, _y + 76)], BC['c']),
+    'jadi persegi', 275)
+SUSUN_PERSEGI = _susunan(
+    _kotak_s(18, _y + 16, 56) + _kotak_s(98, _y + 16, 56),
+    _kotak_s(230, _y + 16, 56) + _kotak_s(286, _y + 16, 56),
+    'jadi persegi panjang', 278)
+SUSUN_EMPAT = _susunan(
+    ''.join(_kotak_s(10 + 42 * i, _y + 20, 32) for i in range(4)),
+    ''.join(_kotak_s(255 + 36 * c, _y + 4 + 36 * r, 36) for r in range(2) for c in range(2)),
+    'jadi persegi besar', 291)
+
+
 # ---------- gambar: bangun ----------
 def grup(items, per=150, fs=20):
     """items = [(isi gambar pada kotak 200x150, nama)]; digambar kecil dengan nama di bawahnya."""
@@ -221,7 +251,7 @@ MATERI = [
      'isi': ['Tanda > dibaca "lebih besar dari". Tanda < dibaca "lebih kecil dari". Tanda = dibaca "sama dengan".',
              'Mulut tanda selalu terbuka ke bilangan yang lebih besar.',
              'Kalau puluhannya sama, bandingkan satuannya. Contoh 41 dan 45: puluhan sama, satuan 1 lebih kecil dari 5, jadi 41 < 45.'],
-     'gambar': [banding(41, '<', 45), banding(29, '<', 31), banding(33, '=', 33)],
+     'gambar': [banding(35, '>', 28), banding(19, '<', 41), banding(33, '=', 33)],
      'ingat': 'Mulut tanda < dan > menghadap bilangan yang lebih besar. Kalau puluhannya sama, lihat satuannya.',
      'ortu': 'Gambar mulut buaya yang ingin makan bilangan terbesar. Minta anak memilih tanda sendiri setelah menaruh dua tumpukan benda berdampingan.'},
 
@@ -347,7 +377,7 @@ MATERI = [
              '2 persegi sama besar disusun sebaris menjadi persegi panjang. Begitu juga 3 persegi sebaris.',
              '4 persegi disusun 2 baris dan 2 kolom menjadi persegi besar. 2 segitiga sama besar menjadi persegi bila sisi miringnya ditempelkan.',
              'Gambar juga bisa disusun dari bangun datar, misalnya rumah.'],
-     'gambar': [DUA_PERSEGI, EMPAT_PERSEGI, DUA_SEGITIGA, RUMAH],
+     'gambar': [SUSUN_PERSEGI, SUSUN_EMPAT, SUSUN_SEGITIGA, RUMAH],
      'ingat': 'Susun bangun kecil rapat tanpa celah, lalu lihat bangun baru yang terbentuk.',
      'ortu': 'Beri anak kartu persegi dan segitiga hasil guntingan, lalu biarkan ia mencoba susunan berbeda. Minta ia menceritakan susunan yang berhasil dengan kata-katanya sendiri.'},
 

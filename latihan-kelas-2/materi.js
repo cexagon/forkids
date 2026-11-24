@@ -36,33 +36,29 @@ window.MATERI = {
     "Ayat 3: Allah adalah Sembahan (Ilah) manusia.",
     "Baca pelan-pelan dari kanan ke kiri, lalu ulangi bersama Ayah atau Ibu."
    ],
-   "contoh": [
+   "gambar": [
     {
-     "teks": "Ayat 1: Qul a'udzu birabbin-nas. Artinya: Katakanlah, \"Aku berlindung kepada Tuhannya manusia.\"",
-     "gambar": [
-      {
-       "teks": "قُلْ اَعُوْذُ بِرَبِّ النَّاسِ"
-      }
-     ]
+     "teks": "قُلْ اَعُوْذُ بِرَبِّ النَّاسِ"
     },
     {
-     "teks": "Ayat 2: Malikin-nas. Artinya: \"Raja manusia.\"",
-     "gambar": [
-      {
-       "teks": "مَلِكِ النَّاسِ"
-      }
-     ]
+     "teks": "مَلِكِ النَّاسِ"
     },
     {
-     "teks": "Ayat 3: Ilahin-nas. Artinya: \"Sembahan manusia.\"",
-     "gambar": [
-      {
-       "teks": "اِلٰهِ النَّاسِ"
-      }
-     ]
+     "teks": "اِلٰهِ النَّاسِ"
     }
    ],
-   "ingat": "Ayat 1 Rabb (Tuhan), ayat 2 Malik (Raja), ayat 3 Ilah (Sembahan), semuanya milik manusia.",
+   "contoh": [
+    {
+     "teks": "Ayat 1: Qul a'udzu birabbin-nas. Artinya: Katakanlah, \"Aku berlindung kepada Tuhannya manusia.\""
+    },
+    {
+     "teks": "Ayat 2: Malikin-nas. Artinya: \"Raja manusia.\""
+    },
+    {
+     "teks": "Ayat 3: Ilahin-nas. Artinya: \"Sembahan manusia.\""
+    }
+   ],
+   "ingat": "Allah adalah Rabb (Tuhan), Malik (Raja), dan Ilah (yang disembah) bagi seluruh manusia.",
    "ortu": "Bacakan satu ayat, lalu anak menirukan. Bantu anak membedakan awal tiap ayat: Qul, Malik, Ilah. Tanyakan, \"Allah itu Tuhan, Raja, dan apa?\""
   },
   {
@@ -74,30 +70,26 @@ window.MATERI = {
     "Setan bersembunyi dan mundur ketika kita mengingat Allah.",
     "Ayat 6 adalah ayat terakhir An-Nas, dan ayat terakhir dalam Al-Qur'an."
    ],
+   "gambar": [
+    {
+     "teks": "مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ"
+    },
+    {
+     "teks": "الَّذِيْ يُوَسْوِسُ فِيْ صُدُوْرِ النَّاسِ"
+    },
+    {
+     "teks": "مِنَ الْجِنَّةِ وَالنَّاسِ"
+    }
+   ],
    "contoh": [
     {
-     "teks": "Ayat 4: Min syarril waswasil khannas. Artinya: \"dari kejahatan (bisikan) setan yang bersembunyi,\"",
-     "gambar": [
-      {
-       "teks": "مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ"
-      }
-     ]
+     "teks": "Ayat 4: Min syarril waswasil khannas. Artinya: \"dari kejahatan (bisikan) setan yang bersembunyi,\""
     },
     {
-     "teks": "Ayat 5: Alladzi yuwaswisu fi shudurin-nas. Artinya: \"yang membisikkan (kejahatan) ke dalam dada manusia,\"",
-     "gambar": [
-      {
-       "teks": "الَّذِيْ يُوَسْوِسُ فِيْ صُدُوْرِ النَّاسِ"
-      }
-     ]
+     "teks": "Ayat 5: Alladzi yuwaswisu fi shudurin-nas. Artinya: \"yang membisikkan (kejahatan) ke dalam dada manusia,\""
     },
     {
-     "teks": "Ayat 6: Minal jinnati wan-nas. Artinya: \"dari (golongan) jin dan manusia.\"",
-     "gambar": [
-      {
-       "teks": "مِنَ الْجِنَّةِ وَالنَّاسِ"
-      }
-     ]
+     "teks": "Ayat 6: Minal jinnati wan-nas. Artinya: \"dari (golongan) jin dan manusia.\""
     }
    ],
    "ingat": "Ayat 4: khannas (setan yang bersembunyi). Ayat 6, ayat terakhir: Minal jinnati wan-nas.",
@@ -160,19 +152,14 @@ window.MATERI = {
     "3. Lanjut ke huruf di sebelah kiri.",
     "4. Gabungkan semua bunyinya menjadi satu kata."
    ],
-   "contoh": [
-    {
-     "teks": "Kata ini dibaca qamar, artinya bulan: qa, ma, r.",
-     "gambar": [
-      {
-       "teks": "قَمَر"
-      }
-     ]
-    }
-   ],
    "gambar": [
     {
-     "img": "aset/crescent-moon.svg"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 500 156\" role=\"img\"><text x=\"214\" y=\"86\" text-anchor=\"middle\" font-size=\"74\" fill=\"#3d2b1f\" font-family=\"'Amiri', 'Noto Naskh Arabic', serif\">ق</text><text x=\"140\" y=\"86\" text-anchor=\"middle\" font-size=\"74\" fill=\"#3d2b1f\" font-family=\"'Amiri', 'Noto Naskh Arabic', serif\">م</text><text x=\"70\" y=\"86\" text-anchor=\"middle\" font-size=\"74\" fill=\"#3d2b1f\" font-family=\"'Amiri', 'Noto Naskh Arabic', serif\">ر</text><line x1=\"276\" y1=\"62\" x2=\"316\" y2=\"62\" stroke=\"#3d2b1f\" stroke-width=\"6\" stroke-linecap=\"round\"/><polyline points=\"306,50 318,62 306,74\" fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><text x=\"410\" y=\"90\" text-anchor=\"middle\" font-size=\"92\" fill=\"#3d2b1f\" font-family=\"'Amiri', 'Noto Naskh Arabic', serif\">قَمَر</text><text x=\"140\" y=\"140\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"700\" fill=\"#8a7a6c\" font-family=\"sans-serif\">huruf terpisah</text><text x=\"410\" y=\"140\" text-anchor=\"middle\" font-size=\"22\" font-weight=\"700\" fill=\"#8a7a6c\" font-family=\"sans-serif\">disambung</text></svg>"
+    }
+   ],
+   "contoh": [
+    {
+     "teks": "Kata ini dibaca qamar, artinya bulan: qa, ma, r."
     }
    ],
    "ingat": "Baca kata Arab dari kanan ke kiri, huruf demi huruf, lalu gabungkan bunyinya.",
@@ -1400,10 +1387,10 @@ window.MATERI = {
    ],
    "gambar": [
     {
-     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 112\" role=\"img\"><text x=\"150\" y=\"62\" text-anchor=\"middle\" font-size=\"52\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">41 &lt; 45</text><text x=\"150\" y=\"98\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"700\" fill=\"#8a7a6c\" font-family=\"sans-serif\">lebih kecil dari</text></svg>"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 112\" role=\"img\"><text x=\"150\" y=\"62\" text-anchor=\"middle\" font-size=\"52\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">35 &gt; 28</text><text x=\"150\" y=\"98\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"700\" fill=\"#8a7a6c\" font-family=\"sans-serif\">lebih besar dari</text></svg>"
     },
     {
-     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 112\" role=\"img\"><text x=\"150\" y=\"62\" text-anchor=\"middle\" font-size=\"52\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">29 &lt; 31</text><text x=\"150\" y=\"98\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"700\" fill=\"#8a7a6c\" font-family=\"sans-serif\">lebih kecil dari</text></svg>"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 112\" role=\"img\"><text x=\"150\" y=\"62\" text-anchor=\"middle\" font-size=\"52\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">19 &lt; 41</text><text x=\"150\" y=\"98\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"700\" fill=\"#8a7a6c\" font-family=\"sans-serif\">lebih kecil dari</text></svg>"
     },
     {
      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 112\" role=\"img\"><text x=\"150\" y=\"62\" text-anchor=\"middle\" font-size=\"52\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">33 = 33</text><text x=\"150\" y=\"98\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"700\" fill=\"#8a7a6c\" font-family=\"sans-serif\">sama dengan</text></svg>"
@@ -1700,13 +1687,13 @@ window.MATERI = {
    ],
    "gambar": [
     {
-     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 150\" role=\"img\"><rect x=\"25\" y=\"35\" width=\"80\" height=\"80\" rx=\"4\" fill=\"#7CC6E8\" stroke=\"#3d2b1f\" stroke-width=\"4\"/><rect x=\"135\" y=\"35\" width=\"80\" height=\"80\" rx=\"4\" fill=\"#7CC6E8\" stroke=\"#3d2b1f\" stroke-width=\"4\"/></svg>"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 136\" role=\"img\"><rect x=\"18\" y=\"46\" width=\"56\" height=\"56\" fill=\"#7CC6E8\" stroke=\"#3d2b1f\" stroke-width=\"4\" stroke-linejoin=\"round\"/><rect x=\"98\" y=\"46\" width=\"56\" height=\"56\" fill=\"#7CC6E8\" stroke=\"#3d2b1f\" stroke-width=\"4\" stroke-linejoin=\"round\"/><line x1=\"176\" y1=\"68\" x2=\"206\" y2=\"68\" stroke=\"#3d2b1f\" stroke-width=\"5\" stroke-linecap=\"round\"/><polyline points=\"198,59 208,68 198,77\" fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><rect x=\"230\" y=\"46\" width=\"56\" height=\"56\" fill=\"#7CC6E8\" stroke=\"#3d2b1f\" stroke-width=\"4\" stroke-linejoin=\"round\"/><rect x=\"286\" y=\"46\" width=\"56\" height=\"56\" fill=\"#7CC6E8\" stroke=\"#3d2b1f\" stroke-width=\"4\" stroke-linejoin=\"round\"/><text x=\"80\" y=\"126\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"700\" fill=\"#8a7a6c\" font-family=\"sans-serif\">dipisah</text><text x=\"278\" y=\"126\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"700\" fill=\"#8a7a6c\" font-family=\"sans-serif\">jadi persegi panjang</text></svg>"
     },
     {
-     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 260 90\" role=\"img\"><rect x=\"18\" y=\"23\" width=\"44\" height=\"44\" rx=\"4\" fill=\"#7CC6E8\" stroke=\"#3d2b1f\" stroke-width=\"4\"/><rect x=\"80\" y=\"23\" width=\"44\" height=\"44\" rx=\"4\" fill=\"#7CC6E8\" stroke=\"#3d2b1f\" stroke-width=\"4\"/><rect x=\"142\" y=\"23\" width=\"44\" height=\"44\" rx=\"4\" fill=\"#7CC6E8\" stroke=\"#3d2b1f\" stroke-width=\"4\"/><rect x=\"204\" y=\"23\" width=\"44\" height=\"44\" rx=\"4\" fill=\"#7CC6E8\" stroke=\"#3d2b1f\" stroke-width=\"4\"/></svg>"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 136\" role=\"img\"><rect x=\"10\" y=\"50\" width=\"32\" height=\"32\" fill=\"#7CC6E8\" stroke=\"#3d2b1f\" stroke-width=\"4\" stroke-linejoin=\"round\"/><rect x=\"52\" y=\"50\" width=\"32\" height=\"32\" fill=\"#7CC6E8\" stroke=\"#3d2b1f\" stroke-width=\"4\" stroke-linejoin=\"round\"/><rect x=\"94\" y=\"50\" width=\"32\" height=\"32\" fill=\"#7CC6E8\" stroke=\"#3d2b1f\" stroke-width=\"4\" stroke-linejoin=\"round\"/><rect x=\"136\" y=\"50\" width=\"32\" height=\"32\" fill=\"#7CC6E8\" stroke=\"#3d2b1f\" stroke-width=\"4\" stroke-linejoin=\"round\"/><line x1=\"176\" y1=\"68\" x2=\"206\" y2=\"68\" stroke=\"#3d2b1f\" stroke-width=\"5\" stroke-linecap=\"round\"/><polyline points=\"198,59 208,68 198,77\" fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><rect x=\"255\" y=\"34\" width=\"36\" height=\"36\" fill=\"#7CC6E8\" stroke=\"#3d2b1f\" stroke-width=\"4\" stroke-linejoin=\"round\"/><rect x=\"291\" y=\"34\" width=\"36\" height=\"36\" fill=\"#7CC6E8\" stroke=\"#3d2b1f\" stroke-width=\"4\" stroke-linejoin=\"round\"/><rect x=\"255\" y=\"70\" width=\"36\" height=\"36\" fill=\"#7CC6E8\" stroke=\"#3d2b1f\" stroke-width=\"4\" stroke-linejoin=\"round\"/><rect x=\"291\" y=\"70\" width=\"36\" height=\"36\" fill=\"#7CC6E8\" stroke=\"#3d2b1f\" stroke-width=\"4\" stroke-linejoin=\"round\"/><text x=\"80\" y=\"126\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"700\" fill=\"#8a7a6c\" font-family=\"sans-serif\">dipisah</text><text x=\"291\" y=\"126\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"700\" fill=\"#8a7a6c\" font-family=\"sans-serif\">jadi persegi besar</text></svg>"
     },
     {
-     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 150\" role=\"img\"><polygon points=\"25,115 105,115 25,35\" fill=\"#F5B82E\" stroke=\"#3d2b1f\" stroke-width=\"4\" stroke-linejoin=\"round\"/><polygon points=\"135,115 215,115 135,35\" fill=\"#E8742A\" stroke=\"#3d2b1f\" stroke-width=\"4\" stroke-linejoin=\"round\"/><path d=\"M25 99 H41 V115\" fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"3\"/><path d=\"M135 99 H151 V115\" fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"3\"/></svg>"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 136\" role=\"img\"><polygon points=\"10,106 80,106 10,36\" fill=\"#F5B82E\" stroke=\"#3d2b1f\" stroke-width=\"4\" stroke-linejoin=\"round\"/><polygon points=\"95,36 165,36 165,106\" fill=\"#E8742A\" stroke=\"#3d2b1f\" stroke-width=\"4\" stroke-linejoin=\"round\"/><line x1=\"176\" y1=\"68\" x2=\"206\" y2=\"68\" stroke=\"#3d2b1f\" stroke-width=\"5\" stroke-linecap=\"round\"/><polyline points=\"198,59 208,68 198,77\" fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><polygon points=\"240,106 310,106 240,36\" fill=\"#F5B82E\" stroke=\"#3d2b1f\" stroke-width=\"4\" stroke-linejoin=\"round\"/><polygon points=\"240,36 310,36 310,106\" fill=\"#E8742A\" stroke=\"#3d2b1f\" stroke-width=\"4\" stroke-linejoin=\"round\"/><text x=\"80\" y=\"126\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"700\" fill=\"#8a7a6c\" font-family=\"sans-serif\">dipisah</text><text x=\"275\" y=\"126\" text-anchor=\"middle\" font-size=\"15\" font-weight=\"700\" fill=\"#8a7a6c\" font-family=\"sans-serif\">jadi persegi</text></svg>"
     },
     {
      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 150\" role=\"img\"><rect x=\"60\" y=\"70\" width=\"120\" height=\"70\" rx=\"3\" fill=\"#7CC6E8\" stroke=\"#3d2b1f\" stroke-width=\"4\" stroke-linejoin=\"round\"/><polygon points=\"48,72 120,18 192,72\" fill=\"#F5B82E\" stroke=\"#3d2b1f\" stroke-width=\"4\" stroke-linejoin=\"round\"/><rect x=\"105\" y=\"98\" width=\"30\" height=\"42\" rx=\"3\" fill=\"#E8742A\" stroke=\"#3d2b1f\" stroke-width=\"4\" stroke-linejoin=\"round\"/><circle cx=\"80\" cy=\"96\" r=\"10\" fill=\"#7BC96F\" stroke=\"#3d2b1f\" stroke-width=\"4\"/><circle cx=\"160\" cy=\"96\" r=\"10\" fill=\"#7BC96F\" stroke=\"#3d2b1f\" stroke-width=\"4\"/></svg>"
@@ -3052,7 +3039,7 @@ window.MATERI = {
      "teks": "In front of = di depan kotak.",
      "gambar": [
       {
-       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 260 150\" role=\"img\"><rect width=\"260\" height=\"150\" fill=\"#F4F9FC\"/><rect y=\"112\" width=\"260\" height=\"38\" fill=\"#EAD9B5\"/><rect x=\"85\" y=\"52\" width=\"80\" height=\"70\" fill=\"#D9A55B\" stroke=\"#3d2b1f\" stroke-width=\"3\"/><rect x=\"85\" y=\"52\" width=\"80\" height=\"8\" fill=\"#B98240\" stroke=\"#3d2b1f\" stroke-width=\"3\"/><rect x=\"120.0\" y=\"60\" width=\"10\" height=\"20\" fill=\"#EBC98F\"/><image href='aset/rabbit-face.svg' x='103.0' y='94' width='44' height='44'/></svg>"
+       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 260 150\" role=\"img\"><rect width=\"260\" height=\"150\" fill=\"#F4F9FC\"/><rect y=\"112\" width=\"260\" height=\"38\" fill=\"#EAD9B5\"/><rect x=\"90\" y=\"44\" width=\"80\" height=\"70\" fill=\"#D9A55B\" stroke=\"#3d2b1f\" stroke-width=\"3\"/><rect x=\"90\" y=\"44\" width=\"80\" height=\"8\" fill=\"#B98240\" stroke=\"#3d2b1f\" stroke-width=\"3\"/><rect x=\"125.0\" y=\"52\" width=\"10\" height=\"20\" fill=\"#EBC98F\"/><image href='aset/rabbit-face.svg' x='99' y='78' width='66' height='66'/></svg>"
       }
      ]
     },
@@ -3060,7 +3047,7 @@ window.MATERI = {
      "teks": "Behind = di belakang kotak, hanya sebagian yang terlihat.",
      "gambar": [
       {
-       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 260 150\" role=\"img\"><rect width=\"260\" height=\"150\" fill=\"#F4F9FC\"/><rect y=\"112\" width=\"260\" height=\"38\" fill=\"#EAD9B5\"/><image href='aset/dog-face.svg' x='112' y='24' width='50' height='50'/><rect x=\"85\" y=\"52\" width=\"80\" height=\"70\" fill=\"#D9A55B\" stroke=\"#3d2b1f\" stroke-width=\"3\"/><rect x=\"85\" y=\"52\" width=\"80\" height=\"8\" fill=\"#B98240\" stroke=\"#3d2b1f\" stroke-width=\"3\"/><rect x=\"120.0\" y=\"60\" width=\"10\" height=\"20\" fill=\"#EBC98F\"/></svg>"
+       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 260 150\" role=\"img\"><rect width=\"260\" height=\"150\" fill=\"#F4F9FC\"/><rect y=\"112\" width=\"260\" height=\"38\" fill=\"#EAD9B5\"/><image href='aset/dog-face.svg' x='99' y='8' width='66' height='66'/><rect x=\"90\" y=\"52\" width=\"80\" height=\"70\" fill=\"#D9A55B\" stroke=\"#3d2b1f\" stroke-width=\"3\"/><rect x=\"90\" y=\"52\" width=\"80\" height=\"8\" fill=\"#B98240\" stroke=\"#3d2b1f\" stroke-width=\"3\"/><rect x=\"125.0\" y=\"60\" width=\"10\" height=\"20\" fill=\"#EBC98F\"/></svg>"
       }
      ]
     },
@@ -3068,7 +3055,7 @@ window.MATERI = {
      "teks": "Next to = di sebelah kotak, berdampingan.",
      "gambar": [
       {
-       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 260 150\" role=\"img\"><rect width=\"260\" height=\"150\" fill=\"#F4F9FC\"/><rect y=\"112\" width=\"260\" height=\"38\" fill=\"#EAD9B5\"/><rect x=\"45\" y=\"52\" width=\"80\" height=\"70\" fill=\"#D9A55B\" stroke=\"#3d2b1f\" stroke-width=\"3\"/><rect x=\"45\" y=\"52\" width=\"80\" height=\"8\" fill=\"#B98240\" stroke=\"#3d2b1f\" stroke-width=\"3\"/><rect x=\"80.0\" y=\"60\" width=\"10\" height=\"20\" fill=\"#EBC98F\"/><image href='aset/duck.svg' x='138' y='72' width='50' height='50'/></svg>"
+       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 260 150\" role=\"img\"><rect width=\"260\" height=\"150\" fill=\"#F4F9FC\"/><rect y=\"112\" width=\"260\" height=\"38\" fill=\"#EAD9B5\"/><rect x=\"40\" y=\"52\" width=\"80\" height=\"70\" fill=\"#D9A55B\" stroke=\"#3d2b1f\" stroke-width=\"3\"/><rect x=\"40\" y=\"52\" width=\"80\" height=\"8\" fill=\"#B98240\" stroke=\"#3d2b1f\" stroke-width=\"3\"/><rect x=\"75.0\" y=\"60\" width=\"10\" height=\"20\" fill=\"#EBC98F\"/><image href='aset/duck.svg' x='138' y='56' width='66' height='66'/></svg>"
       }
      ]
     }

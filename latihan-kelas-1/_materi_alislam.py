@@ -1,8 +1,16 @@
 from _alat import *
 from _soal_alislam import KAPAL
 
+NAMA_HURUF = {'ا': 'alif', 'ب': 'ba', 'ت': 'ta', 'ث': 'tsa', 'ج': 'jim', 'ح': 'ha', 'خ': 'kha',
+              'د': 'dal', 'ذ': 'dzal', 'ر': 'ra', 'ل': 'lam', 'م': 'mim', 'ن': 'nun'}
+
+
 def H(*huruf):
-    return [{'teks': h} for h in huruf]
+    """Satu svg per huruf: huruf Arab besar, nama latinnya di bawah (font 30)."""
+    return [svg(f'<text x="70" y="80" text-anchor="middle" font-size="92" fill="{INK}" '
+                f'font-family="\'Amiri\', \'Noto Naskh Arabic\', serif">{h}</text>'
+                f'<text x="70" y="148" text-anchor="middle" font-size="30" font-weight="800" fill="{INK}" '
+                f'font-family="sans-serif">{NAMA_HURUF[h]}</text>', 140, 160) for h in huruf]
 
 MATERI = [
   {'kisi': 'AI1a',

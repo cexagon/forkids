@@ -5,6 +5,19 @@ from _soal_alislam import KAPAL, AYAT1, AYAT2, AYAT3, AYAT6
 AYAT4 = 'مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ'
 AYAT5 = 'الَّذِيْ يُوَسْوِسُ فِيْ صُدُوْرِ النَّاسِ'
 
+_AR = "font-family=\"'Amiri', 'Noto Naskh Arabic', serif\""
+# huruf terpisah (dibaca dari kanan: ق, م, ر) -> kata bersambung
+SAMBUNG = svg(
+    f'<text x="214" y="86" text-anchor="middle" font-size="74" fill="{INK}" {_AR}>ق</text>'
+    f'<text x="140" y="86" text-anchor="middle" font-size="74" fill="{INK}" {_AR}>م</text>'
+    f'<text x="70" y="86" text-anchor="middle" font-size="74" fill="{INK}" {_AR}>ر</text>'
+    f'<line x1="276" y1="62" x2="316" y2="62" stroke="{INK}" stroke-width="6" stroke-linecap="round"/>'
+    f'<polyline points="306,50 318,62 306,74" fill="none" stroke="{INK}" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>'
+    f'<text x="410" y="90" text-anchor="middle" font-size="92" fill="{INK}" {_AR}>قَمَر</text>'
+    f'<text x="140" y="140" text-anchor="middle" font-size="22" font-weight="700" fill="#8a7a6c" font-family="sans-serif">huruf terpisah</text>'
+    f'<text x="410" y="140" text-anchor="middle" font-size="22" font-weight="700" fill="#8a7a6c" font-family="sans-serif">disambung</text>',
+    500, 156)
+
 MATERI = [
   # ---------------- AI1 Surah An-Nas
   {'kisi': 'AI1', 'judul': 'Mengenal Surah An-Nas',
@@ -22,19 +35,21 @@ MATERI = [
            'Ayat 1: Allah adalah Tuhan (Rabb) manusia. Ayat 2: Allah adalah Raja (Malik) manusia.',
            'Ayat 3: Allah adalah Sembahan (Ilah) manusia.',
            "Baca pelan-pelan dari kanan ke kiri, lalu ulangi bersama Ayah atau Ibu."],
-   'contoh': [{'teks': 'Ayat 1: Qul a\'udzu birabbin-nas. Artinya: Katakanlah, "Aku berlindung kepada Tuhannya manusia."', 'gambar': [{'teks': AYAT1}]},
-              {'teks': 'Ayat 2: Malikin-nas. Artinya: "Raja manusia."', 'gambar': [{'teks': AYAT2}]},
-              {'teks': 'Ayat 3: Ilahin-nas. Artinya: "Sembahan manusia."', 'gambar': [{'teks': AYAT3}]}],
-   'ingat': 'Ayat 1 Rabb (Tuhan), ayat 2 Malik (Raja), ayat 3 Ilah (Sembahan), semuanya milik manusia.',
+   'gambar': [{'teks': AYAT1}, {'teks': AYAT2}, {'teks': AYAT3}],
+   'contoh': [{'teks': 'Ayat 1: Qul a\'udzu birabbin-nas. Artinya: Katakanlah, "Aku berlindung kepada Tuhannya manusia."'},
+              {'teks': 'Ayat 2: Malikin-nas. Artinya: "Raja manusia."'},
+              {'teks': 'Ayat 3: Ilahin-nas. Artinya: "Sembahan manusia."'}],
+   'ingat': 'Allah adalah Rabb (Tuhan), Malik (Raja), dan Ilah (yang disembah) bagi seluruh manusia.',
    'ortu': 'Bacakan satu ayat, lalu anak menirukan. Bantu anak membedakan awal tiap ayat: Qul, Malik, Ilah. Tanyakan, "Allah itu Tuhan, Raja, dan apa?"'},
   {'kisi': 'AI1', 'judul': 'An-Nas ayat 4 sampai 6',
    'isi': ['Ayat 4 sampai 6 menjelaskan dari apa kita berlindung.',
            'Kita berlindung dari bisikan jahat setan yang bersembunyi.',
            'Setan bersembunyi dan mundur ketika kita mengingat Allah.',
            'Ayat 6 adalah ayat terakhir An-Nas, dan ayat terakhir dalam Al-Qur\'an.'],
-   'contoh': [{'teks': 'Ayat 4: Min syarril waswasil khannas. Artinya: "dari kejahatan (bisikan) setan yang bersembunyi,"', 'gambar': [{'teks': AYAT4}]},
-              {'teks': 'Ayat 5: Alladzi yuwaswisu fi shudurin-nas. Artinya: "yang membisikkan (kejahatan) ke dalam dada manusia,"', 'gambar': [{'teks': AYAT5}]},
-              {'teks': 'Ayat 6: Minal jinnati wan-nas. Artinya: "dari (golongan) jin dan manusia."', 'gambar': [{'teks': AYAT6}]}],
+   'gambar': [{'teks': AYAT4}, {'teks': AYAT5}, {'teks': AYAT6}],
+   'contoh': [{'teks': 'Ayat 4: Min syarril waswasil khannas. Artinya: "dari kejahatan (bisikan) setan yang bersembunyi,"'},
+              {'teks': 'Ayat 5: Alladzi yuwaswisu fi shudurin-nas. Artinya: "yang membisikkan (kejahatan) ke dalam dada manusia,"'},
+              {'teks': 'Ayat 6: Minal jinnati wan-nas. Artinya: "dari (golongan) jin dan manusia."'}],
    'ingat': 'Ayat 4: khannas (setan yang bersembunyi). Ayat 6, ayat terakhir: Minal jinnati wan-nas.',
    'ortu': 'Latih menghafal bertahap: ayat 1 sampai 3 dulu, lalu 4 sampai 6. Bila anak lupa satu kata, bacakan awal ayatnya dan biarkan ia melanjutkan sendiri.'},
 
@@ -59,8 +74,8 @@ MATERI = [
            '2. Bunyikan satu huruf lengkap dengan harakatnya.',
            '3. Lanjut ke huruf di sebelah kiri.',
            '4. Gabungkan semua bunyinya menjadi satu kata.'],
-   'contoh': [{'teks': 'Kata ini dibaca qamar, artinya bulan: qa, ma, r.', 'gambar': [{'teks': 'قَمَر'}]}],
-   'gambar': [img('crescent-moon')],
+   'gambar': [SAMBUNG],
+   'contoh': [{'teks': 'Kata ini dibaca qamar, artinya bulan: qa, ma, r.'}],
    'ingat': 'Baca kata Arab dari kanan ke kiri, huruf demi huruf, lalu gabungkan bunyinya.',
    'ortu': 'Tutup huruf di sebelah kiri dengan jari, lalu buka satu per satu sambil membunyikannya. Pastikan anak mulai dari kanan, bukan dari kiri.'},
   {'kisi': 'AI2', 'judul': 'Dari mana huruf keluar?',
