@@ -379,15 +379,25 @@ svg.i { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-widt
 .mk-ingat p { font-size: 22px; line-height: 1.4; }
 .mc .kfoot { margin-top: -2px; }
 
-/* gambar di kartu materi: kecil, berdampingan, tidak melebihi layar */
-.mc .picbox { padding: 8px 10px; gap: 8px 14px; border-radius: 18px; border-width: 2px; max-height: none; }
-.mc .part { gap: 4px; }
-.mc .part figcaption { font-family: var(--display); font-weight: 800; font-size: 21px; line-height: 1.15; color: var(--ink); }
-.mc .copies img { height: 56px; }
-.mc .copies:not(.multi) img { height: clamp(84px, 15vh, 120px); max-width: min(100%, 220px); }
-.mc .part:has(> .sv) { flex: 0 1 220px; }
-.mc .part > .sv { width: min(100%, 300px); }
-.mc .part > .sv svg { max-height: 34vh; width: 100%; height: auto; }
+/* gambar di kartu materi (v3)
+   Satu kolom untuk HP dan tablet tegak: judul, gambar selebar kartu, isi, contoh, Ingat!.
+   Wadah gambar tidak pernah memotong; ukuran dibatasi pada gambar itu sendiri. */
+.mc .picbox { padding: 10px; gap: 10px 14px; border-radius: 18px; border-width: 2px; max-height: none; overflow: visible; }
+.mc .picbox.mainpic { width: 100%; }
+.mc .part { gap: 4px; min-width: 0; }
+.mc .part figcaption { font-family: var(--display); font-weight: 800; font-size: 21px; line-height: 1.15; color: var(--ink); text-align: center; }
+/* aset gambar: 96-140px, berjajar */
+.mc .copies:not(.multi) img { height: clamp(96px, 15vw, 140px); width: auto; max-width: min(100%, 240px); }
+.mc .copies.multi img { height: 56px; }
+/* diagram svg: selebar kartu (maks 560px), tinggi maks 32vh pada svg-nya.
+   --mw = lebar minimum agar label di dalam svg >= 13px (dihitung di latihan.js) */
+.mc .part:has(> .sv) { flex: 1 1 var(--mw, 130px); min-width: min(100%, var(--mw, 130px)); max-width: 560px; }
+.mc .part > .sv { width: 100%; }
+.mc .part > .sv svg { display: block; width: 100%; height: auto; max-height: 32vh; margin: 0 auto; }
+/* svg berlabel: tidak membesar melebihi kebutuhan label, supaya beberapa diagram tetap berjajar;
+   satu diagram tunggal boleh 1,4x lebih besar */
+.mc .part.lbl { flex: 1 1 auto; width: min(100%, var(--mw)); max-width: min(100%, 560px, calc(var(--mw) * 1.2)); }
+.mc .part.lbl:only-of-type { width: min(100%, 560px, calc(var(--mw) * 1.4)); max-width: min(100%, 560px, calc(var(--mw) * 1.4)); }
 .mc .op { font-size: 40px; }
 .mc .op.huruf { font-size: clamp(40px, 9vw, 64px); }
 .mc .picbox:has(> .op.huruf):not(:has(> .part)) { direction: rtl; }
@@ -398,36 +408,50 @@ svg.i { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-widt
 .mc .part.lambang { gap: 4px; }
 /* contoh */
 .mc .ct .picbox { background: #fff; padding: 6px 10px; border-width: 2px; }
-.mc .ct .copies:not(.multi) img { height: clamp(64px, 11vh, 88px); }
-.mc .ct .part:has(> .sv) { flex-basis: 180px; }
-.mc .ct .part > .sv svg { max-height: 24vh; }
+.mc .ct .copies:not(.multi) img { height: clamp(96px, 12vw, 120px); }
+.mc .ct .part > .sv svg { max-height: 26vh; }
 .mc .ct.ar { align-items: stretch; }
 .mc .ct.ar .picbox { order: -1; }
 .mc .ct.ar .op.huruf { color: var(--ink); }
+.mc .ct.has-pic { display: flex; flex-direction: column; gap: 8px; }
+.mc .ct.has-pic > .picbox { align-self: stretch; }
+.mc .ct.has-pic:not(:has(.lbl)) > .picbox { align-self: flex-start; }
+/* gambar contoh tanpa label: pendukung, cukup kecil; contoh berlabel: selebar kebutuhan labelnya */
+.mc .ct .part:not(.lbl):has(> .sv) { flex: 0 1 240px; max-width: 240px; }
+.mc .ct .part.lbl:only-of-type { width: min(100%, var(--mw)); max-width: min(100%, var(--mw)); }
 
 @media (min-width: 768px) {
   .mc { padding: 16px 22px 18px; gap: 14px; }
   .mk-head { flex-direction: row; align-items: flex-end; justify-content: space-between; gap: 16px; }
   .mk-acts { flex: none; }
-  .mc.two { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 14px 24px; align-items: start; }
-  .mc.two > .mk-head, .mc.two > .kfoot, .mc.two > .kx { grid-column: 1 / -1; }
-  .mc.two > .picbox.mainpic { grid-column: 1; align-self: start; max-height: 38vh; align-content: center; }
-  .mc.two > .mk-body { grid-column: 2; }
-  .mc .copies:not(.multi) img { height: clamp(96px, 14vh, 120px); }
-  .mc .ct.has-pic { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px 16px; }
-  .mc .ct.has-pic > p { flex: 1 1 240px; min-width: 0; }
-  .mc .ct.has-pic > .picbox { flex: 0 1 auto; max-width: 46%; }
+  .mc .ct.has-pic:not(:has(.lbl)) { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px 16px; }
+  .mc .ct.has-pic:not(:has(.lbl)) > p { flex: 1 1 240px; min-width: 0; }
+  .mc .ct.has-pic:not(:has(.lbl)) > .picbox { flex: 0 1 auto; max-width: 46%; align-self: center; }
 }
 @media (max-width: 767px) {
-  .mc .copies:not(.multi) img { height: clamp(72px, 12vh, 96px); }
   .mk-isi p, .mk-ingat p { font-size: 19px; line-height: 1.4; }
   .mk-contoh p { font-size: 18px; }
   .mk-title { font-size: 25px; }
-  .mc .part figcaption { font-size: 20px; }
+  .mc .part figcaption { font-size: 19px; }
   .mc { padding: 12px 12px 14px; gap: 10px; }
   .mk-act { min-height: 44px; font-size: 17px; padding: 2px 12px; }
   .mk-ingat h2 { font-size: 20px; }
-  .mc .part.lambang .copies img { width: 84px; height: 84px; }
+  .mc .part.lambang .copies img { width: 88px; height: 88px; }
+  .mc .picbox { padding: 8px; gap: 8px 10px; }
+  /* HP: diagram berlabel boleh sedikit lebih kecil supaya dua sejajar (label tetap >= 13px) */
+  .mc .part.lbl:not(:only-of-type) { width: min(100%, calc(var(--mw) * .85)); min-width: min(100%, calc(var(--mw) * .85)); }
+}
+/* Landscape lebar (>= 1024, lebar > tinggi): dua kolom, gambar kiri ikut layar */
+@media (min-width: 1024px) and (orientation: landscape) {
+  .mk-wrap { max-width: 1120px; }
+  .mc.two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px 28px; align-items: start; }
+  .mc.two > .mk-head, .mc.two > .kfoot, .mc.two > .kx { grid-column: 1 / -1; }
+  .mc.two > .picbox.mainpic { grid-column: 1; grid-row: 2; position: sticky; top: 84px; align-content: flex-start; }
+  .mc.two > .mk-body { grid-column: 2; grid-row: 2; }
+  .mc.two > .mainpic .part > .sv svg { max-height: 60vh; }
+  .mc.two > .mainpic .copies:not(.multi) img { height: clamp(110px, 16vh, 140px); }
+  /* .wide (>= 3 diagram berlabel lebar, ditandai latihan.js): tetap satu kolom, diagram berjajar */
+  .mc.wide > .mainpic .part > .sv svg { max-height: 40vh; }
 }
 
 /* kartu Siap latihan? */
@@ -446,8 +470,19 @@ svg.i { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-widt
 .mk-nav .btn { min-height: 56px; }
 .mc .picbox:has(> .op.huruf):not(:has(> :nth-child(6))) { flex-wrap: wrap; }
 .mc .picbox:has(> .op.huruf):not(:has(> .part)) .op.huruf { padding: 2px 6px; }
-@media (min-width: 768px) { .mc.two > .picbox.mainpic:has(> .op.huruf) { justify-content: center; } }
+.mc .picbox.mainpic:has(> .op.huruf) { justify-content: center; }
 .mc.cta .paket.main .p-score.none { display: none; }
 .mc .ct.ar .picbox { padding: 2px 10px; border: 0; background: transparent; }
 .mc .ct.ar .op.huruf.ayat { font-size: clamp(26px, 6vw, 38px) !important; line-height: 1.5; padding: 0 6px; }
 .mc .ct.ar { gap: 4px; }
+
+/* ===== Belajar dulu v3: nav tetap, Ingat! lebih kuat ===== */
+/* nav selalu di dasar layar: posisi tombol sama di semua kartu */
+.mk-nav { position: fixed; left: 0; right: 0; bottom: 0; z-index: 6; }
+.mk-nav-in { min-height: 56px; align-items: center; }
+.mk-wrap { padding-bottom: calc(100px + env(safe-area-inset-bottom)); }
+/* Ingat! = peringkat #2: tint lebih gelap + garis hijau penuh, terbaca di grayscale */
+.mk-ingat { background: #DCEEC6; border: 3px solid var(--leaf); }
+.mk-ingat h2 { color: var(--leaf-deep); }
+/* panel orang tua tidak tertutup bar atas / nav saat digulir ke sana */
+#materi .kx { scroll-margin-top: 88px; scroll-margin-bottom: calc(104px + env(safe-area-inset-bottom)); }

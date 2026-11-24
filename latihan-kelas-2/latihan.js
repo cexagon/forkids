@@ -689,6 +689,10 @@
       pn.hidden = !open;
       b.setAttribute('aria-expanded', open ? 'true' : 'false');
       b.classList.toggle('on', open);
+      if (open && pn.scrollIntoView) {
+        var rm = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+        pn.scrollIntoView({ behavior: rm ? 'auto' : 'smooth', block: 'nearest' });
+      }
     });
     document.addEventListener('keydown', function (e) {
       if (!M || e.altKey || e.ctrlKey || e.metaKey) return;
@@ -740,8 +744,8 @@
     var h = '<div class="mk-isi">';
     arr.forEach(function (s) {
       var m = /^(\d+)\.\s+([\s\S]*)$/.exec(String(s));
-      if (m) h += '<p class="step"><span class="qno sm" aria-hidden="true">' + m[1] + '</span><span class="st" dir="ltr"><span class="sr">Langkah ' + m[1] + '. </span>' + nw(m[2]) + '</span></p>';
-      else h += '<p dir="ltr">' + nw(s) + '</p>';
+      if (m) h += '<p class="step"><span class="qno sm" aria-hidden="true">' + m[1] + '</span><span class="st" dir="ltr"><span class="sr">Langkah ' + m[1] + '. </span>' + mnw(m[2]) + '</span></p>';
+      else h += '<p dir="ltr">' + mnw(s) + '</p>';
     });
     return h + '</div>';
   }
@@ -753,29 +757,51 @@
       : '<button class="pkl" type="button" data-t="' + pid + '" aria-expanded="false" aria-controls="' + pid + '">' + ic('info') + '<span>Untuk orang tua</span></button>';
     return '<div class="kfoot">' + btn + '</div><div class="kx" id="' + pid + '" role="region" aria-label="Untuk orang tua, kartu ' + (i + 1) + '" hidden><h3>Untuk orang tua</h3><p>' + br(c.ortu) + '</p></div>';
   }
+  /* suku kata "ga - jah", "se - mang - ka" tidak boleh pecah di akhir baris */
+  var SYL_RE = /[A-Za-z\u00C0-\u024F]+(?:[ \u00a0]+[-\u2013][ \u00a0]+[A-Za-z\u00C0-\u024F]+)+/g;
+  function mnw(s) { return nw(s).split(/(<[^>]+>)/).map(function (t, n) { return n % 2 ? t : t.replace(SYL_RE, '<span class="nw">$&</span>'); }).join(''); }
+  /* gambar materi: svg berlabel diberi --mw, lebar minimum agar teks label >= 15px (terukur >= 13px) */
+  function svgMw(p) {
+    if (!p.svg || !/<text/.test(p.svg)) return 0;
+    var vb = /viewBox="\s*[-\d.]+[\s,]+[-\d.]+[\s,]+([\d.]+)[\s,]+([\d.]+)/.exec(p.svg);
+    if (!vb) return 0;
+    var re = /font-size(?:\s*=\s*"|\s*:\s*)([\d.]+)/g, f, min = Infinity;
+    while ((f = re.exec(p.svg))) min = Math.min(min, +f[1]);
+    if (!isFinite(min) || min <= 0) min = 16;
+    return Math.max(130, Math.min(560, Math.ceil(+vb[1] * 15 / min)));
+  }
+  function mpart(p) {
+    var h = part(p), mw = svgMw(p);
+    return mw ? h.replace('<figure class="part', '<figure style="--mw:' + mw + 'px" class="part lbl') : h;
+  }
+  /* >= 3 diagram berlabel yang lebar: tidak muat dua sejajar di kolom kiri layar landscape */
+  function wideDiag(g) {
+    var m = (g || []).map(svgMw).filter(Boolean);
+    return m.length >= 3 && Math.max.apply(null, m) > 200;
+  }
   function hasAr(x) { return (x.gambar || []).some(function (g) { return g.teks != null && /[\u0600-\u06FF]/.test(g.teks); }); }
   function cardHtml2(c, i, N, anim) {
     var pic = c.gambar && c.gambar.length;
-    var h = '<article class="mc' + (pic ? ' two' : '') + (anim ? ' in' : '') + '" aria-labelledby="mk-t">';
+    var h = '<article class="mc' + (pic ? (wideDiag(c.gambar) ? ' wide' : ' two') : '') + (anim ? ' in' : '') + '" aria-labelledby="mk-t">';
     h += '<div class="mk-head"><div class="mk-ttl"><div class="mk-meta"><span class="mk-count">Kartu ' + (i + 1) + ' dari ' + N + '</span>' + (c.kisi ? '<span class="tag">' + esc(c.kisi) + '</span>' : '') + '</div>';
     h += '<h1 class="mk-title" id="mk-t" tabindex="-1" dir="ltr">' + br(c.judul) + '</h1></div>';
     h += '<div class="mk-acts"><button class="mk-act" id="mk-read" type="button">' + ic('read') + '<span>Bacakan</span></button>' +
       (c.suara ? '<button class="mk-act audio" id="mk-play" type="button" aria-describedby="mk-msg">' + ic('speaker') + '<span>Dengarkan</span></button><span class="lmsg" id="mk-msg" aria-live="polite"></span>' : '') + '</div></div>';
-    if (pic) h += '<div class="picbox mainpic" role="group" aria-label="Gambar">' + c.gambar.map(part).join('') + '</div>';
+    if (pic) h += '<div class="picbox mainpic" role="group" aria-label="Gambar">' + c.gambar.map(mpart).join('') + '</div>';
     h += '<div class="mk-body">';
     if (c.isi && c.isi.length) h += isiHtml(c.isi);
     if (c.contoh && c.contoh.length) {
       h += '<section class="mk-contoh" aria-labelledby="mk-ct"><h2 id="mk-ct">Contoh</h2>';
       c.contoh.forEach(function (x) {
         if (typeof x === 'string') x = { teks: x };
-        var cp = x.gambar && x.gambar.length ? '<div class="picbox" role="group" aria-label="Gambar contoh">' + x.gambar.map(part).join('') + '</div>' : '';
-        var ct = x.teks ? '<p dir="ltr">' + nw(x.teks) + '</p>' : '';
+        var cp = x.gambar && x.gambar.length ? '<div class="picbox" role="group" aria-label="Gambar contoh">' + x.gambar.map(mpart).join('') + '</div>' : '';
+        var ct = x.teks ? '<p dir="ltr">' + mnw(x.teks) + '</p>' : '';
         /* gambar teks Arab (ayat) tampil di atas teks latin dan artinya */
         h += '<div class="ct' + (cp ? (hasAr(x) ? ' ar' : ' has-pic') : '') + '">' + (hasAr(x) ? cp + ct : ct + cp) + '</div>';
       });
       h += '</section>';
     }
-    if (c.ingat) h += '<div class="mk-ingat" role="note"><h2>' + ic('star') + 'Ingat!</h2><p dir="ltr">' + nw(c.ingat) + '</p></div>';
+    if (c.ingat) h += '<div class="mk-ingat" role="note"><h2>' + ic('star') + 'Ingat!</h2><p dir="ltr">' + mnw(c.ingat) + '</p></div>';
     return h + '</div>' + ortuHtml(c, i) + '</article>';
   }
   function ctaHtml(anim) {
