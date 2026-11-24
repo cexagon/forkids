@@ -1,0 +1,123 @@
+import re
+from _alat import *
+from _soal_pjok import (MERANGKAK, SATU_KAKI, LANGKAH_DEPAN, LANGKAH_KANAN, LANGKAH_KIRI, MELIUK,
+                        JONGKOK, DUDUK, BERDIRI_RAPAT, DILARANG_BERLARI, PEGANGAN)
+
+def lab(g, t):
+    """Beri label pada gambar. Gambar svg tidak menampilkan 'label' di latihan.js,
+    jadi teks label digambar langsung di bawah figur (viewBox diperpanjang) dan dipakai sebagai aria-label."""
+    d = dict(g); d['label'] = t
+    if 'svg' in d:
+        m = re.search(r'viewBox="0 0 (\d+) (\d+)"', d['svg'])
+        w, h = int(m.group(1)), int(m.group(2))
+        fs = min(16, (w - 12) / (len(t) * 0.6))
+        txt = (f'<text x="{w // 2}" y="{h + 20}" text-anchor="middle" font-size="{fs:.1f}" font-weight="800" '
+               f'fill="{INK}" font-family="sans-serif">{t}</text>')
+        sv = d['svg'].replace(m.group(0), f'viewBox="0 0 {w} {h + 28}" aria-label="{t}"', 1)
+        d['svg'] = sv.replace('</svg>', txt + '</svg>')
+    return d
+
+MATERI = [
+  {'kisi': 'PJ1', 'judul': 'Gerak bertumpu',
+   'isi': ['Coba lihat anak ini. Ia merangkak.',
+           'Tangan, lutut, dan kaki menahan badannya di lantai.',
+           'Bagian badan yang menahan disebut tumpuan.',
+           'Gerak seperti ini disebut gerak bertumpu.'],
+   'gambar': [lab(MERANGKAK, 'bertumpu')],
+   'ingat': 'Gerak bertumpu: tangan, lutut, dan kaki menahan badan.',
+   'ortu': 'Ajak anak merangkak di karpet. Tanyakan, "Apa yang menahan badanmu?" Minta ia menunjuk tangan, lutut, dan kakinya.'},
+  {'kisi': 'PJ1', 'judul': 'Gerak bergantung',
+   'isi': ['Anak ini memegang palang dengan dua tangan.',
+           'Badannya menggantung di bawah palang.',
+           'Jadi, bergantung berarti menahan badan dengan tangan.',
+           'Palang harus kuat dan tidak goyang.'],
+   'gambar': [lab(BERGANTUNG, 'bergantung')],
+   'ingat': 'Bergantung: tangan memegang palang yang kuat dan menahan badan.',
+   'ortu': 'Di taman bermain, ajak anak bergantung sebentar pada palang yang kokoh sambil Anda mendampingi. Tekankan bahwa alatnya harus kuat.'},
+  {'kisi': 'PJ1', 'judul': 'Seimbang dan sikap pesawat',
+   'isi': ['Coba berdiri dengan satu kaki. Itu gerak keseimbangan. Kita tidak berpindah tempat.',
+           'Sikap pesawat: satu kaki menumpu, badan condong ke depan.',
+           'Kedua tangan direntangkan ke samping seperti sayap.',
+           'Sikap pesawat dilakukan di tempat, tidak sambil berlari.',
+           'Latihan keseimbangan membuat badan tidak mudah jatuh.'],
+   'gambar': [lab(SATU_KAKI, 'satu kaki'), lab(PESAWAT, 'sikap pesawat')],
+   'ingat': 'Sikap pesawat melatih keseimbangan: satu kaki, tangan terentang.',
+   'ortu': 'Berlombalah dengan anak: siapa paling lama bisa bertahan di sikap pesawat. Ingatkan bahwa gerak ini dilakukan di tempat, bukan sambil berlari.'},
+
+  {'kisi': 'PJ2', 'judul': 'Melangkah ke depan dan ke samping',
+   'isi': ['Saat lagu dimainkan, kaki melangkah mengikuti irama.',
+           'Panah menunjukkan arah langkah.',
+           'Panah ke depan: kita melangkah ke depan.',
+           'Panah ke kanan atau kiri: kita menggeser kaki ke samping.'],
+   'gambar': [lab(LANGKAH_DEPAN, 'ke depan'), lab(LANGKAH_KANAN, 'ke samping kanan'), lab(LANGKAH_KIRI, 'ke samping kiri')],
+   'contoh': [{'teks': 'Anak pada gambar kedua dilihat dari belakang. Kanan anak sama dengan kanan kita.'}],
+   'ingat': 'Ikuti panah dan irama: ke depan, ke samping kanan, atau ke samping kiri.',
+   'ortu': 'Putar lagu dan ajak anak melangkah sesuai ketukan. Sebut arahnya, "depan, kanan, kiri". Anak yang bingung kiri-kanan boleh diberi gelang di tangan kanan.'},
+  {'kisi': 'PJ2', 'judul': 'Meliukkan badan',
+   'isi': ['Sekarang badan ikut menari.',
+           'Kedua kaki tetap di tempat.',
+           'Badan meliuk ke kanan, lalu ke kiri, mengikuti irama.',
+           'Gerak mengikuti irama disebut gerak berirama.'],
+   'gambar': [lab(MELIUK, 'meliukkan badan')],
+   'ingat': 'Meliukkan badan: kaki tetap, badan bergerak ke kanan dan ke kiri.',
+   'ortu': 'Peragakan bersama anak di depan cermin dengan lagu riang. Pastikan kakinya tidak berpindah tempat.'},
+
+  {'kisi': 'PJ3', 'judul': 'Sikap tubuh diam',
+   'isi': ['Ada sikap tubuh yang diam. Badan tidak berpindah tempat.',
+           'Berdiri tegak adalah sikap diam.',
+           'Duduk dan jongkok juga sikap diam.'],
+   'gambar': [lab(BERDIRI_RAPAT, 'berdiri tegak'), lab(DUDUK, 'duduk'), lab(JONGKOK, 'jongkok')],
+   'ingat': 'Berdiri, duduk, dan jongkok adalah sikap tubuh diam.',
+   'ortu': 'Mainkan "patung": saat musik berhenti, anak diam dalam sikap berdiri, duduk, atau jongkok. Sebut nama sikapnya.'},
+  {'kisi': 'PJ3', 'judul': 'Sikap tubuh bergerak',
+   'isi': ['Ada juga sikap tubuh yang bergerak.',
+           'Berlari adalah sikap bergerak. Berjalan juga.',
+           'Melompat: kedua kaki terangkat dari tanah.',
+           'Bermain engklek membuat kita melompat dengan satu kaki.'],
+   'gambar': [lab(BERLARI, 'berlari'), lab(MELOMPAT, 'melompat'), img('person-walking', label='berjalan')],
+   'ingat': 'Berlari, berjalan, dan melompat adalah sikap tubuh bergerak.',
+   'ortu': 'Ajak anak melompat dan berlari kecil di halaman. Tanyakan, "Kakimu terangkat dari tanah tidak?" Ulangi sampai ia paham arti melompat.'},
+  {'kisi': 'PJ3', 'judul': 'Manfaat bergerak',
+   'isi': ['Bergerak itu menyenangkan.',
+           'Saat bergerak, darah mengalir lancar ke seluruh badan.',
+           'Peredaran darah yang lancar membuat badan sehat dan kuat.',
+           'Yuk, banyak bergerak setiap hari.'],
+   'gambar': [img('person-running', label='berlari'), img('thumbs-up', label='sehat')],
+   'ingat': 'Banyak bergerak membuat peredaran darah lancar, badan sehat dan kuat.',
+   'ortu': 'Ajak anak meraba denyut nadi di pergelangan tangan sebelum dan sesudah berlari kecil. Bantu ia merasakan badannya bekerja.'},
+
+  {'kisi': 'PJ4', 'judul': 'Aman di kolam renang',
+   'isi': ['Berenang itu seru, tetapi kita harus hati-hati.',
+           'Anak kecil berenang ditemani orang dewasa. Jangan berenang sendiri.',
+           'Anak yang belum pandai berenang memakai pelampung.',
+           'Sebelum masuk kolam, kita melakukan pemanasan agar badan siap.'],
+   'gambar': [img('person-swimming', label='berenang')],
+   'ingat': 'Berenang ditemani orang dewasa, pakai pelampung, dan pemanasan dulu.',
+   'ortu': 'Sebelum berenang, buat kesepakatan: tidak masuk air tanpa orang dewasa. Lakukan pemanasan ringan bersama selama satu menit.'},
+  {'kisi': 'PJ4', 'judul': 'Pinggir kolam itu licin',
+   'isi': ['Lantai di pinggir kolam basah dan licin.',
+           'Kita bisa terpeleset kalau berlari atau berkejar-kejaran.',
+           'Tanda ini artinya dilarang berlari. Kita berjalan pelan.',
+           'Kalau lelah di dalam kolam, berpeganglah di pinggir, lalu naik dan istirahat.'],
+   'gambar': [lab(DILARANG_BERLARI, 'dilarang berlari'), lab(PEGANGAN, 'berpegangan di pinggir')],
+   'ingat': 'Di pinggir kolam kita berjalan pelan. Kalau lelah, berpegangan di pinggir dan istirahat.',
+   'ortu': 'Latih anak berjalan pelan di lantai basah. Ajarkan agar ia segera memberi tahu Anda saat merasa lelah di air, tanpa takut dimarahi.'},
+
+  {'kisi': 'PJ5', 'judul': 'Bersih itu sebagian dari iman',
+   'isi': ['Anak muslim suka hidup bersih.',
+           'Ada pesan yang baik: kebersihan sebagian dari iman.',
+           'Setelah olahraga, badan berkeringat.',
+           'Kita mandi dan ganti baju agar badan bersih.'],
+   'gambar': [img('shower', label='mandi'), img('soap', label='sabun')],
+   'ingat': 'Kebersihan sebagian dari iman. Setelah olahraga, kita mandi dan ganti baju.',
+   'ortu': 'Biasakan anak mandi dan berganti baju sehabis berolahraga. Kaitkan dengan pesan bahwa menjaga kebersihan adalah bagian dari iman.'},
+  {'kisi': 'PJ5', 'judul': 'Bismillah dan Alhamdulillah',
+   'isi': ['Sebelum mulai olahraga, kita membaca Bismillah.',
+           'Artinya, dengan nama Allah.',
+           'Setelah selesai, kita mengucap Alhamdulillah.',
+           'Artinya, segala puji bagi Allah. Kita bersyukur.'],
+   'gambar': [img('folded-hands', label='berdoa'), img('person-running', label='olahraga')],
+   'contoh': [{'teks': 'Mau lomba lari: Bismillah. Lomba selesai: Alhamdulillah.'}],
+   'ingat': 'Sebelum olahraga: Bismillah. Sesudah olahraga: Alhamdulillah.',
+   'ortu': 'Ucapkan bersama anak di awal dan akhir setiap bermain atau olahraga, sampai menjadi kebiasaan.'},
+]

@@ -1,0 +1,166 @@
+from _alat import *
+from _soal_inggris import adegan, KOTAK_PENSIL, BG, im, kotak
+
+
+def adegan_besar(prep, item, s=66):
+    """Kotak + satu benda/hewan besar (s=66 dari tinggi 150, sekitar 44%) untuk kartu depan/belakang/sebelah."""
+    o = BG
+    if prep == 'next':
+        o += kotak(40, 52, 80, 70) + im(item, 138, 122 - s, s)
+    elif prep == 'front':
+        o += kotak(90, 44, 80, 70) + im(item, 99, 144 - s, s)
+    else:  # behind: benda lebih dulu, kotak menutupi bagian bawahnya
+        o += im(item, 99, 8, s) + kotak(90, 52, 80, 70)
+    return svg(o, 260, 150)
+
+
+MATERI = [
+  {'kisi': 'EN1a', 'judul': 'Nama buah dalam bahasa Inggris: apple, banana, mango, orange',
+   'isi': ['Yuk, kenalan dengan nama buah dalam bahasa Inggris!',
+           'Apple artinya apel. Banana artinya pisang.',
+           'Mango artinya mangga. Orange artinya jeruk.'],
+   'gambar': [img('red-apple', label='apple'), img('banana', label='banana'), img('mango', label='mango'),
+              img('tangerine', label='orange')],
+   'ingat': 'Apple = apel, banana = pisang, mango = mangga, orange = jeruk.',
+   'ortu': 'Tunjukkan buah asli atau gambarnya, ucapkan namanya bersama, lalu minta anak menunjuk saat Anda menyebut satu nama.'},
+
+  {'kisi': 'EN1a', 'judul': 'Nama buah dalam bahasa Inggris: grapes, watermelon, pineapple',
+   'isi': ['Grapes artinya anggur. Watermelon artinya semangka.',
+           'Pineapple artinya nanas. Hati-hati, pineapple bukan apple, ya.'],
+   'gambar': [img('grapes', label='grapes'), img('watermelon', label='watermelon'), img('pineapple', label='pineapple')],
+   'contoh': [{'teks': 'Water artinya air, melon artinya melon. Watermelon adalah melon yang banyak airnya, yaitu semangka.'},
+              {'teks': 'Grapes ditulis dengan s karena anggur tumbuh bergerombol.'}],
+   'ingat': 'Grapes = anggur, watermelon = semangka, pineapple = nanas.',
+   'ortu': 'Tunjukkan buah asli atau gambarnya dan ucapkan namanya bersama. Minta anak mengeja kata yang mudah tertukar, seperti pineapple.'},
+
+  {'kisi': 'EN1b', 'judul': 'Do you like ...?',
+   'isi': ['Untuk bertanya apakah temanmu suka sesuatu, katakan “Do you like ...?”.',
+           'Kalau suka, jawab “Yes, I do.” Kalau tidak suka, jawab “No, I don’t.”',
+           'Don’t adalah singkatan dari do not. Jadi “No, I do not.” juga boleh.'],
+   'gambar': [img('watermelon', label='watermelon')],
+   'contoh': [{'teks': 'Do you like watermelon? Yes, I do. (Ya, aku suka.)'},
+              {'teks': 'Do you like broccoli? No, I don’t. (Tidak, aku tidak suka.)', 'gambar': [img('broccoli')]}],
+   'ingat': 'Suka: Yes, I do. Tidak suka: No, I don’t.',
+   'ortu': 'Main tanya jawab di rumah dengan makanan yang disukai dan tidak disukai anak. Pastikan anak menjawab sesuai rasa sebenarnya, supaya kalimatnya bermakna.'},
+
+  {'kisi': 'EN1b', 'judul': 'Menghargai kesukaan teman',
+   'isi': ['Setiap orang boleh punya kesukaan yang berbeda.',
+           'Kalau temanmu tidak suka apel, kita tidak mengejek dan tidak memaksa.',
+           'Sebagai anak muslim, kita menghargai teman dan berkata baik, misalnya “Tidak apa-apa.”'],
+   'gambar': [img('red-apple'), img('pineapple')],
+   'ingat': 'Kesukaan boleh berbeda; kita tidak mengejek dan tidak memaksa teman.',
+   'ortu': 'Tanyakan, “Kalau kamu diejek karena suka sesuatu, rasanya bagaimana?” Biarkan anak sendiri yang menyimpulkan bahwa mengejek itu tidak baik. Beri contoh nyata, misalnya adik yang tidak suka sayur.'},
+
+  {'kisi': 'EN2a', 'judul': 'Anggota keluargaku: father, mother, brother, sister',
+   'isi': ['Father artinya ayah. Mother artinya ibu.',
+           'Brother artinya saudara laki-laki, kakak atau adik.',
+           'Sister artinya saudara perempuan.'],
+   'gambar': [img('man', label='father'), img('woman-with-headscarf', label='mother'), img('boy', label='brother'),
+              img('girl', label='sister')],
+   'ingat': 'Father ayah, mother ibu, brother saudara laki-laki, sister saudara perempuan.',
+   'ortu': 'Tunjuk foto keluarga dan minta anak menyebut nama Inggris tiap orang.'},
+
+  {'kisi': 'EN2a', 'judul': 'Anggota keluargaku: grandfather dan grandmother',
+   'isi': ['Grandfather artinya kakek. Grandmother artinya nenek.',
+           'Grand artinya orang tua dari orang tua kita.'],
+   'gambar': [img('old-man', label='grandfather'), img('old-woman', label='grandmother')],
+   'contoh': [{'teks': 'Grand + father = ayah dari ayah atau ibu kita, yaitu kakek.'}],
+   'ingat': 'Grandfather kakek, grandmother nenek.',
+   'ortu': 'Tunjuk foto keluarga dan minta anak menyebut nama Inggris kakek dan neneknya. Bantu anak membedakan mother dan grandmother dengan petunjuk “ibu dari ibuku”.'},
+
+  {'kisi': 'EN2b', 'judul': 'My ... likes ...',
+   'isi': ['Untuk bercerita tentang kesukaan keluarga, pakai “My ... likes ...”.',
+           'Karena yang suka hanya satu orang, kata like diberi s menjadi likes.',
+           'Contoh: My brother likes apples. Artinya, saudara laki-lakiku suka apel.'],
+   'gambar': [img('boy', label='brother'), img('red-apple', label='apples')],
+   'contoh': [{'teks': 'My mother likes bananas. (Ibuku suka pisang.)', 'gambar': [img('woman-with-headscarf', label='mother'), img('banana')]},
+              {'teks': 'My grandmother likes oranges. (Nenekku suka jeruk.)', 'gambar': [img('old-woman', label='grandmother'), img('tangerine')]}],
+   'ingat': 'My + anggota keluarga + likes + yang disukai.',
+   'ortu': 'Tanya anak, “Ayah suka makan apa?” lalu susun kalimatnya bersama. Ingatkan huruf s pada likes setiap kali anak menulisnya.'},
+
+  {'kisi': 'EN2b', 'judul': 'Does your ... like ...?',
+   'isi': ['Untuk bertanya tentang kesukaan satu orang lain, pakai “Does your ... like ...?”.',
+           'Setelah does, kata like tidak memakai s. Tulis seperti ini: Does your brother like pizza?',
+           'Kalau orangnya laki-laki, jawab “Yes, he does.” Kalau perempuan, jawab “Yes, she does.”',
+           'Kalau tidak suka, jawab “No, he doesn’t.” atau “No, she doesn’t.”'],
+   'gambar': [img('boy', label='brother'), img('pizza')],
+   'contoh': [{'teks': 'Does your grandfather like bananas? Yes, he does. (Grandfather laki-laki, jadi he.)', 'gambar': [img('old-man', label='grandfather'), img('banana')]},
+              {'teks': 'Does your grandmother like grapes? No, she doesn’t. (Grandmother perempuan, jadi she.)', 'gambar': [img('old-woman', label='grandmother'), img('grapes')]}],
+   'ingat': 'Does your ... like ...? Laki-laki: he does. Perempuan: she does.',
+   'ortu': 'Latih dengan dua langkah: anak menentukan dulu orangnya laki-laki atau perempuan, baru memilih he atau she. Lalu cek bahwa kata tanyanya does dan like tanpa s.'},
+
+  {'kisi': 'EN3a', 'judul': 'Benda di kelasku: pencil, book, bag, ruler',
+   'isi': ['Pencil artinya pensil. Book artinya buku. Bag artinya tas.',
+           'Ruler artinya penggaris.'],
+   'gambar': [img('pencil', label='pencil'), img('green-book', label='book'), img('backpack', label='bag'),
+              img('straight-ruler', label='ruler')],
+   'ingat': 'Pencil pensil, book buku, bag tas, ruler penggaris.',
+   'ortu': 'Minta anak membuka tasnya, menunjuk benda satu per satu, menyebut nama Inggris, lalu mengejanya.'},
+
+  {'kisi': 'EN3a', 'judul': 'Benda di kelasku: chair, crayon, pencil case',
+   'isi': ['Chair artinya kursi. Crayon artinya krayon.',
+           'Pencil case artinya kotak pensil. Pencil case ditulis dua kata.'],
+   'gambar': [img('chair', label='chair'), img('crayon', label='crayon'), KOTAK_PENSIL],
+   'contoh': [{'teks': 'Pencil adalah pensilnya. Pencil case adalah tempat pensilnya.', 'gambar': [img('pencil', label='pencil')]}],
+   'ingat': 'Chair kursi, crayon krayon, pencil case kotak pensil.',
+   'ortu': 'Minta anak menunjuk benda di sekitarnya, menyebut nama Inggris, lalu mengejanya. Beri perhatian pada pencil dan pencil case yang sering tertukar.'},
+
+  {'kisi': 'EN3b', 'judul': 'Where is my ...?',
+   'isi': ['Untuk bertanya letak bendamu, katakan “Where is my ...?”. Artinya, di mana ... milikku?',
+           'Jawab dengan “It is” lalu kata tempat.',
+           'On artinya di atas. Under artinya di bawah. In artinya di dalam. Near artinya dekat.'],
+   'contoh': [{'teks': 'Where is my crayon? It is on the table. (di atas meja)', 'gambar': [adegan('on', 'crayon')]},
+              {'teks': 'Where is my cat? It is under the table. (di bawah meja)', 'gambar': [adegan('under', 'cat-face')]},
+              {'teks': 'Where is my apple? It is in the box. (di dalam kotak)', 'gambar': [adegan('in', 'red-apple')]}],
+   'ingat': 'It is on (di atas), under (di bawah), in (di dalam), near (dekat).',
+   'ortu': 'Peragakan dengan benda sungguhan: letakkan pensil di atas meja, di bawah meja, lalu di dalam kotak sambil menyebut kalimatnya. Gantian, anak yang menaruh dan Anda yang bertanya.'},
+
+  {'kisi': 'EN4a', 'judul': 'In front of, behind, next to',
+   'isi': ['In front of artinya di depan.',
+           'Behind artinya di belakang.',
+           'Next to artinya di sebelah, berdampingan.',
+           'Coba lihat tiga gambar kotak di bawah ini.'],
+   'contoh': [{'teks': 'In front of = di depan kotak.', 'gambar': [adegan_besar('front', 'rabbit-face')]},
+              {'teks': 'Behind = di belakang kotak, hanya sebagian yang terlihat.', 'gambar': [adegan_besar('behind', 'dog-face')]},
+              {'teks': 'Next to = di sebelah kotak, berdampingan.', 'gambar': [adegan_besar('next', 'duck')]}],
+   'ingat': 'In front of = di depan, behind = di belakang, next to = di sebelah.',
+   'ortu': 'Peragakan dengan boneka dan kotak: taruh boneka di depan, di belakang, lalu di samping kotak. Minta anak menyebut kata Inggrisnya, lalu balik: Anda menyebut kata, anak yang menaruh boneka.'},
+
+  {'kisi': 'EN4b', 'judul': 'Letak benda dari gambar',
+   'isi': ['Untuk menjelaskan letak benda dari gambar, mulai dengan “It is ...”.',
+           'Lihat dulu bendanya, lalu lihat letaknya dibanding benda lain.',
+           'Kalau menutupi dari depan, pakai in front of. Kalau tersembunyi di balik, pakai behind. Kalau berdampingan, pakai next to.'],
+   'contoh': [{'teks': 'Where is the teddy bear? It is next to the chair.', 'gambar': [adegan('next', 'teddy-bear', ref='kursi')]},
+              {'teks': 'Where is the basketball? It is in front of the chair.', 'gambar': [adegan('front', 'basketball', ref='kursi')]}],
+   'ingat': 'It is + in front of / behind / next to + the + benda acuan.',
+   'ortu': 'Minta anak menunjuk bagian gambar yang menjadi petunjuk, bukan menebak. Untuk teks pendek, garis bawahi kata letaknya, misalnya “The cat is behind the chair”, lalu salin kata itu.'},
+
+  {'kisi': 'EN5a', 'judul': 'There are ...',
+   'isi': ['Untuk menyebut jumlah benda yang banyak, pakai “There are ...”. Artinya, ada ....',
+           'Susun dengan tiga bagian: jumlah, nama benda, lalu tempat.',
+           'Karena bendanya banyak, namanya diberi s: ball menjadi balls.',
+           'Angka: one, two, three, four, five.'],
+   'contoh': [{'teks': 'There are three oranges on the table. (jumlah: three, benda: oranges, tempat: on the table)', 'gambar': [adegan('on', 'tangerine', n=3)]},
+              {'teks': 'There are two cats in front of the box.', 'gambar': [adegan('front', 'cat-face', n=2)]},
+              {'teks': 'There are five eggs in the box.', 'gambar': [adegan('in', 'egg', n=5)]}],
+   'ingat': 'There are + jumlah + benda (pakai s) + tempat.',
+   'ortu': 'Minta anak menghitung bendanya satu per satu dulu, menyebut nama Inggris bendanya, baru menyebut tempatnya. Cek tiga hal itu satu per satu saat anak menulis kalimat.'},
+
+  {'kisi': 'EN5b', 'judul': 'Bertanya sopan dan berterima kasih',
+   'isi': ['Kalau ingin bertanya kepada Bu Guru, mulai dengan “Excuse me.” Artinya, permisi.',
+           'Contoh: Excuse me, Sir. Where is my crayon? (Sir untuk bapak guru, Ma’am untuk ibu guru.)',
+           'Untuk meminjam, tambahkan please. Contoh: May I borrow your scissors, please?',
+           'Setelah dibantu, ucapkan “Thank you.” Artinya, terima kasih.'],
+   'gambar': [img('man-teacher', label='Sir'), img('woman-teacher', label='Ma’am'), img('crayon')],
+   'ingat': 'Excuse me untuk permisi, please untuk meminta tolong, thank you untuk berterima kasih.',
+   'ortu': 'Mainkan peran: Anda jadi guru, anak “mencari” bukunya. Ajak anak memakai nada halus, bukan memerintah. Bandingkan “Give me my crayon!” dengan “Excuse me, where is my crayon?”.'},
+
+  {'kisi': 'EN5b', 'judul': 'Rapi, tanggung jawab, bersyukur',
+   'isi': ['Setelah memakai krayon atau lem, kita menaruhnya kembali di tempatnya. Itu sikap rapi dan bertanggung jawab.',
+           'Kalau menemukan barang teman, kita mengembalikannya.',
+           'Kalau meminjam barang teman lalu hilang, kita minta maaf, ikut mencari, dan menggantinya.',
+           'Kalau mendapat buku baru, kita bersyukur kepada Allah swt. dengan berkata “Alhamdulillah”.'],
+   'gambar': [img('crayon'), img('green-book'), img('folded-hands')],
+   'ingat': 'Menaruh barang kembali, mengembalikan barang teman, dan mengucap Alhamdulillah adalah sikap yang baik.',
+   'ortu': 'Tanyakan, “Kalau mainanmu dipinjam teman lalu hilang, kamu ingin dia berbuat apa?” Dari jawabannya anak menemukan minta maaf, mencari, dan mengganti. Biasakan juga ucapan Alhamdulillah.'},
+]

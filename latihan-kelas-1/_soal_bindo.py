@@ -149,7 +149,7 @@ paket3 = [
     isian('Ular bergerak dengan cara ....', ['merayap', 'melata', 'rayap', 'merayap-rayap'],
           gambar=[img('snake', label='ular')], kisi='BI4c'),
     isian('Kakak memegang gagang pintu, lalu membuka pintu ke arah badannya. Pintu itu ... oleh kakak.',
-          ['ditarik', 'tarik', 'menarik', 'di tarik'], gambar=[img('house', label='pintu')],
+          ['ditarik', 'tarik', 'menarik', 'di tarik'], gambar=[img('door', label='pintu')],
           bahas='Benda yang bergerak mendekat ke arah kita berarti ditarik.', kisi='BI4d'),
 ]
 

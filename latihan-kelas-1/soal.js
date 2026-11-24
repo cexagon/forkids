@@ -7,7 +7,7 @@ window.SOAL = [
   "materi": "Huruf hijaiah, Al-Fatihah, Rukun Iman, basmalah dan hamdalah, Rukun Islam, syahadat, nabi dan mukjizat",
   "paket": [
    {
-    "nama": "Paket 1",
+    "nama": "Latihan 1",
     "soal": [
      {
       "jenis": "pg",
@@ -317,7 +317,7 @@ window.SOAL = [
     ]
    },
    {
-    "nama": "Paket 2",
+    "nama": "Latihan 2",
     "soal": [
      {
       "jenis": "pg",
@@ -627,7 +627,7 @@ window.SOAL = [
     ]
    },
    {
-    "nama": "Paket 3",
+    "nama": "Latihan 3",
     "soal": [
      {
       "jenis": "pg",
@@ -928,7 +928,7 @@ window.SOAL = [
   "materi": "Patuh aturan, identitas diri, sikap baik kepada teman, lambang negara dan lagu kebangsaan",
   "paket": [
    {
-    "nama": "Paket 1",
+    "nama": "Latihan 1",
     "soal": [
      {
       "jenis": "pg",
@@ -1184,7 +1184,7 @@ window.SOAL = [
     ]
    },
    {
-    "nama": "Paket 2",
+    "nama": "Latihan 2",
     "soal": [
      {
       "jenis": "pg",
@@ -1460,7 +1460,7 @@ window.SOAL = [
     ]
    },
    {
-    "nama": "Paket 3",
+    "nama": "Latihan 3",
     "soal": [
      {
       "jenis": "pg",
@@ -1723,7 +1723,7 @@ window.SOAL = [
   "materi": "Sumber bunyi, tanda baca, suku kata, kuman dan kebersihan, makanan sehat, gerakan",
   "paket": [
    {
-    "nama": "Paket 1",
+    "nama": "Latihan 1",
     "soal": [
      {
       "jenis": "pg",
@@ -2052,7 +2052,7 @@ window.SOAL = [
     ]
    },
    {
-    "nama": "Paket 2",
+    "nama": "Latihan 2",
     "soal": [
      {
       "jenis": "pg",
@@ -2385,7 +2385,7 @@ window.SOAL = [
     ]
    },
    {
-    "nama": "Paket 3",
+    "nama": "Latihan 3",
     "soal": [
      {
       "jenis": "pg",
@@ -2708,7 +2708,7 @@ window.SOAL = [
       "kisi": "BI4d",
       "gambar": [
        {
-        "img": "aset/house.svg",
+        "img": "aset/door.svg",
         "label": "pintu"
        }
       ],
@@ -2724,7 +2724,7 @@ window.SOAL = [
   "materi": "Membilang dan membandingkan, penjumlahan dan pengurangan sampai 10, mengenal bentuk",
   "paket": [
    {
-    "nama": "Paket 1",
+    "nama": "Latihan 1",
     "soal": [
      {
       "jenis": "pg",
@@ -3032,7 +3032,7 @@ window.SOAL = [
     ]
    },
    {
-    "nama": "Paket 2",
+    "nama": "Latihan 2",
     "soal": [
      {
       "jenis": "pg",
@@ -3341,7 +3341,7 @@ window.SOAL = [
     ]
    },
    {
-    "nama": "Paket 3",
+    "nama": "Latihan 3",
     "soal": [
      {
       "jenis": "pg",
@@ -3653,7 +3653,7 @@ window.SOAL = [
   "materi": "Bertumpu, bergantung, keseimbangan, gerak berirama, sikap tubuh, keselamatan di kolam renang",
   "paket": [
    {
-    "nama": "Paket 1",
+    "nama": "Latihan 1",
     "soal": [
      {
       "jenis": "pg",
@@ -3967,7 +3967,7 @@ window.SOAL = [
     ]
    },
    {
-    "nama": "Paket 2",
+    "nama": "Latihan 2",
     "soal": [
      {
       "jenis": "pg",
@@ -4268,17 +4268,12 @@ window.SOAL = [
       "tanya": "Lantai di pinggir kolam licin, jadi kita tidak boleh berlari.",
       "benar": true,
       "kisi": "PJ4",
-      "gambar": [
-       {
-        "img": "aset/water-wave.svg"
-       }
-      ],
       "bahas": "Kalau berlari di lantai licin, kita bisa terpeleset dan jatuh."
      }
     ]
    },
    {
-    "nama": "Paket 3",
+    "nama": "Latihan 3",
     "soal": [
      {
       "jenis": "pg",
@@ -4589,7 +4584,7 @@ window.SOAL = [
   "materi": "Jenis garis, garis dan gerak di alam, bentuk geometris, topeng, bentuk berulang",
   "paket": [
    {
-    "nama": "Paket 1",
+    "nama": "Latihan 1",
     "soal": [
      {
       "jenis": "pg",
@@ -4906,7 +4901,7 @@ window.SOAL = [
     ]
    },
    {
-    "nama": "Paket 2",
+    "nama": "Latihan 2",
     "soal": [
      {
       "jenis": "pg",
@@ -5217,7 +5212,7 @@ window.SOAL = [
     ]
    },
    {
-    "nama": "Paket 3",
+    "nama": "Latihan 3",
     "soal": [
      {
       "jenis": "pg",
@@ -5530,7 +5525,7 @@ window.SOAL = [
   "materi": "Greetings, introducing yourself, numbers one to ten, I have, colors",
   "paket": [
    {
-    "nama": "Paket 1",
+    "nama": "Latihan 1",
     "soal": [
      {
       "jenis": "pg",
@@ -5813,7 +5808,7 @@ window.SOAL = [
     ]
    },
    {
-    "nama": "Paket 2",
+    "nama": "Latihan 2",
     "soal": [
      {
       "jenis": "pg",
@@ -6098,7 +6093,7 @@ window.SOAL = [
     ]
    },
    {
-    "nama": "Paket 3",
+    "nama": "Latihan 3",
     "soal": [
      {
       "jenis": "pg",

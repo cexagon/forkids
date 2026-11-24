@@ -260,11 +260,229 @@ svg.i { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-widt
 
 /* paket per mapel */
 .subject { cursor: default; }
-.pakets { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 10px; }
+.pakets { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 10px; }
 .paket { min-height: 72px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: #FFF8EA; border: 3px solid var(--hill, #EAD7B0); border-radius: 18px; box-shadow: 0 4px 0 var(--hill, #EAD7B0); font: inherit; color: inherit; cursor: pointer; }
 .paket:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--hill, #EAD7B0); }
 .paket:focus-visible { outline: 4px solid var(--accent); outline-offset: 2px; }
-.paket .p-name { font-family: var(--display); font-weight: 800; font-size: 19px; }
+.paket .p-name { font-family: var(--display); font-weight: 800; font-size: 19px; line-height: 1.05; text-align: center; }
+@media (min-width: 900px) { .paket .p-name { font-size: 16px; } .paket { padding: 4px 2px; } }
 .paket .p-score { display: inline-flex; align-items: center; gap: 4px; font-size: 15px; color: var(--leaf-deep); font-weight: 800; }
 .paket .p-score .i { width: 18px; height: 18px; }
 .paket .p-score.none { color: var(--ink-soft); font-weight: 700; }
+
+/* Belajar dulu (materi) */
+#materi { overflow-x: clip; }
+#materi[hidden] { display: none; }
+.belajar { width: 100%; margin-top: 8px; min-height: 64px; justify-content: flex-start; text-align: left; padding: 8px 16px; font-size: 22px; }
+.belajar .b-txt { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; min-width: 0; }
+.belajar .done-badge { display: inline-flex; align-items: center; gap: 4px; background: #fff; color: var(--leaf-deep); border-radius: 999px;
+  padding: 2px 12px 2px 6px; font-family: var(--body); font-weight: 800; font-size: 14px; line-height: 1.2; }
+.belajar .done-badge svg { width: 18px; height: 18px; stroke-width: 3.2; }
+.lihat { align-self: flex-start; margin-top: 8px; min-height: 48px; padding: 4px 16px; font-size: 17px; border-radius: 14px; }
+.lihat svg { width: 24px; height: 24px; }
+.mk-wrap { padding-top: 16px; padding-bottom: 28px; }
+.mc { background: var(--card); border: 3px solid var(--hill); border-radius: 24px; padding: 18px 20px 22px; display: flex; flex-direction: column; gap: 16px; touch-action: pan-y; }
+.mc.in { animation: mk-in .22s ease-out; }
+@keyframes mk-in { from { opacity: 0; transform: translateX(var(--dx, 18px)); } to { opacity: 1; transform: none; } }
+.mk-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.mk-count { font-family: var(--display); font-weight: 800; font-size: 18px; color: var(--ink-soft); }
+.mk-title { font-size: clamp(30px, 5vw, 42px); line-height: 1.1; overflow-wrap: anywhere; }
+.mk-title:focus, .mk-title:focus-visible { outline: none; }
+.mk-acts { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; }
+.mk-act { display: inline-flex; align-items: center; gap: 8px; min-height: 56px; padding: 6px 18px; border-radius: 16px; border: 3px solid var(--leaf); background: #fff; color: var(--leaf-deep);
+  font-family: var(--display); font-weight: 800; font-size: 20px; line-height: 1.1; }
+.mk-act svg { width: 26px; height: 26px; }
+.mk-act.audio { border-color: var(--accent-deep); color: var(--accent-deep); }
+.mk-act.on { background: var(--leaf-soft); }
+.mk-act.audio.on { background: var(--sel); }
+.mk-isi { display: flex; flex-direction: column; gap: 12px; max-width: 40em; }
+.mk-isi p { font-size: 24px; line-height: 1.5; overflow-wrap: anywhere; }
+.mk-isi .step { display: flex; gap: 12px; align-items: flex-start; }
+.mk-isi .step .qno { background: var(--accent); color: #fff; margin-top: 2px; }
+.mk-isi .step .st { flex: 1; min-width: 0; }
+.mk-contoh { border-top: 2px dashed var(--line); padding-top: 12px; display: flex; flex-direction: column; gap: 12px; }
+.mk-contoh h2 { font-size: 22px; color: var(--ink-soft); }
+.mk-contoh .ct { display: flex; flex-direction: column; gap: 10px; }
+.mk-contoh .ct + .ct { border-top: 2px dashed var(--line); padding-top: 12px; }
+.mk-contoh p { font-size: 23px; line-height: 1.45; font-weight: 700; overflow-wrap: anywhere; }
+.mk-ingat { background: var(--leaf-soft); border: 3px solid #B8D69A; border-radius: 20px; padding: 14px 18px 16px; display: flex; flex-direction: column; gap: 6px; }
+.mk-ingat h2 { display: flex; align-items: center; gap: 8px; font-size: 26px; color: var(--leaf-deep); }
+.mk-ingat h2 svg { width: 28px; height: 28px; }
+.mk-ingat p { font-size: 24px; line-height: 1.45; color: var(--ink); overflow-wrap: anywhere; }
+.mc.cta { align-items: center; text-align: center; padding: 28px 18px 26px; gap: 14px; }
+.mc.cta .pakets { width: min(100%, 560px); margin-top: 6px; }
+.mk-nav { position: sticky; bottom: 0; z-index: 4; background: var(--card); border-top: 3px solid var(--hill); padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); }
+.mk-nav-in { max-width: 900px; margin: 0 auto; display: flex; gap: 12px; }
+.mk-nav .btn { flex: 1 1 0; min-width: 0; min-height: 64px; }
+.mk-nav .btn.secondary:disabled { box-shadow: none; }
+@media (max-width: 600px) {
+  .mc { padding: 14px 14px 18px; border-radius: 20px; gap: 14px; }
+  .mk-isi p, .mk-ingat p { font-size: 21px; }
+  .mk-contoh p { font-size: 20px; }
+  .mk-nav { padding: 8px 10px calc(8px + env(safe-area-inset-bottom)); }
+  .mk-nav-in { gap: 8px; }
+  .mk-nav .btn { font-size: 19px; gap: 4px; padding: 6px 8px; }
+  .mk-nav .btn svg { width: 24px; height: 24px; }
+  .belajar { font-size: 21px; }
+  .mk-pre { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .mc.in { animation: none; } }
+/* Panel orang tua (kelas 1: tombol berlabel) */
+.kfoot { display: flex; justify-content: flex-end; margin-top: -4px; }
+.pkl { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 4px 16px; border-radius: 14px; border: 2px dashed #B08A5E; background: transparent; font-family: var(--display); font-weight: 800; font-size: 17px; color: var(--ink); }
+.pkl svg { width: 22px; height: 22px; color: var(--accent-deep); }
+.pkl:hover, .pkl[aria-expanded="true"] { background: #FFF8E1; }
+.pkl[aria-expanded="true"] { border-style: solid; border-color: var(--soil); }
+.kx { background: #FFF8E1; border: 2px solid var(--line); border-radius: 14px; padding: 10px 14px 12px; display: flex; flex-direction: column; gap: 4px; }
+.kx[hidden] { display: none; }
+.kx h3 { font-family: var(--body); font-weight: 800; font-size: 15px; color: #6B4A2E; }
+.kx p { font-size: 17px; line-height: 1.5; font-weight: 600; color: var(--ink); overflow-wrap: anywhere; }
+
+/* ===== Belajar dulu v2: satu kartu per layar ===== */
+.nw { white-space: nowrap; }
+/* beranda: chip latihan selalu satu baris */
+.pakets { gap: 8px; }
+.paket { min-width: 0; padding: 4px 6px; }
+.paket .p-name { white-space: nowrap; font-size: clamp(15px, 4.2vw, 19px); }
+.paket .p-score { white-space: nowrap; }
+@media (min-width: 600px) { .paket .p-name { font-size: 18px; } }
+@media (min-width: 900px) { .pakets { gap: 6px; } .paket { padding: 4px 0; } .paket .p-name { font-size: 15px; } }
+
+/* deret huruf Arab di soal: pendek (<= 5 bagian) satu baris, lebih panjang boleh turun baris */
+.picbox:has(> .op.huruf) { flex-wrap: wrap; }
+.picbox:has(> .op.huruf):not(:has(> :nth-child(6))) { flex-wrap: nowrap; }
+.picbox:has(> .op.huruf) .op.huruf { font-size: clamp(40px, 13vw, 96px); padding: 2px clamp(4px, 2vw, 18px); max-width: 100%; }
+.picbox:has(> .op.huruf) > .op:not(.huruf) { font-size: clamp(24px, 7vw, 56px); padding: 0 2px; }
+.picbox:has(> .op.huruf.ayat) { flex-wrap: wrap; }
+.op.huruf.ayat { font-size: clamp(30px, 8.5vw, 60px) !important; }
+
+/* kartu materi */
+#materi .bar .btn { min-height: 52px; }
+.mk-wrap { padding-top: 10px; padding-bottom: 16px; }
+.mc { padding: 14px 16px 16px; gap: 12px; border-radius: 22px; }
+.mk-head { display: flex; flex-direction: column; gap: 8px; }
+.mk-ttl { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.mk-title { font-size: clamp(26px, 4.4vw, 36px); }
+.mk-act { min-height: 48px; padding: 4px 14px; font-size: 18px; border-radius: 14px; border-width: 3px; }
+.mk-act svg { width: 24px; height: 24px; }
+.mk-acts { gap: 8px 10px; }
+.mk-body { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.mk-isi { gap: 8px; max-width: 42em; }
+.mk-isi p { font-size: 22px; line-height: 1.42; }
+.mk-contoh { padding-top: 10px; gap: 10px; }
+.mk-contoh h2 { font-size: 19px; }
+.mk-contoh p { font-size: 21px; line-height: 1.4; }
+.mk-contoh .ct { gap: 8px; }
+.mk-ingat { padding: 10px 16px 12px; gap: 4px; border-radius: 18px; }
+.mk-ingat h2 { font-size: 22px; }
+.mk-ingat h2 svg { width: 24px; height: 24px; }
+.mk-ingat p { font-size: 22px; line-height: 1.4; }
+.mc .kfoot { margin-top: -2px; }
+
+/* gambar di kartu materi (v3)
+   Satu kolom untuk HP dan tablet tegak: judul, gambar selebar kartu, isi, contoh, Ingat!.
+   Wadah gambar tidak pernah memotong; ukuran dibatasi pada gambar itu sendiri. */
+.mc .picbox { padding: 10px; gap: 10px 14px; border-radius: 18px; border-width: 2px; max-height: none; overflow: visible; }
+.mc .picbox.mainpic { width: 100%; }
+.mc .part { gap: 4px; min-width: 0; }
+.mc .part figcaption { font-family: var(--display); font-weight: 800; font-size: 21px; line-height: 1.15; color: var(--ink); text-align: center; }
+/* aset gambar: 96-140px, berjajar */
+.mc .copies:not(.multi) img { height: clamp(96px, 15vw, 140px); width: auto; max-width: min(100%, 240px); }
+.mc .copies.multi img { height: 56px; }
+/* diagram svg: selebar kartu (maks 560px), tinggi maks 32vh pada svg-nya.
+   --mw = lebar minimum agar label di dalam svg >= 13px (dihitung di latihan.js) */
+.mc .part:has(> .sv) { flex: 1 1 var(--mw, 130px); min-width: min(100%, var(--mw, 130px)); max-width: 560px; }
+.mc .part > .sv { width: 100%; }
+.mc .part > .sv svg { display: block; width: 100%; height: auto; max-height: 32vh; margin: 0 auto; }
+/* svg berlabel: tidak membesar melebihi kebutuhan label, supaya beberapa diagram tetap berjajar;
+   satu diagram tunggal boleh 1,4x lebih besar */
+.mc .part.lbl { flex: 1 1 auto; width: min(100%, var(--mw)); max-width: min(100%, 560px, calc(var(--mw) * 1.2)); }
+.mc .part.lbl:only-of-type { width: min(100%, 560px, calc(var(--mw) * 1.4)); max-width: min(100%, 560px, calc(var(--mw) * 1.4)); }
+.mc .op { font-size: 40px; }
+.mc .op.huruf { font-size: clamp(40px, 9vw, 64px); }
+.mc .picbox:has(> .op.huruf):not(:has(> .part)) { direction: rtl; }
+.mc .picbox:has(> .op.huruf):not(:has(> .part)) .op.huruf { font-size: clamp(40px, 11vw, 64px); }
+.mc .op.huruf.ayat { font-size: clamp(28px, 7vw, 44px) !important; line-height: 1.6; }
+/* lambang sila: bingkai seragam */
+.mc .part.lambang .copies img { width: 104px; height: 104px; object-fit: contain; background: #fff; border: 3px solid var(--line); border-radius: 14px; padding: 4px; max-width: none; }
+.mc .part.lambang { gap: 4px; }
+/* contoh */
+.mc .ct .picbox { background: #fff; padding: 6px 10px; border-width: 2px; }
+.mc .ct .copies:not(.multi) img { height: clamp(96px, 12vw, 120px); }
+.mc .ct .part > .sv svg { max-height: 26vh; }
+.mc .ct.ar { align-items: stretch; }
+.mc .ct.ar .picbox { order: -1; }
+.mc .ct.ar .op.huruf { color: var(--ink); }
+.mc .ct.has-pic { display: flex; flex-direction: column; gap: 8px; }
+.mc .ct.has-pic > .picbox { align-self: stretch; }
+.mc .ct.has-pic:not(:has(.lbl)) > .picbox { align-self: flex-start; }
+/* gambar contoh tanpa label: pendukung, cukup kecil; contoh berlabel: selebar kebutuhan labelnya */
+.mc .ct .part:not(.lbl):has(> .sv) { flex: 0 1 240px; max-width: 240px; }
+.mc .ct .part.lbl:only-of-type { width: min(100%, var(--mw)); max-width: min(100%, var(--mw)); }
+
+@media (min-width: 768px) {
+  .mc { padding: 16px 22px 18px; gap: 14px; }
+  .mk-head { flex-direction: row; align-items: flex-end; justify-content: space-between; gap: 16px; }
+  .mk-acts { flex: none; }
+  .mc .ct.has-pic:not(:has(.lbl)) { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px 16px; }
+  .mc .ct.has-pic:not(:has(.lbl)) > p { flex: 1 1 240px; min-width: 0; }
+  .mc .ct.has-pic:not(:has(.lbl)) > .picbox { flex: 0 1 auto; max-width: 46%; align-self: center; }
+}
+@media (max-width: 767px) {
+  .mk-isi p, .mk-ingat p { font-size: 19px; line-height: 1.4; }
+  .mk-contoh p { font-size: 18px; }
+  .mk-title { font-size: 25px; }
+  .mc .part figcaption { font-size: 19px; }
+  .mc { padding: 12px 12px 14px; gap: 10px; }
+  .mk-act { min-height: 44px; font-size: 17px; padding: 2px 12px; }
+  .mk-ingat h2 { font-size: 20px; }
+  .mc .part.lambang .copies img { width: 88px; height: 88px; }
+  .mc .picbox { padding: 8px; gap: 8px 10px; }
+  /* HP: diagram berlabel boleh sedikit lebih kecil supaya dua sejajar (label tetap >= 13px) */
+  .mc .part.lbl:not(:only-of-type) { width: min(100%, calc(var(--mw) * .85)); min-width: min(100%, calc(var(--mw) * .85)); }
+}
+/* Landscape lebar (>= 1024, lebar > tinggi): dua kolom, gambar kiri ikut layar */
+@media (min-width: 1024px) and (orientation: landscape) {
+  .mk-wrap { max-width: 1120px; }
+  .mc.two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px 28px; align-items: start; }
+  .mc.two > .mk-head, .mc.two > .kfoot, .mc.two > .kx { grid-column: 1 / -1; }
+  .mc.two > .picbox.mainpic { grid-column: 1; grid-row: 2; position: sticky; top: 84px; align-content: flex-start; }
+  .mc.two > .mk-body { grid-column: 2; grid-row: 2; }
+  .mc.two > .mainpic .part > .sv svg { max-height: 60vh; }
+  .mc.two > .mainpic .copies:not(.multi) img { height: clamp(110px, 16vh, 140px); }
+  /* .wide (>= 3 diagram berlabel lebar, ditandai latihan.js): tetap satu kolom, diagram berjajar */
+  .mc.wide > .mainpic .part > .sv svg { max-height: 40vh; }
+}
+
+/* kartu Siap latihan? */
+.mc.cta { padding: 22px 16px 22px; gap: 12px; }
+.mc.cta .pakets { display: flex; flex-wrap: wrap; width: min(100%, 560px); gap: 10px; margin-top: 4px; }
+.mc.cta .paket { flex: 1 1 120px; min-height: 56px; background: #fff; flex-direction: row; gap: 8px; box-shadow: none; border-color: var(--line); }
+.mc.cta .paket .p-name { font-size: 19px; }
+.mc.cta .paket.main { flex: 1 1 100%; order: -1; min-height: 88px; background: var(--accent); border-color: var(--accent-deep); color: #fff; box-shadow: 0 6px 0 var(--accent-deep); }
+.mc.cta .paket.main:active { box-shadow: none; transform: translateY(4px); }
+.mc.cta .paket.main .p-name { font-size: 32px; }
+.mc.cta .paket.main svg.i { width: 32px; height: 32px; }
+.mc.cta .paket.main .p-score, .mc.cta .paket.main .p-score.none { color: #fff; font-size: 16px; opacity: .95; }
+.mk-nav.last .mk-nav-in { justify-content: flex-start; }
+.mk-nav.last #mk-prev { flex: 0 0 auto; min-height: 52px; background: transparent; border-color: var(--line); color: var(--ink-soft); box-shadow: none; font-size: 17px; padding: 4px 16px; }
+.mk-nav { padding-top: 8px; padding-bottom: calc(8px + env(safe-area-inset-bottom)); }
+.mk-nav .btn { min-height: 56px; }
+.mc .picbox:has(> .op.huruf):not(:has(> :nth-child(6))) { flex-wrap: wrap; }
+.mc .picbox:has(> .op.huruf):not(:has(> .part)) .op.huruf { padding: 2px 6px; }
+.mc .picbox.mainpic:has(> .op.huruf) { justify-content: center; }
+.mc.cta .paket.main .p-score.none { display: none; }
+.mc .ct.ar .picbox { padding: 2px 10px; border: 0; background: transparent; }
+.mc .ct.ar .op.huruf.ayat { font-size: clamp(26px, 6vw, 38px) !important; line-height: 1.5; padding: 0 6px; }
+.mc .ct.ar { gap: 4px; }
+
+/* ===== Belajar dulu v3: nav tetap, Ingat! lebih kuat ===== */
+/* nav selalu di dasar layar: posisi tombol sama di semua kartu */
+.mk-nav { position: fixed; left: 0; right: 0; bottom: 0; z-index: 6; }
+.mk-nav-in { min-height: 56px; align-items: center; }
+.mk-wrap { padding-bottom: calc(100px + env(safe-area-inset-bottom)); }
+/* Ingat! = peringkat #2: tint lebih gelap + garis hijau penuh, terbaca di grayscale */
+.mk-ingat { background: #DCEEC6; border: 3px solid var(--leaf); }
+.mk-ingat h2 { color: var(--leaf-deep); }
+/* panel orang tua tidak tertutup bar atas / nav saat digulir ke sana */
+#materi .kx { scroll-margin-top: 88px; scroll-margin-bottom: calc(104px + env(safe-area-inset-bottom)); }

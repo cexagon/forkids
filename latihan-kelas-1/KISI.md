@@ -4,7 +4,7 @@ Angka di kolom paket = nomor soal yang menguji indikator itu. Dibuat otomatis ol
 
 ## Al-Islam
 
-| Kode | Indikator kisi-kisi | Butir di kisi | Paket 1 | Paket 2 | Paket 3 |
+| Kode | Indikator kisi-kisi | Butir di kisi | Latihan 1 | Latihan 2 | Latihan 3 |
 | --- | --- | --- | --- | --- | --- |
 | AI1a | Lafal huruf hijaiah | 3 (PG 2, isian 1) | 1, 2, 16 | 1, 2, 16 | 1, 2, 16 |
 | AI1b | Arti dan bacaan Al-Fatihah | 1 (PG 1) | 3 | 3 | 3 |
@@ -19,7 +19,7 @@ Angka di kolom paket = nomor soal yang menguji indikator itu. Dibuat otomatis ol
 
 ## Pendidikan Pancasila
 
-| Kode | Indikator kisi-kisi | Butir di kisi | Paket 1 | Paket 2 | Paket 3 |
+| Kode | Indikator kisi-kisi | Butir di kisi | Latihan 1 | Latihan 2 | Latihan 3 |
 | --- | --- | --- | --- | --- | --- |
 | PK1 | Perilaku sesuai aturan di rumah, sekolah, dan saat bermain | 11 (PG 7, B/S 4) | 1, 2, 3, 4, 5, 6, 7, 16, 17, 18, 19 | 1, 2, 3, 4, 5, 6, 7, 16, 17, 18, 19 | 1, 2, 3, 4, 5, 6, 7, 16, 17, 18, 19 |
 | PK2 | Identitas diri (jenis kelamin, cara berpakaian, hobi) dan bersyukur atas tubuh | 4 (PG 4) | 8, 9, 10, 11 | 8, 9, 10, 11 | 8, 9, 10, 11 |
@@ -28,7 +28,7 @@ Angka di kolom paket = nomor soal yang menguji indikator itu. Dibuat otomatis ol
 
 ## Bahasa Indonesia
 
-| Kode | Indikator kisi-kisi | Butir di kisi | Paket 1 | Paket 2 | Paket 3 |
+| Kode | Indikator kisi-kisi | Butir di kisi | Latihan 1 | Latihan 2 | Latihan 3 |
 | --- | --- | --- | --- | --- | --- |
 | BI1a | Sumber bunyi berdasarkan gambar atau cerita | 1 (PG 1) | 1 | 1 | 1 |
 | BI1b | Benda atau hewan sumber bunyi di sekitar | 2 (PG 1, isian 1) | 2, 16 | 2, 16 | 2, 16 |
@@ -46,7 +46,7 @@ Angka di kolom paket = nomor soal yang menguji indikator itu. Dibuat otomatis ol
 
 ## Matematika
 
-| Kode | Indikator kisi-kisi | Butir di kisi | Paket 1 | Paket 2 | Paket 3 |
+| Kode | Indikator kisi-kisi | Butir di kisi | Latihan 1 | Latihan 2 | Latihan 3 |
 | --- | --- | --- | --- | --- | --- |
 | MT1 | Membilang, mengurutkan, dan membandingkan bilangan sampai 10 (<, >, =) | 4 (PG 4) | 1, 2, 3, 4 | 1, 2, 3, 4 | 1, 2, 3, 4 |
 | MT2 | Penjumlahan sampai 10: gambar, garis bilangan, soal cerita, dua bilangan berjumlah 10 | 6 (PG 4, isian 2) | 5, 6, 7, 8, 16, 17 | 5, 6, 7, 8, 16, 17 | 5, 6, 7, 8, 16, 17 |
@@ -55,7 +55,7 @@ Angka di kolom paket = nomor soal yang menguji indikator itu. Dibuat otomatis ol
 
 ## PJOK
 
-| Kode | Indikator kisi-kisi | Butir di kisi | Paket 1 | Paket 2 | Paket 3 |
+| Kode | Indikator kisi-kisi | Butir di kisi | Latihan 1 | Latihan 2 | Latihan 3 |
 | --- | --- | --- | --- | --- | --- |
 | PJ1 | Gerak bertumpu, bergantung, dan keseimbangan (sikap pesawat) | 5 (PG 3, B/S 2) | 1, 2, 3, 16, 17 | 1, 2, 3, 16, 17 | 1, 2, 3, 16, 17 |
 | PJ2 | Gerak berirama: melangkah ke depan, ke samping, meliukkan badan | 4 (PG 3, B/S 1) | 4, 5, 6, 18 | 4, 5, 6, 18 | 4, 5, 6, 18 |
@@ -65,7 +65,7 @@ Angka di kolom paket = nomor soal yang menguji indikator itu. Dibuat otomatis ol
 
 ## Seni Rupa
 
-| Kode | Indikator kisi-kisi | Butir di kisi | Paket 1 | Paket 2 | Paket 3 |
+| Kode | Indikator kisi-kisi | Butir di kisi | Latihan 1 | Latihan 2 | Latihan 3 |
 | --- | --- | --- | --- | --- | --- |
 | SR1 | Jenis garis: lurus, lengkung, zig-zag, bergelombang, spiral | 4 (PG 3, isian 1) | 1, 2, 3, 15 | 1, 2, 3, 15 | 1, 2, 3, 15 |
 | SR2 | Garis dengan kesan gerak di alam (ombak, petir) | 4 (PG 3, isian 1) | 4, 5, 6, 16 | 4, 5, 6, 16 | 4, 5, 6, 16 |
@@ -75,7 +75,7 @@ Angka di kolom paket = nomor soal yang menguji indikator itu. Dibuat otomatis ol
 
 ## Bahasa Inggris
 
-| Kode | Indikator kisi-kisi | Butir di kisi | Paket 1 | Paket 2 | Paket 3 |
+| Kode | Indikator kisi-kisi | Butir di kisi | Latihan 1 | Latihan 2 | Latihan 3 |
 | --- | --- | --- | --- | --- | --- |
 | EN1a | Greetings: good morning, good afternoon, good night | 3 (PG 3) | 1, 2, 3 | 1, 2, 3 | 1, 2, 3 |
 | EN1b | Jawaban "How are you?" | 1 (PG 1) | 4 | 4 | 4 |
