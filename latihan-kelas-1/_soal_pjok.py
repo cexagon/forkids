@@ -139,4 +139,94 @@ paket3 = [
        gambar=[img('folded-hands')], bahas='Bismillah dibaca sebelum memulai. Sesudah selesai kita membaca Alhamdulillah.', kisi='PJ5'),
 ]
 
+# ---------------------------------- SOAL TAMBAHAN (melengkapi jumlah butir kisi-kisi) ----------------------------------
+paket1 += [
+    pg('Anak pada gambar bergantung pada palang. Badannya ditahan oleh ....', 'kedua tangan', ['kedua telinga', 'perut saja'],
+       gambar=[BERGANTUNG], bahas='Saat bergantung, tangan memegang palang dan menahan badan.', kisi='PJ1'),
+    pg('Pada sikap pesawat, kedua tangan anak ....', 'direntangkan ke samping', ['dilipat di dada', 'memegang kaki'],
+       gambar=[PESAWAT], bahas='Sikap pesawat: satu kaki menumpu dan kedua tangan terentang seperti sayap.', kisi='PJ1'),
+    bs('Sikap pesawat dilakukan sambil berlari kencang.', False,
+       bahas='Sikap pesawat dilakukan di tempat: satu kaki menumpu dan badan seimbang.', kisi='PJ1'),
+    pg('Lihat gambar. Anak menggeser kakinya mengikuti irama. Ia melangkah ke samping ....', 'kiri', ['kanan', 'belakang'],
+       gambar=[LANGKAH_KIRI, img('musical-note')], bahas='Anak dilihat dari belakang. Panah menunjuk ke kiri, jadi anak melangkah ke samping kiri.', kisi='PJ2'),
+    pg('Gambar mana yang menunjukkan meliukkan badan?', opsi(MELIUK), [opsi(JONGKOK), opsi(BERLARI)],
+       bahas='Meliukkan badan: badan bergerak ke kanan dan ke kiri.', kisi='PJ2'),
+    pg('Kedua kaki terangkat dari tanah dan badan naik ke atas. Itu gerakan ....', 'melompat', ['duduk', 'jongkok'],
+       gambar=[MELOMPAT], bahas='Melompat berarti kaki terangkat dari tanah.', kisi='PJ3'),
+    pg('Salah satu manfaat bergerak adalah ....', 'peredaran darah lancar', ['peredaran darah berhenti', 'badan cepat sakit'],
+       bahas='Banyak bergerak membuat darah mengalir lancar dan badan sehat.', kisi='PJ3'),
+    pg('Sebelum masuk ke kolam renang, kita sebaiknya ....', 'melakukan pemanasan', ['makan sebanyak-banyaknya', 'langsung melompat ke kolam'],
+       bahas='Pemanasan membuat badan siap dan mencegah kram saat berenang.', kisi='PJ4'),
+    pg('Rani merasa lelah di dalam kolam. Rani harus ....', 'berpegangan di pinggir kolam', ['menyelam ke dasar kolam', 'berenang ke tempat yang dalam'],
+       gambar=[img('person-swimming')], bahas='Saat lelah, pegang pinggir kolam dan beristirahat.', kisi='PJ4'),
+    pg('Rafi akan ikut lomba lari. Sebelum mulai, Rafi mengucapkan ....', 'Bismillah', ['Alhamdulillah', 'Assalamualaikum'],
+       gambar=[img('person-running')], bahas='Sebelum memulai kita membaca Bismillah.', kisi='PJ5'),
+]
+
+paket2 += [
+    pg('Gambar mana yang menunjukkan gerak bertumpu?', opsi(MERANGKAK), [opsi(BERGANTUNG), opsi(MELOMPAT)],
+       bahas='Pada gerak bertumpu, tangan, lutut, dan kaki menahan badan di lantai.', kisi='PJ1'),
+    pg('Gambar mana yang menunjukkan sikap pesawat?', opsi(PESAWAT), [opsi(JONGKOK), opsi(DUDUK)],
+       bahas='Sikap pesawat: berdiri satu kaki, badan condong, kedua tangan terentang.', kisi='PJ1'),
+    bs('Gerak keseimbangan membuat badan kita mudah jatuh.', False,
+       bahas='Gerak keseimbangan melatih badan agar tidak mudah jatuh.', kisi='PJ1'),
+    pg('Gambar mana yang menunjukkan melangkah ke depan?', opsi(LANGKAH_DEPAN), [opsi(LANGKAH_KANAN), opsi(MELIUK)],
+       bahas='Panah pada gambar menunjuk ke depan, jadi anak melangkah ke depan.', kisi='PJ2'),
+    pg('Kaki digeser ke kanan mengikuti irama lagu. Itu gerak melangkah ke ....', 'samping', ['depan', 'belakang'],
+       gambar=[img('musical-note')], bahas='Menggeser kaki ke kanan atau ke kiri disebut melangkah ke samping.', kisi='PJ2'),
+    pg('Anak duduk selonjor di lantai. Sikap ini termasuk sikap tubuh ....', 'diam', ['bergerak', 'berlari'],
+       gambar=[DUDUK], bahas='Duduk tidak berpindah tempat. Itu sikap tubuh diam.', kisi='PJ3'),
+    pg('Salah satu manfaat bergerak adalah badan menjadi ....', 'sehat dan kuat', ['lemas', 'mudah sakit'],
+       gambar=[img('person-walking')], bahas='Banyak bergerak membuat badan sehat dan kuat.', kisi='PJ3'),
+    pg('Rani mau berenang di kolam. Siapa yang harus menemani Rani agar aman?', 'ayah atau guru', ['teman yang masih kecil', 'tidak perlu ditemani siapa pun'],
+       gambar=[img('person-swimming')], bahas='Anak harus berenang ditemani orang dewasa.', kisi='PJ4'),
+    pg('Dina capek setelah berenang cukup lama. Sebaiknya Dina ....', 'segera ke pinggir kolam dan beristirahat', ['terus berenang sampai tengah', 'menyelam lebih lama'],
+       bahas='Kalau lelah, kita berhenti berenang, ke pinggir kolam, lalu istirahat.', kisi='PJ4'),
+    pg('Lomba lari sudah selesai. Dina bersyukur dengan mengucapkan ....', 'Alhamdulillah', ['Bismillah', 'Astagfirullah'],
+       bahas='Setelah selesai kita bersyukur dengan mengucapkan Alhamdulillah.', kisi='PJ5'),
+]
+
+paket3 += [
+    pg('Tangan, lutut, dan kaki yang menahan badan pada gerak bertumpu disebut ....', 'tumpuan', ['hiasan', 'mainan'],
+       gambar=[MERANGKAK], bahas='Bagian tubuh yang menahan badan disebut tumpuan.', kisi='PJ1'),
+    pg('Anak bergantung pada ....', 'palang yang kuat', ['kasur yang empuk', 'bantal'], gambar=[BERGANTUNG],
+       bahas='Kita bergantung pada palang atau alat lain yang kuat dan stabil.', kisi='PJ1'),
+    bs('Saat bergantung, badan kita ditahan oleh kedua tangan.', True,
+       bahas='Tangan memegang palang dan menahan badan.', kisi='PJ1'),
+    pg('Gerak mana yang dilakukan dengan melangkah ke depan mengikuti irama?', 'berjalan maju mengikuti ketukan', ['menggeser kaki ke kiri', 'meliukkan badan ke kanan dan ke kiri'],
+       gambar=[img('drum')], bahas='Melangkah ke depan berarti kaki maju sesuai ketukan.', kisi='PJ2'),
+    pg('Saat meliukkan badan mengikuti irama, kaki kita ....', 'tetap di tempat', ['berlari', 'melompat jauh'],
+       gambar=[MELIUK], bahas='Saat meliuk, kaki tetap di tempat; badan bergerak ke kanan dan ke kiri.', kisi='PJ2'),
+    pg('Gambar mana yang menunjukkan sikap tubuh bergerak?', opsi(BERLARI), [opsi(BERDIRI), opsi(JONGKOK)],
+       bahas='Berlari termasuk sikap tubuh bergerak. Berdiri dan jongkok adalah sikap tubuh diam.', kisi='PJ3'),
+    pg('Kegiatan mana yang dilakukan dengan gerak melompat?', 'bermain engklek', ['tidur siang', 'duduk membaca buku'],
+       bahas='Saat bermain engklek, kita melompat dengan satu kaki.', kisi='PJ3'),
+    pg('Dimas ingin berenang, tetapi belum ada orang dewasa. Dimas harus ....', 'menunggu orang dewasa yang menemani', ['langsung masuk ke kolam', 'mengajak adik kecil berenang berdua'],
+       gambar=[img('person-swimming')], bahas='Anak tidak boleh berenang sendiri. Tunggu orang dewasa yang menemani.', kisi='PJ4'),
+    pg('Anak yang belum pandai berenang sebaiknya memakai ....', 'pelampung', ['payung', 'bantal'],
+       bahas='Pelampung membantu badan tetap mengapung sehingga lebih aman.', kisi='PJ4'),
+    pg('Anak muslim yang beriman suka hidup ....', 'bersih', ['kotor', 'berantakan'], gambar=[img('toothbrush')],
+       bahas='Kebersihan sebagian dari iman, jadi kita menjaga kebersihan.', kisi='PJ5'),
+]
+
+_URUT = {'pg': 0, 'bs': 1, 'isian': 2, 'uraian': 3}
+for _p in (paket1, paket2, paket3):
+    _p.sort(key=lambda q: (_URUT[q['jenis']], q['kisi']))
+
 PAKET = [paket1, paket2, paket3]
+
+# Seimbangkan letak kunci PG (a/b/c) agar tidak berpola: pindahkan jawaban benar soal-soal ini ke huruf tertentu.
+def _geser(p, awal, huruf):
+    k = 'abc'.index(huruf)
+    for q in p:
+        if q['jenis'] == 'pg' and q['tanya'].startswith(awal):
+            j = q['jawab']; q['pilihan'][j], q['pilihan'][k] = q['pilihan'][k], q['pilihan'][j]; q['jawab'] = k
+            return
+    raise KeyError(awal)
+_geser(PAKET[0], 'Pada sikap pesawat', 'b')
+_geser(PAKET[0], 'Rafi akan ikut lomba lari', 'b')
+_geser(PAKET[0], 'Salah satu manfaat bergerak adalah ....', 'b')
+_geser(PAKET[2], 'Saat meliukkan badan', 'a')
+_geser(PAKET[2], 'Gambar mana yang menunjukkan sikap tubuh bergerak', 'c')
+_geser(PAKET[2], 'Saat lelah di dalam kolam', 'b')
+_geser(PAKET[2], 'Olahraga sudah selesai', 'b')

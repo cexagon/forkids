@@ -1,7 +1,7 @@
 from _alat import *
 
 # =====================================================================
-# Matematika kelas 2 - ASAS ganjil. 3 paket x (6 PG, 6 isian, 3 uraian).
+# Matematika kelas 2 - ASAS ganjil. 3 paket x (10 PG, 9 isian, 5 uraian) = 24 butir sesuai kisi-kisi.
 # Semua angka hitungan diperiksa dengan assert di bagian "verifikasi" (bawah file).
 # =====================================================================
 
@@ -430,6 +430,191 @@ paket3 = [
                    'Ajak anak menaruh 25 dan 18 sendok es krim, menukar tiap 10 sendok lepas dengan 1 ikat, lalu menghitung ikatan dan sisanya.'),
 ]
 
+
+# =====================================================================
+# TAMBAHAN supaya tiap paket = 24 butir seperti kisi-kisi (10 PG, 9 isian, 5 uraian)
+# =====================================================================
+# ---------- gambar tambahan ----------
+LINGKARAN_G = svg(circ(120, 75, 52, BC['c']), 240, 150)
+BOLA_G = svg(bola(100, 78, 52, MER), 200, 150)
+KERUCUT_G = KERUCUT
+SEGITIGA_G = svg(tri(120, 72, 52, BC['t']), 240, 150)
+RUMAH_DATAR = svg(poly([(40, 62), (120, 12), (200, 62)], '#F29A52') + sq(120, 100, 38, '#B5E1F4')
+                  + rr(105, 100, 30, 38, '#C98B55') , 240, 150)
+PERSEGI_BAGI = svg(sq(120, 75, 55, '#FBD97E') + putus('M120 20 V130', 4), 240, 150)
+GRID_2X3 = svg(''.join(sq(45 + 75 * c, 40 + 70 * r, 32, BC['s']) for r in range(2) for c in range(3)), 240, 150)
+PERSEGI_DIAG1 = svg(sq(120, 75, 55, '#B5E3AB') + putus('M65 20 L175 130', 4), 240, 150)
+PERSEGI_DIAG2 = svg(sq(120, 75, 55, '#B5E3AB') + putus('M65 20 L175 130', 4) + putus('M175 20 L65 130', 4), 240, 150)
+TIGA_PERSEGI = svg(''.join(sq(45 + 75 * i, 75, 28, BC['s']) for i in range(3)), 240, 150)
+ROBOT = svg(sq(120, 38, 28, '#B5E1F4') + circ(108, 34, 6, '#fff') + circ(132, 34, 6, '#fff')
+            + rr(84, 70, 72, 48, '#F8C197') + rr(60, 74, 22, 12, '#F8C197') + rr(158, 74, 22, 12, '#F8C197'), 240, 150)
+KUMPUL_2 = svg(shp('c', 45, 48, 22) + shp('t', 120, 45, 24) + shp('c', 200, 50, 22) + shp('s', 55, 112, 20)
+               + shp('r', 130, 115, 18) + shp('c', 210, 112, 22), 255, 150)
+KUMPUL_4 = svg(shp('s', 45, 50, 22) + shp('t', 120, 48, 24) + shp('r', 55, 115, 18) + shp('c', 150, 112, 24), 255, 150)
+TUMPUK = svg(tri(120, 28, 20, BC['t']) + circ(120, 80, 20, BC['c']) + sq(120, 128, 17, BC['s']), 240, 160)
+POLA_UKURAN = svg(''.join(circ(30 + i * 44, 45, 22 if 'bkk'[i % 3] == 'b' else 12, BC['c']) for i in range(7))
+                  + kotak_tanya(30 + 7 * 44, 45), 30 + 8 * 44 + 14, 90)
+POLA_AABK = deretan([('c', W[x]) for x in ['merah', 'merah', 'biru', 'kuning'] * 2 + ['merah', 'merah']], r=14, gap=36)
+POLA7 = deretan([('c', W[x]) for x in ['merah', 'merah', 'biru', 'biru'] * 2], q=2, r=16, gap=44)
+
+paket1 += [
+    pg('Bangun datar pada gambar bernama ....', 'lingkaran', ['persegi', 'segitiga', 'persegi panjang'], gambar=[LINGKARAN_G],
+       bahas='Lingkaran bulat, tepinya melengkung dan tidak punya pojok. Bangun lain punya sisi lurus.', kisi='MT3a',
+       konteks='Bangun datar itu pipih seperti gambar di kertas. Lingkaran bulat sempurna, tidak punya pojok, seperti tutup toples atau piring. '
+               'Ajak anak menelusuri tepi gambar dengan jari, lalu bandingkan dengan tepi persegi dan segitiga yang punya pojok.'),
+    pg('Pernyataan yang benar tentang segi banyak adalah ....', 'sisinya lurus dan punya pojok',
+       ['sisinya melengkung', 'tidak punya pojok', 'bulat seperti bola'], kisi='MT3c',
+       bahas='Segi banyak, seperti segitiga dan persegi, sisinya lurus dan punya pojok.',
+       konteks='Bangun datar dibagi dua jenis: segi banyak (sisi lurus, punya pojok) dan bentuk lengkung (tepi melengkung, tanpa pojok). '
+               'Gambar segitiga dan lingkaran bersama anak, lalu minta ia menunjuk pojok pada tiap gambar. '
+               'Bangun yang punya pojok itulah segi banyak.'),
+    pg('Gambar rumah tersusun dari beberapa bangun datar. Atap rumah berbentuk ....', 'segitiga',
+       ['persegi', 'lingkaran', 'persegi panjang'], gambar=[RUMAH_DATAR],
+       bahas='Atap rumah pada gambar punya 3 sisi dan 3 pojok, yaitu segitiga.', kisi='MT3d',
+       konteks='Satu gambar bisa disusun dari beberapa bangun datar. Mengurai berarti memisahkan gambar menjadi bangun-bangun pembentuknya. '
+               'Minta anak menunjuk bagian atap, lalu menghitung sisi dan pojoknya untuk menamai bangun itu. '
+               'Ajak ia menyusun rumah-rumahan sendiri dari kertas.'),
+    pg('Setelah bintang pada pola ini, gambar berikutnya adalah ....', 'bulan', ['bintang', 'awan', 'matahari'],
+       gambar=[img('star'), img('crescent-moon'), img('crescent-moon'), img('star'), img('crescent-moon'), img('crescent-moon'), img('star'), {'teks': '?'}],
+       bahas='Polanya bintang, bulan, bulan, diulang. Setelah bintang datang bulan.', kisi='MT4b',
+       konteks='Pada pola gambar, cari kelompok yang berulang. Di sini kelompoknya "bintang, bulan, bulan". '
+               'Minta anak menepuk tangan mengikuti irama itu sambil menyebut nama gambar, lalu lanjutkan sampai ke tanda tanya.'),
+    isian('Bangun ruang yang bulat penuh pada gambar ini bernama ....', ['bola'], gambar=[BOLA_G],
+          bahas='Bola bulat penuh, tidak punya pojok dan tidak punya sisi datar.', kisi='MT3a',
+          konteks='Bangun ruang yang bulat penuh bernama bola, seperti bola sepak atau kelereng. '
+                  'Ajak anak menggelindingkan bola dan kotak, lalu tanya mana yang bisa menggelinding ke segala arah.'),
+    isian('Persegi termasuk segi banyak atau bentuk lengkung? Tulis jawabanmu.', ['segi banyak', 'segibanyak', 'segi-banyak', 'bentuk segi banyak'],
+          bahas='Persegi punya 4 sisi lurus dan 4 pojok, jadi termasuk segi banyak.', kisi='MT3c',
+          konteks='Segi banyak punya sisi lurus dan pojok, bentuk lengkung punya tepi melengkung tanpa pojok. '
+                  'Ajak anak meraba pojok sapu tangan atau ubin berbentuk persegi, lalu memilih satu dari dua istilah itu.'),
+    isian('Lengkapi pola gambar ini. Gambar pada tanda ? adalah ....', ['ikan', 'gambar ikan', 'fish'],
+          gambar=[img('ant'), img('fish'), img('butterfly'), img('ant'), img('fish'), img('butterfly'), img('ant'), {'teks': '?'}],
+          bahas='Polanya semut, ikan, kupu-kupu, diulang. Setelah semut datang ikan.', kisi='MT4b',
+          konteks='Pola gambar dengan tiga unsur diulang dalam urutan tetap. '
+                  'Minta anak membaca "semut, ikan, kupu-kupu" lalu mengulanginya sampai tiba di tanda tanya. '
+                  'Bisa dilatih dengan tiga benda di rumah, misalnya sendok, garpu, piring.'),
+    uraian('Kue berbentuk persegi dipotong sepanjang garis putus-putus tepat di tengah.\nPotongannya ada berapa dan berbentuk apa?',
+           'Potongannya ada 2 dan berbentuk persegi panjang.',
+           [['2', 'dua'], ['persegi panjang', 'persegipanjang']], minimal=2, gambar=[PERSEGI_BAGI],
+           bahas='Persegi dibagi dua tepat di tengah menjadi 2 persegi panjang: dua sisinya panjang dan dua sisinya pendek.', kisi='MT3d',
+           konteks='Bangun datar bisa dipotong menjadi bangun lain. Beri anak kertas persegi, minta ia melipat tepat di tengah lalu menggunting. '
+                   'Tanyakan: ada berapa potongan, dan apakah keempat sisi tiap potongan masih sama panjang? '
+                   'Terima jawaban dengan kata-kata anak sendiri.'),
+    uraian('Tulis nama dua bentuk pada tanda ? pada pola ini, lalu jelaskan bagaimana polanya.',
+           'Dua bentuknya persegi dan segitiga. Polanya segitiga, lingkaran, persegi, diulang terus.',
+           [['persegi dan segitiga', 'persegi segitiga', 'persegi lalu segitiga', 'persegi kemudian segitiga', 'persegi terus segitiga'],
+            ['diulang', 'berulang', 'ulang', 'segitiga lingkaran persegi']], minimal=2, gambar=[POLA5],
+           bahas='Polanya segitiga, lingkaran, persegi, diulang. Setelah lingkaran datang persegi, lalu segitiga.', kisi='MT4b',
+           konteks='Untuk melanjutkan pola, cari dulu kelompok kecil yang berulang (di sini tiga bentuk). '
+                   'Minta anak membaca kelompok itu dengan lantang lalu mengulanginya sampai melewati bentuk terakhir pada gambar. '
+                   'Minta ia menjelaskan dengan kalimatnya sendiri apa yang berulang.'),
+]
+
+paket2 += [
+    pg('Perhatikan gambar. Bangun ruang ini bernama ....', 'kerucut', ['tabung', 'kubus', 'bola'], gambar=[KERUCUT_G],
+       bahas='Kerucut runcing di atas dan alasnya berbentuk lingkaran, seperti topi ulang tahun.', kisi='MT3a',
+       konteks='Kerucut runcing di satu ujung dan alasnya lingkaran, seperti topi ulang tahun atau cone es krim. '
+               'Ajak anak membedakannya dari tabung (kaleng) yang atas dan bawahnya sama besar.'),
+    pg('Kubus pada gambar punya ... titik sudut.', '8', ['4', '6', '12'], gambar=[KUBUS],
+       bahas='Kubus punya 8 titik sudut (4 di atas dan 4 di bawah), 6 sisi, dan 12 rusuk.', kisi='MT3b',
+       konteks='Titik sudut adalah pojok tempat rusuk bertemu. Pegang dadu bersama anak, hitung pojok atas (4) lalu pojok bawah (4). '
+               'Jangan lupa menghitung pojok bagian belakang yang di gambar tampak sebagai garis putus-putus.'),
+    pg('Persegi panjang pada gambar dibagi menjadi persegi-persegi kecil. Ada berapa persegi kecil?', '6', ['3', '5', '8'], gambar=[GRID_2X3],
+       bahas='Ada 2 baris dan tiap baris 3 persegi, jadi 3 + 3 = 6 persegi kecil.', kisi='MT3d',
+       konteks='Bangun datar besar bisa diurai menjadi bangun kecil. Ajak anak menghitung per baris lalu menjumlahkannya, jangan menghitung acak. '
+               'Boleh menutup baris pertama dengan kertas agar anak fokus pada satu baris.'),
+    pg('Warna lingkaran pada tanda ? adalah ....', 'biru', ['merah', 'kuning', 'hijau'], gambar=[POLA_AABK],
+       bahas='Polanya merah, merah, biru, kuning, diulang. Setelah dua merah datang biru.', kisi='MT4b',
+       konteks='Pola ini punya kelompok empat warna: merah, merah, biru, kuning. '
+               'Minta anak melingkari tiap kelompok empat lingkaran dengan pensil, lalu melihat kelompok terakhir yang belum lengkap. '
+               'Warna apa yang harus datang berikutnya?'),
+    isian('Perhatikan gambar. Bangun datar ini bernama ....', ['segitiga'], gambar=[SEGITIGA_G],
+          bahas='Segitiga punya 3 sisi dan 3 pojok.', kisi='MT3a',
+          konteks='Segitiga punya 3 sisi lurus dan 3 pojok. Ajak anak menghitung sisi dan pojok pada gambar sambil menyentuh satu per satu. '
+                  'Contoh benda: penggaris segitiga atau potongan pizza.'),
+    isian('Ada berapa bangun yang punya pojok pada gambar?', ['3', 'tiga'], gambar=[KUMPUL_2],
+          bahas='Yang punya pojok: 1 segitiga, 1 persegi, 1 persegi panjang = 3. Lingkaran (3 buah) tidak punya pojok.', kisi='MT3c',
+          konteks='Bangun yang punya pojok adalah segi banyak. Lingkaran bulat mulus tanpa pojok. '
+                  'Minta anak menelusuri tepi tiap bangun dengan jari: bila jarinya "tersangkut" di pojok, hitung bangun itu.'),
+    isian('Bangun datar yang berada di bawah lingkaran adalah ....', ['persegi', 'bujur sangkar'], gambar=[TUMPUK],
+          bahas='Dari atas ke bawah: segitiga, lingkaran, persegi. Di bawah lingkaran ada persegi.', kisi='MT4a',
+          konteks='Atas dan bawah dilihat dari posisi gambar pada kertas: yang lebih dekat ke bagian atas kertas ada di atas. '
+                  'Ajak anak menumpuk tiga benda di meja lalu menyebut urutannya dari atas ke bawah, kemudian mencocokkannya dengan gambar.'),
+    uraian('Kue berbentuk persegi dipotong sepanjang kedua garis putus-putus yang bersilang dari pojok ke pojok.\nPotongannya ada berapa dan berbentuk apa?',
+           'Potongannya ada 4 dan berbentuk segitiga.',
+           [['4', 'empat'], ['segitiga']], minimal=2, gambar=[PERSEGI_DIAG2],
+           bahas='Dua garis silang dari pojok ke pojok membagi persegi menjadi 4 segitiga.', kisi='MT3d',
+           konteks='Bangun datar dapat dipotong menjadi bangun lain. Beri anak kertas persegi, minta ia melipat dari pojok ke pojok dua kali (bersilang), lalu menggunting di lipatan. '
+                   'Tanyakan: ada berapa potongan, dan berapa pojok tiap potongan? Biarkan anak menyebut nama bangunnya sendiri.'),
+    uraian('Tulis warna dua bola pada tanda ? pada pola ini, lalu jelaskan polanya.',
+           'Dua bola itu berwarna kuning dan kuning. Polanya merah, kuning, kuning, diulang terus.',
+           [['kuning dan kuning', 'kuning kuning', 'dua kuning', '2 kuning', 'keduanya kuning', 'semuanya kuning', 'kuning semua', 'sama sama kuning'],
+            ['diulang', 'berulang', 'ulang', 'merah kuning kuning', 'satu merah', '1 merah']],
+           minimal=2, gambar=[POLA6],
+           bahas='Polanya merah, kuning, kuning, diulang. Setelah merah datang dua kuning.', kisi='MT4b',
+           konteks='Cari kelompok kecil yang berulang: "merah, kuning, kuning". '
+                   'Minta anak membaca polanya sambil menepuk, lalu meneruskannya dua langkah. '
+                   'Minta ia menjelaskan dengan kalimatnya sendiri apa yang berulang.'),
+]
+
+paket3 += [
+    pg('Kaleng susu dan kaleng sarden berbentuk bangun ruang yang bernama ....', 'tabung', ['kubus', 'kerucut', 'bola'],
+       bahas='Kaleng punya alas dan tutup berbentuk lingkaran serta sisi melengkung di sekelilingnya: tabung.', kisi='MT3a',
+       konteks='Tabung punya dua sisi datar berbentuk lingkaran (atas dan bawah) dan satu sisi melengkung. '
+               'Ajak anak mencari kaleng atau gelas di dapur, lalu meraba bagian atas, bawah, dan sisinya.'),
+    pg('Robot pada gambar tersusun dari beberapa bangun datar. Mata robot berbentuk ....', 'lingkaran',
+       ['persegi', 'segitiga', 'persegi panjang'], gambar=[ROBOT],
+       bahas='Mata robot bulat tanpa pojok, yaitu lingkaran. Kepalanya persegi dan badannya persegi panjang.', kisi='MT3d',
+       konteks='Satu gambar bisa disusun dari banyak bangun datar. Ajak anak menunjuk bagian gambar satu per satu dan menyebut bangun penyusunnya. '
+               'Untuk tiap bagian, tanyakan: ada pojoknya atau bulat mulus?'),
+    pg('Buah yang berada di sebelah kanan pisang adalah ....', 'anggur', ['apel', 'jeruk', 'pisang'],
+       gambar=[img('red-apple'), img('banana'), img('grapes')],
+       bahas='Dari kiri ke kanan: apel, pisang, anggur. Di sebelah kanan pisang ada anggur.', kisi='MT4a',
+       konteks='Kiri dan kanan dilihat dari sisi pembaca gambar: tangan penulis (kanan) berada di sisi kanan. '
+               'Ajak anak menyebut urutan gambar dari kiri ke kanan, lalu menunjuk pisang dan menggeser jarinya ke arah kanan.'),
+    pg('Lingkaran pada tanda ? berukuran ....', 'lingkaran kecil', ['lingkaran besar', 'persegi kecil', 'segitiga besar'], gambar=[POLA_UKURAN],
+       bahas='Polanya besar, kecil, kecil, diulang. Setelah satu besar datang lingkaran kecil.', kisi='MT4b',
+       konteks='Pola tidak hanya tentang bentuk atau warna, tetapi juga ukuran. '
+               'Minta anak menyebut "besar, kecil, kecil" sambil menunjuk gambar, lalu melanjutkan ke tanda tanya. '
+               'Perhatikan juga bentuknya: pilihan jawaban ada yang berbeda bentuk.'),
+    isian('Bangun ruang yang semua sisinya berbentuk persegi yang sama besar bernama ....', ['kubus'],
+          bahas='Kubus: 6 sisi persegi yang sama besar, seperti dadu.', kisi='MT3a',
+          konteks='Kubus seperti dadu atau kotak kado berbentuk kubus: semua sisinya persegi yang sama besar. '
+                  'Bandingkan dengan balok (kotak sepatu) yang sisinya persegi panjang.'),
+    isian('Balok pada gambar mempunyai ... rusuk.', ['12', 'dua belas'], gambar=[BALOK],
+          bahas='Balok punya 12 rusuk: 4 di atas, 4 di bawah, dan 4 yang tegak.', kisi='MT3b',
+          konteks='Rusuk adalah garis pinggir tempat dua sisi bertemu. Ajak anak menelusuri rusuk kotak sepatu dengan jari per kelompok: '
+                  'rusuk atas, rusuk bawah, lalu rusuk yang tegak. Garis putus-putus di gambar adalah rusuk bagian belakang.'),
+    isian('Tulis nama satu-satunya bangun yang bentuknya lengkung pada gambar.', ['lingkaran'], gambar=[KUMPUL_4],
+          bahas='Persegi, segitiga, dan persegi panjang sisinya lurus. Hanya lingkaran yang lengkung.', kisi='MT3c',
+          konteks='Bentuk lengkung punya tepi yang melengkung mulus tanpa pojok. '
+                  'Ajak anak menelusuri tepi tiap bangun dengan telunjuk: bangun mana yang tidak punya pojok sama sekali?'),
+    uraian('Gambar menunjukkan 3 persegi yang sama besar. Bagaimana cara menyusunnya menjadi satu persegi panjang? Ceritakan susunannya.',
+           'Tempelkan ketiga persegi berjajar dalam satu baris, sisinya rapat tanpa celah, sehingga menjadi satu persegi panjang.',
+           [['berjajar', 'sebaris', 'satu baris', '1 baris', 'berderet', 'berdampingan', 'berbaris', 'sejajar', 'ke samping', 'mendatar', 'memanjang', 'dijajarkan', 'ditumpuk', 'bertumpuk', 'ke bawah', 'satu kolom', 'tegak']],
+           minimal=1, gambar=[TIGA_PERSEGI],
+           bahas='3 persegi diletakkan berjajar dalam satu baris, rapat tanpa celah, menjadi persegi panjang.', kisi='MT3d',
+           konteks='Menyusun bangun datar berarti menempatkan bangun kecil rapat tanpa celah. '
+                   'Beri anak 3 kartu persegi yang sama besar dan minta ia mencoba susunan yang berbeda. '
+                   'Tanyakan: susunan mana yang membuat satu bangun panjang dengan 4 pojok siku-siku?'),
+    uraian('Tulis warna dua bola pada tanda tanya, lalu ceritakan bagaimana polanya.',
+           'Dua bola itu berwarna merah dan merah. Polanya merah, merah, biru, biru, diulang terus.',
+           [['merah dan merah', 'merah merah', 'dua merah', '2 merah', 'keduanya merah', 'semuanya merah', 'merah semua', 'sama sama merah'],
+            ['diulang', 'berulang', 'ulang', 'dua biru', '2 biru', 'merah merah biru biru']],
+           minimal=2, gambar=[POLA7],
+           bahas='Polanya merah, merah, biru, biru, diulang. Setelah dua biru datang dua merah.', kisi='MT4b',
+           konteks='Cari kelompok yang berulang: di sini empat bola "merah, merah, biru, biru". '
+                   'Minta anak melingkari tiap kelompok empat bola, lalu memeriksa kelompok terakhir yang belum lengkap. '
+                   'Minta ia menjelaskan dengan kalimatnya sendiri.'),
+]
+
+# urutkan seperti lembar ujian: PG, B/S, isian, uraian; di dalam bagian mengikuti urutan indikator kisi-kisi
+from _kisi import KISI as _K
+_KODE = list(_K['matematika'])
+_URUT = ['pg', 'bs', 'isian', 'uraian']
+for _p in (paket1, paket2, paket3):
+    _p.sort(key=lambda q: (_URUT.index(q['jenis']), _KODE.index(q['kisi'])))
+
 PAKET = [paket1, paket2, paket3]
 
 # =====================================================================
@@ -465,3 +650,16 @@ assert _p5[8] == 's' and _p5[9] == 't'                        # 8 bentuk tampil 
 _p6 = ['merah', 'kuning', 'kuning'] * 3
 assert _p6[7] == 'kuning' and _p6[8] == 'kuning'
 assert 'tcstcstc'[:8] == 'tcstcstc'
+
+# tambahan: verifikasi pola/jumlah baru
+assert (6 * 2 == 12) and 3 + 3 == 6
+assert ['bs', 'bkk'[0]] and 'bkk' * 3 == 'bkkbkkbkk' and 'bkkbkkbkk'[7] == 'k'   # besar, kecil, kecil -> setelah 7 gambar (idx 7) = kecil
+_a = ['merah', 'merah', 'biru', 'kuning'] * 3
+assert _a[10] == 'biru'
+_b = ['merah', 'merah', 'biru', 'biru'] * 3
+assert _b[8] == 'merah' and _b[9] == 'merah'
+_c = ['ant', 'fish', 'butterfly'] * 3
+assert _c[7] == 'fish'
+_d = ['star', 'moon', 'moon'] * 3
+assert _d[7] == 'moon' and _d[6] == 'star'
+assert sum(k != 'c' for k in 'ctcsrc') == 3 and sum(k == 'c' for k in 'stcr') == 1

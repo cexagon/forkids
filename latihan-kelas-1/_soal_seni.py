@@ -145,4 +145,79 @@ paket3 = [
        bahas='Polanya lingkaran, segitiga, berulang; yang hilang lingkaran.', kisi='SR5'),
 ]
 
+# ---------- gambar tambahan ----------
+SUNGAI = svg('<rect x="0" y="0" width="240" height="150" fill="#BFE3A8"/>' + line(_gelombang(-10, 250, 75, 30, 2), '#2F7FC1', 22), 240, 150)
+TALI = svg('<rect x="0" y="0" width="240" height="150" fill="#FFF4DD"/>' + line(_gelombang(20, 220, 75, 28, 2), '#B5651D', 9), 240, 150)
+PAPAN = svg('<rect x="30" y="25" width="180" height="100" rx="6" fill="#2E6B4F" stroke="#8B5A2B" stroke-width="10"/>' + line('M55 60 H120 M55 85 H165', '#fff', 5), 240, 150)
+SPIRAL2 = svg(line(_spiral_at(120, 75, 2.4, 9), INK, 7), 240, 150)
+MATAHARI = svg('<circle cx="120" cy="75" r="28" fill="#F5B82E" stroke="#3d2b1f" stroke-width="4"/>' + ''.join(line(f'M{120+40*math.cos(k*math.pi/4):.1f} {75+40*math.sin(k*math.pi/4):.1f} L{120+62*math.cos(k*math.pi/4):.1f} {75+62*math.sin(k*math.pi/4):.1f}', '#E8742A', 7) for k in range(8)), 240, 150)
+PERSEGI_O = svg(sq(120, 70, 52, '#E8742A'))
+
+def _urut(soal):
+    from _kisi import KISI
+    jn = ['pg', 'bs', 'isian', 'uraian']; ks = list(KISI['seni'])
+    return sorted(soal, key=lambda q: (jn.index(q['jenis']), ks.index(q['kisi'])))
+
+paket1 += [
+    pg('Manakah garis spiral?', SPIRAL, [BERGELOMBANG, ZIGZAG],
+       bahas='Garis spiral berputar-putar dari tengah ke luar.', kisi='SR1'),
+    pg('Pelangi di langit membentuk garis ....', 'lengkung', ['zig-zag', 'lurus'], gambar=[img('rainbow')],
+       bahas='Pelangi melengkung seperti busur, jadi bentuknya garis lengkung.', kisi='SR1'),
+    pg('Angin puyuh berputar-putar seperti garis ....', 'spiral', ['lurus', 'zig-zag'], gambar=[img('cyclone')],
+       bahas='Angin puyuh berputar dari tengah, seperti garis spiral.', kisi='SR2'),
+    isian('Air sungai mengalir berkelok-kelok seperti garis ....', ['bergelombang', 'garis bergelombang', 'gelombang'], gambar=[SUNGAI],
+          bahas='Aliran air yang berkelok halus seperti garis bergelombang.', kisi='SR2'),
+    pg('Papan tulis di kelas berbentuk ....', 'persegi panjang', ['segitiga', 'lingkaran'], gambar=[PAPAN],
+       bahas='Papan tulis punya 2 sisi panjang dan 2 sisi pendek, jadi persegi panjang.', kisi='SR3'),
+    pg('Topeng kertas dibuat dengan cara dilipat lalu ....', 'digunting', ['dibakar', 'disiram'],
+       bahas='Topeng kertas dibuat dengan teknik lipat dan gunting.', kisi='SR4'),
+    isian('Tulis nama bagian topeng yang ditunjuk panah merah: ....', ['mulut'], gambar=[topeng('marah', 'mulut')],
+          bahas='Panah menunjuk mulut topeng.', kisi='SR4'),
+    pg('Bentuk yang hilang pada susunan ini adalah ....', 'lingkaran', ['segitiga', 'persegi'], gambar=[pola('cstcst?')],
+       bahas='Polanya lingkaran, persegi, segitiga, lalu berulang. Setelah segitiga datang lingkaran.', kisi='SR5'),
+    isian('Tulis warna lingkaran yang hilang: ....', ['merah'], gambar=[warna('mbmbmb?')],
+          bahas='Warnanya merah, biru, merah, biru ... Setelah biru adalah merah.', kisi='SR5'),
+]
+paket2 += [
+    pg('Pinggir penggaris berbentuk garis ....', 'lurus', ['lengkung', 'spiral'], gambar=[img('straight-ruler')],
+       bahas='Tepi penggaris tidak berbelok, jadi garis lurus.', kisi='SR1'),
+    isian('Garis pada gambar disebut garis ....', ['spiral', 'garis spiral'], gambar=[SPIRAL2],
+          bahas='Garis yang berputar-putar dari tengah disebut spiral.', kisi='SR1'),
+    pg('Cahaya kilat yang menyambar terlihat seperti garis ....', 'zig-zag', ['lurus', 'spiral'], gambar=[img('high-voltage')],
+       bahas='Kilat patah-patah naik turun seperti garis zig-zag.', kisi='SR2'),
+    pg('Tali yang digoyang naik turun membentuk garis ....', 'bergelombang', ['lurus', 'zig-zag'], gambar=[TALI],
+       bahas='Tali yang bergoyang naik turun halus membentuk garis bergelombang.', kisi='SR2'),
+    isian('Tulis nama bentuk ini: ....', ['lingkaran'], gambar=[UNGU],
+          bahas='Lingkaran bulat dan tidak punya sudut.', kisi='SR3'),
+    pg('Kita bisa melihat dari topeng karena topeng punya lubang ....', 'mata', ['hidung', 'mulut'],
+       bahas='Lubang mata dibuat supaya pemakai topeng bisa melihat.', kisi='SR4'),
+    pg('Wajah topeng ini terlihat ....', 'senang', ['sedih', 'marah'], gambar=[topeng('senang')],
+       bahas='Mulut melengkung ke atas berarti senang.', kisi='SR4'),
+    pg('Bentuk berikutnya pada susunan ini adalah ....', 'segitiga', ['lingkaran', 'persegi'], gambar=[pola('ttcttc?')],
+       bahas='Polanya segitiga, segitiga, lingkaran, berulang. Berikutnya segitiga.', kisi='SR5'),
+    pg('Warna lingkaran yang hilang pada pola ini adalah ....', 'kuning', ['merah', 'biru'], gambar=[warna('kbbkbb?')],
+       bahas='Polanya kuning, biru, biru, berulang. Berikutnya kuning.', kisi='SR5'),
+]
+paket3 += [
+    pg('Garis yang patah-patah naik turun dengan ujung runcing disebut garis ....', 'zig-zag', ['lengkung', 'spiral'],
+       bahas='Garis zig-zag patah-patah naik turun.', kisi='SR1'),
+    pg('Manakah garis lurus?', LURUS, [BERGELOMBANG, LENGKUNG],
+       bahas='Garis lurus tidak berbelok.', kisi='SR1'),
+    pg('Kilat menyambar di langit seperti garis ....', 'zig-zag', ['lengkung', 'spiral'], gambar=[PETIR],
+       bahas='Kilat patah-patah seperti garis zig-zag.', kisi='SR2'),
+    isian('Sinar matahari digambar dengan garis ....', ['lurus', 'garis lurus'], gambar=[MATAHARI],
+          bahas='Sinar matahari memancar lurus ke segala arah.', kisi='SR2'),
+    isian('Bentuk pada gambar ini bernama ....', ['persegi'], gambar=[PERSEGI_O],
+          bahas='Persegi punya 4 sisi yang sama panjang.', kisi='SR3'),
+    pg('Pada topeng yang sedih, mulutnya melengkung ke ....', 'bawah', ['atas', 'samping'], gambar=[topeng('sedih')],
+       bahas='Mulut melengkung ke bawah berarti sedih.', kisi='SR4'),
+    isian('Panah merah menunjuk bagian topeng bernama ....', ['mata'], gambar=[topeng('senang', 'mata')],
+          bahas='Panah menunjuk lubang mata topeng.', kisi='SR4'),
+    pg('Bentuk yang datang berikutnya pada susunan ini adalah ....', 'persegi', ['segitiga', 'lingkaran'], gambar=[pola('stcstc?')],
+       bahas='Polanya persegi, segitiga, lingkaran, berulang. Berikutnya persegi.', kisi='SR5'),
+    pg('Lingkaran berikutnya berwarna ....', 'biru', ['merah', 'kuning'], gambar=[warna('bmbmbm?')],
+       bahas='Polanya biru, merah, berulang. Setelah merah adalah biru.', kisi='SR5'),
+]
+paket1, paket2, paket3 = _urut(paket1), _urut(paket2), _urut(paket3)
+
 PAKET = [paket1, paket2, paket3]

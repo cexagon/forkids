@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Menyusun soal.js dan KISI.md dari _soal_<mapel>.py (masing-masing berisi PAKET = [paket1, paket2, paket3]).
-Memeriksa: 15 soal per paket (6 PG, 6 isian, 3 uraian), setiap soal punya kode kisi yang sah, semua indikator kisi-kisi tercakup
+Memeriksa: tiap paket memuat tepat jumlah butir per indikator dan bentuk seperti kisi-kisi, setiap soal punya kode kisi yang sah, semua indikator kisi-kisi tercakup
 di gabungan 3 paket, tidak ada soal kembar, semua gambar/suara ada, kunci jawaban sah.
 Jalankan: python3 latihan-kelas-2/_buat_soal.py"""
 import importlib, json, os, sys
@@ -10,8 +10,6 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from _kisi import KISI
 
-N_SOAL = 15
-BENTUK = {'pg': 6, 'isian': 6, 'uraian': 3}
 
 MAPEL = [
     ('alislam', 'Al-Islam', 'Surah An-Nas, hijaiah bersambung, Al-Hafiz, Al-Wali, Al-Halim, Al-Khabir, jujur dan santun, salat fardu, kisah Nabi Nuh', False),
@@ -23,8 +21,35 @@ MAPEL = [
     ('inggris', 'Bahasa Inggris', 'Fruits, Do you like, family members, classroom objects, Where is my, in front of, behind, next to, There are', False),
 ]
 
+# --- Susunan paket = susunan ujian di kisi-kisi: tiap paket memuat tepat jumlah butir per indikator dan per bentuk ---
+import re as _re
+_JENIS = {'pg': 'pg', 'isian': 'isian', 'b/s': 'bs', 'uraian': 'uraian'}
+URUT = ['pg', 'bs', 'isian', 'uraian']
+def target(mid):
+    t = Counter()
+    for k, (teks, butir, bentuk) in KISI[mid].items():
+        for f, n in _re.findall(r'([A-Za-z/]+)\s*(\d+)', bentuk):
+            j = _JENIS[f.lower()]
+            if j == 'uraian' and False: j = 'isian'
+            t[(k, j)] += int(n)
+    return t
+def cek_susunan(mid, pi, soal):
+    err = []
+    t = target(mid)
+    ada = Counter((q.get('kisi'), q['jenis']) for q in soal)
+    if sum(t.values()) != len(soal): err.append(f'{mid} paket {pi}: {len(soal)} soal (kisi-kisi: {sum(t.values())})')
+    for key in sorted(set(t) | set(ada)):
+        if t[key] != ada[key]: err.append(f'{mid} paket {pi}: {key[0]} {key[1]} = {ada[key]} (kisi-kisi: {t[key]})')
+    urut = [URUT.index(q['jenis']) for q in soal]
+    if urut != sorted(urut): err.append(f'{mid} paket {pi}: urutan harus PG, B/S, isian, lalu uraian')
+    return err
+
 def ada(path):
-    return os.path.exists(os.path.join(HERE, path))
+    f = os.path.join(HERE, path)
+    if not os.path.exists(f): return False
+    if f.endswith('.svg'):  # unduhan gagal bisa tersimpan sebagai teks "404: Not Found"
+        with open(f, 'rb') as h: return b'<svg' in h.read(400)
+    return True
 
 def periksa(mid, paket):
     err = []
@@ -33,9 +58,7 @@ def periksa(mid, paket):
     semua = Counter()
     tanya = Counter()
     for pi, soal in enumerate(paket, 1):
-        if len(soal) != N_SOAL: err.append(f'{mid} paket {pi}: {len(soal)} soal (harus {N_SOAL})')
-        jml = Counter(q['jenis'] for q in soal)
-        if dict(jml) != BENTUK: err.append(f'{mid} paket {pi}: bentuk {dict(jml)} (harus {BENTUK})')
+        err += cek_susunan(mid, pi, soal)
         for qi, q in enumerate(soal, 1):
             tag = f'{mid} P{pi} no {qi}'
             k = q.get('kisi')
