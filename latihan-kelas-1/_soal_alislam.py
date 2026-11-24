@@ -89,4 +89,96 @@ paket3 = [
        gambar=[img('snake')], bahas='Mukjizat Nabi Musa: tongkatnya berubah menjadi ular dan dapat membelah laut.', kisi='AI4d'),
 ]
 
+paket1 += [
+    pg('Huruf hijaiah berikut dibaca ....', 'ta', ['ba', 'jim'], gambar=[{'teks': 'ت'}],
+       bahas='Ta punya dua titik di atas; ba punya satu titik di bawah.', kisi='AI1a'),
+    pg('Nama huruf hijaiah ini adalah ....', 'mim', ['nun', 'ha'], gambar=[{'teks': 'م'}],
+       bahas='Huruf ini dibaca mim.', kisi='AI1a'),
+    isian('Rukun Iman yang kedua adalah iman kepada ....', ['malaikat', 'malaikat allah', 'para malaikat', 'malaikat-malaikat allah', 'malaikat malaikat allah'],
+          bahas='Urutan Rukun Iman: Allah, malaikat, kitab, rasul, hari akhir, qada dan qadar.', kisi='AI2a'),
+    pg('Ikan, burung, dan kupu-kupu adalah makhluk ciptaan Allah. Gambar ini mengingatkan kita untuk beriman kepada ....',
+       'Allah', ['kitab Allah', 'hari akhir'], gambar=[img('fish'), img('bird'), img('butterfly')],
+       bahas='Semua makhluk diciptakan Allah, jadi kita beriman kepada Allah, Rukun Iman yang pertama.', kisi='AI2b'),
+    pg('Setelah makan roti, kita membaca ....', 'Alhamdulillah', ['Bismillah', 'Astagfirullah'], gambar=[img('bread')],
+       bahas='Selesai makan kita bersyukur dengan hamdalah: Alhamdulillah.', kisi='AI3a'),
+    pg('Kamu ingin minta tolong diambilkan susu oleh Ibu. Kata yang santun adalah ....',
+       'Ibu, tolong ambilkan susu ya.', ['Ibu, ambilkan susu sekarang!', 'Ambil susu sana!'], gambar=[img('glass-of-milk')],
+       bahas='Meminta dengan kata "tolong" dan nada lembut adalah sikap santun.', kisi='AI3b'),
+    pg('Banyaknya Rukun Islam ada ... macam.', '5', ['4', '6'],
+       bahas='Rukun Islam ada 5: syahadat, salat, zakat, puasa Ramadan, haji.', kisi='AI4a'),
+    isian('Rukun Islam yang pertama adalah ....', ['syahadat', 'dua kalimat syahadat', 'membaca syahadat', 'mengucap syahadat', 'syahadatain'],
+          bahas='Rukun Islam yang pertama adalah syahadat.', kisi='AI4a'),
+    pg('Syahadat tauhid berarti kita bersaksi bahwa tidak ada Tuhan selain ....', 'Allah', ['nabi', 'sahabat'],
+       bahas='Syahadat tauhid: Asyhadu an laa ilaaha illallah, tiada Tuhan selain Allah.', kisi='AI4b'),
+    pg('Nabi Ismail adalah anak dari Nabi ....', 'Ibrahim', ['Nuh', 'Musa'],
+       bahas='Nabi Ismail adalah putra Nabi Ibrahim.', kisi='AI4c'),
+]
+
+paket2 += [
+    pg('Huruf yang ada di gambar dibaca ....', 'dal', ['ta', 'mim'], gambar=[{'teks': 'د'}],
+       bahas='Huruf ini dibaca dal.', kisi='AI1a'),
+    isian('Tulis nama huruf hijaiah ini: ....', ['ra', 'ro', 'raa'], gambar=[{'teks': 'ر'}],
+          bahas='Huruf ini dibaca ra.', kisi='AI1a'),
+    pg('Percaya kepada Allah dengan sepenuh hati disebut ....', 'iman', ['salat', 'puasa'],
+       bahas='Iman artinya percaya. Kita beriman kepada Allah.', kisi='AI2a'),
+    pg('Semangka, pisang, dan apel adalah ciptaan Allah. Gambar ini mengingatkan kita untuk beriman kepada ....',
+       'Allah', ['hari akhir', 'rasul'], gambar=[img('watermelon'), img('banana'), img('red-apple')],
+       bahas='Semua buah diciptakan Allah, jadi kita beriman kepada Allah.', kisi='AI2b'),
+    pg('Setelah belajar kita bersyukur dengan membaca ....', 'Alhamdulillah', ['Bismillah', 'Astagfirullah'], gambar=[img('books')],
+       bahas='Alhamdulillah (hamdalah) dibaca untuk bersyukur. Sebelum belajar kita membaca basmalah.', kisi='AI3a'),
+    isian('Kamu ingin lewat di depan Pak Guru. Kata yang santun: "...., Pak."', ['permisi', 'misi', 'permisi pak'],
+          gambar=[img('man-teacher')], bahas='Saat lewat di depan orang kita berkata "permisi".', kisi='AI3b'),
+    pg('Rukun Islam yang ketiga adalah ....', 'zakat', ['salat', 'haji'], gambar=[img('coin')],
+       bahas='Rukun Islam: syahadat, salat, zakat, puasa Ramadan, haji. Zakat urutan ketiga.', kisi='AI4a'),
+    pg('Salat Subuh dikerjakan sebanyak ... rakaat.', '2', ['3', '4'], gambar=[img('sunrise')],
+       bahas='Subuh 2 rakaat, Zuhur 4, Asar 4, Magrib 3, Isya 4.', kisi='AI4a'),
+    pg('"Wa asyhadu anna Muhammadar Rasulullah" artinya ....', 'aku bersaksi Nabi Muhammad utusan Allah',
+       ['aku bersaksi tiada Tuhan selain Allah', 'segala puji bagi Allah'],
+       bahas='Syahadat rasul: aku bersaksi bahwa Nabi Muhammad adalah utusan Allah.', kisi='AI4b'),
+    pg('Nabi yang wajib kita ketahui namanya ada ... orang.', '25', ['10', '15'],
+       bahas='Ada 25 nabi dan rasul yang wajib kita ketahui.', kisi='AI4c'),
+]
+
+paket3 += [
+    pg('Pilih bacaan huruf hijaiah di bawah ini ....', 'nun', ['mim', 'sin'], gambar=[{'teks': 'ن'}],
+       bahas='Nun punya satu titik di atas.', kisi='AI1a'),
+    isian('Huruf hijaiah apakah ini? Jawab: ....', ['lam', 'lām', 'lamm', 'laam'], gambar=[{'teks': 'ل'}],
+          bahas='Huruf ini dibaca lam.', kisi='AI1a'),
+    pg('Banyaknya Rukun Iman ada ... macam.', '6', ['4', '5'],
+       bahas='Rukun Iman ada 6. Rukun Islam ada 5.', kisi='AI2a'),
+    pg("Kitab suci Al-Qur'an diturunkan Allah kepada Nabi Muhammad saw. Gambar ini mengingatkan kita untuk beriman kepada ....",
+       'kitab Allah', ['hari akhir', 'qada dan qadar'], gambar=[img('green-book', label="Al-Qur'an")],
+       bahas='Iman kepada kitab Allah adalah Rukun Iman yang ketiga.', kisi='AI2b'),
+    pg('Kalimat "Alhamdulillah" disebut ....', 'hamdalah', ['basmalah', 'syahadat'],
+       bahas='Alhamdulillah disebut hamdalah. Bismillah disebut basmalah.', kisi='AI3a'),
+    pg('Temanmu membantu mengangkat tasmu. Yang kamu lakukan adalah ....', 'berterima kasih', ['diam saja', 'pergi begitu saja'],
+       gambar=[img('backpack')], bahas='Kita berterima kasih saat dibantu.', kisi='AI3b'),
+    pg('Saat berpuasa Ramadan, kita menahan diri dari ....', 'makan dan minum', ['bernapas', 'berjalan'],
+       bahas='Orang berpuasa menahan makan dan minum dari Subuh sampai Magrib.', kisi='AI4a'),
+    isian('Salat Magrib dikerjakan sebanyak ... rakaat.', ['3', 'tiga'],
+          bahas='Subuh 2, Zuhur 4, Asar 4, Magrib 3, Isya 4.', kisi='AI4a'),
+    pg('Asyhadu an laa ilaaha illallah artinya ....', 'aku bersaksi tiada Tuhan selain Allah',
+       ['aku bersaksi Nabi Muhammad utusan Allah', 'dengan nama Allah'],
+       bahas='Syahadat tauhid: aku bersaksi tiada Tuhan selain Allah.', kisi='AI4b'),
+    isian('Nabi yang diberi kitab Zabur adalah Nabi ....', ['daud', 'nabi daud', 'dawud'],
+          bahas='Kitab Zabur diturunkan kepada Nabi Daud.', kisi='AI4c'),
+]
+
+from _kisi import KISI as _K
+_o = {'pg': 0, 'bs': 1, 'isian': 2, 'uraian': 3}
+_k = list(_K['alislam'])
+paket1, paket2, paket3 = [sorted(p, key=lambda q: (_o[q['jenis']], _k.index(q['kisi']))) for p in (paket1, paket2, paket3)]
+
 PAKET = [paket1, paket2, paket3]
+
+# Seimbangkan letak kunci PG (a/b/c) agar tidak berpola: pindahkan jawaban benar soal-soal ini ke huruf tertentu.
+def _geser(p, awal, huruf):
+    k = 'abc'.index(huruf)
+    for q in p:
+        if q['jenis'] == 'pg' and q['tanya'].startswith(awal):
+            j = q['jawab']; q['pilihan'][j], q['pilihan'][k] = q['pilihan'][k], q['pilihan'][j]; q['jawab'] = k
+            return
+    raise KeyError(awal)
+_geser(PAKET[2], "Kitab suci Al-Qur'an diturunkan", 'c')
+_geser(PAKET[2], 'Saat berpuasa Ramadan', 'c')
+_geser(PAKET[2], 'Yang termasuk 25 nabi', 'c')

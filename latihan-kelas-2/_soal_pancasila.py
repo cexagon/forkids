@@ -171,7 +171,7 @@ paket2 = [
        konteks='Setiap sila punya lambang di perisai: bintang, rantai, pohon beringin, kepala banteng, padi dan kapas. Urutannya sama dengan urutan sila. '
                'Ajak anak menghafal dengan menghitung jarinya: bintang jari 1, rantai jari ke berapa? Mulai dari bintang.'),
     pg('Sila kedua Pancasila berbunyi ....',
-       'Kemanusiaan yang Adil dan Beradab', ['Ketuhanan Yang Maha Esa', 'Persatuan Indonesia', 'Keadilan Sosial bagi Seluruh Rakyat Indonesia'],
+       'Kemanusiaan yang Adil dan Beradab', ['Ketuhanan Yang Maha Esa', 'Persatuan Indonesia', 'Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan dalam Permusyawaratan/Perwakilan'],
        kisi='PK5', bahas='Sila kedua: Kemanusiaan yang Adil dan Beradab.',
        konteks='Sila kedua berkaitan dengan kemanusiaan, yaitu bersikap baik dan adil kepada sesama. Bacakan lima sila dengan anak secara berurutan, '
                'lalu minta ia menunjuk sila kedua. Lambangnya, rantai, bisa dijadikan petunjuk.'),
@@ -319,5 +319,173 @@ paket3 = [
            konteks='Menghormati orang yang lebih tua tampak lewat ucapan dan sikap. Tanyakan: "Saat bertemu kakek atau Bu Guru, apa yang kamu ucapkan dan lakukan? Bagaimana caramu berbicara?" '
                    'Bantu anak menyebut satu cara lewat tindakan dan satu cara lewat ucapan.'),
 ]
+
+# ---------------------------------------------------------------- TAMBAHAN: tiap paket = 25 soal sesuai kisi-kisi
+paket1 += [
+    pg('Ibu membuat aturan: setelah bermain, mainan harus dirapikan. Rani merapikannya dengan senang hati. Sikap Rani menunjukkan bahwa ia ....',
+       'anak yang berbakti', ['anak yang suka membantah', 'tidak peduli pada aturan', 'malas membantu'], kisi='PK1b',
+       bahas='Menaati aturan ibu dengan senang hati adalah cara berbakti.',
+       konteks='Berbakti dapat dimulai dari menaati aturan kecil di rumah, seperti merapikan mainan. Tanyakan ke anak: "Kalau kamu merapikan mainan tanpa diminta dua kali, ibu merasa apa?" '
+               'Lalu ajak ia memilih sikap yang membuat orang tua bangga, bukan yang melawan atau menghindar.'),
+    pg('Bel masuk kelas berbunyi. Anak yang patuh aturan sekolah akan ....',
+       'segera masuk kelas dan duduk rapi', ['bermain dulu di halaman', 'membeli jajan dulu di kantin', 'berlari-lari di lorong'],
+       gambar=[img('bell', label='bel')], kisi='PK2', bahas='Saat bel berbunyi, kita masuk kelas dan duduk rapi.',
+       konteks='Bel sekolah adalah tanda aturan waktu yang harus dipatuhi semua murid. Bayangkan bersama anak suasana setelah bel berbunyi: apa yang dilakukan murid yang tertib? '
+               'Ia dapat menceritakan apa yang biasa ia lakukan di sekolah sebelum memilih jawaban.'),
+    pg('Sila ketiga Pancasila berbunyi ....',
+       'Persatuan Indonesia', ['Ketuhanan Yang Maha Esa', 'Kemanusiaan yang Adil dan Beradab',
+                              'Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan dalam Permusyawaratan/Perwakilan'],
+       kisi='PK5', bahas='Sila ketiga: Persatuan Indonesia.',
+       konteks='Sila ketiga berkaitan dengan persatuan, yaitu rukun dan bersatu walau berbeda-beda. Bacakan kelima sila bersama anak sambil menghitung dengan jari sampai jari ketiga. '
+               'Petunjuk: sila ini memuat nama negara kita dan lambangnya pohon beringin.'),
+    pg('Padi dan kapas pada perisai melambangkan keadilan sosial. Sikap yang sesuai adalah ....',
+       'membagi makanan dengan adil kepada semua teman', ['memberi lebih banyak hanya kepada teman dekat', 'mengambil bagian terbanyak untuk diri sendiri', 'tidak mau berbagi dengan siapa pun'],
+       gambar=[LAMBANG[5]], kisi='PK6',
+       bahas='Padi dan kapas adalah lambang sila kelima: pangan dan sandang cukup untuk semua. Kita bersikap adil dan mau berbagi.',
+       konteks='Padi adalah makanan dan kapas adalah bahan pakaian, sehingga gambar itu berarti kebutuhan semua orang tercukupi secara adil. '
+               'Tanyakan ke anak: "Kalau ada sepiring kue untuk lima teman, bagaimana membaginya supaya adil?" Pilih sikap yang tidak membeda-bedakan.'),
+    isian('Mandi dua kali sehari adalah aturan di rumah Fajar. Aturan ini menjaga kebersihan ....', ['badan', 'tubuh', 'kulit', 'badan dan kulit', 'diri', 'badan kita', 'tubuh kita'],
+          gambar=[img('shower', label='mandi')], kisi='PK1a', bahas='Mandi membersihkan badan.',
+          konteks='Mandi teratur adalah salah satu aturan kebersihan keluarga yang juga diajarkan dalam Islam. Tanyakan ke anak: "Setelah mandi, bagian apa yang terasa segar dan bersih?" '
+                  'Minta ia menyelesaikan kalimat dengan nama bagian yang kita bersihkan saat mandi.'),
+    isian('Setiap pagi Dina menyapu halaman agar tidak ada sampah berserakan. Aturan ini menjaga kebersihan ....', ['lingkungan', 'halaman', 'rumah', 'halaman rumah', 'lingkungan rumah', 'lingkungan sekitar', 'sekitar'],
+          kisi='PK2', bahas='Menyapu halaman menjaga kebersihan lingkungan.',
+          konteks='Aturan menjaga kebersihan berlaku di rumah, sekolah, dan lingkungan sekitar. Ajak anak melihat halaman rumah atau sekolah yang bersih dan yang kotor, lalu tanyakan: '
+                  '"Apa yang dijaga ketika kita menyapu halaman dan membuang sampah?" Jawabannya adalah tempat kita tinggal.'),
+    isian('Gambar padi dan kapas pada perisai Garuda adalah lambang sila ke ....', ['5', 'lima', 'kelima', 'ke-5', 'ke 5', 'ke-lima'], gambar=[LAMBANG[5]], kisi='PK4',
+          bahas='Padi dan kapas adalah lambang sila kelima.',
+          konteks='Lambang pada perisai berurutan: bintang, rantai, pohon beringin, kepala banteng, lalu padi dan kapas. Padi dan kapas adalah gambar yang terakhir. '
+                  'Ajak anak menghitung gambar dengan jari lalu menyebut angkanya.'),
+    isian('Sila yang berbunyi "Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan dalam Permusyawaratan/Perwakilan" adalah sila ke ....', ['4', 'empat', 'keempat', 'ke-4', 'ke 4', 'ke-empat'],
+          kisi='PK5', bahas='Sila keempat: Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan dalam Permusyawaratan/Perwakilan.',
+          konteks='Sila keempat adalah sila yang paling panjang dan berisi musyawarah, yaitu berunding bersama untuk mengambil keputusan. Bacakan kelima sila berurutan sambil menghitung dengan jari, '
+                  'lalu minta anak berhenti di sila yang dimulai dengan kata "Kerakyatan" dan menyebut nomornya.'),
+    uraian('Mengapa kita harus datang ke sekolah tepat waktu seperti Rasulullah saw. yang selalu menepati waktu? Jelaskan!',
+           'Supaya tidak ketinggalan pelajaran dan tidak mengganggu teman. Tepat waktu menunjukkan kita disiplin dan menghargai waktu.',
+           [['ketinggalan', 'terlambat', 'pelajaran', 'belajar', 'mengganggu', 'tertinggal'],
+            ['disiplin', 'menghargai waktu', 'tertib', 'teratur', 'rajin', 'teladan', 'contoh', 'dipercaya', 'rapi']],
+           minimal=1, kisi='PK3',
+           konteks='Rasulullah saw. menepati waktu dalam ibadah dan janji, dan itu adalah contoh disiplin. Tanyakan: "Kalau datang terlambat, apa yang tidak kamu dapat di kelas?" '
+                   'Bantu anak menyebut satu alasan dari akibatnya, misalnya ketinggalan pelajaran, atau dari sikapnya, yaitu menghargai waktu.'),
+    uraian('Sebutkan dua cara kita bersyukur kepada Allah swt. atas nikmat yang diberikan!',
+           'Mengucapkan Alhamdulillah dan menghabiskan makanan yang diberikan. Kita juga bisa berbagi dengan teman.',
+           [['alhamdulillah', 'hamdalah', 'syukur', 'berterima kasih', 'terima kasih', 'berdoa', 'doa'],
+            ['salat', 'sholat', 'shalat', 'beribadah', 'berbagi', 'sedekah', 'menghabiskan', 'menjaga', 'merawat', 'tidak mengeluh', 'rajin', 'belajar', 'tidak membuang', 'berzikir', 'zikir']],
+           minimal=2, kisi='PK6',
+           konteks='Bersyukur ditunjukkan lewat ucapan dan perbuatan. Tanyakan ke anak: "Setelah makan enak, apa yang kita ucapkan? Apa lagi yang bisa kita lakukan supaya nikmat itu tidak sia-sia?" '
+                   'Bantu ia menyebut satu ucapan dan satu perbuatan.'),
+]
+
+paket2 += [
+    pg('Meneladani Rasulullah saw., Rafi bertugas piket menghapus papan tulis. Yang sebaiknya Rafi lakukan adalah ....',
+       'menyelesaikan tugas piketnya sampai selesai', ['menyuruh temannya mengerjakannya', 'pulang tanpa menyelesaikannya', 'berpura-pura sakit supaya tidak piket'],
+       kisi='PK3', bahas='Tanggung jawab berarti menyelesaikan tugas yang menjadi bagian kita.',
+       konteks='Tanggung jawab berarti menyelesaikan tugas yang diberikan kepada kita, seperti Rasulullah saw. menjaga amanah dengan sungguh-sungguh. '
+               'Tanyakan: "Kalau jadwal piketmu hari ini, apa yang kamu kerjakan sampai selesai?" Pilih tindakan yang tidak melempar tugas ke orang lain.'),
+    pg('Pak Satpam berpesan agar murid tidak berlari-lari di lorong sekolah. Anak yang patuh aturan akan ....',
+       'berjalan dengan tertib', ['berlomba lari saat istirahat', 'bermain kejar-kejaran di lorong', 'berteriak sambil berlari'],
+       gambar=[img('person-walking', label='berjalan')], kisi='PK2', bahas='Di lorong sekolah kita berjalan tertib supaya tidak menabrak teman.',
+       konteks='Aturan tidak berlari di lorong dibuat agar tidak ada yang bertabrakan atau terjatuh. Ajak anak membayangkan lorong sekolah yang ramai saat istirahat. '
+               'Tanyakan apa yang bisa terjadi bila semua berlari, lalu pilih sikap yang menjaga keselamatan bersama.'),
+    pg('Sila yang berbunyi "Ketuhanan Yang Maha Esa" adalah sila ke ....',
+       'satu', ['dua', 'tiga', 'empat'], kisi='PK5', bahas='"Ketuhanan Yang Maha Esa" adalah sila pertama.',
+       konteks='Urutan sila Pancasila perlu dihafal dengan bunyinya. Sila pertama menyebut Ketuhanan, yaitu tentang iman kepada Allah swt. '
+               'Tanyakan ke anak: "Mana sila yang menyebut Tuhan?" Lalu bacakan lima sila secara berurutan sambil menghitung dengan jari.'),
+    pg('Gambar bintang pada perisai melambangkan ketuhanan. Sikap yang sesuai dengan lambang ini adalah ....',
+       'beribadah dan bersyukur kepada Allah swt.', ['lupa berdoa dan salat', 'mengeluh atas rezeki yang diterima', 'menyembah benda-benda'],
+       gambar=[LAMBANG[1]], kisi='PK6',
+       bahas='Bintang adalah lambang sila pertama. Kita meneladaninya dengan beribadah dan bersyukur kepada Allah swt.',
+       konteks='Bintang bersinar terang di langit dan melambangkan cahaya iman kepada Allah swt. Tanyakan ke anak: "Setelah bangun tidur dan sebelum makan, apa yang kita ucapkan kepada Allah?" '
+               'Pilih sikap yang menunjukkan kita mengingat dan berterima kasih kepada-Nya.'),
+    isian('Setelah azan Subuh berkumandang, keluarga Hana bangun untuk menunaikan ....', ['salat', 'sholat', 'shalat', 'solat', 'salat subuh', 'sholat subuh', 'shalat subuh', 'salat berjamaah'],
+          gambar=[img('sunrise', label='subuh')], kisi='PK1a', bahas='Setelah azan Subuh, kita bangun dan menunaikan salat Subuh.',
+          konteks='Banyak keluarga muslim punya aturan bangun saat azan Subuh untuk salat bersama. Tanyakan ke anak: "Kalau azan berbunyi, kegiatan apa yang kita lakukan?" '
+                  'Kata yang dicari adalah ibadah yang dilakukan lima kali sehari.'),
+    isian('Sebelum masuk ke rumah orang lain, kita mengetuk pintu lalu mengucapkan kalimat salam, yaitu ....', [x for x in SALAM if x != 'salam'] + ['asalamualaikum', 'assalamualaikum wr wb', "assalamu'alaikum wr. wb."], gambar=[img('house')], kisi='PK2',
+          bahas="Kita mengucapkan salam, yaitu Assalamu'alaikum, sebelum masuk rumah.",
+          konteks='Salam adalah aturan sopan santun sekaligus doa keselamatan saat bertamu. Latih bersama anak: ia berdiri di depan pintu, mengetuk, lalu mengucapkan sesuatu sebelum masuk. '
+                  'Tanyakan ucapan apa yang dimulai dengan "Assalamu...".'),
+    isian('Gambar kepala banteng pada perisai Garuda adalah lambang sila ke ....', ['4', 'empat', 'keempat', 'ke-4', 'ke 4', 'ke-empat'], gambar=[LAMBANG[4]], kisi='PK4',
+          bahas='Kepala banteng adalah lambang sila keempat.',
+          konteks='Lambang pada perisai berurutan: bintang, rantai, pohon beringin, kepala banteng, lalu padi dan kapas. Kepala banteng ada di urutan sesudah beringin. '
+                  'Ajak anak menghitung gambar dengan jari lalu menyebut angkanya.'),
+    isian('Saat berbicara dengan kakek, kita memakai kata-kata yang ....', ['sopan', 'santun', 'halus', 'lembut', 'sopan santun', 'baik dan sopan'], gambar=[img('old-man', label='kakek')], kisi='PK6',
+          bahas='Menghormati orang yang lebih tua dengan berbicara sopan.',
+          konteks='Menghormati orang yang lebih tua tampak dari cara kita berbicara. Tanyakan ke anak: "Kalau berbicara dengan kakek, apakah suara dan katamu sama dengan saat bercanda dengan teman?" '
+                  'Minta ia menyebut sifat kata-kata yang pantas untuk orang tua.'),
+    uraian('Mengapa kita tidak boleh membantah ketika orang tua mengingatkan aturan di rumah? Jelaskan!',
+           'Karena membantah itu tidak sopan dan membuat orang tua sedih. Kita harus menghormati dan berbakti kepada mereka.',
+           [['hormat', 'menghormati', 'sopan', 'santun', 'tidak sopan', 'berbakti', 'bakti', 'menyayangi', 'sayang', 'durhaka', 'dosa', 'berdosa', 'patuh', 'taat'],
+            ['sedih', 'marah', 'kecewa', 'sakit hati', 'senang', 'bahagia', 'demi kebaikan', 'untuk kebaikan', 'pahala', 'rida', 'ridha']],
+           minimal=1, kisi='PK1b',
+           konteks='Orang tua membuat aturan demi kebaikan anak, sehingga menaatinya adalah bentuk hormat dan bakti. Tanyakan: "Kalau ibu mengingatkan dan kamu menjawab dengan nada tinggi, ibu merasa bagaimana?" '
+                   'Bantu anak menulis satu alasan dari sisi sopan santun atau perasaan orang tua.'),
+    uraian('Mengapa kita berdoa kepada Allah swt. sebelum belajar atau makan? Kaitkan dengan sila pertama!',
+           'Karena kita percaya kepada Allah swt. yang Maha Esa. Kita meminta kemudahan dan bersyukur atas rezeki dari-Nya.',
+           [['allah', 'tuhan'],
+            ['percaya', 'beriman', 'iman', 'yakin', 'bergantung', 'meminta', 'memohon', 'pertolongan', 'izin', 'berkah', 'syukur', 'bersyukur', 'berterima kasih', 'terima kasih',
+             'taat', 'takwa', 'bertakwa', 'mengingat', 'ingat', 'kemudahan', 'mudah', 'dimudahkan', 'lancar', 'dilancarkan', 'rezeki', 'rejeki', 'menciptakan', 'memberi']],
+           minimal=2, kisi='PK5',
+           konteks='Sila pertama mengajarkan bahwa kita percaya dan bergantung kepada Allah swt. Berdoa adalah cara kita mengingat-Nya dan meminta pertolongan. '
+                   'Tanyakan: "Siapa yang memberi kita makanan dan ilmu?" Bantu anak menyebut siapa yang ia mintai tolong dan mengapa.'),
+]
+
+paket3 += [
+    pg('Di perpustakaan sekolah ada aturan menjaga ketenangan. Anak yang patuh aturan akan ....',
+       'berbicara dengan suara pelan', ['bercanda dengan suara keras', 'berlari di antara rak buku', 'menelepon dengan suara lantang'],
+       gambar=[img('books', label='perpustakaan')], kisi='PK2', bahas='Di perpustakaan kita menjaga ketenangan dengan berbicara pelan.',
+       konteks='Setiap tempat punya aturan sendiri; di perpustakaan aturannya adalah tenang agar semua dapat membaca. Tanyakan ke anak: "Kalau temanmu berteriak di perpustakaan, apa yang kamu rasakan?" '
+               'Pilih sikap yang tidak mengganggu orang lain.'),
+    pg('Sila kelima Pancasila berbunyi ....',
+       'Keadilan Sosial bagi Seluruh Rakyat Indonesia', ['Ketuhanan Yang Maha Esa', 'Persatuan Indonesia', 'Kemanusiaan yang Adil dan Beradab'],
+       kisi='PK5', bahas='Sila kelima: Keadilan Sosial bagi Seluruh Rakyat Indonesia.',
+       konteks='Sila kelima adalah sila terakhir dan berisi keadilan bagi semua rakyat. Bacakan lima sila bersama anak sampai yang terakhir. '
+               'Petunjuk: sila ini memuat kata "Keadilan", dan lambangnya padi dan kapas yang berarti makanan dan pakaian cukup untuk semua.'),
+    pg('Saat kerja bakti di kampung, Pak RT meminta semua warga ikut membersihkan jalan. Sikap warga yang baik adalah ....',
+       'ikut membersihkan jalan bersama-sama', ['menonton dari rumah saja', 'menyuruh orang lain mengerjakannya', 'pulang saat pekerjaan dimulai'], kisi='PK6',
+       bahas='Gotong royong berarti ikut bekerja bersama untuk kebaikan bersama.',
+       konteks='Gotong royong berarti semua orang ikut bekerja demi kepentingan bersama. Tanyakan: "Kalau semua warga ikut membersihkan jalan, apa bedanya dengan kalau hanya satu orang?" '
+               'Pilih sikap yang ikut bekerja, bukan hanya melihat atau menyuruh.'),
+    pg('Rima menerima hadiah dari nenek lalu berkata, "Terima kasih, Nek." Sikap Rima menunjukkan bahwa ia ....',
+       'bersyukur dan menghargai pemberian', ['merasa sombong', 'tidak peduli pada pemberian', 'ingin hadiah yang lebih banyak'], kisi='PK6',
+       bahas='Berterima kasih adalah cara menghargai pemberian dan bersyukur.',
+       konteks='Bersyukur berarti berterima kasih atas pemberian, baik kepada Allah swt. maupun kepada sesama. Ajak anak mengingat saat ia menerima hadiah: apa yang ia ucapkan? '
+               'Pilih sikap yang menghargai pemberi.'),
+    isian('Selesai makan, keluarga Naya mengucapkan syukur dengan kalimat ....', ALHAMDULILLAH, gambar=[img('cooked-rice', label='selesai makan')], kisi='PK1a',
+          bahas='Setelah makan kita mengucapkan Alhamdulillah.',
+          konteks='Sebelum makan kita membaca Bismillah, dan sesudah makan kita bersyukur. Tanyakan ke anak: "Setelah perut kenyang, apa yang kita ucapkan kepada Allah?" '
+                  'Kalimat itu diawali "Alham...".'),
+    isian('Ibu melarang bermain ponsel saat waktu belajar. Anak yang berbakti akan ... larangan itu.', ['menaati', 'mematuhi', 'menuruti', 'menurut', 'taat', 'patuh', 'mengikuti', 'mentaati'],
+          kisi='PK1b', bahas='Anak yang berbakti menaati aturan orang tua.',
+          konteks='Berbakti artinya menaati dan menyayangi orang tua, termasuk saat aturan itu terasa berat. Tanyakan ke anak: "Kalau ibu bilang waktunya belajar, apa yang sebaiknya kamu lakukan?" '
+                  'Ia dapat menjawab dengan kata kerja bahwa aturan itu diikuti.'),
+    isian('Pada perisai di dada Garuda Pancasila terdapat ... gambar lambang sila.', ['5', 'lima'], kisi='PK4',
+          bahas='Ada lima gambar pada perisai, sesuai lima sila Pancasila.',
+          konteks='Perisai di dada Garuda berisi satu gambar untuk setiap sila. Ajak anak menghitung sila Pancasila dengan jari: bintang, rantai, pohon beringin, kepala banteng, padi dan kapas. '
+                  'Jumlah gambar sama dengan jumlah sila.'),
+    isian('"Kemanusiaan yang Adil dan Beradab" adalah bunyi sila ke ....', ['2', 'dua', 'kedua', 'ke-2', 'ke 2', 'ke-dua'], kisi='PK5', bahas='Sila kedua: Kemanusiaan yang Adil dan Beradab.',
+          konteks='Sila kedua mengajarkan kita bersikap adil dan beradab (sopan, berakhlak baik) kepada sesama manusia. Bacakan kelima sila berurutan sambil menghitung dengan jari, '
+                  'lalu minta anak berhenti di sila yang dimulai dengan kata "Kemanusiaan" dan menyebut nomornya.'),
+    uraian('Mengapa kita harus membuang sampah pada tempatnya? Jelaskan dua alasan!',
+           'Supaya lingkungan bersih dan indah. Sampah yang berserakan bisa menyebabkan banjir dan penyakit.',
+           [['bersih', 'rapi', 'indah', 'asri', 'nyaman', 'sehat', 'tidak kotor', 'tidak berserakan'],
+            ['banjir', 'penyakit', 'sakit', 'kuman', 'bau', 'selokan', 'tersumbat', 'nyamuk', 'tikus', 'tidak bau']],
+           minimal=2, kisi='PK2',
+           konteks='Membuang sampah pada tempatnya menjaga lingkungan dan kesehatan. Tanyakan ke anak: "Kalau selokan penuh sampah dan hujan deras, apa yang bisa terjadi? Kalau halaman bersih, perasaanmu bagaimana?" '
+                   'Bantu anak menyebut satu alasan tentang kebersihan dan satu tentang akibat buruknya.'),
+    uraian('Tuliskan satu tugas yang menjadi tanggung jawabmu di rumah atau di sekolah, dan bagaimana kamu menjalankannya!',
+           'Tugas piket menyapu kelas. Aku menyapu sampai bersih dan tidak menyuruh teman.',
+           [['piket', 'menyapu', 'membereskan', 'merapikan', 'mencuci', 'menyiram', 'menyiapkan', 'mengerjakan', 'pr', 'belajar', 'menjaga', 'merawat', 'membantu',
+             'mainan', 'tempat tidur', 'buku', 'tas', 'sepatu', 'piring', 'kamar', 'sampah', 'kelas', 'tanaman', 'adik', 'menghapus', 'mengepel']],
+           minimal=1, kisi='PK3',
+           konteks='Tanggung jawab adalah menyelesaikan tugas yang menjadi bagian kita, seperti Rasulullah saw. menjaga amanah dengan baik. Tanyakan ke anak: "Apa tugasmu setiap hari di rumah atau saat piket?" '
+                   'Terima contoh nyata apa pun dari anak, lalu minta ia menyebut cara ia menyelesaikannya.'),
+]
+
+# urutan lembar ujian: pg, bs, isian, uraian; di dalam bagian mengikuti urutan indikator kisi-kisi
+_J = ['pg', 'bs', 'isian', 'uraian']
+_K = ['PK1a', 'PK1b', 'PK2', 'PK3', 'PK4', 'PK5', 'PK6']
+for _p in (paket1, paket2, paket3):
+    _p.sort(key=lambda q: (_J.index(q['jenis']), _K.index(q['kisi'])))
 
 PAKET = [paket1, paket2, paket3]

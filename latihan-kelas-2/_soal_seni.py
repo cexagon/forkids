@@ -25,9 +25,9 @@ def blob(cx, cy, radii, warna, rot=0):
     return f'<path d="{d} Z" fill="{warna}" stroke="{INK}" stroke-width="4" stroke-linejoin="round"/>'
 
 BATU = svg(blob(120, 72, [52, 30, 48, 36, 56, 28, 44], '#B8A58C'), 240, 150)
-AWAN_TB = svg(blob(120, 72, [50, 28, 54, 34, 46, 26, 52, 30], '#BFE0F5', 0.4), 240, 150)
+AWAN_TB = svg('<path d="M58 108 C34 108 30 78 52 72 C48 46 82 34 98 50 C106 26 146 24 154 50 C176 40 200 58 190 80 C208 88 200 112 180 108 Z" fill="#BFE0F5" stroke="' + INK + '" stroke-width="5" stroke-linejoin="round"/>', 240, 150)  # awan bergelembung, bentuk bebas
 DAUN_TB = svg(blob(120, 72, [40, 58, 26, 52, 30, 56, 24], '#6DBF6A', 1.1), 240, 150)
-GENANGAN = svg(blob(120, 75, [58, 34, 50, 26, 54, 38], '#7CC6E8', 2.0), 240, 150)
+GENANGAN = svg('<path d="M28 92 C34 74 80 80 104 78 C122 64 150 60 168 74 C196 70 222 84 206 98 C214 112 182 116 160 108 C140 122 96 116 80 108 C56 116 20 108 28 92 Z" fill="#7CC6E8" stroke="' + INK + '" stroke-width="5" stroke-linejoin="round"/>', 240, 150)  # genangan melebar, tepi bergelombang
 PERSEGI_PJG_K = svg(f'<rect x="45" y="35" width="150" height="80" rx="4" fill="#E8742A" stroke="{INK}" stroke-width="5"/>', 240, 150)
 def _kotak_pilihan(isi): return svg(isi, 120, 100)
 O_LINGKARAN = svg(circ(60, 50, 36, '#E8742A'), 120, 100)
@@ -63,7 +63,7 @@ paket1 = [
     pg('Garis pada gambar disebut garis ....', 'zig-zag', ['bergelombang', 'lengkung', 'lurus'], gambar=[ZIGZAG], kisi='SR1b',
        konteks='Garis zig-zag naik turun dengan ujung yang runcing, seperti huruf Z atau gigi gergaji. Bedakan dengan garis bergelombang yang naik turunnya melengkung halus. Minta anak menjalankan jari mengikuti garis: kalau jarinya patah-patah, itu zig-zag.',
        bahas='Garis zig-zag patah-patah dan runcing.'),
-    pg('Manakah bidang yang tidak beraturan?', O_BATU, [O_LINGKARAN, O_PERSEGI, O_SEGITIGA], kisi='SR2b',
+    pg('Manakah bidang yang bentuknya bebas dan tidak punya nama bentuk?', O_BATU, [O_LINGKARAN, O_PERSEGI, O_SEGITIGA], kisi='SR2b',
        konteks='Bidang beraturan punya bentuk yang jelas dan bisa dinamai, seperti lingkaran, persegi, dan segitiga. Bidang tidak beraturan bentuknya bebas, seperti batu, awan, atau genangan air. Tanyakan pada anak: bentuk mana yang bisa kamu sebut namanya? Yang tidak punya nama itulah yang tidak beraturan.',
        bahas='Bentuk batu tidak punya nama bentuk yang pasti, jadi tidak beraturan.'),
     pg('Warna merah, oranye, dan kuning memberikan kesan ....', 'hangat dan bersemangat', ['sejuk dan tenang', 'sepi dan sedih', 'gelap dan menakutkan'], gambar=[PANAS3], kisi='SR3',
@@ -93,7 +93,7 @@ paket1 = [
     isian('Alat untuk memotong kertas pada kegiatan seni rupa adalah ....', ['gunting'], gambar=[img('scissors')], kisi='SR6b',
           konteks='Alat seni rupa punya fungsi masing-masing: gunting untuk memotong, krayon untuk mewarnai, lem untuk menempel. Tunjukkan gambar alat dan tanyakan apa yang bisa dilakukan dengannya. Ingatkan anak bahwa gunting hanya untuk kertas dan dipakai dengan hati-hati.'),
 
-    uraian('Kamu melihat laut yang luas dan indah. Apa yang kamu ucapkan dan kepada siapa kamu bersyukur?',
+    uraian('Kamu melihat laut yang luas dan indah. Apa yang kamu ucapkan dan kepada siapa kamu berterima kasih?',
            'Aku mengucapkan Subhanallah (Masyaallah). Aku bersyukur kepada Allah swt. yang menciptakan laut yang indah.',
            [['subhanallah', 'subhanalloh', 'masyaallah', 'masya allah', 'masyaalloh', 'mashaallah', 'alhamdulillah', 'alhamdulilah'], ['allah', 'alloh', 'tuhan']], minimal=2, kisi='SR4a',
            konteks='Anak diminta menyebut ucapan baik dan kepada siapa ia bersyukur. Ingatkan bahwa laut, gunung, dan langit adalah ciptaan Allah swt. Bantu dengan pertanyaan: kalau kamu kagum melihat sesuatu yang indah, kata apa yang diucapkan di rumah kita?'),
@@ -154,7 +154,7 @@ paket2 = [
 
 # ============================ PAKET 3 ============================
 paket3 = [
-    pg('Manakah bidang yang beraturan?', O_PERSEGI_PJG, [O_BATU, O_AWAN, O_DAUN], kisi='SR2b',
+    pg('Manakah bidang yang punya nama bentuk yang jelas?', O_PERSEGI_PJG, [O_BATU, O_AWAN, O_DAUN], kisi='SR2b',
        konteks='Bidang beraturan punya bentuk yang jelas dan bisa dinamai, seperti persegi panjang. Batu, awan, dan daun bentuknya bebas, jadi tidak beraturan. Tanyakan anak: bentuk mana yang punya nama bentuk?',
        bahas='Persegi panjang punya 4 sisi dan 4 sudut siku-siku, jadi beraturan.'),
     pg('Kamu bisa melihat taman bunga yang indah. Kita bersyukur dengan mengucapkan ....', 'Alhamdulillah, aku bisa melihat bunga yang indah.', ['Biasa saja, bunganya begitu-begitu saja.', 'Ih, bunga ini mau kupetik semuanya.', 'Aduh, banyak sekali bunganya, aku pusing.'], kisi='SR4a',
@@ -163,7 +163,7 @@ paket3 = [
        konteks='Kita boleh memberi saran, tetapi harus dengan kata sopan dan mulai dari hal yang baik. Tanyakan pada anak: kalau temanmu bilang begitu padamu, kamu senang atau sedih? Kalimat yang membuat teman mau memperbaiki karyanya adalah pilihan yang tepat.'),
     pg('Hal yang perlu kita perhatikan saat melihat karya seni rupa adalah ....', 'judul, warna, dan bagian yang kita sukai', ['berat dan harga karya', 'nama ibu pembuatnya', 'suara dan nada lagunya'], kisi='SR5a',
        konteks='Saat melihat karya seni rupa, kita memperhatikan judul, warna, bentuk, garis, bahan, dan bagian yang paling disukai. Ajak anak menatap satu gambar lalu bertanya: apa judulnya, warna apa saja, bagian mana yang paling bagus?'),
-    pg('Bayu menggambar perahu yang ia naiki bersama ayah ketika liburan. Sumber idenya adalah ....', 'pengalaman pribadi', ['imajinasi', 'lingkungan sekitar', 'warna krayon'], kisi='SR5b',
+    pg('Bayu menggambar perahu yang ia naiki bersama ayah ketika liburan. Sumber idenya adalah ....', 'pengalaman pribadi', ['imajinasi', 'meniru buku cerita', 'warna krayon'], kisi='SR5b',
        konteks='Pengalaman pribadi adalah kejadian yang pernah kita alami sendiri, seperti liburan atau bermain di pantai. Imajinasi adalah khayalan, dan lingkungan sekitar adalah yang kita lihat sehari-hari. Bayu mengingat liburannya, jadi idenya dari pengalaman.'),
     pg('Alat yang dipakai untuk mewarnai gambar adalah ....', 'krayon', ['gunting', 'lem', 'penggaris'], gambar=[img('crayon')], kisi='SR6b',
        konteks='Setiap alat seni rupa punya tugas: krayon untuk mewarnai, gunting untuk memotong, lem untuk menempel, penggaris untuk membuat garis lurus. Tunjukkan alatnya satu per satu dan tanyakan apa yang bisa dilakukan dengannya.'),
@@ -189,10 +189,111 @@ paket3 = [
            'Karya seni rupa adalah hasil karya yang dibuat dan bisa dilihat, misalnya gambar, lukisan, patung, atau kolase.',
            [['hasil', 'karya', 'dibuat', 'membuat', 'buatan', 'dilihat'], ['gambar', 'lukisan', 'patung', 'kolase', 'kerajinan', 'topeng', 'anyaman', 'batik', 'melukis', 'menggambar']], minimal=2, kisi='SR5a',
            konteks='Karya seni rupa adalah hasil kegiatan berkarya yang bisa dilihat, seperti gambar, lukisan, patung, kolase, dan kerajinan. Tanyakan pada anak: apa yang pernah kamu buat di sekolah yang bisa dilihat dan dipajang? Itu contoh karya seni rupa.'),
-    uraian('Pilih satu sumber ide (imajinasi, pengalaman pribadi, atau lingkungan sekitar). Tulis apa yang akan kamu gambar dari sumber itu.',
+    uraian('Pilih satu sumber ide untuk menggambar. Tulis nama sumber ide itu dan apa yang akan kamu gambar darinya.',
            'Dari pengalaman pribadi, aku akan menggambar pantai tempat aku bermain pasir waktu liburan.',
-           [['imajinasi', 'khayalan', 'hayalan', 'pengalaman', 'liburan', 'lingkungan', 'sekitar', 'rumah', 'sekolah', 'taman', 'pantai', 'pernah'], ['gambar', 'menggambar', 'melukis', 'membuat', 'buat', 'akan']], minimal=2, kisi='SR5b',
+           [['imajinasi', 'khayalan', 'hayalan', 'pengalaman', 'lingkungan', 'sekitar'], ['liburan', 'rumah', 'sekolah', 'taman', 'pantai', 'pernah', 'pohon', 'bunga', 'gunung', 'sawah', 'laut', 'kucing', 'naga', 'robot', 'keluarga', 'teman', 'kebun', 'masjid', 'kapal', 'perahu', 'mobil', 'hewan', 'peri', 'istana']], minimal=2, kisi='SR5b',
            konteks='Anak memilih satu sumber ide lalu menyebut gambar yang akan dibuat. Bantu dengan contoh: imajinasi (kucing bersayap), pengalaman (liburan ke pantai), lingkungan (pohon di depan rumah). Pastikan isi gambarnya cocok dengan sumber yang dipilih.'),
 ]
+
+# ============================ SOAL TAMBAHAN (menyamakan jumlah dengan kisi-kisi) ============================
+_SYUKUR = ['subhanallah', 'subhanalloh', 'masyaallah', 'masya allah', 'masyaalloh', 'mashaallah', 'alhamdulillah', 'alhamdulilah']
+
+paket1 += [
+    pg('Kamu melihat bintang-bintang berkilau di langit malam. Ucapan yang baik adalah ....', 'Masyaallah, bintang-bintang ciptaan Allah swt. indah sekali.', ['Bintangnya hanya titik kecil, tidak penting.', 'Langit malam membosankan, aku tidak mau melihat.', 'Bintang itu mengganggu tidurku.'], gambar=[img('night-with-stars')], kisi='SR4a',
+       konteks='Langit malam dan bintang adalah ciptaan Allah swt. Saat kagum, kita bisa mengucapkan Masyaallah atau Subhanallah. Ajak anak melihat langit malam dari jendela lalu tanyakan: siapa yang menciptakan bintang, dan kata apa yang baik diucapkan?'),
+    pg('Temanmu mewarnai kucing dengan warna ungu. Kalimat yang menghargai karyanya adalah ....', 'Kucingmu unik, warnanya menarik.', ['Kucing tidak ada yang ungu, gambarmu salah!', 'Gambarmu aneh, aku mau tertawa saja.', 'Aku tidak mau melihat gambarmu.'], kisi='SR4b',
+       konteks='Karya seni boleh berbeda dari kenyataan, dan kita menghargainya dengan kata yang sopan dan baik. Tanyakan pada anak: kalau gambarmu ditertawakan, perasaanmu bagaimana? Pilih kalimat yang menyebut sisi menarik dari karya teman.'),
+    pg('Dika menggambar kucing yang bisa bicara dan memakai topi. Sumber idenya adalah ....', 'imajinasi', ['meniru gambar teman', 'lingkungan sekitar', 'cat air'], kisi='SR5b',
+       konteks='Imajinasi adalah khayalan: membayangkan hal yang belum tentu ada, misalnya kucing yang bisa bicara. Pengalaman pribadi adalah kejadian yang pernah dialami, dan lingkungan sekitar adalah yang kita lihat. Tanyakan: apakah ada kucing yang bisa bicara di dunia nyata? Kalau tidak ada, idenya dari khayalan.'),
+    pg('Alat yang membantu kita membuat garis lurus yang rapi adalah ....', 'penggaris', ['lem', 'gunting', 'kuas'], gambar=[img('straight-ruler')], kisi='SR6b',
+       konteks='Penggaris dipakai untuk membuat garis lurus, lem untuk menempel, gunting untuk memotong, dan kuas untuk mengecat. Berikan penggaris dan kertas pada anak, minta ia membuat garis lurus, lalu bandingkan dengan garis yang dibuat tanpa penggaris.'),
+
+    isian('Awan pada gambar bentuknya bebas dan tidak punya nama bentuk. Awan ini termasuk bidang ....', ['tidak beraturan', 'tidak teratur', 'bidang tidak beraturan'], gambar=[AWAN_TB], kisi='SR2b',
+          konteks='Bidang tidak beraturan bentuknya bebas, seperti awan, batu, dan genangan air. Bidang beraturan punya nama, seperti lingkaran dan persegi. Tanyakan pada anak: awan ini bisa disebut persegi atau lingkaran? Kalau tidak, berarti tidak beraturan.'),
+    isian('Kupu-kupu yang cantik ini ciptaan Allah swt. Rasa terima kasih kita kepada Allah swt. atas ciptaan itu disebut ....', ['syukur', 'bersyukur', 'rasa syukur', 'mensyukuri'], gambar=[img('butterfly')], kisi='SR4a',
+          konteks='Syukur adalah rasa terima kasih kepada Allah swt. atas nikmat dan keindahan yang diberikan, dan kita menunjukkannya dengan ucapan baik seperti Alhamdulillah. Tanyakan pada anak: kalau diberi hadiah, kamu bilang apa? Kepada Allah swt. kita juga berterima kasih, namanya bersyukur.'),
+    isian('Nina menggambar pesta ulang tahunnya yang kemarin. Idenya berasal dari ... pribadi.', ['pengalaman', 'pengalaman pribadi'], kisi='SR5b',
+          konteks='Pengalaman pribadi adalah kejadian yang pernah kita alami sendiri, seperti ulang tahun, liburan, atau bermain bersama teman. Minta anak mengingat satu kejadian seru minggu ini, lalu menggambarnya. Itu ide dari pengalaman.'),
+    isian('Pada teknik kolase, kita membuat gambar dengan cara ... potongan kertas atau kain pada kertas dasar.', ['menempel', 'menempelkan', 'tempel', 'merekatkan', 'menempelnya'], kisi='SR6a',
+          konteks='Kolase dibuat dengan menempel potongan bahan seperti kertas warna, kain perca, atau daun kering pada kertas dasar. Kata kuncinya adalah menempel. Ajak anak membuat kolase kecil dari kertas bekas dan lem.'),
+
+    uraian('Teman sebangkumu menunjukkan hasil kolase buatannya. Tulis satu kalimat pujian yang sopan.',
+           'Kolasemu bagus, warnanya menarik.',
+           [['bagus', 'hebat', 'keren', 'cantik', 'indah', 'rapi', 'menarik', 'suka', 'senang', 'unik', 'lucu']], minimal=1, kisi='SR4b',
+           konteks='Anak berlatih menghargai karya teman dengan kata yang sopan, misalnya menyebut warna atau kerapian yang ia sukai. Periksa bahwa kalimatnya tidak mengejek dan tidak membandingkan dengan karyanya sendiri.'),
+    uraian('Apa artinya imajinasi? Beri satu contoh gambar yang idenya dari imajinasi.',
+           'Imajinasi artinya khayalan atau membayangkan sesuatu. Contohnya menggambar naga yang bisa terbang.',
+           [['khayal', 'hayal', 'bayang', 'pikiran', 'belum ada', 'tidak nyata', 'tidak ada'],
+            ['naga', 'robot', 'terbang', 'peri', 'monster', 'alien', 'bersayap', 'dinosaurus', 'istana', 'kastil', 'unicorn', 'raksasa', 'ajaib', 'roket', 'planet', 'putri', 'pahlawan']], minimal=2, kisi='SR5b',
+           konteks='Imajinasi artinya membayangkan sesuatu di pikiran, termasuk hal yang belum ada, seperti naga terbang atau rumah di awan. Minta anak memejamkan mata, membayangkan hewan yang aneh, lalu menceritakannya. Gambar dari bayangan itu adalah ide dari imajinasi.'),
+]
+
+paket2 += [
+    pg('Genangan air pada gambar bentuknya bebas dan tidak punya nama bentuk. Benda yang bentuknya juga bebas seperti genangan itu adalah ....', 'awan di langit', ['uang koin', 'papan catur', 'ubin lantai'], gambar=[GENANGAN], kisi='SR2b',
+       bahas='Genangan air dan awan sama-sama bidang tidak beraturan. Koin (lingkaran), papan catur, dan ubin (persegi) adalah bidang beraturan.',
+       konteks='Bidang tidak beraturan bentuknya bebas dan tidak punya nama bentuk, seperti genangan air, batu, atau awan. Bidang beraturan punya nama, misalnya koin berbentuk lingkaran dan ubin berbentuk persegi. Tanyakan pada anak: benda mana yang bentuknya bisa kamu sebut namanya? Yang tidak bisa dinamai, itulah jawabannya.'),
+    pg('Kamu melihat matahari terbit yang indah di pagi hari. Ucapan yang baik adalah ....', 'Subhanallah, indah sekali matahari terbit ciptaan Allah swt.', ['Silau sekali, aku benci matahari.', 'Biasa saja, matahari tiap hari juga muncul.', 'Matahari itu mengganggu, aku mau tidur lagi.'], gambar=[img('sunrise')], kisi='SR4a',
+       konteks='Matahari terbit adalah salah satu keindahan ciptaan Allah swt. Kita bisa mengucapkan Subhanallah atau Masyaallah dan bersyukur. Ajak anak melihat langit pagi lalu tanyakan: apa yang kamu rasakan, dan kepada siapa kita bersyukur?'),
+    pg('Manakah yang termasuk karya seni rupa?', 'lukisan pemandangan', ['lagu anak-anak', 'tarian tradisional', 'puisi yang dibacakan'], kisi='SR5a',
+       konteks='Karya seni rupa dapat dilihat dan disentuh, misalnya lukisan, patung, dan kolase. Lagu itu seni musik, tarian itu seni tari, dan puisi itu seni sastra. Minta anak menunjuk benda di rumah yang bisa dilihat dan disentuh sebagai karya seni.'),
+    pg('Dayu meletakkan kertas di atas koin, lalu menggosoknya dengan krayon. Apa yang muncul di kertas?', 'gambar permukaan koin', ['potongan koin yang menempel', 'tulisan nama Dayu', 'warna koin berubah menjadi merah'], gambar=[img('coin')], kisi='SR6a',
+       konteks='Pada teknik gosok, tekstur dan gambar benda berpindah ke kertas saat digosok krayon. Coba bersama anak dengan koin atau daun di bawah kertas tipis. Amati gambar yang muncul pelan-pelan.'),
+
+    isian('Garis ini tidak berbelok dan tidak melengkung sama sekali. Namanya garis ....', ['lurus', 'garis lurus'], gambar=[LURUS], kisi='SR1b',
+          konteks='Garis lurus adalah garis yang tidak berbelok dan tidak melengkung, seperti tepi penggaris. Bandingkan dengan garis lengkung, zig-zag, dan bergelombang. Minta anak menarik garis dari ujung kertas ke ujung lain dengan penggaris.'),
+    isian('Air kolam dan daun hijau mengingatkan kita pada warna ....', ['dingin', 'warna dingin'], gambar=[img('water-wave')], kisi='SR3',
+          konteks='Warna dingin seperti biru dan hijau mengingatkan pada air dan daun, sehingga terasa sejuk. Warna panas mengingatkan pada api dan matahari. Tanyakan pada anak: air itu terasa dingin atau panas? Maka warnanya termasuk kelompok yang mana?'),
+    isian('Kita boleh memberi pujian pada karya teman, tetapi tidak boleh ... karyanya.', ['mengejek', 'menghina', 'mencela', 'mengolok-olok', 'mengolok', 'menertawakan', 'merendahkan', 'mencemooh', 'menjelekkan'], kisi='SR4b',
+          konteks='Menghargai karya teman berarti memakai kata sopan, dan tidak mengejek atau menertawakan. Tanyakan pada anak: bagaimana rasanya kalau gambarmu ditertawakan? Lalu ajak ia menyebut perbuatan yang tidak boleh dilakukan pada karya teman.'),
+    isian('Alat untuk mengecat atau melukis dengan cat air disebut ....', ['kuas', 'kuas lukis'], gambar=[img('paintbrush')], kisi='SR6b',
+          konteks='Kuas dipakai untuk melukis dengan cat air atau cat poster. Tunjukkan kuas, krayon, dan gunting pada anak lalu tanyakan alat mana yang dipakai untuk mengecat. Ingatkan ia mencuci kuas setelah dipakai.'),
+
+    uraian('Kamu melihat hamparan sawah hijau yang luas. Tulis ucapan baik yang kamu ucapkan dan satu alasannya.',
+           'Masyaallah, indah sekali sawah ini. Aku bersyukur karena ini ciptaan Allah swt.',
+           [['subhanallah', 'subhanalloh', 'masyaallah', 'masya allah', 'masyaalloh', 'mashaallah', 'alhamdulillah', 'alhamdulilah'],
+            ['bersyukur', 'syukur', 'berterima kasih', 'terima kasih', 'kagum', 'indah', 'ciptaan', 'pencipta', 'menciptakan', 'diciptakan', 'allah', 'alloh']], minimal=2, kisi='SR4a',
+           konteks='Anak diminta menyebut ucapan baik (Masyaallah, Subhanallah, atau Alhamdulillah) dan satu alasan, misalnya karena indah atau karena ciptaan Allah swt. Bantu dengan pertanyaan: kenapa kita mengucapkannya? Siapa yang menciptakan sawah dan langit?'),
+    uraian('Tulis dua cara memakai bahan seni rupa seperti krayon, lem, dan cat dengan aman dan hati-hati.',
+           'Krayon dan lem tidak dimasukkan ke mulut. Tutup lem ditutup kembali setelah dipakai.',
+           [['mulut', 'dimakan', 'ditelan', 'dijilat'], ['bergantian', 'berbagi', 'antre', 'tidak berebut', 'meminjam'], ['ditutup', 'menutup', 'tutup'], ['mata', 'dicolek', 'dioles ke teman'], ['alas', 'koran', 'meja', 'dinding', 'dicoret']], minimal=2, kisi='SR6b',
+           konteks='Bahan seni rupa dipakai dengan aman: tidak dimasukkan ke mulut, tidak dioles ke teman, ditutup setelah dipakai, dan dipakai bergantian. Ajak anak menyebut dua aturan sambil memegang krayon dan lem. Beri alas koran saat memakai lem atau cat.'),
+]
+
+paket3 += [
+    pg('Cangkang siput berbentuk garis yang berputar-putar dari tengah ke luar. Garis ini disebut garis ....', 'spiral', ['lurus', 'zig-zag', 'bergelombang'], gambar=[img('snail')], kisi='SR1b',
+       konteks='Garis spiral berputar dari tengah ke luar atau sebaliknya, seperti cangkang siput dan pusaran air. Minta anak menelusuri bentuk cangkang dengan jarinya. Kalau jarinya berputar terus, itu garis spiral.'),
+    pg('Rani ingin menggambar suasana sejuk di tepi danau. Warna yang cocok adalah ....', 'biru dan hijau', ['merah dan oranye', 'merah dan kuning', 'oranye dan kuning'], kisi='SR3',
+       konteks='Warna dingin (biru dan hijau) memberi kesan sejuk dan tenang, cocok untuk danau, langit, dan kebun. Warna panas (merah, oranye, kuning) memberi kesan hangat. Tanyakan: kalau ingin suasana sejuk, pilih warna api atau warna air?'),
+    pg('Kamu mendengar burung berkicau merdu di pohon. Ucapan yang baik adalah ....', 'Masyaallah, merdu sekali kicau burung ciptaan Allah swt.', ['Berisik sekali, burung itu mengganggu.', 'Aku mau melempar burung itu supaya diam.', 'Biasa saja, aku tidak peduli.'], gambar=[img('bird')], kisi='SR4a',
+       konteks='Keindahan alam bukan hanya yang dilihat, tetapi juga yang didengar, seperti kicau burung. Kita bersyukur dengan ucapan baik seperti Masyaallah. Ajak anak diam sebentar mendengarkan suara alam, lalu tanyakan siapa yang menciptakannya.'),
+    pg('Bahan yang dapat dipakai untuk membuat kolase adalah ....', 'potongan kertas warna dan kain perca', ['krayon dan pensil warna', 'air dan sabun', 'es batu'], kisi='SR6a',
+       bahas='Kolase dibuat dari potongan bahan yang bisa ditempel, seperti kertas warna, kain perca, atau daun kering.',
+       konteks='Kolase adalah gambar yang disusun dari potongan bahan yang ditempel, seperti kertas warna, kain perca, biji-bijian, atau daun kering. Krayon dan pensil warna dipakai untuk mewarnai, bukan ditempel. Ajak anak mengumpulkan sisa kertas dan kain di rumah, lalu tanyakan mana yang bisa ditempel.'),
+
+    isian('Tali, kawat, dan jalan yang panjang bentuknya mirip dengan ....', ['garis'], kisi='SR1a',
+          konteks='Garis adalah bentuk memanjang. Banyak benda di sekitar kita bentuknya memanjang seperti garis, misalnya tali, kawat, atau jalan lurus. Ajak anak mencari tiga benda di rumah yang bentuknya seperti garis.'),
+    isian('Kamu kagum melihat air terjun yang deras dan indah. Kalimat baik yang artinya "Maha Suci Allah" adalah ....', ['subhanallah', 'subhanalloh', 'subhaanallah', 'subhanallahu', 'subhanaallah'], kisi='SR4a',
+          konteks='Saat kagum pada ciptaan Allah swt. kita bisa mengucapkan Masyaallah (atas kehendak Allah), Subhanallah (Maha Suci Allah), atau Alhamdulillah (segala puji bagi Allah). Ucapkan ketiganya bersama anak beserta artinya, lalu tanyakan mana yang artinya Maha Suci Allah.'),
+    isian('Bila gambar temanmu belum bagus, kita tetap berkata dengan ..., tidak dengan kata yang kasar.', ['sopan', 'baik', 'santun', 'lembut', 'ramah'], kisi='SR4b',
+          konteks='Menghargai teman berarti memilih kata yang sopan dan baik, walaupun gambarnya belum bagus. Latihlah anak mengubah kalimat kasar menjadi kalimat sopan: dari jelek sekali menjadi warnanya sudah bagus, ayo coba lagi.'),
+    isian('Sumber ide dari hal yang kita lihat di dekat kita, seperti taman sekolah, disebut lingkungan ....', ['sekitar'], kisi='SR5b',
+          konteks='Lingkungan sekitar adalah semua yang ada di dekat kita: rumah, sekolah, taman, dan pohon. Ajak anak melihat dari jendela lalu menyebut apa yang bisa digambar. Itu ide dari lingkungan sekitar.'),
+
+    uraian('Tulis satu kalimat syukur atas keindahan alam, dan sebut kepada siapa kamu bersyukur.',
+           'Alhamdulillah, aku bisa melihat pantai yang indah. Aku bersyukur kepada Allah swt.',
+           [['subhanallah', 'subhanalloh', 'masyaallah', 'masya allah', 'masyaalloh', 'mashaallah', 'alhamdulillah', 'alhamdulilah', 'bersyukur', 'syukur', 'terima kasih'],
+            ['allah', 'alloh', 'tuhan']], minimal=2, kisi='SR4a',
+           konteks='Anak menulis satu kalimat syukur yang menyebut Allah swt., misalnya Alhamdulillah, aku bersyukur kepada Allah swt. atas pantai yang indah. Bantu dengan pertanyaan: alam apa yang kamu suka, dan kepada siapa kita berterima kasih?'),
+    uraian('Setelah membuat kolase, meja penuh potongan kertas dan lem. Tulis dua hal yang kamu lakukan.',
+           'Aku membuang sisa potongan kertas ke tempat sampah. Aku merapikan alat dan menutup lem.',
+           [['sampah', 'dibuang', 'membuang', 'memungut', 'dipungut', 'menyapu', 'disapu'], ['dirapikan', 'merapikan', 'dibereskan', 'membereskan', 'disimpan', 'menyimpan', 'dikembalikan', 'mengembalikan'], ['ditutup', 'menutup', 'tutup'], ['dicuci', 'mencuci', 'dibersihkan', 'membersihkan', 'cuci tangan', 'dilap', 'mengelap']], minimal=2, kisi='SR6b',
+           konteks='Setelah berkarya, kita bertanggung jawab merapikan: membuang sisa ke tempat sampah, menyimpan alat, menutup lem, dan membersihkan meja. Minta anak menyebut dua hal yang ia lakukan setelah mewarnai atau menempel di rumah.'),
+]
+
+# urutkan seperti lembar ujian: pg, bs, isian, uraian; di dalam bagian mengikuti urutan indikator kisi-kisi
+_JENIS = ['pg', 'bs', 'isian', 'uraian']
+_KODE = ['SR1a', 'SR1b', 'SR2a', 'SR2b', 'SR3', 'SR4a', 'SR4b', 'SR5a', 'SR5b', 'SR6a', 'SR6b']
+for _p in (paket1, paket2, paket3):
+    _p.sort(key=lambda q: (_JENIS.index(q['jenis']), _KODE.index(q['kisi'])))
 
 PAKET = [paket1, paket2, paket3]

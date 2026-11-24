@@ -48,6 +48,10 @@ HITUNG_LINGKARAN = bentuk([('c', 35, 40, 22), ('t', 95, 45, 24), ('s', 160, 40, 
 HITUNG_PERSEGI = bentuk([('s', 30, 40, 20), ('c', 85, 40, 20), ('s', 140, 40, 20), ('t', 195, 42, 22), ('s', 250, 40, 20),
                          ('t', 30, 112, 22), ('s', 85, 110, 20), ('c', 140, 110, 20), ('s', 195, 110, 20)], 290, 150)
 
+HITUNG_SEGITIGA = bentuk([('t', 35, 42, 22), ('c', 95, 40, 20), ('s', 160, 40, 20), ('t', 220, 42, 22),
+                          ('c', 40, 112, 20), ('t', 100, 112, 22), ('s', 160, 110, 20), ('c', 220, 112, 20)])
+LINGKARAN = svg(circ(120, 70, 55, '#E8742A'), 240, 140)
+
 # ---------- PAKET 1 ----------
 paket1 = [
     pg('Lihat gambar. Mana yang lebih banyak?', 'apel', ['pisang', 'sama banyak'],
@@ -69,6 +73,23 @@ paket1 = [
        bahas='Persegi punya 4 sisi yang sama panjang.', kisi='MT4'),
     isian('Ada berapa lingkaran pada gambar?', ['4', 'empat'], gambar=[HITUNG_LINGKARAN],
           bahas='Ada 4 lingkaran (oranye); segitiga dan persegi tidak dihitung.', kisi='MT4'),
+]
+
+paket1 += [
+    pg('Lanjutkan bilangan ini:  3, 4, 5, ....', '6', ['7', '2'], bahas='Setelah 5 adalah 6.', kisi='MT1'),
+    pg('Ada berapa ekor ikan pada gambar?', '6', ['5', '7'], gambar=[img('fish', n=6)], bahas='Ada 6 ikan.', kisi='MT1'),
+    pg('Ibu punya 5 telur. Ibu membeli 4 telur lagi. Telur Ibu jadi ....', '9', ['8', '10'], bahas='5 + 4 = 9.', kisi='MT2'),
+    pg('Lihat garis bilangan. 5 + 3 = ....', '8', ['7', '9'], gambar=[garis_bilangan(5, 3)],
+       bahas='Mulai dari 5, loncat 3 kali ke kanan, sampai di 8.', kisi='MT2'),
+    isian('Dua bilangan jumlahnya 10.\n7 + ... = 10', ['3', 'tiga'], bahas='7 dan 3 jumlahnya 10.', kisi='MT2'),
+    pg('Ada 9 permen. Dina memakan 6 permen. Sisa permen ada ....', '3', ['4', '2'], bahas='9 − 6 = 3.', kisi='MT3'),
+    pg('Dua bilangan selisihnya 3. Pasangan bilangan yang cocok adalah ....', '10 dan 7', ['10 dan 6', '8 dan 6'],
+       bahas='10 − 7 = 3. (10 − 6 = 4, 8 − 6 = 2.)', kisi='MT3'),
+    isian('Ada 10 kue. Adik makan 6 kue. Sisa kue ada berapa?', ['4', 'empat'], bahas='10 − 6 = 4.', kisi='MT3'),
+    pg('Kelompok mana yang semuanya segitiga?', deret('ttt'), [deret('tcs'), deret('tts')],
+       bahas='Kelompok yang benar hanya berisi segitiga.', kisi='MT4'),
+    pg('Roda sepeda bentuknya ....', 'lingkaran', ['persegi', 'segitiga'], gambar=[img('bicycle', label='sepeda')],
+       bahas='Roda sepeda berbentuk lingkaran.', kisi='MT4'),
 ]
 
 # ---------- PAKET 2 ----------
@@ -96,6 +117,22 @@ paket2 = [
           bahas='Ada 5 persegi (biru).', kisi='MT4'),
 ]
 
+paket2 += [
+    pg('Pilih tanda yang tepat:  3 ... 9', '<', ['>', '='], bahas='3 lebih kecil dari 9, jadi tandanya <.', kisi='MT1'),
+    pg('Ada berapa ekor kupu-kupu pada gambar?', '8', ['7', '9'], gambar=[img('butterfly', n=8)], bahas='Ada 8 kupu-kupu.', kisi='MT1'),
+    pg('Perhatikan garis bilangan. 3 + 5 = ....', '8', ['7', '9'], gambar=[garis_bilangan(3, 5)],
+       bahas='Mulai dari 3, loncat 5 kali ke kanan, sampai di 8.', kisi='MT2'),
+    pg('Ali punya 2 kelereng. Lalu ia mendapat 6 kelereng lagi. Kelereng Ali sekarang ada ....', '8', ['4', '7'], bahas='2 + 6 = 8.', kisi='MT2'),
+    isian('Dua bilangan jumlahnya 10.\n1 + ... = 10', ['9', 'sembilan'], bahas='1 dan 9 jumlahnya 10.', kisi='MT2'),
+    pg('Perhatikan garis bilangan. 9 − 5 = ....', '4', ['5', '3'], gambar=[garis_bilangan(9, -5)],
+       bahas='Mulai dari 9, loncat 5 kali ke kiri, sampai di 4.', kisi='MT3'),
+    pg('Ada 7 ikan di kolam. Lalu 2 ikan dipindahkan ke ember. Ikan di kolam tinggal ....', '5', ['4', '9'], bahas='7 − 2 = 5.', kisi='MT3'),
+    isian('Selisih dua bilangan adalah 3.\n6 − ... = 3', ['3', 'tiga'], bahas='6 − 3 = 3, jadi 6 dan 3 selisihnya 3.', kisi='MT3'),
+    pg('Bentuk pada gambar ini adalah ....', 'segitiga', ['persegi', 'lingkaran'], gambar=[SEGITIGA], bahas='Segitiga punya 3 sisi.', kisi='MT4'),
+    pg('Kelompok mana yang semuanya persegi?', deret('sss'), [deret('scs'), deret('sst')],
+       bahas='Kelompok yang benar hanya berisi persegi.', kisi='MT4'),
+]
+
 # ---------- PAKET 3 ----------
 paket3 = [
     pg('Lihat gambar. Mana yang lebih sedikit?', 'balon', ['bintang', 'sama banyak'],
@@ -120,4 +157,34 @@ paket3 = [
        bahas='Kelompok yang benar hanya berisi lingkaran.', kisi='MT4'),
 ]
 
-PAKET = [paket1, paket2, paket3]
+paket3 += [
+    pg('Bilangan yang lebih kecil dari 4 adalah ....', '3', ['5', '4'], bahas='3 lebih kecil dari 4. 5 dan 4 tidak lebih kecil dari 4.', kisi='MT1'),
+    pg('Bilangan berikutnya:  7, 8, 9, ....', '10', ['6', '8'], bahas='Setelah 9 adalah 10.', kisi='MT1'),
+    pg('Dua bilangan jumlahnya 10. Pasangan dari 6 adalah ....', '4', ['5', '3'], bahas='6 + 4 = 10.', kisi='MT2'),
+    pg('Ada 3 kucing di rumah. Lalu datang 4 kucing lagi. Kucing di rumah sekarang ada ....', '7', ['6', '8'], bahas='3 + 4 = 7.', kisi='MT2'),
+    isian('Ada berapa anjing semuanya?', ['9', 'sembilan'], gambar=[img('dog-face', n=4), {'teks': '+'}, img('dog-face', n=5)],
+          bahas='4 anjing + 5 anjing = 9 anjing.', kisi='MT2'),
+    pg('Sinta punya 8 kelereng. Ia memberikan 5 kelereng kepada adik. Kelereng Sinta tinggal ....', '3', ['4', '2'], bahas='8 − 5 = 3.', kisi='MT3'),
+    pg('Perhatikan garis bilangan. 7 − 2 = ....', '5', ['4', '6'], gambar=[garis_bilangan(7, -2)],
+       bahas='Mulai dari 7, loncat 2 kali ke kiri, sampai di 5.', kisi='MT3'),
+    isian('Selisih dua bilangan adalah 3.\n9 − ... = 3', ['6', 'enam'], bahas='9 − 6 = 3, jadi 9 dan 6 selisihnya 3.', kisi='MT3'),
+    pg('Gambar di bawah ini berbentuk ....', 'lingkaran', ['persegi', 'segitiga'], gambar=[LINGKARAN], bahas='Lingkaran tidak punya sudut.', kisi='MT4'),
+    isian('Ada berapa segitiga pada gambar?', ['3', 'tiga'], gambar=[HITUNG_SEGITIGA], bahas='Ada 3 segitiga (kuning).', kisi='MT4'),
+]
+
+def _urut(p):
+    jn = {'pg': 0, 'bs': 1, 'isian': 2, 'uraian': 3}
+    return sorted(p, key=lambda q: (jn[q['jenis']], q['kisi']))
+
+PAKET = [_urut(paket1), _urut(paket2), _urut(paket3)]
+
+# Seimbangkan letak kunci PG (a/b/c) agar tidak berpola: pindahkan jawaban benar soal-soal ini ke huruf tertentu.
+def _geser(p, awal, huruf):
+    k = 'abc'.index(huruf)
+    for q in p:
+        if q['jenis'] == 'pg' and q['tanya'].startswith(awal):
+            j = q['jawab']; q['pilihan'][j], q['pilihan'][k] = q['pilihan'][k], q['pilihan'][j]; q['jawab'] = k
+            return
+    raise KeyError(awal)
+_geser(PAKET[0], 'Ada 9 permen', 'a')
+_geser(PAKET[0], 'Dua bilangan selisihnya 3', 'c')
