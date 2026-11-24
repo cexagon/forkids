@@ -184,6 +184,7 @@
           <button class="btn ghost" id="installBtn" hidden>Pasang di HP</button>
           <a class="btn secondary" href="./cerita/">Lanjut: Peta Cerita</a>
           <a class="btn ghost" href="./latihan-kelas-1/">Latihan ujian kelas 1</a>
+          <a class="btn ghost" href="./latihan-kelas-2/">Latihan ujian kelas 2</a>
           <button class="btn ghost" id="parentBtn">Untuk orang tua</button>
         </section>
       </main>`, 'map');
