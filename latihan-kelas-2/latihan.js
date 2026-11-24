@@ -31,6 +31,8 @@
       pen: '<path d="M4 20l1-4.5L15.5 5a2.1 2.1 0 0 1 3 3L8 18.5z"/><path d="M13.5 7l3 3"/>',
       clip: '<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1"/><path d="M8.5 11l2 2 4-4"/><path d="M8.5 17h7"/>',
       type: '<rect x="3.5" y="6.5" width="17" height="11" rx="2.5"/><path d="M7 10.5h.01M10.5 10.5h.01M14 10.5h.01M17 10.5h.01M8 14h8"/>',
+      book: '<path d="M12 6.5C10.3 5.2 8 4.7 4.5 5v12.5c3.5-.3 5.8.2 7.5 1.5 1.7-1.3 4-1.8 7.5-1.5V5C16 4.7 13.7 5.2 12 6.5z"/><path d="M12 6.5V19"/>',
+      fwd: '<path d="M10 6l6 6-6 6"/><path d="M16 12H4"/>',
       info: '<circle cx="12" cy="12" r="8.5"/><path d="M12 11v5"/><path d="M12 7.6v.4"/>'
     }[name];
     return '<svg class="i' + (cls ? ' ' + cls : '') + '" viewBox="0 0 24 24" aria-hidden="true">' + p + '</svg>';
@@ -62,6 +64,7 @@
   }
   function hush() {
     try { speechSynthesis.cancel(); } catch (e) {}
+    try { mHush(); } catch (e) {}
     app.querySelectorAll('.speak.on').forEach(function (b) { b.classList.remove('on'); });
     stopAudio();
   }
@@ -168,10 +171,10 @@
       '<p class="parent">' + ic('info') + '<span>Untuk orang tua: anak memilih, mengetik, atau menulis jawaban, lalu menekan Kumpul. Tombol 😵‍💫 di tiap soal membuka penjelasan untuk orang tua. Setelah Kumpul, tekan Nilai untuk melihat hasilnya.</span></p></header>' +
       '<h2 class="hide">Pilih pelajaran</h2><div class="subjects">';
     DATA.forEach(function (s) {
-      var pk = s.paket || [{ nama: 'Paket 1', soal: s.soal }];
+      var pk = s.paket || [{ nama: 'Latihan 1', soal: s.soal }];
       h += '<section class="subject"><span class="s-name">' + esc(s.nama) + '</span><span class="s-materi">' + esc(s.materi) + '</span>' +
         (s.tambahan ? '<span class="s-foot"><span class="tag extra">Tambahan</span></span>' : '') +
-        '<div class="pakets" role="group" aria-label="Pilih paket ' + esc(s.nama) + '">';
+        belajarHtml(s) + '<div class="pakets" role="group" aria-label="Pilih latihan ' + esc(s.nama) + '">';
       pk.forEach(function (p, k) {
         var sc = sk[s.id + '-' + (k + 1)];
         h += '<button class="paket" data-id="' + esc(s.id) + '" data-k="' + k + '" aria-label="' + esc(s.nama + ', ' + p.nama) + (typeof sc === 'number' ? ', nilai terakhir ' + sc : ', belum dicoba') + '">' +
@@ -183,12 +186,13 @@
     app.innerHTML = h + '</div></div>';
     window.scrollTo(0, 0);
     app.querySelectorAll('.paket').forEach(function (b) { b.onclick = function () { start(b.dataset.id, +b.dataset.k); }; });
+    app.querySelectorAll('.belajar').forEach(function (b) { b.onclick = function () { openMateri(b.dataset.id, 'home'); }; });
   }
 
   function start(id, k) {
     hush();
     var base = DATA.filter(function (s) { return s.id === id; })[0];
-    var pk = base.paket || [{ nama: 'Paket 1', soal: base.soal }];
+    var pk = base.paket || [{ nama: 'Latihan 1', soal: base.soal }];
     k = k || 0;
     var sub = { id: base.id + '-' + (k + 1), mapel: base.id, paketIdx: k, nama: base.nama + ' \u00b7 ' + pk[k].nama, soal: pk[k].soal, materi: base.materi };
     S = { sub: sub, ans: [], pads: [], modes: [], audio: {}, graded: null, over: {} };
@@ -277,12 +281,13 @@
     hush();
     var s = S.sub;
     var h = topbar('<div class="prog-wrap"><div class="prog" id="prog" role="status">' + progressHtml() + '</div><div class="progbar" aria-hidden="true"><i id="progfill"></i></div></div>');
-    h += '<main class="wrap paper"><div class="paper-head"><h1>' + esc(s.nama) + '</h1><p>' + s.soal.length + ' soal. Pilih, ketik, atau tulis jawabanmu. Jawaban bisa diganti sebelum dikumpulkan.</p></div>';
+    h += '<main class="wrap paper"><div class="paper-head"><h1>' + esc(s.nama) + '</h1><p>' + s.soal.length + ' soal. Pilih, ketik, atau tulis jawabanmu. Jawaban bisa diganti sebelum dikumpulkan.</p>' + lihatHtml(s.mapel) + '</div>';
     s.soal.forEach(function (q, i) { h += cardHtml(q, i); });
     h += '<div class="submit"><p class="submit-note" id="submit-note"></p><button class="btn primary kumpul" id="kumpul">' + ic('send') + 'Kumpul</button></div></main>';
     app.innerHTML = h;
     window.scrollTo(0, 0);
     $('home').onclick = leave;
+    if ($('lihat')) $('lihat').onclick = function () { openMateri(s.mapel, 'exam'); };
     app.querySelectorAll('.speak').forEach(function (b) { b.onclick = function () { hush(); say(readText(s.soal[+b.dataset.i]), b); }; });
     app.querySelectorAll('.listen').forEach(function (b) { b.onclick = function () { play(+b.dataset.i, b); }; });
     app.querySelectorAll('.opt').forEach(function (b) { b.onclick = function () { mark(+b.dataset.i, +b.dataset.v); }; });
@@ -635,6 +640,191 @@
     b.setAttribute('aria-expanded', open ? 'true' : 'false');
     b.classList.toggle('on', open);
   });
+
+
+  /* ---------- Belajar dulu (materi) ---------- */
+  var MAT = window.MATERI || {};
+  var MKEY = 'latihan-k2-s1-materi';
+  var EMOJI_PARENT = true;
+  var M = null; // { id, nama, from, idx, audio, y, n }
+  function hasMat(id) { return !!MAT && Array.isArray(MAT[id]) && MAT[id].length > 0; }
+  function matDone() { try { return JSON.parse(localStorage.getItem(MKEY)) || {}; } catch (e) { return {}; } }
+  function matMark(id) { try { var d = matDone(); d[id] = 1; localStorage.setItem(MKEY, JSON.stringify(d)); } catch (e) {} }
+  function mapelOf(id) { return DATA.filter(function (s) { return s.id === id; })[0]; }
+  function belajarHtml(s) {
+    if (!hasMat(s.id)) return '';
+    var done = !!matDone()[s.id];
+    return '<button class="btn primary belajar" data-id="' + esc(s.id) + '" aria-label="Belajar dulu: ' + esc(s.nama) + (done ? ', sudah dibaca' : '') + '">' + ic('book') + '<span class="b-txt"><span>Belajar dulu</span>' +
+      (done ? '<span class="done-badge">' + ic('check') + 'Sudah dibaca</span>' : '') + '</span></button>';
+  }
+  function lihatHtml(id) {
+    return hasMat(id) ? '<button class="btn ghost lihat" id="lihat" type="button">' + ic('book') + '<span>Lihat materi</span></button>' : '';
+  }
+  function mHush() {
+    try { speechSynthesis.cancel(); } catch (e) {}
+    if (M && M.audio) { try { M.audio.pause(); } catch (e) {} }
+    var h = $('materi'); if (h) h.querySelectorAll('.mk-act.on').forEach(function (b) { b.classList.remove('on'); });
+  }
+  function mHost() {
+    var el = $('materi');
+    if (el) return el;
+    el = document.createElement('div'); el.id = 'materi'; el.hidden = true;
+    document.body.appendChild(el);
+    var sx = 0, sy = 0, tr = false;
+    el.addEventListener('touchstart', function (e) { tr = e.touches.length === 1; if (tr) { sx = e.touches[0].clientX; sy = e.touches[0].clientY; } }, { passive: true });
+    el.addEventListener('touchend', function (e) {
+      if (!tr || !M || !e.changedTouches.length) return;
+      tr = false;
+      var dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+      if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) matGo(M.idx + (dx < 0 ? 1 : -1));
+    }, { passive: true });
+    el.addEventListener('click', function (e) {
+      var b = e.target.closest ? e.target.closest('.pk, .pkl') : null;
+      if (!b) return;
+      var pn = $(b.dataset.t); if (!pn) return;
+      var open = pn.hidden;
+      pn.hidden = !open;
+      b.setAttribute('aria-expanded', open ? 'true' : 'false');
+      b.classList.toggle('on', open);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (!M || e.altKey || e.ctrlKey || e.metaKey) return;
+      var t = e.target && e.target.tagName;
+      if (t === 'INPUT' || t === 'TEXTAREA' || document.querySelector('dialog[open]')) return;
+      if (e.key === 'ArrowRight') matGo(M.idx + 1); else if (e.key === 'ArrowLeft') matGo(M.idx - 1);
+    });
+    return el;
+  }
+  function openMateri(id, from) {
+    var base = mapelOf(id); if (!base || !hasMat(id)) return;
+    hush();
+    var host = mHost();
+    M = { id: id, nama: base.nama, from: from, idx: 0, audio: null, y: window.scrollY || 0, n: MAT[id].length };
+    host.innerHTML = '<header class="bar"><button class="btn ghost" id="mk-back" type="button">' + ic('back') + '<span>' + (from === 'exam' ? 'Ke soal' : 'Beranda') + '</span></button>' +
+      '<div class="bar-title"><span class="mk-pre">Belajar · </span>' + esc(base.nama) + '</div>' +
+      '<div class="prog-wrap" aria-hidden="true"><div class="progbar"><i id="mk-fill"></i></div></div></header>' +
+      '<main class="wrap mk-wrap"><div id="mk-card"></div><p class="sr" id="mk-live" aria-live="polite"></p></main>' +
+      '<nav class="mk-nav" aria-label="Pindah kartu"><div class="mk-nav-in"><button class="btn secondary" id="mk-prev" type="button">' + ic('back') + '<span>Sebelumnya</span></button>' +
+      '<button class="btn primary" id="mk-next" type="button"><span>Berikutnya</span>' + ic('fwd') + '</button></div></nav>';
+    app.hidden = true; host.hidden = false;
+    $('mk-back').onclick = closeMateri;
+    $('mk-prev').onclick = function () { matGo(M.idx - 1); };
+    $('mk-next').onclick = function () { matGo(M.idx + 1); };
+    matShow(false, 1);
+  }
+  function closeMateri() {
+    if (!M) return;
+    var m = M; mHush(); M = null;
+    var host = $('materi'); host.hidden = true; host.innerHTML = '';
+    app.hidden = false;
+    if (m.from === 'exam') { window.scrollTo(0, m.y); var l = $('lihat'); if (l) l.focus({ preventScroll: true }); }
+    else { home(); }
+  }
+  function matGo(n) {
+    if (!M || n < 0 || n > M.n || n === M.idx) return;
+    var dir = n > M.idx ? 1 : -1;
+    mHush(); M.idx = n;
+    matShow(true, dir);
+  }
+  function endS(t) { t = String(t).trim(); return /[.!?…:]$/.test(t) ? t : t + '.'; }
+  function matRead(c) {
+    var t = [endS(String(c.judul).replace(/\n/g, ' '))];
+    (c.isi || []).forEach(function (s) { t.push(endS(String(s).replace(/\n/g, ' '))); });
+    if (c.ingat) t.push('Ingat. ' + endS(String(c.ingat).replace(/\n/g, ' ')));
+    return t.join(' ');
+  }
+  function isiHtml(arr) {
+    var h = '<div class="mk-isi">';
+    arr.forEach(function (s) {
+      var m = /^(\d+)\.\s+([\s\S]*)$/.exec(String(s));
+      if (m) h += '<p class="step"><span class="qno sm" aria-hidden="true">' + m[1] + '</span><span class="st" dir="ltr"><span class="sr">Langkah ' + m[1] + '. </span>' + br(m[2]) + '</span></p>';
+      else h += '<p dir="ltr">' + br(s) + '</p>';
+    });
+    return h + '</div>';
+  }
+  function ortuHtml(c, i) {
+    if (!c.ortu) return '';
+    var pid = 'mk-kx-' + i;
+    var btn = EMOJI_PARENT
+      ? '<button class="pk" type="button" data-t="' + pid + '" aria-label="Penjelasan untuk orang tua" aria-expanded="false" aria-controls="' + pid + '"><span aria-hidden="true">😵‍💫</span></button>'
+      : '<button class="pkl" type="button" data-t="' + pid + '" aria-expanded="false" aria-controls="' + pid + '">' + ic('info') + '<span>Untuk orang tua</span></button>';
+    return '<div class="kfoot">' + btn + '</div><div class="kx" id="' + pid + '" role="region" aria-label="Untuk orang tua, kartu ' + (i + 1) + '" hidden><h3>Untuk orang tua</h3><p>' + br(c.ortu) + '</p></div>';
+  }
+  function cardHtml2(c, i, N, anim) {
+    var h = '<article class="mc' + (anim ? ' in' : '') + '" aria-labelledby="mk-t">';
+    h += '<div class="mk-meta"><span class="mk-count">Kartu ' + (i + 1) + ' dari ' + N + '</span>' + (c.kisi ? '<span class="tag">' + esc(c.kisi) + '</span>' : '') + '</div>';
+    h += '<h1 class="mk-title" id="mk-t" tabindex="-1" dir="ltr">' + br(c.judul) + '</h1>';
+    h += '<div class="mk-acts"><button class="mk-act" id="mk-read" type="button">' + ic('read') + '<span>Bacakan</span></button>' +
+      (c.suara ? '<button class="mk-act audio" id="mk-play" type="button" aria-describedby="mk-msg">' + ic('speaker') + '<span>Dengarkan</span></button><span class="lmsg" id="mk-msg" aria-live="polite"></span>' : '') + '</div>';
+    if (c.gambar && c.gambar.length) h += '<div class="picbox" role="group" aria-label="Gambar">' + c.gambar.map(part).join('') + '</div>';
+    if (c.isi && c.isi.length) h += isiHtml(c.isi);
+    if (c.contoh && c.contoh.length) {
+      h += '<section class="mk-contoh" aria-labelledby="mk-ct"><h2 id="mk-ct">Contoh</h2>';
+      c.contoh.forEach(function (x) {
+        if (typeof x === 'string') x = { teks: x };
+        h += '<div class="ct">' + (x.teks ? '<p dir="ltr">' + br(x.teks) + '</p>' : '') +
+          (x.gambar && x.gambar.length ? '<div class="picbox" role="group" aria-label="Gambar contoh">' + x.gambar.map(part).join('') + '</div>' : '') + '</div>';
+      });
+      h += '</section>';
+    }
+    if (c.ingat) h += '<div class="mk-ingat" role="note"><h2>' + ic('star') + 'Ingat!</h2><p dir="ltr">' + br(c.ingat) + '</p></div>';
+    return h + ortuHtml(c, i) + '</article>';
+  }
+  function ctaHtml(anim) {
+    var base = mapelOf(M.id), pk = base.paket || [{ nama: 'Latihan 1', soal: base.soal }], sk = load(), ex = M.from === 'exam' && S && S.sub.mapel === M.id;
+    var h = '<article class="mc cta' + (anim ? ' in' : '') + '" aria-labelledby="mk-t"><div class="g-icon">' + ic('check') + '</div>' +
+      '<h1 class="mk-title" id="mk-t" tabindex="-1">Siap latihan?</h1>' +
+      '<p class="g-sub">Kamu sudah membaca semua kartu ' + esc(base.nama) + '. Pilih satu latihan soal untuk mulai.</p>' +
+      '<div class="pakets" role="group" aria-label="Pilih latihan ' + esc(base.nama) + '">';
+    pk.forEach(function (p, k) {
+      var sc = sk[base.id + '-' + (k + 1)], cur = ex && S.sub.paketIdx === k;
+      h += '<button class="paket" type="button" data-k="' + k + '"' + (cur ? ' aria-current="true"' : '') + ' aria-label="' + esc(base.nama + ', ' + p.nama) + (cur ? ', kembali ke soal ini' : typeof sc === 'number' ? ', nilai terakhir ' + sc : ', belum dicoba') + '">' +
+        '<span class="p-name">' + esc(p.nama) + '</span>' +
+        (cur ? '<span class="p-score">Lanjutkan</span>' : typeof sc === 'number' ? '<span class="p-score">' + ic('star') + sc + '</span>' : '<span class="p-score none">Belum</span>') + '</button>';
+    });
+    return h + '</div></article>';
+  }
+  function matShow(anim, dir) {
+    var c = MAT[M.id][M.idx], N = M.n, last = M.idx === N, card = $('mk-card');
+    card.innerHTML = last ? ctaHtml(anim) : cardHtml2(c, M.idx, N, anim);
+    card.style.setProperty('--dx', (dir > 0 ? 18 : -18) + 'px');
+    $('mk-fill').style.width = (Math.min(M.idx + 1, N) * 100 / N) + '%';
+    $('mk-prev').disabled = M.idx === 0;
+    $('mk-next').classList.toggle('hide', last);
+    $('mk-live').textContent = last ? 'Siap latihan? Pilih latihan soal.' : 'Kartu ' + (M.idx + 1) + ' dari ' + N + '. ' + c.judul;
+    window.scrollTo(0, 0);
+    if (last) matMark(M.id);
+    var rd = $('mk-read');
+    if (rd) rd.onclick = function () { mHush(); say(matRead(c), rd); };
+    var pl = $('mk-play');
+    if (pl) pl.onclick = function () { matPlay(c, pl); };
+    card.querySelectorAll('.paket').forEach(function (b) { b.onclick = function () { matStart(+b.dataset.k); }; });
+    var a = document.activeElement;
+    if (anim && (!a || a === document.body || a.disabled || a.offsetParent === null || a.classList.contains('hide'))) { var t = $('mk-t'); if (t) t.focus({ preventScroll: true }); }
+    else if (anim && a && a.id === 'mk-next') { /* fokus tetap di tombol */ }
+  }
+  function matPlay(c, btn) {
+    mHush();
+    var m = $('mk-msg'); if (m) m.textContent = '';
+    if (!M.audio || M.audioSrc !== c.suara) {
+      var a = M.audio = new Audio(c.suara); M.audioSrc = c.suara; a.preload = 'auto';
+      a.onended = a.onpause = function () { btn.classList.remove('on'); };
+      a.onerror = function () { btn.classList.remove('on'); var mm = $('mk-msg'); if (mm) mm.textContent = 'Suaranya belum bisa diputar. Coba ketuk lagi.'; };
+    }
+    try { M.audio.currentTime = 0; } catch (e) {}
+    btn.classList.add('on');
+    var p = M.audio.play();
+    if (p && p.catch) p.catch(function () { btn.classList.remove('on'); });
+  }
+  function matStart(k) {
+    var id = M.id, m = M;
+    function go() { var from = m.from; M = null; mHush(); var host = $('materi'); host.hidden = true; host.innerHTML = ''; app.hidden = false; start(id, k); }
+    if (m.from === 'exam' && S && S.sub.mapel === id) {
+      if (S.sub.paketIdx === k) { closeMateri(); return; }
+      if (!S.graded && countAnswered() > 0) { ask('Pindah latihan?', 'Jawaban yang sudah kamu isi akan hilang.', 'Kembali', 'Pindah', go); return; }
+    }
+    go();
+  }
 
   home();
 })();

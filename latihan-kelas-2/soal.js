@@ -7,7 +7,7 @@ window.SOAL = [
   "materi": "Surah An-Nas, hijaiah bersambung, Al-Hafiz, Al-Wali, Al-Halim, Al-Khabir, jujur dan santun, salat fardu, kisah Nabi Nuh",
   "paket": [
    {
-    "nama": "Paket 1",
+    "nama": "Latihan 1",
     "soal": [
      {
       "jenis": "pg",
@@ -478,7 +478,7 @@ window.SOAL = [
     ]
    },
    {
-    "nama": "Paket 2",
+    "nama": "Latihan 2",
     "soal": [
      {
       "jenis": "pg",
@@ -948,7 +948,7 @@ window.SOAL = [
     ]
    },
    {
-    "nama": "Paket 3",
+    "nama": "Latihan 3",
     "soal": [
      {
       "jenis": "pg",
@@ -1435,7 +1435,7 @@ window.SOAL = [
   "materi": "Aturan di keluarga, rumah, sekolah dan lingkungan, keteladanan Rasulullah, Garuda Pancasila dan sila-silanya",
   "paket": [
    {
-    "nama": "Paket 1",
+    "nama": "Latihan 1",
     "soal": [
      {
       "jenis": "pg",
@@ -1948,7 +1948,7 @@ window.SOAL = [
     ]
    },
    {
-    "nama": "Paket 2",
+    "nama": "Latihan 2",
     "soal": [
      {
       "jenis": "pg",
@@ -2467,7 +2467,7 @@ window.SOAL = [
     ]
    },
    {
-    "nama": "Paket 3",
+    "nama": "Latihan 3",
     "soal": [
      {
       "jenis": "pg",
@@ -3010,7 +3010,7 @@ window.SOAL = [
   "materi": "Perasaan, huruf kapital, kebersihan diri, fabel, kalimat tanya, S-P-O, grafik, rambu, keluarga, kalimat aktif-pasif, fakta dan opini",
   "paket": [
    {
-    "nama": "Paket 1",
+    "nama": "Latihan 1",
     "soal": [
      {
       "jenis": "pg",
@@ -3467,7 +3467,7 @@ window.SOAL = [
     ]
    },
    {
-    "nama": "Paket 2",
+    "nama": "Latihan 2",
     "soal": [
      {
       "jenis": "pg",
@@ -3927,7 +3927,7 @@ window.SOAL = [
     ]
    },
    {
-    "nama": "Paket 3",
+    "nama": "Latihan 3",
     "soal": [
      {
       "jenis": "pg",
@@ -4421,7 +4421,7 @@ window.SOAL = [
   "materi": "Bilangan sampai 50, nilai tempat, menyimpan dan meminjam, bangun datar dan ruang, posisi benda, pola",
   "paket": [
    {
-    "nama": "Paket 1",
+    "nama": "Latihan 1",
     "soal": [
      {
       "jenis": "pg",
@@ -4906,7 +4906,7 @@ window.SOAL = [
     ]
    },
    {
-    "nama": "Paket 2",
+    "nama": "Latihan 2",
     "soal": [
      {
       "jenis": "pg",
@@ -5353,7 +5353,7 @@ window.SOAL = [
     ]
    },
    {
-    "nama": "Paket 3",
+    "nama": "Latihan 3",
     "soal": [
      {
       "jenis": "pg",
@@ -5797,7 +5797,7 @@ window.SOAL = [
   "materi": "Gerak lokomotor, nonlokomotor, manipulatif, gerak berirama, kebugaran dan hidup bersih, aktivitas air, sikap syukur",
   "paket": [
    {
-    "nama": "Paket 1",
+    "nama": "Latihan 1",
     "soal": [
      {
       "jenis": "pg",
@@ -6338,7 +6338,7 @@ window.SOAL = [
     ]
    },
    {
-    "nama": "Paket 2",
+    "nama": "Latihan 2",
     "soal": [
      {
       "jenis": "pg",
@@ -6908,7 +6908,7 @@ window.SOAL = [
     ]
    },
    {
-    "nama": "Paket 3",
+    "nama": "Latihan 3",
     "soal": [
      {
       "jenis": "pg",
@@ -7759,7 +7759,7 @@ window.SOAL = [
   "materi": "Garis dan bidang, warna panas dan dingin, menghargai karya, sumber ide, teknik gosok dan kolase, alat dan bahan",
   "paket": [
    {
-    "nama": "Paket 1",
+    "nama": "Latihan 1",
     "soal": [
      {
       "jenis": "pg",
@@ -8242,7 +8242,7 @@ window.SOAL = [
     ]
    },
    {
-    "nama": "Paket 2",
+    "nama": "Latihan 2",
     "soal": [
      {
       "jenis": "pg",
@@ -8712,7 +8712,7 @@ window.SOAL = [
     ]
    },
    {
-    "nama": "Paket 3",
+    "nama": "Latihan 3",
     "soal": [
      {
       "jenis": "pg",
@@ -9183,7 +9183,7 @@ window.SOAL = [
   "materi": "Fruits, Do you like, family members, classroom objects, Where is my, in front of, behind, next to, There are",
   "paket": [
    {
-    "nama": "Paket 1",
+    "nama": "Latihan 1",
     "soal": [
      {
       "jenis": "pg",
@@ -9705,7 +9705,7 @@ window.SOAL = [
     ]
    },
    {
-    "nama": "Paket 2",
+    "nama": "Latihan 2",
     "soal": [
      {
       "jenis": "pg",
@@ -10247,7 +10247,7 @@ window.SOAL = [
     ]
    },
    {
-    "nama": "Paket 3",
+    "nama": "Latihan 3",
     "soal": [
      {
       "jenis": "pg",

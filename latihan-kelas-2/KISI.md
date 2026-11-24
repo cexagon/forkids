@@ -4,7 +4,7 @@ Angka di kolom paket = nomor soal yang menguji indikator itu. Dibuat otomatis ol
 
 ## Al-Islam
 
-| Kode | Indikator kisi-kisi | Butir di kisi | Paket 1 | Paket 2 | Paket 3 |
+| Kode | Indikator kisi-kisi | Butir di kisi | Latihan 1 | Latihan 2 | Latihan 3 |
 | --- | --- | --- | --- | --- | --- |
 | AI1 | Membaca dan menghafal Surah An-Nas serta pesan pokoknya | 3 (PG 1, isian 1, uraian 1) | 1, 11, 21 | 1, 11, 21 | 1, 11, 21 |
 | AI2 | Membaca huruf hijaiah bersambung dan makharijul huruf | 2 (PG 1, isian 1) | 2, 12 | 2, 12 | 2, 12 |
@@ -18,7 +18,7 @@ Angka di kolom paket = nomor soal yang menguji indikator itu. Dibuat otomatis ol
 
 ## Pendidikan Pancasila
 
-| Kode | Indikator kisi-kisi | Butir di kisi | Paket 1 | Paket 2 | Paket 3 |
+| Kode | Indikator kisi-kisi | Butir di kisi | Latihan 1 | Latihan 2 | Latihan 3 |
 | --- | --- | --- | --- | --- | --- |
 | PK1a | Aturan di keluarga: salat berjamaah, berdoa sebelum makan, menjaga kebersihan | 3 (PG 1, isian 2) | 1, 11, 12 | 1, 11, 12 | 1, 11, 12 |
 | PK1b | Manfaat mematuhi aturan keluarga sebagai wujud berbakti kepada orang tua | 3 (PG 1, isian 1, uraian 1) | 2, 13, 21 | 2, 13, 21 | 2, 13, 21 |
@@ -30,7 +30,7 @@ Angka di kolom paket = nomor soal yang menguji indikator itu. Dibuat otomatis ol
 
 ## Bahasa Indonesia
 
-| Kode | Indikator kisi-kisi | Butir di kisi | Paket 1 | Paket 2 | Paket 3 |
+| Kode | Indikator kisi-kisi | Butir di kisi | Latihan 1 | Latihan 2 | Latihan 3 |
 | --- | --- | --- | --- | --- | --- |
 | BI1a | Mengidentifikasi perasaan (senang, sedih, marah, takut, terkejut) dari ekspresi wajah dan situasi | 2 (PG 1, isian 1) | 1, 11 | 1, 11 | 1, 11 |
 | BI1b | Menghargai dan mengungkapkan perasaan dengan baik (menghibur teman, menahan amarah, tidak mengejek) | 3 (PG 1, isian 1, uraian 1) | 2, 12, 21 | 2, 12, 21 | 2, 12, 21 |
@@ -50,7 +50,7 @@ Angka di kolom paket = nomor soal yang menguji indikator itu. Dibuat otomatis ol
 
 ## Matematika
 
-| Kode | Indikator kisi-kisi | Butir di kisi | Paket 1 | Paket 2 | Paket 3 |
+| Kode | Indikator kisi-kisi | Butir di kisi | Latihan 1 | Latihan 2 | Latihan 3 |
 | --- | --- | --- | --- | --- | --- |
 | MT1a | Membandingkan bilangan sampai 50 (<, >, =) | 1 (PG 1) | 1 | 1 | 1 |
 | MT1b | Nilai tempat (puluhan, satuan) | 1 (isian 1) | 11 | 11 | 11 |
@@ -65,7 +65,7 @@ Angka di kolom paket = nomor soal yang menguji indikator itu. Dibuat otomatis ol
 
 ## PJOK
 
-| Kode | Indikator kisi-kisi | Butir di kisi | Paket 1 | Paket 2 | Paket 3 |
+| Kode | Indikator kisi-kisi | Butir di kisi | Latihan 1 | Latihan 2 | Latihan 3 |
 | --- | --- | --- | --- | --- | --- |
 | PJ1 | Gerak lokomotor, nonlokomotor, manipulatif, keseimbangan (tumpuan, menangkap bola, berjalan mundur, merentangkan tangan) | 9 (PG 3, isian 4, uraian 2) | 1, 2, 3, 11, 12, 13, 14, 21, 22 | 1, 2, 3, 11, 12, 13, 14, 21, 22 | 1, 2, 3, 11, 12, 13, 14, 21, 22 |
 | PJ2 | Gerak berirama mengikuti irama musik dan anggota tubuh yang bergerak | 2 (PG 1, uraian 1) | 4, 23 | 4, 23 | 4, 23 |
@@ -75,7 +75,7 @@ Angka di kolom paket = nomor soal yang menguji indikator itu. Dibuat otomatis ol
 
 ## Seni Rupa
 
-| Kode | Indikator kisi-kisi | Butir di kisi | Paket 1 | Paket 2 | Paket 3 |
+| Kode | Indikator kisi-kisi | Butir di kisi | Latihan 1 | Latihan 2 | Latihan 3 |
 | --- | --- | --- | --- | --- | --- |
 | SR1a | Pengertian garis dalam karya seni rupa | 1 (isian 1) | 11 | 11 | 11 |
 | SR1b | Jenis garis berdasarkan bentuknya (zig-zag, bergelombang, dll.) | 2 (PG 1, isian 1) | 1, 12 | 1, 12 | 1, 12 |
@@ -91,7 +91,7 @@ Angka di kolom paket = nomor soal yang menguji indikator itu. Dibuat otomatis ol
 
 ## Bahasa Inggris
 
-| Kode | Indikator kisi-kisi | Butir di kisi | Paket 1 | Paket 2 | Paket 3 |
+| Kode | Indikator kisi-kisi | Butir di kisi | Latihan 1 | Latihan 2 | Latihan 3 |
 | --- | --- | --- | --- | --- | --- |
 | EN1a | Nama-nama buah dalam bahasa Inggris (apple, banana, pineapple, ...) | 2 (PG 1, isian 1) | 1, 11 | 1, 11 | 1, 11 |
 | EN1b | "Do you like ...?" — "Yes, I do." / "No, I don't."; menghargai kesukaan teman | 3 (PG 1, isian 1, uraian 1) | 2, 12, 21 | 2, 12, 21 | 2, 12, 21 |

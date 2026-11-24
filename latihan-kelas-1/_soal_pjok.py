@@ -106,7 +106,7 @@ paket2 = [
        bahas='Bergerak membuat peredaran darah lancar, badan jadi sehat.', kisi='PJ3'),
     pg('Tanda di kolam renang ini artinya ....', 'dilarang berlari', ['boleh berlari', 'harus berlari'], gambar=[DILARANG_BERLARI],
        bahas='Garis merah mencoret orang berlari. Artinya dilarang berlari.', kisi='PJ4'),
-    bs('Lantai di pinggir kolam licin, jadi kita tidak boleh berlari.', True, gambar=[img('water-wave')],
+    bs('Lantai di pinggir kolam licin, jadi kita tidak boleh berlari.', True,
        bahas='Kalau berlari di lantai licin, kita bisa terpeleset dan jatuh.', kisi='PJ4'),
     pg('Sebelum mulai berolahraga, kita berdoa dan membaca ....', 'Bismillah', ['Alhamdulillah', 'Astagfirullah'], gambar=[img('folded-hands')],
        bahas='Bismillah artinya dengan nama Allah. Kita baca sebelum memulai.', kisi='PJ5'),

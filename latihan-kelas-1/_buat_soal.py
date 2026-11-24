@@ -84,6 +84,33 @@ def periksa(mid, paket):
         if n > 1: err.append(f'{mid}: soal kembar: {t[:60]}')
     return err, semua
 
+# --- Modul belajar: _materi_<mapel>.py berisi MATERI = [kartu, ...], satu kartu atau lebih per indikator kisi-kisi ---
+def cek_materi(mid):
+    err = []
+    f = os.path.join(HERE, f'_materi_{mid}.py')
+    if not os.path.exists(f): return [f'{mid}: belum ada _materi_{mid}.py'], []
+    mat = importlib.import_module(f'_materi_{mid}').MATERI
+    kode = list(KISI[mid])
+    ada_k = [m.get('kisi') for m in mat]
+    for i, m in enumerate(mat, 1):
+        tag = f'{mid} materi {i}'
+        if m.get('kisi') not in KISI[mid]: err.append(f'{tag}: kode kisi {m.get("kisi")!r} tidak dikenal')
+        if not (m.get('judul') or '').strip(): err.append(f'{tag}: tanpa judul')
+        isi = m.get('isi') or []
+        if not 1 <= len(isi) <= 5: err.append(f'{tag}: isi harus 1-5 kalimat pendek')
+        if any(len(x) > 160 for x in isi): err.append(f'{tag}: ada kalimat isi lebih dari 160 huruf')
+        if not (m.get('ingat') or '').strip(): err.append(f'{tag}: tanpa kalimat ingat')
+        if not (m.get('ortu') or '').strip(): err.append(f'{tag}: tanpa tips orang tua')
+        parts = list(m.get('gambar', []))
+        for c in m.get('contoh', []): parts += c.get('gambar', [])
+        for part in parts:
+            if 'img' in part and not ada(part['img']): err.append(f'{tag}: gambar {part["img"]} tidak ada')
+        if m.get('suara') and not ada(m['suara']): err.append(f'{tag}: suara {m["suara"]} tidak ada')
+    for k in kode:
+        if k not in ada_k: err.append(f'{mid}: indikator {k} belum punya materi')
+    if ada_k != sorted(ada_k, key=lambda x: kode.index(x) if x in kode else 99): err.append(f'{mid}: urutan materi harus mengikuti urutan kisi-kisi')
+    return err, mat
+
 def cek(mid):
     mod = importlib.import_module(f'_soal_{mid}')
     err, cak = periksa(mid, mod.PAKET)
@@ -92,6 +119,8 @@ def cek(mid):
 
 def main():
     if len(sys.argv) == 3 and sys.argv[1] == '--cek': cek(sys.argv[2])
+    if len(sys.argv) == 3 and sys.argv[1] == '--cek-materi':
+        e, _ = cek_materi(sys.argv[2]); print('\n'.join(e) or f'{sys.argv[2]}: materi lulus'); sys.exit(1 if e else 0)
     data, laporan, errors = [], [], []
     for mid, nama, materi, tambahan in MAPEL:
         mod = importlib.import_module(f'_soal_{mid}')
@@ -99,12 +128,12 @@ def main():
         err, cak = periksa(mid, paket)
         errors += err
         item = {'id': mid, 'nama': nama, 'materi': materi,
-                'paket': [{'nama': f'Paket {i}', 'soal': s} for i, s in enumerate(paket, 1)]}
+                'paket': [{'nama': f'Latihan {i}', 'soal': s} for i, s in enumerate(paket, 1)]}
         if tambahan: item['tambahan'] = True
         data.append(item)
         # tabel cakupan
         laporan.append(f'## {nama}\n')
-        laporan.append('| Kode | Indikator kisi-kisi | Butir di kisi | Paket 1 | Paket 2 | Paket 3 |')
+        laporan.append('| Kode | Indikator kisi-kisi | Butir di kisi | Latihan 1 | Latihan 2 | Latihan 3 |')
         laporan.append('| --- | --- | --- | --- | --- | --- |')
         for k, (teks, butir, bentuk) in KISI[mid].items():
             sel = []
@@ -119,6 +148,13 @@ def main():
            '   Dibuat oleh _buat_soal.py dari _soal_<mapel>.py; ubah di sana lalu jalankan ulang. */\n'
            'window.SOAL = ' + json.dumps(data, ensure_ascii=False, indent=1) + ';\n')
     open(os.path.join(HERE, 'soal.js'), 'w').write(out)
+    materi, merr = {}, []
+    for mid, *_ in MAPEL:
+        e, m = cek_materi(mid)
+        merr += e
+        if m: materi[mid] = m
+    if merr: print('\n'.join(merr)); sys.exit(1)
+    open(os.path.join(HERE, 'materi.js'), 'w').write('/* Modul belajar per mapel, dibuat oleh _buat_soal.py dari _materi_<mapel>.py. */\nwindow.MATERI = ' + json.dumps(materi, ensure_ascii=False, indent=1) + ';\n')
     open(os.path.join(HERE, 'KISI.md'), 'w').write(
         '# Cakupan kisi-kisi ASAS ganjil kelas 1\n\nAngka di kolom paket = nomor soal yang menguji indikator itu. Dibuat otomatis oleh `_buat_soal.py`.\n\n' + '\n'.join(laporan))
     for d in data:
