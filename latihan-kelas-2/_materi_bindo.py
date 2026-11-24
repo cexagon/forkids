@@ -3,14 +3,23 @@ from _soal_bindo import RAMBU_AWAS, RAMBU_PARKIR, RAMBU_MASUK, RAMBU_TIKUNG, gra
 
 MATERI = [
  {'kisi': 'BI1a',
-  'judul': 'Wajah bercerita',
+  'judul': 'Wajah bercerita: senang, sedih, marah',
   'isi': ['Wajah kita bisa bercerita tentang perasaan.',
-          'Senang: mulut tersenyum lebar. Sedih: mata berair, mulut melengkung ke bawah.',
-          'Marah: alis mengerut dan wajah tegang. Takut: mata melebar dan mulut meringis.',
+          'Senang: mulut tersenyum lebar.',
+          'Sedih: mata berair, mulut melengkung ke bawah.',
+          'Marah: alis mengerut dan wajah tegang.'],
+  'gambar': [img('grinning-face', label='senang'), img('crying-face', label='sedih'), img('angry-face', label='marah')],
+  'ingat': 'Dari wajah, kita bisa tahu seseorang sedang senang, sedih, atau marah.',
+  'ortu': 'Ajak anak berkaca dan menirukan tiga wajah itu bergantian. Lalu tunjuk satu gambar dan minta ia menebak nama perasaannya.'},
+
+ {'kisi': 'BI1a',
+  'judul': 'Wajah bercerita: takut dan terkejut',
+  'isi': ['Masih ada perasaan lain yang terlihat di wajah.',
+          'Takut: mata melebar dan mulut meringis.',
           'Terkejut: mata dan mulut terbuka lebar karena ada hal yang tidak disangka.'],
-  'gambar': [img('grinning-face'), img('crying-face'), img('angry-face'), img('fearful-face'), img('astonished-face')],
-  'ingat': 'Dari wajah, kita bisa tahu seseorang sedang senang, sedih, marah, takut, atau terkejut.',
-  'ortu': 'Ajak anak berkaca dan menirukan lima wajah itu bergantian. Lalu tunjuk satu gambar dan minta ia menebak nama perasaannya.'},
+  'gambar': [img('fearful-face', label='takut'), img('astonished-face', label='terkejut')],
+  'ingat': 'Wajah juga bercerita saat takut dan terkejut.',
+  'ortu': 'Ajak anak berkaca dan menirukan wajah takut dan terkejut. Lalu campurkan dengan tiga wajah sebelumnya dan minta ia menebak nama perasaannya.'},
 
  {'kisi': 'BI1a',
   'judul': 'Perasaan dari kejadian',
@@ -93,7 +102,7 @@ MATERI = [
           'Untuk tahu jumlahnya, hitung lingkaran pada baris yang ditanyakan.',
           'Baris yang paling panjang berarti jumlahnya paling banyak. Untuk selisih, kurangkan kedua jumlahnya.'],
   'gambar': [grafik('Hewan di Kebun', [('Ayam', 4, ORANYE), ('Bebek', 6, KUNING), ('Sapi', 2, HIJAU)], 'hewan')],
-  'contoh': [{'teks': 'Bebek ada 6 dan ayam ada 4. Bebek lebih banyak 2 daripada ayam (6 - 4 = 2).'}],
+  'contoh': [{'teks': 'Bebek ada 6 dan ayam ada 4. Bebek lebih banyak 2 daripada ayam (6 − 4 = 2).'}],
   'ingat': 'Hitung tanda gambar pada baris yang ditanyakan. Baris terpanjang berarti terbanyak.',
   'ortu': 'Gambar grafik sederhana dari kegiatan keluarga, misalnya buah kesukaan. Minta anak menghitung tiap baris dan mencari yang terbanyak.'},
 

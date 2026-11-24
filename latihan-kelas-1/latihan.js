@@ -83,6 +83,9 @@
 
   /* ---------- helpers soal ---------- */
   function br(s) { return esc(s).replace(/\n/g, '<br>'); }
+  /* ekspresi angka-operator tidak boleh putus baris ("6 + 9 = 15") */
+  var MATH_RE = /\d+(?:[ \u00a0]*(?:[+\-\u2212\u00d7\u00f7:=]|&lt;|&gt;)[ \u00a0]*\d+)+/g;
+  function nw(s) { return br(s).split(/(&#?\w+;|<br>)/).map(function (t, n) { return n % 2 ? t : t.replace(MATH_RE, '<span class="nw">$&</span>'); }).join(''); }
   function jenis(q) { return q.jenis || 'pg'; }
   function optLabel(p) { return typeof p === 'string' ? p : (p.label || ''); }
   function optPlain(p, i) { return optLabel(p) || ('gambar ' + L[i]); }
@@ -95,7 +98,7 @@
     if (p.teks != null) return '<span class="op' + (/[؀-ۿ]/.test(p.teks) ? ' huruf" lang="ar' : '') + '" aria-hidden="true">' + esc(p.teks) + '</span>';
     if (p.svg) return '<figure class="part"><div class="sv">' + p.svg + '</div></figure>';
     var n = p.n > 1 ? p.n : 0, cols = n ? Math.min(n, 5) : 1;
-    return '<figure class="part"><div class="copies' + (n ? ' multi' : '') + '" style="--c:' + cols + '"' + (n ? ' role="img" aria-label="' + n + ' ' + esc(p.label || 'gambar') + '"' : '') + '>' + pic(p.img, p.label, n) + '</div>' +
+    return '<figure class="part' + (/lambang-sila/.test(p.img || '') ? ' lambang' : '') + '"><div class="copies' + (n ? ' multi' : '') + '" style="--c:' + cols + '"' + (n ? ' role="img" aria-label="' + n + ' ' + esc(p.label || 'gambar') + '"' : '') + '>' + pic(p.img, p.label, n) + '</div>' +
       (p.label ? '<figcaption>' + esc(p.label) + '</figcaption>' : '') + '</figure>';
   }
   function optInner(p) {
@@ -156,7 +159,7 @@
   function home() {
     hush(); S = null;
     var sk = load();
-    var h = '<div class="wrap"><header class="home-head"><h1>Ujian <span>Semester 1</span></h1>' +
+    var h = '<div class="wrap"><header class="home-head"><h1>Latihan Ujian <span>Kelas 1</span></h1>' +
       '<p class="parent">' + ic('info') + '<span>Untuk orang tua: anak memilih atau menulis jawaban, lalu menekan Kumpul. Setelah itu tekan Nilai untuk melihat hasilnya.</span></p></header>' +
       '<h2 class="hide">Pilih pelajaran</h2><div class="subjects">';
     DATA.forEach(function (s) {
@@ -577,8 +580,8 @@
     var h = '<div class="mk-isi">';
     arr.forEach(function (s) {
       var m = /^(\d+)\.\s+([\s\S]*)$/.exec(String(s));
-      if (m) h += '<p class="step"><span class="qno sm" aria-hidden="true">' + m[1] + '</span><span class="st" dir="ltr"><span class="sr">Langkah ' + m[1] + '. </span>' + br(m[2]) + '</span></p>';
-      else h += '<p dir="ltr">' + br(s) + '</p>';
+      if (m) h += '<p class="step"><span class="qno sm" aria-hidden="true">' + m[1] + '</span><span class="st" dir="ltr"><span class="sr">Langkah ' + m[1] + '. </span>' + nw(m[2]) + '</span></p>';
+      else h += '<p dir="ltr">' + nw(s) + '</p>';
     });
     return h + '</div>';
   }
@@ -590,25 +593,30 @@
       : '<button class="pkl" type="button" data-t="' + pid + '" aria-expanded="false" aria-controls="' + pid + '">' + ic('info') + '<span>Untuk orang tua</span></button>';
     return '<div class="kfoot">' + btn + '</div><div class="kx" id="' + pid + '" role="region" aria-label="Untuk orang tua, kartu ' + (i + 1) + '" hidden><h3>Untuk orang tua</h3><p>' + br(c.ortu) + '</p></div>';
   }
+  function hasAr(x) { return (x.gambar || []).some(function (g) { return g.teks != null && /[\u0600-\u06FF]/.test(g.teks); }); }
   function cardHtml2(c, i, N, anim) {
-    var h = '<article class="mc' + (anim ? ' in' : '') + '" aria-labelledby="mk-t">';
-    h += '<div class="mk-meta"><span class="mk-count">Kartu ' + (i + 1) + ' dari ' + N + '</span>' + (c.kisi ? '<span class="tag">' + esc(c.kisi) + '</span>' : '') + '</div>';
-    h += '<h1 class="mk-title" id="mk-t" tabindex="-1" dir="ltr">' + br(c.judul) + '</h1>';
+    var pic = c.gambar && c.gambar.length;
+    var h = '<article class="mc' + (pic ? ' two' : '') + (anim ? ' in' : '') + '" aria-labelledby="mk-t">';
+    h += '<div class="mk-head"><div class="mk-ttl"><div class="mk-meta"><span class="mk-count">Kartu ' + (i + 1) + ' dari ' + N + '</span>' + (c.kisi ? '<span class="tag">' + esc(c.kisi) + '</span>' : '') + '</div>';
+    h += '<h1 class="mk-title" id="mk-t" tabindex="-1" dir="ltr">' + br(c.judul) + '</h1></div>';
     h += '<div class="mk-acts"><button class="mk-act" id="mk-read" type="button">' + ic('read') + '<span>Bacakan</span></button>' +
-      (c.suara ? '<button class="mk-act audio" id="mk-play" type="button" aria-describedby="mk-msg">' + ic('speaker') + '<span>Dengarkan</span></button><span class="lmsg" id="mk-msg" aria-live="polite"></span>' : '') + '</div>';
-    if (c.gambar && c.gambar.length) h += '<div class="picbox" role="group" aria-label="Gambar">' + c.gambar.map(part).join('') + '</div>';
+      (c.suara ? '<button class="mk-act audio" id="mk-play" type="button" aria-describedby="mk-msg">' + ic('speaker') + '<span>Dengarkan</span></button><span class="lmsg" id="mk-msg" aria-live="polite"></span>' : '') + '</div></div>';
+    if (pic) h += '<div class="picbox mainpic" role="group" aria-label="Gambar">' + c.gambar.map(part).join('') + '</div>';
+    h += '<div class="mk-body">';
     if (c.isi && c.isi.length) h += isiHtml(c.isi);
     if (c.contoh && c.contoh.length) {
       h += '<section class="mk-contoh" aria-labelledby="mk-ct"><h2 id="mk-ct">Contoh</h2>';
       c.contoh.forEach(function (x) {
         if (typeof x === 'string') x = { teks: x };
-        h += '<div class="ct">' + (x.teks ? '<p dir="ltr">' + br(x.teks) + '</p>' : '') +
-          (x.gambar && x.gambar.length ? '<div class="picbox" role="group" aria-label="Gambar contoh">' + x.gambar.map(part).join('') + '</div>' : '') + '</div>';
+        var cp = x.gambar && x.gambar.length ? '<div class="picbox" role="group" aria-label="Gambar contoh">' + x.gambar.map(part).join('') + '</div>' : '';
+        var ct = x.teks ? '<p dir="ltr">' + nw(x.teks) + '</p>' : '';
+        /* gambar teks Arab (ayat) tampil di atas teks latin dan artinya */
+        h += '<div class="ct' + (cp ? (hasAr(x) ? ' ar' : ' has-pic') : '') + '">' + (hasAr(x) ? cp + ct : ct + cp) + '</div>';
       });
       h += '</section>';
     }
-    if (c.ingat) h += '<div class="mk-ingat" role="note"><h2>' + ic('star') + 'Ingat!</h2><p dir="ltr">' + br(c.ingat) + '</p></div>';
-    return h + ortuHtml(c, i) + '</article>';
+    if (c.ingat) h += '<div class="mk-ingat" role="note"><h2>' + ic('star') + 'Ingat!</h2><p dir="ltr">' + nw(c.ingat) + '</p></div>';
+    return h + '</div>' + ortuHtml(c, i) + '</article>';
   }
   function ctaHtml(anim) {
     var base = mapelOf(M.id), pk = base.paket || [{ nama: 'Latihan 1', soal: base.soal }], sk = load(), ex = M.from === 'exam' && S && S.sub.mapel === M.id;
@@ -616,12 +624,16 @@
       '<h1 class="mk-title" id="mk-t" tabindex="-1">Siap latihan?</h1>' +
       '<p class="g-sub">Kamu sudah membaca semua kartu ' + esc(base.nama) + '. Pilih satu latihan soal untuk mulai.</p>' +
       '<div class="pakets" role="group" aria-label="Pilih latihan ' + esc(base.nama) + '">';
+    var main = -1, first = -1;
+    pk.forEach(function (p, k) { if (ex && S.sub.paketIdx === k) main = k; if (first < 0 && typeof sk[base.id + '-' + (k + 1)] !== 'number') first = k; });
+    if (main < 0) main = first >= 0 ? first : 0;
     pk.forEach(function (p, k) {
-      var sc = sk[base.id + '-' + (k + 1)], cur = ex && S.sub.paketIdx === k;
-      h += '<button class="paket" type="button" data-k="' + k + '"' + (cur ? ' aria-current="true"' : '') + ' aria-label="' + esc(base.nama + ', ' + p.nama) + (cur ? ', kembali ke soal ini' : typeof sc === 'number' ? ', nilai terakhir ' + sc : ', belum dicoba') + '">' +
-        '<span class="p-name">' + esc(p.nama) + '</span>' +
+      var sc = sk[base.id + '-' + (k + 1)], cur = ex && S.sub.paketIdx === k, isMain = k === main;
+      h += '<button class="paket' + (isMain ? ' main' : '') + '" type="button" data-k="' + k + '"' + (cur ? ' aria-current="true"' : '') + ' aria-label="' + esc(base.nama + ', ' + p.nama) + (cur ? ', kembali ke soal ini' : typeof sc === 'number' ? ', nilai terakhir ' + sc : ', belum dicoba') + '">' +
+        (isMain ? ic('fwd') : '') + '<span class="p-name">' + esc(p.nama) + '</span>' +
         (cur ? '<span class="p-score">Lanjutkan</span>' : typeof sc === 'number' ? '<span class="p-score">' + ic('star') + sc + '</span>' : '<span class="p-score none">Belum</span>') + '</button>';
     });
+    h = h.replace('Pilih satu latihan soal untuk mulai.', 'Mulai dari latihan yang disorot.');
     return h + '</div></article>';
   }
   function matShow(anim, dir) {
@@ -630,6 +642,7 @@
     card.style.setProperty('--dx', (dir > 0 ? 18 : -18) + 'px');
     $('mk-fill').style.width = (Math.min(M.idx + 1, N) * 100 / N) + '%';
     $('mk-prev').disabled = M.idx === 0;
+    document.querySelector('.mk-nav').classList.toggle('last', last);
     $('mk-next').classList.toggle('hide', last);
     $('mk-live').textContent = last ? 'Siap latihan? Pilih latihan soal.' : 'Kartu ' + (M.idx + 1) + ' dari ' + N + '. ' + c.judul;
     window.scrollTo(0, 0);

@@ -21,8 +21,8 @@ MATERI = [
            'Cara mudah membedakannya: telusuri dengan jari.',
            'Kalau jarimu patah-patah, itu zig-zag. Kalau mengalun, itu bergelombang.'],
    'gambar': [ZIGZAG, BERGELOMBANG, img('water-wave')],
-   'contoh': [{'teks': 'Zig-zag: ujungnya runcing.', 'gambar': [ZIGZAG]},
-              {'teks': 'Bergelombang: naik turun melengkung seperti ombak.', 'gambar': [BERGELOMBANG]}],
+   'contoh': [{'teks': 'Zig-zag: ujungnya runcing.'},
+              {'teks': 'Bergelombang: naik turun melengkung seperti ombak.'}],
    'ingat': 'Zig-zag runcing dan patah-patah, bergelombang melengkung halus.',
    'ortu': 'Minta anak menelusuri gambar dengan jari lalu menggambar kedua garis di kertas. Tanyakan setelah tiap garis: jarimu patah-patah atau mengalun?'},
 
@@ -45,7 +45,7 @@ MATERI = [
            'Bila ujung sebuah garis bertemu lagi dan menutup, terbentuklah bidang.',
            'Bagian dalam yang bisa kamu warnai itulah bidang.'],
    'gambar': [O_LINGKARAN, AWAN_TB],
-   'contoh': [{'teks': 'Garis pinggir lingkaran membatasi bidang di dalamnya.', 'gambar': [O_LINGKARAN]}],
+   'contoh': [{'teks': 'Garis pinggir lingkaran membatasi bidang di dalamnya.'}],
    'ingat': 'Bidang adalah daerah datar yang dibatasi garis.',
    'ortu': 'Gambar sebuah lingkaran bersama anak, lalu minta ia mewarnai bagian dalamnya. Katakan bahwa bagian yang diwarnai itu bidang dan garis di pinggirnya yang membatasi.'},
 
@@ -86,7 +86,7 @@ MATERI = [
            'Kesannya sejuk dan tenang.',
            'Warna dingin cocok untuk menggambar danau, kebun, atau langit.'],
    'gambar': [DINGIN3, img('water-wave'), img('leaf-fluttering-in-wind')],
-   'contoh': [{'teks': 'Ingin gambar hutan dan sungai yang sejuk? Pilih warna dingin.', 'gambar': [DINGIN3]}],
+   'contoh': [{'teks': 'Ingin gambar hutan dan sungai yang sejuk? Pilih warna dingin.'}],
    'ingat': 'Biru dan hijau adalah warna dingin: sejuk dan tenang.',
    'ortu': 'Ajak anak membayangkan duduk di tepi kolam atau taman hijau, lalu tanya perasaannya. Minta ia memilih warna untuk gambar yang sejuk dan untuk gambar yang hangat.'},
 
@@ -134,7 +134,7 @@ MATERI = [
    'gambar': [img('deciduous-tree'), img('house'), img('butterfly')],
    'contoh': [{'teks': 'Khayalan: naga yang bisa terbang. Sumbernya imajinasi.'},
               {'teks': 'Bermain di pantai saat liburan. Sumbernya pengalaman pribadi.'},
-              {'teks': 'Pohon di depan sekolah. Sumbernya lingkungan sekitar.', 'gambar': [img('deciduous-tree')]}],
+              {'teks': 'Pohon di depan sekolah. Sumbernya lingkungan sekitar.'}],
    'ingat': 'Sumber ide: imajinasi, pengalaman pribadi, dan lingkungan sekitar.',
    'ortu': 'Tanyakan tiga hal: apa yang bisa kamu bayangkan, apa yang pernah kamu alami, apa yang kamu lihat di sekitar? Bila gambarnya hal yang belum ada di dunia nyata, idenya dari imajinasi.'},
 
@@ -164,7 +164,7 @@ MATERI = [
            'Krayon untuk mewarnai, kuas untuk mengecat atau melukis dengan cat air.',
            'Gunting untuk memotong, lem untuk menempel.',
            'Penggaris untuk membuat garis lurus yang rapi.'],
-   'gambar': [img('crayon'), img('paintbrush'), img('scissors'), img('straight-ruler'), img('pencil')],
+   'gambar': [img('crayon'), img('paintbrush'), img('scissors'), img('straight-ruler')],
    'ingat': 'Krayon mewarnai, kuas mengecat, gunting memotong, lem menempel, penggaris membuat garis lurus.',
    'ortu': 'Tunjukkan alatnya satu per satu dan tanya: ini dipakai untuk apa? Lalu minta anak mencobanya, misalnya membuat garis lurus dengan penggaris.'},
 

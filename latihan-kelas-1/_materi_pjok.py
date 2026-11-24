@@ -1,9 +1,21 @@
+import re
 from _alat import *
 from _soal_pjok import (MERANGKAK, SATU_KAKI, LANGKAH_DEPAN, LANGKAH_KANAN, LANGKAH_KIRI, MELIUK,
                         JONGKOK, DUDUK, BERDIRI_RAPAT, DILARANG_BERLARI, PEGANGAN)
 
 def lab(g, t):
-    d = dict(g); d['label'] = t; return d
+    """Beri label pada gambar. Gambar svg tidak menampilkan 'label' di latihan.js,
+    jadi teks label digambar langsung di bawah figur (viewBox diperpanjang) dan dipakai sebagai aria-label."""
+    d = dict(g); d['label'] = t
+    if 'svg' in d:
+        m = re.search(r'viewBox="0 0 (\d+) (\d+)"', d['svg'])
+        w, h = int(m.group(1)), int(m.group(2))
+        fs = min(16, (w - 12) / (len(t) * 0.6))
+        txt = (f'<text x="{w // 2}" y="{h + 20}" text-anchor="middle" font-size="{fs:.1f}" font-weight="800" '
+               f'fill="{INK}" font-family="sans-serif">{t}</text>')
+        sv = d['svg'].replace(m.group(0), f'viewBox="0 0 {w} {h + 28}" aria-label="{t}"', 1)
+        d['svg'] = sv.replace('</svg>', txt + '</svg>')
+    return d
 
 MATERI = [
   {'kisi': 'PJ1', 'judul': 'Gerak bertumpu',
@@ -62,7 +74,7 @@ MATERI = [
            'Berlari adalah sikap bergerak. Berjalan juga.',
            'Melompat: kedua kaki terangkat dari tanah.',
            'Bermain engklek membuat kita melompat dengan satu kaki.'],
-   'gambar': [lab(BERLARI, 'berlari'), lab(MELOMPAT, 'melompat'), img('person-walking')],
+   'gambar': [lab(BERLARI, 'berlari'), lab(MELOMPAT, 'melompat'), img('person-walking', label='berjalan')],
    'ingat': 'Berlari, berjalan, dan melompat adalah sikap tubuh bergerak.',
    'ortu': 'Ajak anak melompat dan berlari kecil di halaman. Tanyakan, "Kakimu terangkat dari tanah tidak?" Ulangi sampai ia paham arti melompat.'},
   {'kisi': 'PJ3', 'judul': 'Manfaat bergerak',
@@ -70,7 +82,7 @@ MATERI = [
            'Saat bergerak, darah mengalir lancar ke seluruh badan.',
            'Peredaran darah yang lancar membuat badan sehat dan kuat.',
            'Yuk, banyak bergerak setiap hari.'],
-   'gambar': [img('person-running'), img('thumbs-up')],
+   'gambar': [img('person-running', label='berlari'), img('thumbs-up', label='sehat')],
    'ingat': 'Banyak bergerak membuat peredaran darah lancar, badan sehat dan kuat.',
    'ortu': 'Ajak anak meraba denyut nadi di pergelangan tangan sebelum dan sesudah berlari kecil. Bantu ia merasakan badannya bekerja.'},
 
@@ -79,7 +91,7 @@ MATERI = [
            'Anak kecil berenang ditemani orang dewasa. Jangan berenang sendiri.',
            'Anak yang belum pandai berenang memakai pelampung.',
            'Sebelum masuk kolam, kita melakukan pemanasan agar badan siap.'],
-   'gambar': [img('person-swimming')],
+   'gambar': [img('person-swimming', label='berenang')],
    'ingat': 'Berenang ditemani orang dewasa, pakai pelampung, dan pemanasan dulu.',
    'ortu': 'Sebelum berenang, buat kesepakatan: tidak masuk air tanpa orang dewasa. Lakukan pemanasan ringan bersama selama satu menit.'},
   {'kisi': 'PJ4', 'judul': 'Pinggir kolam itu licin',
@@ -96,7 +108,7 @@ MATERI = [
            'Ada pesan yang baik: kebersihan sebagian dari iman.',
            'Setelah olahraga, badan berkeringat.',
            'Kita mandi dan ganti baju agar badan bersih.'],
-   'gambar': [img('shower'), img('soap')],
+   'gambar': [img('shower', label='mandi'), img('soap', label='sabun')],
    'ingat': 'Kebersihan sebagian dari iman. Setelah olahraga, kita mandi dan ganti baju.',
    'ortu': 'Biasakan anak mandi dan berganti baju sehabis berolahraga. Kaitkan dengan pesan bahwa menjaga kebersihan adalah bagian dari iman.'},
   {'kisi': 'PJ5', 'judul': 'Bismillah dan Alhamdulillah',
@@ -104,7 +116,7 @@ MATERI = [
            'Artinya, dengan nama Allah.',
            'Setelah selesai, kita mengucap Alhamdulillah.',
            'Artinya, segala puji bagi Allah. Kita bersyukur.'],
-   'gambar': [img('folded-hands'), img('person-running')],
+   'gambar': [img('folded-hands', label='berdoa'), img('person-running', label='olahraga')],
    'contoh': [{'teks': 'Mau lomba lari: Bismillah. Lomba selesai: Alhamdulillah.'}],
    'ingat': 'Sebelum olahraga: Bismillah. Sesudah olahraga: Alhamdulillah.',
    'ortu': 'Ucapkan bersama anak di awal dan akhir setiap bermain atau olahraga, sampai menjadi kebiasaan.'},

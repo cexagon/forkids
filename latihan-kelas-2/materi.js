@@ -109,8 +109,7 @@ window.MATERI = {
    "isi": [
     "Huruf Arab disebut huruf hijaiah. Kita membacanya dari kanan ke kiri.",
     "Setiap huruf punya nama dan bunyi sendiri.",
-    "Coba ucapkan: ب ba, ت ta, ج ja, ك ka, ق qa, ل la, م ma.",
-    "Huruf ك (ka) dan ق (qa) mirip, tetapi qa diucapkan lebih dalam dari pangkal lidah."
+    "Coba ucapkan: ب ba, ت ta, ج ja."
    ],
    "gambar": [
     {
@@ -121,7 +120,19 @@ window.MATERI = {
     },
     {
      "teks": "ج"
-    },
+    }
+   ],
+   "ingat": "Huruf Arab dibaca dari kanan ke kiri; tiap huruf punya nama dan bunyi sendiri.",
+   "ortu": "Tunjuk huruf satu per satu dan minta anak menirukan bunyinya. Ulangi pelan-pelan sampai anak percaya diri."
+  },
+  {
+   "kisi": "AI2",
+   "judul": "Huruf hijaiah: ka, qa, la, ma",
+   "isi": [
+    "Coba ucapkan: ك ka, ق qa, ل la, م ma.",
+    "Huruf ك (ka) dan ق (qa) mirip, tetapi qa diucapkan lebih dalam dari pangkal lidah."
+   ],
+   "gambar": [
     {
      "teks": "ك"
     },
@@ -135,16 +146,18 @@ window.MATERI = {
      "teks": "م"
     }
    ],
-   "ingat": "Huruf Arab dibaca dari kanan ke kiri; tiap huruf punya nama dan bunyi sendiri.",
-   "ortu": "Tunjuk huruf satu per satu dan minta anak menirukan bunyinya. Bedakan ك dan ق dengan mengucapkan ka dan qa berulang; qa terasa lebih ke dalam."
+   "ingat": "ك dibaca ka, ق dibaca qa (lebih dalam), ل dibaca la, م dibaca ma.",
+   "ortu": "Bedakan ك dan ق dengan mengucapkan ka dan qa berulang; qa terasa lebih ke dalam."
   },
   {
    "kisi": "AI2",
    "judul": "Membaca huruf bersambung",
    "isi": [
     "Huruf Arab bisa disambung menjadi kata. Bentuk huruf sedikit berubah.",
-    "Cara membaca: 1. Mulai dari huruf paling kanan.",
-    "2. Bunyikan satu huruf lengkap dengan harakatnya. 3. Lanjut ke huruf di sebelah kiri.",
+    "Cara membaca:",
+    "1. Mulai dari huruf paling kanan.",
+    "2. Bunyikan satu huruf lengkap dengan harakatnya.",
+    "3. Lanjut ke huruf di sebelah kiri.",
     "4. Gabungkan semua bunyinya menjadi satu kata."
    ],
    "contoh": [
@@ -364,12 +377,12 @@ window.MATERI = {
   },
   {
    "kisi": "AI7",
-   "judul": "Nama dan waktu salat fardu",
+   "judul": "Salat fardu: Subuh, Zuhur, Asar",
    "isi": [
     "Lima salat fardu urutannya dari pagi: Subuh, Zuhur, Asar, Magrib, Isya.",
-    "Subuh dikerjakan sebelum matahari terbit. Zuhur siang, setelah matahari condong ke barat.",
-    "Asar dikerjakan sore hari. Magrib saat matahari terbenam.",
-    "Isya dikerjakan malam hari."
+    "Subuh dikerjakan sebelum matahari terbit.",
+    "Zuhur dikerjakan siang, setelah matahari condong ke barat.",
+    "Asar dikerjakan sore hari."
    ],
    "gambar": [
     {
@@ -383,7 +396,20 @@ window.MATERI = {
     {
      "img": "aset/sun-behind-cloud.svg",
      "label": "Asar"
-    },
+    }
+   ],
+   "ingat": "Urutan dari pagi: Subuh, Zuhur, Asar. Waktunya mengikuti matahari.",
+   "ortu": "Hubungkan dengan kegiatan: bangun tidur (Subuh), siang (Zuhur), sore (Asar). Hitung dengan jari."
+  },
+  {
+   "kisi": "AI7",
+   "judul": "Salat fardu: Magrib dan Isya",
+   "isi": [
+    "Magrib dikerjakan saat matahari terbenam.",
+    "Isya dikerjakan malam hari.",
+    "Urutan lengkapnya: Subuh, Zuhur, Asar, Magrib, Isya."
+   ],
+   "gambar": [
     {
      "img": "aset/sunset.svg",
      "label": "Magrib"
@@ -393,8 +419,8 @@ window.MATERI = {
      "label": "Isya"
     }
    ],
-   "ingat": "Urutan: Subuh, Zuhur, Asar, Magrib, Isya. Waktunya mengikuti matahari.",
-   "ortu": "Hubungkan dengan kegiatan: bangun tidur (Subuh), siang (Zuhur), sore (Asar), matahari tenggelam (Magrib), malam (Isya). Hitung dengan jari."
+   "ingat": "Urutan lengkap: Subuh, Zuhur, Asar, Magrib, Isya.",
+   "ortu": "Hubungkan dengan kegiatan: matahari tenggelam (Magrib), malam (Isya). Lalu minta anak menyebut kelima salat berurutan dengan jari."
   },
   {
    "kisi": "AI7",
@@ -473,12 +499,7 @@ window.MATERI = {
    ],
    "contoh": [
     {
-     "teks": "Azan Subuh berkumandang. Keluarga bangun, berwudu, lalu salat bersama.",
-     "gambar": [
-      {
-       "img": "aset/mosque.svg"
-      }
-     ]
+     "teks": "Azan Subuh berkumandang. Keluarga bangun, berwudu, lalu salat bersama."
     }
    ],
    "ingat": "Salat bersama dengan imam disebut salat berjamaah, dan itu salah satu aturan baik di keluarga.",
@@ -548,12 +569,7 @@ window.MATERI = {
    ],
    "contoh": [
     {
-     "teks": "Bima menaruh sepatunya di rak setelah pulang sekolah, sesuai aturan Ayah. Ayah senang dan teras menjadi rapi.",
-     "gambar": [
-      {
-       "img": "aset/house.svg"
-      }
-     ]
+     "teks": "Bima menaruh sepatunya di rak setelah pulang sekolah, sesuai aturan Ayah. Ayah senang dan teras menjadi rapi."
     }
    ],
    "ingat": "Menaati aturan keluarga adalah berbakti, dan manfaatnya: orang tua senang, rumah rapi dan rukun.",
@@ -592,12 +608,7 @@ window.MATERI = {
      ]
     },
     {
-     "teks": "Berbicara dengan kakek memakai kata-kata yang halus dan sopan.",
-     "gambar": [
-      {
-       "img": "aset/old-man.svg"
-      }
-     ]
+     "teks": "Berbicara dengan kakek memakai kata-kata yang halus dan sopan."
     }
    ],
    "ingat": "Ucapkan salam saat bertemu, jawab salam dengan \"Wa'alaikumussalam\", dan bersikap sopan kepada yang lebih tua.",
@@ -723,12 +734,11 @@ window.MATERI = {
   },
   {
    "kisi": "PK4",
-   "judul": "Lima gambar pada perisai",
+   "judul": "Gambar pada perisai: sila 1 sampai 3",
    "isi": [
     "Ada lima gambar pada perisai, urutannya sama dengan nomor sila.",
-    "Sila 1 bintang. Sila 2 rantai. Sila 3 pohon beringin.",
-    "Sila 4 kepala banteng. Sila 5 padi dan kapas.",
-    "Kepala banteng adalah satu-satunya gambar kepala hewan pada perisai."
+    "Sila 1 bintang. Sila 2 rantai.",
+    "Sila 3 pohon beringin."
    ],
    "gambar": [
     {
@@ -742,7 +752,20 @@ window.MATERI = {
     {
      "img": "aset/lambang-sila-3.png",
      "label": "pohon beringin"
-    },
+    }
+   ],
+   "ingat": "Urutan gambar: bintang, rantai, pohon beringin.",
+   "ortu": "Hafalkan dengan jari: jari 1 bintang, jari 2 rantai, jari 3 pohon beringin. Tutup satu gambar lalu tanyakan itu lambang sila ke berapa."
+  },
+  {
+   "kisi": "PK4",
+   "judul": "Gambar pada perisai: sila 4 dan 5",
+   "isi": [
+    "Sila 4 kepala banteng. Sila 5 padi dan kapas.",
+    "Kepala banteng adalah satu-satunya gambar kepala hewan pada perisai.",
+    "Urutan lengkapnya: bintang, rantai, pohon beringin, kepala banteng, padi dan kapas."
+   ],
+   "gambar": [
     {
      "img": "aset/lambang-sila-4.png",
      "label": "kepala banteng"
@@ -753,16 +776,16 @@ window.MATERI = {
     }
    ],
    "ingat": "Urutan gambar: bintang, rantai, pohon beringin, kepala banteng, padi dan kapas.",
-   "ortu": "Hafalkan dengan jari: jari 1 bintang, jari 2 rantai, dan seterusnya. Tutup satu gambar lalu tanyakan itu lambang sila ke berapa. Ulangi sampai anak lancar."
+   "ortu": "Lanjutkan hafalan dengan jari: jari 4 kepala banteng, jari 5 padi dan kapas. Tutup satu gambar lalu tanyakan itu lambang sila ke berapa. Ulangi sampai anak lancar."
   },
   {
    "kisi": "PK5",
-   "judul": "Bunyi kelima sila",
+   "judul": "Bunyi sila 1 sampai 3",
    "isi": [
-    "Pancasila artinya lima sila. Ini bunyi kelimanya:",
-    "1. Ketuhanan Yang Maha Esa. 2. Kemanusiaan yang Adil dan Beradab. 3. Persatuan Indonesia.",
-    "4. Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan dalam Permusyawaratan/Perwakilan.",
-    "5. Keadilan Sosial bagi Seluruh Rakyat Indonesia."
+    "Pancasila artinya lima sila. Ini bunyi tiga yang pertama:",
+    "1. Ketuhanan Yang Maha Esa.",
+    "2. Kemanusiaan yang Adil dan Beradab.",
+    "3. Persatuan Indonesia."
    ],
    "gambar": [
     {
@@ -776,7 +799,20 @@ window.MATERI = {
     {
      "img": "aset/lambang-sila-3.png",
      "label": "sila 3"
-    },
+    }
+   ],
+   "ingat": "Sila 1 Ketuhanan Yang Maha Esa. Sila 2 Kemanusiaan yang Adil dan Beradab. Sila 3 Persatuan Indonesia.",
+   "ortu": "Ucapkan satu sila, anak mengulang, sambil menunjuk gambarnya. Setelah hafal, tutup bunyinya dan tanyakan sila itu bunyinya apa dan sila ke berapa."
+  },
+  {
+   "kisi": "PK5",
+   "judul": "Bunyi sila 4 dan 5",
+   "isi": [
+    "Ini bunyi dua sila berikutnya:",
+    "4. Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan dalam Permusyawaratan/Perwakilan.",
+    "5. Keadilan Sosial bagi Seluruh Rakyat Indonesia."
+   ],
+   "gambar": [
     {
      "img": "aset/lambang-sila-4.png",
      "label": "sila 4"
@@ -786,34 +822,8 @@ window.MATERI = {
      "label": "sila 5"
     }
    ],
-   "contoh": [
-    {
-     "teks": "Sila 1: Ketuhanan Yang Maha Esa.",
-     "gambar": [
-      {
-       "img": "aset/lambang-sila-1.png"
-      }
-     ]
-    },
-    {
-     "teks": "Sila 2: Kemanusiaan yang Adil dan Beradab.",
-     "gambar": [
-      {
-       "img": "aset/lambang-sila-2.png"
-      }
-     ]
-    },
-    {
-     "teks": "Sila 3: Persatuan Indonesia.",
-     "gambar": [
-      {
-       "img": "aset/lambang-sila-3.png"
-      }
-     ]
-    }
-   ],
-   "ingat": "Pancasila punya lima sila, dari Ketuhanan Yang Maha Esa sampai Keadilan Sosial bagi Seluruh Rakyat Indonesia.",
-   "ortu": "Ucapkan satu sila, anak mengulang, sambil menunjuk gambarnya. Sila 4 panjang, jadi pecah per bagian. Setelah hafal, tutup bunyinya dan tanyakan sila itu bunyinya apa dan sila ke berapa."
+   "ingat": "Sila 4 Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan dalam Permusyawaratan/Perwakilan. Sila 5 Keadilan Sosial bagi Seluruh Rakyat Indonesia.",
+   "ortu": "Sila 4 panjang, jadi pecah per bagian dan ucapkan pelan-pelan sambil menunjuk gambarnya. Setelah hafal, tutup bunyinya dan tanyakan sila itu bunyinya apa dan sila ke berapa."
   },
   {
    "kisi": "PK5",
@@ -842,12 +852,11 @@ window.MATERI = {
   },
   {
    "kisi": "PK6",
-   "judul": "Arti gambar pada perisai",
+   "judul": "Arti gambar pada perisai: sila 1 sampai 3",
    "isi": [
     "Bintang bersinar terang. Ia melambangkan Ketuhanan: iman kepada Allah swt. menerangi hidup kita.",
     "Rantai terdiri dari mata rantai yang saling berkait. Itu melambangkan manusia yang saling menyayangi dan menolong.",
-    "Pohon beringin besar dan rindang. Ia melambangkan persatuan: kita rukun dengan semua teman.",
-    "Kepala banteng hidup berkelompok. Ia melambangkan musyawarah. Padi dan kapas melambangkan pangan dan sandang cukup serta adil untuk semua."
+    "Pohon beringin besar dan rindang. Ia melambangkan persatuan: kita rukun dengan semua teman."
    ],
    "gambar": [
     {
@@ -861,7 +870,19 @@ window.MATERI = {
     {
      "img": "aset/lambang-sila-3.png",
      "label": "beringin"
-    },
+    }
+   ],
+   "ingat": "Bintang: iman. Rantai: saling menyayangi. Beringin: persatuan.",
+   "ortu": "Tunjuk satu gambar dan tanyakan artinya. Hubungkan ke kehidupan: \"Kalau teman kesulitan, kita seperti rantai. Bagaimana caramu menolong?\""
+  },
+  {
+   "kisi": "PK6",
+   "judul": "Arti gambar pada perisai: sila 4 dan 5",
+   "isi": [
+    "Kepala banteng hidup berkelompok. Ia melambangkan musyawarah.",
+    "Padi dan kapas melambangkan pangan dan sandang cukup serta adil untuk semua."
+   ],
+   "gambar": [
     {
      "img": "aset/lambang-sila-4.png",
      "label": "banteng"
@@ -871,8 +892,8 @@ window.MATERI = {
      "label": "padi dan kapas"
     }
    ],
-   "ingat": "Setiap gambar punya arti: iman, saling menyayangi, persatuan, musyawarah, dan keadilan.",
-   "ortu": "Tunjuk satu gambar dan tanyakan artinya. Hubungkan ke kehidupan: \"Kalau teman kesulitan, kita seperti rantai. Bagaimana caramu menolong?\" Pilih sikap yang sesuai dengan gambarnya."
+   "ingat": "Banteng: musyawarah. Padi dan kapas: keadilan. Setiap gambar punya arti: iman, saling menyayangi, persatuan, musyawarah, dan keadilan.",
+   "ortu": "Tunjuk satu gambar dan tanyakan artinya. Pilih sikap yang sesuai dengan gambarnya, misalnya bermusyawarah saat memilih permainan bersama teman."
   },
   {
    "kisi": "PK6",
@@ -894,12 +915,7 @@ window.MATERI = {
    ],
    "contoh": [
     {
-     "teks": "Doni diberi buku cerita oleh paman. Ia berkata \"Alhamdulillah, terima kasih, Paman,\" lalu merawat buku itu baik-baik.",
-     "gambar": [
-      {
-       "img": "aset/wrapped-gift.svg"
-      }
-     ]
+     "teks": "Doni diberi buku cerita oleh paman. Ia berkata \"Alhamdulillah, terima kasih, Paman,\" lalu merawat buku itu baik-baik."
     }
    ],
    "ingat": "Bersyukur: ucapkan Alhamdulillah, berterima kasih, dan berbagi. Menghormati: bicara sopan kepada semua orang.",
@@ -940,32 +956,50 @@ window.MATERI = {
  "bindo": [
   {
    "kisi": "BI1a",
-   "judul": "Wajah bercerita",
+   "judul": "Wajah bercerita: senang, sedih, marah",
    "isi": [
     "Wajah kita bisa bercerita tentang perasaan.",
-    "Senang: mulut tersenyum lebar. Sedih: mata berair, mulut melengkung ke bawah.",
-    "Marah: alis mengerut dan wajah tegang. Takut: mata melebar dan mulut meringis.",
+    "Senang: mulut tersenyum lebar.",
+    "Sedih: mata berair, mulut melengkung ke bawah.",
+    "Marah: alis mengerut dan wajah tegang."
+   ],
+   "gambar": [
+    {
+     "img": "aset/grinning-face.svg",
+     "label": "senang"
+    },
+    {
+     "img": "aset/crying-face.svg",
+     "label": "sedih"
+    },
+    {
+     "img": "aset/angry-face.svg",
+     "label": "marah"
+    }
+   ],
+   "ingat": "Dari wajah, kita bisa tahu seseorang sedang senang, sedih, atau marah.",
+   "ortu": "Ajak anak berkaca dan menirukan tiga wajah itu bergantian. Lalu tunjuk satu gambar dan minta ia menebak nama perasaannya."
+  },
+  {
+   "kisi": "BI1a",
+   "judul": "Wajah bercerita: takut dan terkejut",
+   "isi": [
+    "Masih ada perasaan lain yang terlihat di wajah.",
+    "Takut: mata melebar dan mulut meringis.",
     "Terkejut: mata dan mulut terbuka lebar karena ada hal yang tidak disangka."
    ],
    "gambar": [
     {
-     "img": "aset/grinning-face.svg"
+     "img": "aset/fearful-face.svg",
+     "label": "takut"
     },
     {
-     "img": "aset/crying-face.svg"
-    },
-    {
-     "img": "aset/angry-face.svg"
-    },
-    {
-     "img": "aset/fearful-face.svg"
-    },
-    {
-     "img": "aset/astonished-face.svg"
+     "img": "aset/astonished-face.svg",
+     "label": "terkejut"
     }
    ],
-   "ingat": "Dari wajah, kita bisa tahu seseorang sedang senang, sedih, marah, takut, atau terkejut.",
-   "ortu": "Ajak anak berkaca dan menirukan lima wajah itu bergantian. Lalu tunjuk satu gambar dan minta ia menebak nama perasaannya."
+   "ingat": "Wajah juga bercerita saat takut dan terkejut.",
+   "ortu": "Ajak anak berkaca dan menirukan wajah takut dan terkejut. Lalu campurkan dengan tiga wajah sebelumnya dan minta ia menebak nama perasaannya."
   },
   {
    "kisi": "BI1a",
@@ -1143,7 +1177,7 @@ window.MATERI = {
    ],
    "contoh": [
     {
-     "teks": "Bebek ada 6 dan ayam ada 4. Bebek lebih banyak 2 daripada ayam (6 - 4 = 2)."
+     "teks": "Bebek ada 6 dan ayam ada 4. Bebek lebih banyak 2 daripada ayam (6 − 4 = 2)."
     }
    ],
    "ingat": "Hitung tanda gambar pada baris yang ditanyakan. Baris terpanjang berarti terbanyak.",
@@ -1480,10 +1514,10 @@ window.MATERI = {
    "kisi": "MT2b",
    "judul": "Mengurang dengan meminjam",
    "isi": [
-    "Contoh 43 - 18. Satuan 3 tidak cukup dikurangi 8, jadi kita meminjam.",
+    "Contoh 43 − 18. Satuan 3 tidak cukup dikurangi 8, jadi kita meminjam.",
     "1. Pinjam 1 puluhan dari 4. Puluhan 4 tinggal 3. Satuan 3 menjadi 13.",
-    "2. Kurangi satuan: 13 - 8 = 5. Tulis 5.",
-    "3. Kurangi puluhan: 3 - 1 = 2. Tulis 2. Jadi 43 - 18 = 25."
+    "2. Kurangi satuan: 13 − 8 = 5. Tulis 5.",
+    "3. Kurangi puluhan: 3 − 1 = 2. Tulis 2. Jadi 43 − 18 = 25."
    ],
    "gambar": [
     {
@@ -1505,11 +1539,11 @@ window.MATERI = {
    "isi": [
     "Bandingkan satuan atas dengan satuan bawah. Kalau satuan atas lebih kecil, pinjam 1 puluhan.",
     "Kalau satuan atas cukup besar, tidak perlu meminjam.",
-    "Kalau satuan atas 0, kita juga pinjam. Contoh 30 - 12: 10 - 2 = 8, puluhan tinggal 2, lalu 2 - 1 = 1."
+    "Kalau satuan atas 0, kita juga pinjam. Contoh 30 − 12: 10 − 2 = 8, puluhan tinggal 2, lalu 2 − 1 = 1."
    ],
    "contoh": [
     {
-     "teks": "Pinjam: 26 - 9. Satuan 6 kurang dari 9. 16 - 9 = 7, puluhan 2 - 1 = 1. Hasil 17.",
+     "teks": "Pinjam: 26 − 9. Satuan 6 kurang dari 9. 16 − 9 = 7, puluhan 2 − 1 = 1. Hasil 17.",
      "gambar": [
       {
        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 230 236\" role=\"img\"><rect x=\"85\" y=\"22\" width=\"54\" height=\"214\" rx=\"12\" fill=\"#FFF0C9\"/><text x=\"112\" y=\"16\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"700\" fill=\"#8a7a6c\" font-family=\"sans-serif\">puluhan</text><text x=\"172\" y=\"16\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"700\" fill=\"#8a7a6c\" font-family=\"sans-serif\">satuan</text><text x=\"112\" y=\"114\" text-anchor=\"middle\" font-size=\"50\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">2</text><text x=\"172\" y=\"114\" text-anchor=\"middle\" font-size=\"50\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">6</text><text x=\"52\" y=\"162\" text-anchor=\"middle\" font-size=\"46\" font-weight=\"800\" fill=\"#8a7a6c\" font-family=\"sans-serif\">−</text><text x=\"172\" y=\"162\" text-anchor=\"middle\" font-size=\"50\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">9</text><line x1=\"74\" x2=\"206\" y1=\"178\" y2=\"178\" stroke=\"#3d2b1f\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"95\" y1=\"110\" x2=\"129\" y2=\"76\" stroke=\"#E5484D\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"155\" y1=\"110\" x2=\"189\" y2=\"76\" stroke=\"#E5484D\" stroke-width=\"5\" stroke-linecap=\"round\"/><text x=\"112\" y=\"60\" text-anchor=\"middle\" font-size=\"28\" font-weight=\"800\" fill=\"#E8742A\" font-family=\"sans-serif\">1</text><text x=\"172\" y=\"60\" text-anchor=\"middle\" font-size=\"28\" font-weight=\"800\" fill=\"#E8742A\" font-family=\"sans-serif\">16</text><text x=\"172\" y=\"220\" text-anchor=\"middle\" font-size=\"50\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">7</text><text x=\"112\" y=\"220\" text-anchor=\"middle\" font-size=\"50\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">1</text></svg>"
@@ -1517,7 +1551,7 @@ window.MATERI = {
      ]
     },
     {
-     "teks": "Tanpa pinjam: 37 - 14. Satuan 7 - 4 = 3, puluhan 3 - 1 = 2. Hasil 23.",
+     "teks": "Tanpa pinjam: 37 − 14. Satuan 7 − 4 = 3, puluhan 3 − 1 = 2. Hasil 23.",
      "gambar": [
       {
        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 230 236\" role=\"img\"><rect x=\"85\" y=\"22\" width=\"54\" height=\"214\" rx=\"12\" fill=\"#FFF0C9\"/><text x=\"112\" y=\"16\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"700\" fill=\"#8a7a6c\" font-family=\"sans-serif\">puluhan</text><text x=\"172\" y=\"16\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"700\" fill=\"#8a7a6c\" font-family=\"sans-serif\">satuan</text><text x=\"112\" y=\"114\" text-anchor=\"middle\" font-size=\"50\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">3</text><text x=\"172\" y=\"114\" text-anchor=\"middle\" font-size=\"50\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">7</text><text x=\"52\" y=\"162\" text-anchor=\"middle\" font-size=\"46\" font-weight=\"800\" fill=\"#8a7a6c\" font-family=\"sans-serif\">−</text><text x=\"112\" y=\"162\" text-anchor=\"middle\" font-size=\"50\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">1</text><text x=\"172\" y=\"162\" text-anchor=\"middle\" font-size=\"50\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">4</text><line x1=\"74\" x2=\"206\" y1=\"178\" y2=\"178\" stroke=\"#3d2b1f\" stroke-width=\"5\" stroke-linecap=\"round\"/><text x=\"172\" y=\"220\" text-anchor=\"middle\" font-size=\"50\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">3</text><text x=\"112\" y=\"220\" text-anchor=\"middle\" font-size=\"50\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">2</text></svg>"
@@ -1525,7 +1559,7 @@ window.MATERI = {
      ]
     },
     {
-     "teks": "Satuan 0: 30 - 12. Hasil 18.",
+     "teks": "Satuan 0: 30 − 12. Hasil 18.",
      "gambar": [
       {
        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 230 236\" role=\"img\"><rect x=\"85\" y=\"22\" width=\"54\" height=\"214\" rx=\"12\" fill=\"#FFF0C9\"/><text x=\"112\" y=\"16\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"700\" fill=\"#8a7a6c\" font-family=\"sans-serif\">puluhan</text><text x=\"172\" y=\"16\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"700\" fill=\"#8a7a6c\" font-family=\"sans-serif\">satuan</text><text x=\"112\" y=\"114\" text-anchor=\"middle\" font-size=\"50\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">3</text><text x=\"172\" y=\"114\" text-anchor=\"middle\" font-size=\"50\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">0</text><text x=\"52\" y=\"162\" text-anchor=\"middle\" font-size=\"46\" font-weight=\"800\" fill=\"#8a7a6c\" font-family=\"sans-serif\">−</text><text x=\"112\" y=\"162\" text-anchor=\"middle\" font-size=\"50\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">1</text><text x=\"172\" y=\"162\" text-anchor=\"middle\" font-size=\"50\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">2</text><line x1=\"74\" x2=\"206\" y1=\"178\" y2=\"178\" stroke=\"#3d2b1f\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"95\" y1=\"110\" x2=\"129\" y2=\"76\" stroke=\"#E5484D\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"155\" y1=\"110\" x2=\"189\" y2=\"76\" stroke=\"#E5484D\" stroke-width=\"5\" stroke-linecap=\"round\"/><text x=\"112\" y=\"60\" text-anchor=\"middle\" font-size=\"28\" font-weight=\"800\" fill=\"#E8742A\" font-family=\"sans-serif\">2</text><text x=\"172\" y=\"60\" text-anchor=\"middle\" font-size=\"28\" font-weight=\"800\" fill=\"#E8742A\" font-family=\"sans-serif\">10</text><text x=\"172\" y=\"220\" text-anchor=\"middle\" font-size=\"50\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">8</text><text x=\"112\" y=\"220\" text-anchor=\"middle\" font-size=\"50\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">1</text></svg>"
@@ -1683,12 +1717,11 @@ window.MATERI = {
   },
   {
    "kisi": "MT4a",
-   "judul": "Di mana letaknya?",
+   "judul": "Di mana letaknya? Atas, bawah, depan, belakang",
    "isi": [
     "Letak benda diceritakan dengan kata atas, bawah, kiri, kanan, depan, dan belakang.",
-    "Kiri dan kanan dilihat seperti kamu melihat gambar. Tangan yang kamu pakai menulis adalah kanan.",
-    "Benda yang lebih dekat denganmu ada di depan. Benda yang lebih jauh ada di belakang.",
-    "Contoh: kelinci ada di sebelah kanan bintang. Anjing ada di sebelah kiri bintang."
+    "Lihat gambar: ada bentuk di atas, di tengah, dan di bawah.",
+    "Benda yang lebih dekat denganmu ada di depan. Benda yang lebih jauh ada di belakang."
    ],
    "gambar": [
     {
@@ -1696,7 +1729,20 @@ window.MATERI = {
     },
     {
      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 230 160\" role=\"img\"><rect x=\"40\" y=\"20\" width=\"110\" height=\"70\" rx=\"3\" fill=\"#B5E1F4\" stroke=\"#3d2b1f\" stroke-width=\"4\" stroke-linejoin=\"round\"/><text x=\"95\" y=\"62\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">belakang</text><circle cx=\"130\" cy=\"106\" r=\"28\" fill=\"#E5484D\" stroke=\"#3d2b1f\" stroke-width=\"4\"/><text x=\"130\" y=\"112\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"800\" fill=\"#fff\" font-family=\"sans-serif\">depan</text><line x1=\"190\" y1=\"50\" x2=\"190\" y2=\"120\" stroke=\"#8a7a6c\" stroke-width=\"4\" stroke-dasharray=\"2 8\" stroke-linecap=\"round\"/><text x=\"215\" y=\"150\" text-anchor=\"end\" font-size=\"13\" font-weight=\"700\" fill=\"#8a7a6c\" font-family=\"sans-serif\">lebih dekat ke kita</text></svg>"
-    },
+    }
+   ],
+   "ingat": "Atas dan bawah, depan dan belakang: pakai kata-kata itu untuk letak benda.",
+   "ortu": "Taruh tiga benda bertumpuk atau berjajar, lalu tanya \"apa yang paling atas?\" dan \"mana yang lebih dekat ke kamu?\"."
+  },
+  {
+   "kisi": "MT4a",
+   "judul": "Di mana letaknya? Kiri dan kanan",
+   "isi": [
+    "Kiri dan kanan dilihat seperti kamu melihat gambar.",
+    "Tangan yang kamu pakai menulis adalah kanan.",
+    "Contoh: kelinci ada di sebelah kanan bintang. Anjing ada di sebelah kiri bintang."
+   ],
+   "gambar": [
     {
      "img": "aset/dog-face.svg",
      "label": "kiri"
@@ -1710,7 +1756,7 @@ window.MATERI = {
      "label": "kanan"
     }
    ],
-   "ingat": "Atas dan bawah, kiri dan kanan, depan dan belakang: pakai kata-kata itu untuk letak benda.",
+   "ingat": "Tangan untuk menulis adalah kanan. Lawannya kiri.",
    "ortu": "Taruh tiga benda berjajar, lalu tanya \"apa di sebelah kiri gelas?\". Minta anak mengangkat tangan kanan lebih dulu agar tidak tertukar."
   },
   {
@@ -1719,7 +1765,7 @@ window.MATERI = {
    "isi": [
     "Pola adalah susunan bentuk, warna, atau ukuran yang berulang.",
     "Cari bagian yang berulang. Tepuk sambil menyebutnya, lalu teruskan sampai tanda tanya.",
-    "Kalau ada dua tanda tanya, teruskan dua langkah. Jelaskan polanya dengan kata-kata, misalnya \"hijau, kuning, diulang\"."
+    "Jelaskan polanya dengan kata-kata, misalnya \"hijau, kuning, diulang\"."
    ],
    "contoh": [
     {
@@ -1745,7 +1791,19 @@ window.MATERI = {
        "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 96\" role=\"img\"><circle cx=\"32\" cy=\"48\" r=\"22\" fill=\"#E8742A\" stroke=\"#3d2b1f\" stroke-width=\"4\"/><circle cx=\"82\" cy=\"48\" r=\"12\" fill=\"#E8742A\" stroke=\"#3d2b1f\" stroke-width=\"4\"/><circle cx=\"132\" cy=\"48\" r=\"12\" fill=\"#E8742A\" stroke=\"#3d2b1f\" stroke-width=\"4\"/><circle cx=\"182\" cy=\"48\" r=\"22\" fill=\"#E8742A\" stroke=\"#3d2b1f\" stroke-width=\"4\"/><circle cx=\"232\" cy=\"48\" r=\"12\" fill=\"#E8742A\" stroke=\"#3d2b1f\" stroke-width=\"4\"/><circle cx=\"282\" cy=\"48\" r=\"12\" fill=\"#E8742A\" stroke=\"#3d2b1f\" stroke-width=\"4\"/><circle cx=\"332\" cy=\"48\" r=\"22\" fill=\"#E8742A\" stroke=\"#3d2b1f\" stroke-width=\"4\"/><rect x=\"360\" y=\"22\" width=\"44\" height=\"52\" rx=\"10\" fill=\"#fff\" stroke=\"#3d2b1f\" stroke-width=\"4\" stroke-dasharray=\"8 6\"/><text x=\"382\" y=\"60\" text-anchor=\"middle\" font-size=\"30\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">?</text></svg>"
       }
      ]
-    },
+    }
+   ],
+   "ingat": "Temukan bagian yang berulang, lalu teruskan. Pola dijelaskan dengan menyebut bagian yang diulang.",
+   "ortu": "Buat pola dari benda di rumah: sendok, garpu, sendok, garpu. Minta anak menebak benda berikutnya dan menjelaskan alasannya."
+  },
+  {
+   "kisi": "MT4b",
+   "judul": "Pola dengan dua tanda tanya",
+   "isi": [
+    "Kadang ada dua tanda tanya. Teruskan pola dua langkah.",
+    "Cari dulu bagian yang berulang, lalu sebut dua bagian berikutnya."
+   ],
+   "contoh": [
     {
      "teks": "Biru, hijau, merah, diulang. Dua berikutnya hijau dan merah.",
      "gambar": [
@@ -1755,8 +1813,8 @@ window.MATERI = {
      ]
     }
    ],
-   "ingat": "Temukan bagian yang berulang, lalu teruskan. Pola dijelaskan dengan menyebut bagian yang diulang.",
-   "ortu": "Buat pola dari benda di rumah: sendok, garpu, sendok, garpu. Minta anak menebak benda berikutnya dan menjelaskan alasannya."
+   "ingat": "Dua tanda tanya berarti teruskan pola dua langkah.",
+   "ortu": "Buat pola tiga benda yang berulang, misalnya sendok, garpu, gelas. Tutup dua benda terakhir dan minta anak menebaknya."
   }
  ],
  "pjok": [
@@ -1771,39 +1829,27 @@ window.MATERI = {
    ],
    "gambar": [
     {
-     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"88\" cy=\"30\" r=\"15\" fill=\"#F7C873\"/><path d=\"M86 45 L76 105 M76 105 L106 130 L100 165 M76 105 L52 140 L30 135 M82 62 L110 82 L128 66 M82 62 L56 74 L46 96\"/></g></svg>"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 208\" aria-label=\"lokomotor\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"88\" cy=\"30\" r=\"15\" fill=\"#F7C873\"/><path d=\"M86 45 L76 105 M76 105 L106 130 L100 165 M76 105 L52 140 L30 135 M82 62 L110 82 L128 66 M82 62 L56 74 L46 96\"/></g><text x=\"80\" y=\"200\" text-anchor=\"middle\" font-size=\"16.0\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">lokomotor</text></svg>",
+     "label": "lokomotor"
     },
     {
-     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"94\" cy=\"64\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"101\" cy=\"61\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M92 79 L84 150 M84 150 L120 126 L112 164 H128 M90 94 L134 102\"/><path d=\"M15 168 H145\" stroke-width=\"4\"/></g></svg>"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 208\" aria-label=\"nonlokomotor\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"94\" cy=\"64\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"101\" cy=\"61\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M92 79 L84 150 M84 150 L120 126 L112 164 H128 M90 94 L134 102\"/><path d=\"M15 168 H145\" stroke-width=\"4\"/></g><text x=\"80\" y=\"200\" text-anchor=\"middle\" font-size=\"16.0\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">nonlokomotor</text></svg>",
+     "label": "nonlokomotor"
     },
     {
-     "img": "aset/soccer-ball.svg"
+     "img": "aset/soccer-ball.svg",
+     "label": "manipulatif"
     }
    ],
    "contoh": [
     {
-     "teks": "Berlari dari pintu ke pagar: badan pindah tempat, jadi lokomotor.",
-     "gambar": [
-      {
-       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"88\" cy=\"30\" r=\"15\" fill=\"#F7C873\"/><path d=\"M86 45 L76 105 M76 105 L106 130 L100 165 M76 105 L52 140 L30 135 M82 62 L110 82 L128 66 M82 62 L56 74 L46 96\"/></g></svg>"
-      }
-     ]
+     "teks": "Berlari dari pintu ke pagar: badan pindah tempat, jadi lokomotor."
     },
     {
-     "teks": "Berjongkok lalu berdiri di tempat yang sama: nonlokomotor.",
-     "gambar": [
-      {
-       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"94\" cy=\"64\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"101\" cy=\"61\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M92 79 L84 150 M84 150 L120 126 L112 164 H128 M90 94 L134 102\"/><path d=\"M15 168 H145\" stroke-width=\"4\"/></g></svg>"
-      }
-     ]
+     "teks": "Berjongkok lalu berdiri di tempat yang sama: nonlokomotor."
     },
     {
-     "teks": "Melempar bola: memakai benda, jadi manipulatif.",
-     "gambar": [
-      {
-       "img": "aset/soccer-ball.svg"
-      }
-     ]
+     "teks": "Melempar bola: memakai benda, jadi manipulatif."
     }
    ],
    "ingat": "Lokomotor berpindah tempat, nonlokomotor di tempat, manipulatif memakai benda.",
@@ -1820,34 +1866,28 @@ window.MATERI = {
    ],
    "gambar": [
     {
-     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"88\" cy=\"30\" r=\"15\" fill=\"#F7C873\"/><path d=\"M86 45 L76 105 M76 105 L106 130 L100 165 M76 105 L52 140 L30 135 M82 62 L110 82 L128 66 M82 62 L56 74 L46 96\"/></g></svg>"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 208\" aria-label=\"berlari\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"88\" cy=\"30\" r=\"15\" fill=\"#F7C873\"/><path d=\"M86 45 L76 105 M76 105 L106 130 L100 165 M76 105 L52 140 L30 135 M82 62 L110 82 L128 66 M82 62 L56 74 L46 96\"/></g><text x=\"80\" y=\"200\" text-anchor=\"middle\" font-size=\"16.0\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">berlari</text></svg>",
+     "label": "berlari"
     },
     {
-     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"80\" cy=\"26\" r=\"15\" fill=\"#F7C873\"/><path d=\"M80 41 V98 M80 98 L60 128 L76 150 M80 98 L100 128 L84 150 M80 55 L54 22 M80 55 L106 22\"/><path d=\"M30 172 H130\" stroke-width=\"4\" stroke-dasharray=\"6 8\"/></g></svg>"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 208\" aria-label=\"melompat\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"80\" cy=\"26\" r=\"15\" fill=\"#F7C873\"/><path d=\"M80 41 V98 M80 98 L60 128 L76 150 M80 98 L100 128 L84 150 M80 55 L54 22 M80 55 L106 22\"/><path d=\"M30 172 H130\" stroke-width=\"4\" stroke-dasharray=\"6 8\"/></g><text x=\"80\" y=\"200\" text-anchor=\"middle\" font-size=\"16.0\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">melompat</text></svg>",
+     "label": "melompat"
     },
     {
-     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"32\" cy=\"70\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"25\" cy=\"67\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M45 82 H115 M50 82 L48 140 M115 82 L112 140 M112 140 H152\"/><path d=\"M10 145 H155\" stroke-width=\"4\"/></g></svg>"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 208\" aria-label=\"merangkak\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"32\" cy=\"70\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"25\" cy=\"67\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M45 82 H115 M50 82 L48 140 M115 82 L112 140 M112 140 H152\"/><path d=\"M10 145 H155\" stroke-width=\"4\"/></g><text x=\"80\" y=\"200\" text-anchor=\"middle\" font-size=\"16.0\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">merangkak</text></svg>",
+     "label": "merangkak"
     },
     {
-     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"96\" cy=\"30\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"103\" cy=\"27\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M94 45 V105 M94 105 L116 162 M94 105 L74 160 M94 60 L110 96 M94 60 L80 94\"/><path d=\"M10 166 H150\" stroke-width=\"4\"/><path d=\"M70 124 L14 124 M26.3 117.3 L14 124 L26.3 130.7\" stroke=\"#E8742A\" stroke-width=\"6\"/></g></svg>"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 208\" aria-label=\"jalan mundur\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"96\" cy=\"30\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"103\" cy=\"27\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M94 45 V105 M94 105 L116 162 M94 105 L74 160 M94 60 L110 96 M94 60 L80 94\"/><path d=\"M10 166 H150\" stroke-width=\"4\"/><path d=\"M70 124 L14 124 M26.3 117.3 L14 124 L26.3 130.7\" stroke=\"#E8742A\" stroke-width=\"6\"/></g><text x=\"80\" y=\"200\" text-anchor=\"middle\" font-size=\"16.0\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">jalan mundur</text></svg>",
+     "label": "jalan mundur"
     }
    ],
    "contoh": [
     {
-     "teks": "Melompat: kaki menolak lantai, badan terangkat, lalu mendarat di tempat lain.",
-     "gambar": [
-      {
-       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"80\" cy=\"26\" r=\"15\" fill=\"#F7C873\"/><path d=\"M80 41 V98 M80 98 L60 128 L76 150 M80 98 L100 128 L84 150 M80 55 L54 22 M80 55 L106 22\"/><path d=\"M30 172 H130\" stroke-width=\"4\" stroke-dasharray=\"6 8\"/></g></svg>"
-      }
-     ]
+     "teks": "Melompat: kaki menolak lantai, badan terangkat, lalu mendarat di tempat lain."
     },
     {
-     "teks": "Berjalan mundur: panah menunjuk ke belakang. Melangkahlah pelan-pelan dan hati-hati agar tidak jatuh.",
-     "gambar": [
-      {
-       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"96\" cy=\"30\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"103\" cy=\"27\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M94 45 V105 M94 105 L116 162 M94 105 L74 160 M94 60 L110 96 M94 60 L80 94\"/><path d=\"M10 166 H150\" stroke-width=\"4\"/><path d=\"M70 124 L14 124 M26.3 117.3 L14 124 L26.3 130.7\" stroke=\"#E8742A\" stroke-width=\"6\"/></g></svg>"
-      }
-     ]
+     "teks": "Berjalan mundur: panah menunjuk ke belakang. Melangkahlah pelan-pelan dan hati-hati agar tidak jatuh."
     }
    ],
    "ingat": "Berjalan, berlari, melompat, merangkak, dan berjalan mundur adalah gerak lokomotor.",
@@ -1863,23 +1903,21 @@ window.MATERI = {
    ],
    "gambar": [
     {
-     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"94\" cy=\"64\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"101\" cy=\"61\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M92 79 L84 150 M84 150 L120 126 L112 164 H128 M90 94 L134 102\"/><path d=\"M15 168 H145\" stroke-width=\"4\"/></g></svg>"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 208\" aria-label=\"berjongkok\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"94\" cy=\"64\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"101\" cy=\"61\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M92 79 L84 150 M84 150 L120 126 L112 164 H128 M90 94 L134 102\"/><path d=\"M15 168 H145\" stroke-width=\"4\"/></g><text x=\"80\" y=\"200\" text-anchor=\"middle\" font-size=\"16.0\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">berjongkok</text></svg>",
+     "label": "berjongkok"
     },
     {
-     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M80 125 L66 170 M80 125 L94 170 M80 125 L96 72 M95 78 L62 92 L80 114 M95 78 L120 98 L86 112\"/><circle cx=\"102\" cy=\"54\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"97\" cy=\"51\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><circle cx=\"107\" cy=\"51\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M97 59 Q102 63 107 59\" stroke-width=\"2.5\"/><path d=\"M48 26 Q14 44 18 86 M8 72 L18 86 L28 72\" stroke=\"#E8742A\" stroke-width=\"5\"/><path d=\"M124 26 Q154 44 148 86 M138 72 L148 86 L158 72\" stroke=\"#E8742A\" stroke-width=\"5\"/><path d=\"M15 172 H145\" stroke-width=\"4\"/></g></svg>"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 208\" aria-label=\"meliuk\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M80 125 L66 170 M80 125 L94 170 M80 125 L96 72 M95 78 L62 92 L80 114 M95 78 L120 98 L86 112\"/><circle cx=\"102\" cy=\"54\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"97\" cy=\"51\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><circle cx=\"107\" cy=\"51\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M97 59 Q102 63 107 59\" stroke-width=\"2.5\"/><path d=\"M48 26 Q14 44 18 86 M8 72 L18 86 L28 72\" stroke=\"#E8742A\" stroke-width=\"5\"/><path d=\"M124 26 Q154 44 148 86 M138 72 L148 86 L158 72\" stroke=\"#E8742A\" stroke-width=\"5\"/><path d=\"M15 172 H145\" stroke-width=\"4\"/></g><text x=\"80\" y=\"200\" text-anchor=\"middle\" font-size=\"16.0\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">meliuk</text></svg>",
+     "label": "meliuk"
     },
     {
-     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"80\" cy=\"30\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"75\" cy=\"27\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><circle cx=\"85\" cy=\"27\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M75 35 Q80 39 85 35\" stroke-width=\"2.5\"/><path d=\"M80 45 V110 M80 110 L77 165 M80 110 L83 165 M80 60 L64 104 M80 60 L96 104\"/><path d=\"M15 170 H145\" stroke-width=\"4\"/></g></svg>"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 208\" aria-label=\"berdiri\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"80\" cy=\"30\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"75\" cy=\"27\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><circle cx=\"85\" cy=\"27\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M75 35 Q80 39 85 35\" stroke-width=\"2.5\"/><path d=\"M80 45 V110 M80 110 L77 165 M80 110 L83 165 M80 60 L64 104 M80 60 L96 104\"/><path d=\"M15 170 H145\" stroke-width=\"4\"/></g><text x=\"80\" y=\"200\" text-anchor=\"middle\" font-size=\"16.0\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">berdiri</text></svg>",
+     "label": "berdiri"
     }
    ],
    "contoh": [
     {
-     "teks": "Meliukkan badan ke kiri dan ke kanan sambil tetap berdiri di satu titik.",
-     "gambar": [
-      {
-       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M80 125 L66 170 M80 125 L94 170 M80 125 L96 72 M95 78 L62 92 L80 114 M95 78 L120 98 L86 112\"/><circle cx=\"102\" cy=\"54\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"97\" cy=\"51\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><circle cx=\"107\" cy=\"51\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M97 59 Q102 63 107 59\" stroke-width=\"2.5\"/><path d=\"M48 26 Q14 44 18 86 M8 72 L18 86 L28 72\" stroke=\"#E8742A\" stroke-width=\"5\"/><path d=\"M124 26 Q154 44 148 86 M138 72 L148 86 L158 72\" stroke=\"#E8742A\" stroke-width=\"5\"/><path d=\"M15 172 H145\" stroke-width=\"4\"/></g></svg>"
-      }
-     ]
+     "teks": "Meliukkan badan ke kiri dan ke kanan sambil tetap berdiri di satu titik."
     }
    ],
    "ingat": "Nonlokomotor: bergerak di tempat, misalnya jongkok, berdiri, membungkuk, dan meliuk.",
@@ -1896,20 +1934,17 @@ window.MATERI = {
    ],
    "gambar": [
     {
-     "img": "aset/soccer-ball.svg"
+     "img": "aset/soccer-ball.svg",
+     "label": "sepak bola"
     },
     {
-     "img": "aset/basketball.svg"
+     "img": "aset/basketball.svg",
+     "label": "bola basket"
     }
    ],
    "contoh": [
     {
-     "teks": "Ayah melempar bola, kamu menerimanya dengan kedua tangan. Itu gerak menangkap.",
-     "gambar": [
-      {
-       "img": "aset/soccer-ball.svg"
-      }
-     ]
+     "teks": "Ayah melempar bola, kamu menerimanya dengan kedua tangan. Itu gerak menangkap."
     }
    ],
    "ingat": "Gerak manipulatif memakai benda, misalnya melempar, menangkap, dan menendang bola.",
@@ -1926,28 +1961,20 @@ window.MATERI = {
    ],
    "gambar": [
     {
-     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"80\" cy=\"30\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"75\" cy=\"27\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><circle cx=\"85\" cy=\"27\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M75 35 Q80 39 85 35\" stroke-width=\"2.5\"/><path d=\"M80 45 V110 M80 110 L78 165 M80 110 L104 130 L86 142 M80 60 L36 64 M80 60 L124 64\"/><path d=\"M15 170 H145\" stroke-width=\"4\"/></g></svg>"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 208\" aria-label=\"satu kaki\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"80\" cy=\"30\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"75\" cy=\"27\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><circle cx=\"85\" cy=\"27\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M75 35 Q80 39 85 35\" stroke-width=\"2.5\"/><path d=\"M80 45 V110 M80 110 L78 165 M80 110 L104 130 L86 142 M80 60 L36 64 M80 60 L124 64\"/><path d=\"M15 170 H145\" stroke-width=\"4\"/></g><text x=\"80\" y=\"200\" text-anchor=\"middle\" font-size=\"16.0\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">satu kaki</text></svg>",
+     "label": "satu kaki"
     },
     {
-     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"66\" cy=\"66\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"73\" cy=\"63\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M66 82 L92 140 M92 140 L148 142 M70 94 L30 140\"/><path d=\"M10 150 H155\" stroke-width=\"4\"/><circle cx=\"30\" cy=\"144\" r=\"6\" fill=\"#E8742A\" stroke=\"none\"/></g></svg>"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 208\" aria-label=\"duduk bertumpu tangan\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"66\" cy=\"66\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"73\" cy=\"63\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M66 82 L92 140 M92 140 L148 142 M70 94 L30 140\"/><path d=\"M10 150 H155\" stroke-width=\"4\"/><circle cx=\"30\" cy=\"144\" r=\"6\" fill=\"#E8742A\" stroke=\"none\"/></g><text x=\"80\" y=\"200\" text-anchor=\"middle\" font-size=\"11.7\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">duduk bertumpu tangan</text></svg>",
+     "label": "duduk bertumpu tangan"
     }
    ],
    "contoh": [
     {
-     "teks": "Berjalan di garis lurus seperti titian: tangan terentang, mata ke depan, langkah pelan.",
-     "gambar": [
-      {
-       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"80\" cy=\"30\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"75\" cy=\"27\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><circle cx=\"85\" cy=\"27\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M75 35 Q80 39 85 35\" stroke-width=\"2.5\"/><path d=\"M80 45 V110 M80 110 L77 165 M80 110 L83 165 M80 60 L64 104 M80 60 L96 104\"/><path d=\"M15 170 H145\" stroke-width=\"4\"/></g></svg>"
-      }
-     ]
+     "teks": "Berjalan di garis lurus seperti titian: tangan terentang, mata ke depan, langkah pelan."
     },
     {
-     "teks": "Duduk bertumpu tangan: kaki lurus, badan condong ke belakang, tangan menahan di lantai.",
-     "gambar": [
-      {
-       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"66\" cy=\"66\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"73\" cy=\"63\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M66 82 L92 140 M92 140 L148 142 M70 94 L30 140\"/><path d=\"M10 150 H155\" stroke-width=\"4\"/><circle cx=\"30\" cy=\"144\" r=\"6\" fill=\"#E8742A\" stroke=\"none\"/></g></svg>"
-      }
-     ]
+     "teks": "Duduk bertumpu tangan: kaki lurus, badan condong ke belakang, tangan menahan di lantai."
     }
    ],
    "ingat": "Tangan terentang, mata menatap satu titik, dan kaki sebagai tumpuan membantu badan seimbang.",
@@ -1964,23 +1991,21 @@ window.MATERI = {
    ],
    "gambar": [
     {
-     "img": "aset/musical-note.svg"
+     "img": "aset/musical-note.svg",
+     "label": "musik"
     },
     {
-     "img": "aset/drum.svg"
+     "img": "aset/drum.svg",
+     "label": "ketukan"
     },
     {
-     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M80 125 L66 170 M80 125 L94 170 M80 125 L96 72 M95 78 L62 92 L80 114 M95 78 L120 98 L86 112\"/><circle cx=\"102\" cy=\"54\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"97\" cy=\"51\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><circle cx=\"107\" cy=\"51\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M97 59 Q102 63 107 59\" stroke-width=\"2.5\"/><path d=\"M48 26 Q14 44 18 86 M8 72 L18 86 L28 72\" stroke=\"#E8742A\" stroke-width=\"5\"/><path d=\"M124 26 Q154 44 148 86 M138 72 L148 86 L158 72\" stroke=\"#E8742A\" stroke-width=\"5\"/><path d=\"M15 172 H145\" stroke-width=\"4\"/></g></svg>"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 208\" aria-label=\"meliuk\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M80 125 L66 170 M80 125 L94 170 M80 125 L96 72 M95 78 L62 92 L80 114 M95 78 L120 98 L86 112\"/><circle cx=\"102\" cy=\"54\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"97\" cy=\"51\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><circle cx=\"107\" cy=\"51\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M97 59 Q102 63 107 59\" stroke-width=\"2.5\"/><path d=\"M48 26 Q14 44 18 86 M8 72 L18 86 L28 72\" stroke=\"#E8742A\" stroke-width=\"5\"/><path d=\"M124 26 Q154 44 148 86 M138 72 L148 86 L158 72\" stroke=\"#E8742A\" stroke-width=\"5\"/><path d=\"M15 172 H145\" stroke-width=\"4\"/></g><text x=\"80\" y=\"200\" text-anchor=\"middle\" font-size=\"16.0\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">meliuk</text></svg>",
+     "label": "meliuk"
     }
    ],
    "contoh": [
     {
-     "teks": "Lagu pelan: ayunkan tangan pelan-pelan. Lagu cepat: hentakkan kaki dengan cepat.",
-     "gambar": [
-      {
-       "img": "aset/musical-note.svg"
-      }
-     ]
+     "teks": "Lagu pelan: ayunkan tangan pelan-pelan. Lagu cepat: hentakkan kaki dengan cepat."
     }
    ],
    "ingat": "Gerak berirama mengikuti ketukan musik: pelan untuk musik pelan, cepat untuk musik cepat.",
@@ -1996,10 +2021,12 @@ window.MATERI = {
    ],
    "gambar": [
     {
-     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 180\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M80 125 L66 170 M80 125 L94 170 M80 125 L96 72 M95 78 L62 92 L80 114 M95 78 L120 98 L86 112\"/><circle cx=\"102\" cy=\"54\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"97\" cy=\"51\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><circle cx=\"107\" cy=\"51\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M97 59 Q102 63 107 59\" stroke-width=\"2.5\"/><path d=\"M48 26 Q14 44 18 86 M8 72 L18 86 L28 72\" stroke=\"#E8742A\" stroke-width=\"5\"/><path d=\"M124 26 Q154 44 148 86 M138 72 L148 86 L158 72\" stroke=\"#E8742A\" stroke-width=\"5\"/><path d=\"M15 172 H145\" stroke-width=\"4\"/></g></svg>"
+     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 160 208\" aria-label=\"meliuk\" role=\"img\"><g fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M80 125 L66 170 M80 125 L94 170 M80 125 L96 72 M95 78 L62 92 L80 114 M95 78 L120 98 L86 112\"/><circle cx=\"102\" cy=\"54\" r=\"15\" fill=\"#F7C873\"/><circle cx=\"97\" cy=\"51\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><circle cx=\"107\" cy=\"51\" r=\"2.5\" fill=\"#3d2b1f\" stroke=\"none\"/><path d=\"M97 59 Q102 63 107 59\" stroke-width=\"2.5\"/><path d=\"M48 26 Q14 44 18 86 M8 72 L18 86 L28 72\" stroke=\"#E8742A\" stroke-width=\"5\"/><path d=\"M124 26 Q154 44 148 86 M138 72 L148 86 L158 72\" stroke=\"#E8742A\" stroke-width=\"5\"/><path d=\"M15 172 H145\" stroke-width=\"4\"/></g><text x=\"80\" y=\"200\" text-anchor=\"middle\" font-size=\"16.0\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">meliuk</text></svg>",
+     "label": "meliuk"
     },
     {
-     "img": "aset/person-cartwheeling.svg"
+     "img": "aset/person-cartwheeling.svg",
+     "label": "gerak lincah"
     }
    ],
    "ingat": "Tangan, kaki, kepala, dan badan bergerak mengikuti irama musik.",
@@ -2016,10 +2043,12 @@ window.MATERI = {
    ],
    "gambar": [
     {
-     "img": "aset/bicycle.svg"
+     "img": "aset/bicycle.svg",
+     "label": "bersepeda"
     },
     {
-     "img": "aset/person-running.svg"
+     "img": "aset/person-running.svg",
+     "label": "lari kecil"
     }
    ],
    "ingat": "Bersepeda menguatkan otot kaki. Lari kecil melatih jantung dan paru-paru.",
@@ -2036,23 +2065,21 @@ window.MATERI = {
    ],
    "gambar": [
     {
-     "img": "aset/soap.svg"
+     "img": "aset/soap.svg",
+     "label": "sabun"
     },
     {
-     "img": "aset/toothbrush.svg"
+     "img": "aset/toothbrush.svg",
+     "label": "sikat gigi"
     },
     {
-     "img": "aset/shower.svg"
+     "img": "aset/shower.svg",
+     "label": "mandi"
     }
    ],
    "contoh": [
     {
-     "teks": "Sehabis bermain di lapangan: minum air putih, cuci tangan pakai sabun, lalu mandi.",
-     "gambar": [
-      {
-       "img": "aset/soap.svg"
-      }
-     ]
+     "teks": "Sehabis bermain di lapangan: minum air putih, cuci tangan pakai sabun, lalu mandi."
     }
    ],
    "ingat": "Ganti keringat dengan air putih, cuci tangan pakai sabun, mandi, dan sikat gigi dua kali sehari.",
@@ -2068,10 +2095,12 @@ window.MATERI = {
    ],
    "gambar": [
     {
-     "img": "aset/chair.svg"
+     "img": "aset/chair.svg",
+     "label": "kursi"
     },
     {
-     "img": "aset/house.svg"
+     "img": "aset/house.svg",
+     "label": "ruangan"
     }
    ],
    "ingat": "Menata ruang sebelum bermain membuat kita aman dan nyaman, tidak mudah tersandung.",
@@ -2088,20 +2117,17 @@ window.MATERI = {
    ],
    "gambar": [
     {
-     "img": "aset/wastebasket.svg"
+     "img": "aset/wastebasket.svg",
+     "label": "tempat sampah"
     },
     {
-     "img": "aset/house.svg"
+     "img": "aset/house.svg",
+     "label": "lingkungan bersih"
     }
    ],
    "contoh": [
     {
-     "teks": "Piket kelas: menyapu lantai, membuang sampah ke tempatnya, dan mengelap meja.",
-     "gambar": [
-      {
-       "img": "aset/wastebasket.svg"
-      }
-     ]
+     "teks": "Piket kelas: menyapu lantai, membuang sampah ke tempatnya, dan mengelap meja."
     }
    ],
    "ingat": "Kebersihan sebagian dari iman. Lingkungan bersih membuat kita sehat dan nyaman.",
@@ -2118,13 +2144,16 @@ window.MATERI = {
    ],
    "gambar": [
     {
-     "img": "aset/shower.svg"
+     "img": "aset/shower.svg",
+     "label": "basahi tubuh"
     },
     {
-     "img": "aset/person-swimming.svg"
+     "img": "aset/person-swimming.svg",
+     "label": "mengapung"
     },
     {
-     "img": "aset/water-wave.svg"
+     "img": "aset/water-wave.svg",
+     "label": "air"
     }
    ],
    "ingat": "Basahi tubuh dulu, lalu berlatih mengapung dengan badan santai di kolam dangkal bersama orang dewasa.",
@@ -2141,17 +2170,13 @@ window.MATERI = {
    ],
    "gambar": [
     {
-     "img": "aset/folded-hands.svg"
+     "img": "aset/folded-hands.svg",
+     "label": "berdoa"
     }
    ],
    "contoh": [
     {
-     "teks": "Mulai kegiatan: \"Bismillah\". Selesai dengan selamat: \"Alhamdulillah\".",
-     "gambar": [
-      {
-       "img": "aset/folded-hands.svg"
-      }
-     ]
+     "teks": "Mulai kegiatan: \"Bismillah\". Selesai dengan selamat: \"Alhamdulillah\"."
     }
    ],
    "ingat": "Bismillah untuk memulai, alhamdulillah untuk bersyukur. Doa dan syukur menunjukkan kita ingat Allah swt.",
@@ -2168,20 +2193,17 @@ window.MATERI = {
    ],
    "gambar": [
     {
-     "img": "aset/raised-hand.svg"
+     "img": "aset/raised-hand.svg",
+     "label": "sabar"
     },
     {
-     "img": "aset/thumbs-up.svg"
+     "img": "aset/thumbs-up.svg",
+     "label": "tolong-menolong"
     }
    ],
    "contoh": [
     {
-     "teks": "Dua anak memegang ujung tali, satu anak melompat. Mereka bergantian dan saling membantu. Itu kerja sama.",
-     "gambar": [
-      {
-       "img": "aset/thumbs-up.svg"
-      }
-     ]
+     "teks": "Dua anak memegang ujung tali, satu anak melompat. Mereka bergantian dan saling membantu. Itu kerja sama."
     }
    ],
    "ingat": "Sabar itu tenang menunggu dan menerima. Tolong-menolong itu membantu teman yang kesulitan.",
@@ -2198,10 +2220,12 @@ window.MATERI = {
    ],
    "gambar": [
     {
-     "img": "aset/mosque.svg"
+     "img": "aset/mosque.svg",
+     "label": "salat"
     },
     {
-     "img": "aset/person-walking.svg"
+     "img": "aset/person-walking.svg",
+     "label": "berolahraga"
     }
    ],
    "ingat": "Menutup aurat dan salat tepat waktu tetap dilakukan, juga saat berolahraga.",
@@ -2261,20 +2285,10 @@ window.MATERI = {
    ],
    "contoh": [
     {
-     "teks": "Zig-zag: ujungnya runcing.",
-     "gambar": [
-      {
-       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 140\" role=\"img\"><path d=\"M20 100 L55 40 L90 100 L125 40 L160 100 L195 40 L220 90\" fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
-      }
-     ]
+     "teks": "Zig-zag: ujungnya runcing."
     },
     {
-     "teks": "Bergelombang: naik turun melengkung seperti ombak.",
-     "gambar": [
-      {
-       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 140\" role=\"img\"><path d=\"M20.0 75.0 L21.7 70.6 L23.3 66.3 L25.0 62.3 L26.7 58.5 L28.3 55.2 L30.0 52.3 L31.7 50.1 L33.3 48.4 L35.0 47.3 L36.7 47.0 L38.3 47.3 L40.0 48.4 L41.7 50.1 L43.3 52.3 L45.0 55.2 L46.7 58.5 L48.3 62.3 L50.0 66.3 L51.7 70.6 L53.3 75.0 L55.0 79.4 L56.7 83.7 L58.3 87.7 L60.0 91.5 L61.7 94.8 L63.3 97.7 L65.0 99.9 L66.7 101.6 L68.3 102.7 L70.0 103.0 L71.7 102.7 L73.3 101.6 L75.0 99.9 L76.7 97.7 L78.3 94.8 L80.0 91.5 L81.7 87.7 L83.3 83.7 L85.0 79.4 L86.7 75.0 L88.3 70.6 L90.0 66.3 L91.7 62.3 L93.3 58.5 L95.0 55.2 L96.7 52.3 L98.3 50.1 L100.0 48.4 L101.7 47.3 L103.3 47.0 L105.0 47.3 L106.7 48.4 L108.3 50.1 L110.0 52.3 L111.7 55.2 L113.3 58.5 L115.0 62.3 L116.7 66.3 L118.3 70.6 L120.0 75.0 L121.7 79.4 L123.3 83.7 L125.0 87.7 L126.7 91.5 L128.3 94.8 L130.0 97.7 L131.7 99.9 L133.3 101.6 L135.0 102.7 L136.7 103.0 L138.3 102.7 L140.0 101.6 L141.7 99.9 L143.3 97.7 L145.0 94.8 L146.7 91.5 L148.3 87.7 L150.0 83.7 L151.7 79.4 L153.3 75.0 L155.0 70.6 L156.7 66.3 L158.3 62.3 L160.0 58.5 L161.7 55.2 L163.3 52.3 L165.0 50.1 L166.7 48.4 L168.3 47.3 L170.0 47.0 L171.7 47.3 L173.3 48.4 L175.0 50.1 L176.7 52.3 L178.3 55.2 L180.0 58.5 L181.7 62.3 L183.3 66.3 L185.0 70.6 L186.7 75.0 L188.3 79.4 L190.0 83.7 L191.7 87.7 L193.3 91.5 L195.0 94.8 L196.7 97.7 L198.3 99.9 L200.0 101.6 L201.7 102.7 L203.3 103.0 L205.0 102.7 L206.7 101.6 L208.3 99.9 L210.0 97.7 L211.7 94.8 L213.3 91.5 L215.0 87.7 L216.7 83.7 L218.3 79.4 L220.0 75.0\" fill=\"none\" stroke=\"#3d2b1f\" stroke-width=\"8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>"
-      }
-     ]
+     "teks": "Bergelombang: naik turun melengkung seperti ombak."
     }
    ],
    "ingat": "Zig-zag runcing dan patah-patah, bergelombang melengkung halus.",
@@ -2340,12 +2354,7 @@ window.MATERI = {
    ],
    "contoh": [
     {
-     "teks": "Garis pinggir lingkaran membatasi bidang di dalamnya.",
-     "gambar": [
-      {
-       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 120 100\" role=\"img\"><circle cx=\"60\" cy=\"50\" r=\"36\" fill=\"#E8742A\" stroke=\"#3d2b1f\" stroke-width=\"4\"/></svg>"
-      }
-     ]
+     "teks": "Garis pinggir lingkaran membatasi bidang di dalamnya."
     }
    ],
    "ingat": "Bidang adalah daerah datar yang dibatasi garis.",
@@ -2448,12 +2457,7 @@ window.MATERI = {
    ],
    "contoh": [
     {
-     "teks": "Ingin gambar hutan dan sungai yang sejuk? Pilih warna dingin.",
-     "gambar": [
-      {
-       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 246 120\" role=\"img\"><rect x=\"10\" y=\"25\" width=\"70\" height=\"70\" rx=\"10\" fill=\"#2F7FC1\" stroke=\"#3d2b1f\" stroke-width=\"4\"/><rect x=\"88\" y=\"25\" width=\"70\" height=\"70\" rx=\"10\" fill=\"#3FA34D\" stroke=\"#3d2b1f\" stroke-width=\"4\"/><rect x=\"166\" y=\"25\" width=\"70\" height=\"70\" rx=\"10\" fill=\"#5CB8E6\" stroke=\"#3d2b1f\" stroke-width=\"4\"/></svg>"
-      }
-     ]
+     "teks": "Ingin gambar hutan dan sungai yang sejuk? Pilih warna dingin."
     }
    ],
    "ingat": "Biru dan hijau adalah warna dingin: sejuk dan tenang.",
@@ -2580,12 +2584,7 @@ window.MATERI = {
      "teks": "Bermain di pantai saat liburan. Sumbernya pengalaman pribadi."
     },
     {
-     "teks": "Pohon di depan sekolah. Sumbernya lingkungan sekitar.",
-     "gambar": [
-      {
-       "img": "aset/deciduous-tree.svg"
-      }
-     ]
+     "teks": "Pohon di depan sekolah. Sumbernya lingkungan sekitar."
     }
    ],
    "ingat": "Sumber ide: imajinasi, pengalaman pribadi, dan lingkungan sekitar.",
@@ -2655,9 +2654,6 @@ window.MATERI = {
     },
     {
      "img": "aset/straight-ruler.svg"
-    },
-    {
-     "img": "aset/pencil.svg"
     }
    ],
    "ingat": "Krayon mewarnai, kuas mengecat, gunting memotong, lem menempel, penggaris membuat garis lurus.",
@@ -2687,12 +2683,11 @@ window.MATERI = {
  "inggris": [
   {
    "kisi": "EN1a",
-   "judul": "Nama buah dalam bahasa Inggris",
+   "judul": "Nama buah dalam bahasa Inggris: apple, banana, mango, orange",
    "isi": [
     "Yuk, kenalan dengan nama buah dalam bahasa Inggris!",
-    "Apple artinya apel. Banana artinya pisang. Mango artinya mangga.",
-    "Orange artinya jeruk. Grapes artinya anggur. Watermelon artinya semangka.",
-    "Pineapple artinya nanas. Hati-hati, pineapple bukan apple, ya."
+    "Apple artinya apel. Banana artinya pisang.",
+    "Mango artinya mangga. Orange artinya jeruk."
    ],
    "gambar": [
     {
@@ -2710,7 +2705,19 @@ window.MATERI = {
     {
      "img": "aset/tangerine.svg",
      "label": "orange"
-    },
+    }
+   ],
+   "ingat": "Apple = apel, banana = pisang, mango = mangga, orange = jeruk.",
+   "ortu": "Tunjukkan buah asli atau gambarnya, ucapkan namanya bersama, lalu minta anak menunjuk saat Anda menyebut satu nama."
+  },
+  {
+   "kisi": "EN1a",
+   "judul": "Nama buah dalam bahasa Inggris: grapes, watermelon, pineapple",
+   "isi": [
+    "Grapes artinya anggur. Watermelon artinya semangka.",
+    "Pineapple artinya nanas. Hati-hati, pineapple bukan apple, ya."
+   ],
+   "gambar": [
     {
      "img": "aset/grapes.svg",
      "label": "grapes"
@@ -2726,26 +2733,14 @@ window.MATERI = {
    ],
    "contoh": [
     {
-     "teks": "Water artinya air, melon artinya melon. Watermelon adalah melon yang banyak airnya, yaitu semangka.",
-     "gambar": [
-      {
-       "img": "aset/watermelon.svg",
-       "label": "watermelon"
-      }
-     ]
+     "teks": "Water artinya air, melon artinya melon. Watermelon adalah melon yang banyak airnya, yaitu semangka."
     },
     {
-     "teks": "Grapes ditulis dengan s karena anggur tumbuh bergerombol.",
-     "gambar": [
-      {
-       "img": "aset/grapes.svg",
-       "label": "grapes"
-      }
-     ]
+     "teks": "Grapes ditulis dengan s karena anggur tumbuh bergerombol."
     }
    ],
-   "ingat": "Apple = apel, pineapple = nanas, orange = jeruk, grapes = anggur, watermelon = semangka.",
-   "ortu": "Tunjukkan buah asli atau gambarnya, ucapkan namanya bersama, lalu minta anak menunjuk saat Anda menyebut satu nama. Minta anak mengeja kata yang mudah tertukar, seperti pineapple."
+   "ingat": "Grapes = anggur, watermelon = semangka, pineapple = nanas.",
+   "ortu": "Tunjukkan buah asli atau gambarnya dan ucapkan namanya bersama. Minta anak mengeja kata yang mudah tertukar, seperti pineapple."
   },
   {
    "kisi": "EN1b",
@@ -2763,12 +2758,7 @@ window.MATERI = {
    ],
    "contoh": [
     {
-     "teks": "Do you like watermelon? Yes, I do. (Ya, aku suka.)",
-     "gambar": [
-      {
-       "img": "aset/watermelon.svg"
-      }
-     ]
+     "teks": "Do you like watermelon? Yes, I do. (Ya, aku suka.)"
     },
     {
      "teks": "Do you like broccoli? No, I don’t. (Tidak, aku tidak suka.)",
@@ -2803,12 +2793,11 @@ window.MATERI = {
   },
   {
    "kisi": "EN2a",
-   "judul": "Anggota keluargaku",
+   "judul": "Anggota keluargaku: father, mother, brother, sister",
    "isi": [
     "Father artinya ayah. Mother artinya ibu.",
-    "Brother artinya saudara laki-laki, kakak atau adik. Sister artinya saudara perempuan.",
-    "Grandfather artinya kakek. Grandmother artinya nenek.",
-    "Grand artinya orang tua dari orang tua kita."
+    "Brother artinya saudara laki-laki, kakak atau adik.",
+    "Sister artinya saudara perempuan."
    ],
    "gambar": [
     {
@@ -2826,7 +2815,19 @@ window.MATERI = {
     {
      "img": "aset/girl.svg",
      "label": "sister"
-    },
+    }
+   ],
+   "ingat": "Father ayah, mother ibu, brother saudara laki-laki, sister saudara perempuan.",
+   "ortu": "Tunjuk foto keluarga dan minta anak menyebut nama Inggris tiap orang."
+  },
+  {
+   "kisi": "EN2a",
+   "judul": "Anggota keluargaku: grandfather dan grandmother",
+   "isi": [
+    "Grandfather artinya kakek. Grandmother artinya nenek.",
+    "Grand artinya orang tua dari orang tua kita."
+   ],
+   "gambar": [
     {
      "img": "aset/old-man.svg",
      "label": "grandfather"
@@ -2838,17 +2839,11 @@ window.MATERI = {
    ],
    "contoh": [
     {
-     "teks": "Grand + father = ayah dari ayah atau ibu kita, yaitu kakek.",
-     "gambar": [
-      {
-       "img": "aset/old-man.svg",
-       "label": "grandfather"
-      }
-     ]
+     "teks": "Grand + father = ayah dari ayah atau ibu kita, yaitu kakek."
     }
    ],
-   "ingat": "Father ayah, mother ibu, brother saudara laki-laki, sister saudara perempuan, grandfather kakek, grandmother nenek.",
-   "ortu": "Tunjuk foto keluarga dan minta anak menyebut nama Inggris tiap orang. Bantu anak membedakan mother dan grandmother dengan petunjuk “ibu dari ibuku”."
+   "ingat": "Grandfather kakek, grandmother nenek.",
+   "ortu": "Tunjuk foto keluarga dan minta anak menyebut nama Inggris kakek dan neneknya. Bantu anak membedakan mother dan grandmother dengan petunjuk “ibu dari ibuku”."
   },
   {
    "kisi": "EN2b",
@@ -2946,11 +2941,10 @@ window.MATERI = {
   },
   {
    "kisi": "EN3a",
-   "judul": "Benda di kelasku",
+   "judul": "Benda di kelasku: pencil, book, bag, ruler",
    "isi": [
     "Pencil artinya pensil. Book artinya buku. Bag artinya tas.",
-    "Ruler artinya penggaris. Chair artinya kursi. Crayon artinya krayon.",
-    "Pencil case artinya kotak pensil. Pencil case ditulis dua kata."
+    "Ruler artinya penggaris."
    ],
    "gambar": [
     {
@@ -2968,7 +2962,19 @@ window.MATERI = {
     {
      "img": "aset/straight-ruler.svg",
      "label": "ruler"
-    },
+    }
+   ],
+   "ingat": "Pencil pensil, book buku, bag tas, ruler penggaris.",
+   "ortu": "Minta anak membuka tasnya, menunjuk benda satu per satu, menyebut nama Inggris, lalu mengejanya."
+  },
+  {
+   "kisi": "EN3a",
+   "judul": "Benda di kelasku: chair, crayon, pencil case",
+   "isi": [
+    "Chair artinya kursi. Crayon artinya krayon.",
+    "Pencil case artinya kotak pensil. Pencil case ditulis dua kata."
+   ],
+   "gambar": [
     {
      "img": "aset/chair.svg",
      "label": "chair"
@@ -2988,15 +2994,12 @@ window.MATERI = {
       {
        "img": "aset/pencil.svg",
        "label": "pencil"
-      },
-      {
-       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 260 150\" role=\"img\"><rect width=\"260\" height=\"150\" fill=\"#F4F9FC\"/><rect x=\"40\" y=\"52\" width=\"180\" height=\"60\" rx=\"22\" fill=\"#4BA3E3\" stroke=\"#3d2b1f\" stroke-width=\"4\"/><path d=\"M62 62 H198\" stroke=\"#fff\" stroke-width=\"4\" stroke-dasharray=\"5 5\" fill=\"none\"/><rect x=\"188\" y=\"56\" width=\"16\" height=\"12\" rx=\"4\" fill=\"#F5B82E\" stroke=\"#3d2b1f\" stroke-width=\"3\"/><rect x=\"92\" y=\"84\" width=\"76\" height=\"16\" rx=\"8\" fill=\"#fff\" stroke=\"#3d2b1f\" stroke-width=\"3\"/><text x=\"130\" y=\"97\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#3d2b1f\" font-family=\"sans-serif\">PENCIL</text></svg>"
       }
      ]
     }
    ],
-   "ingat": "Pencil, book, bag, ruler, chair, crayon, dan pencil case adalah nama benda di kelas.",
-   "ortu": "Minta anak membuka tasnya, menunjuk benda satu per satu, menyebut nama Inggris, lalu mengejanya. Beri perhatian pada pencil dan pencil case yang sering tertukar."
+   "ingat": "Chair kursi, crayon krayon, pencil case kotak pensil.",
+   "ortu": "Minta anak menunjuk benda di sekitarnya, menyebut nama Inggris, lalu mengejanya. Beri perhatian pada pencil dan pencil case yang sering tertukar."
   },
   {
    "kisi": "EN3b",
