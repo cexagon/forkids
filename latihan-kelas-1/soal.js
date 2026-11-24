@@ -1392,11 +1392,20 @@ window.SOAL = [
      },
      {
       "jenis": "pg",
-      "tanya": "Lambang sila pertama Pancasila adalah ....",
+      "tanya": "Manakah gambar lambang sila pertama Pancasila?",
       "pilihan": [
-       "bintang",
-       "padi dan kapas",
-       "rantai"
+       {
+        "img": "aset/lambang-sila-1.png",
+        "label": "bintang"
+       },
+       {
+        "img": "aset/lambang-sila-2.png",
+        "label": "rantai"
+       },
+       {
+        "img": "aset/lambang-sila-5.png",
+        "label": "padi dan kapas"
+       }
       ],
       "jawab": 0,
       "kisi": "PK4",
