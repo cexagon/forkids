@@ -1,7 +1,7 @@
 # Rules for this repo (cexagon/forkids)
 
 - **Repo first.** GitHub `cexagon/forkids`, branch `main`, is the single source of truth. Pull `main` (or read the repo on GitHub) before any task; never work from a loose copy on the Mac.
-- What this is: Kebun Hitung, a math learning game for grade 1 (PWA).
+- **Moved.** Kebun Hitung and the exam practice now live in `cexagon/abaqa` (https://cexagon.github.io/abaqa/). This repo only serves redirects from the old addresses; do new work in `cexagon/abaqa`.
 - Hosting: GitHub Pages via `.github/workflows/pages.yml` (push to `main`). Not on Cloudflare.
 - Work on a branch and open a PR; cex merges.
 - If this ever needs a Cloudflare site: add `.github/workflows/deploy.yml` like the other cexagon repos (push to `main` → `npx -y wrangler@4.86.0`, secrets `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID`, `workers_dev`/`preview_urls` false) and a DEPLOY.md. Never deploy by hand.
