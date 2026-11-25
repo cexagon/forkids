@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pindah ke Abaqa</title>
+<meta name="robots" content="noindex">
+<script>
+  /* Kebun Hitung dan latihan ujian sudah pindah ke Abaqa (cexagon.github.io/abaqa/).
+     Alamat lama dipetakan ke alamat barunya. Skor tetap ada: domain sama, nama penyimpanan sama. */
+  (function () {
+    var p = location.pathname.replace(/^\/forkids\/?/, '');
+    var to = '/abaqa/';
+    if (/^latihan-kelas-[12](\/|$)/.test(p)) to += p;
+    else if (p && !/^index\.html$/.test(p)) to += 'kebun-hitung/' + p;
+    location.replace(to + location.search + location.hash);
+  })();
+</script>
+<style>body{font:18px/1.5 system-ui,sans-serif;background:#FFF3D1;color:#3B2A1A;display:grid;place-items:center;min-height:100vh;margin:0;text-align:center;padding:24px}a{color:#1F6B2A;font-weight:700}</style>
+</head>
+<body>
+<p>Kebun Hitung dan Latihan Ujian sekarang ada di <a href="/abaqa/">Abaqa</a>.<br>Membuka Abaqa…</p>
+</body>
+</html>
